@@ -1,21 +1,24 @@
 @extends(layout())
 
+
+
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">{{trans('auth.login')}}</div>
+        <div class="logo col-md-6 col-md-offset-2">
+            <img src="<?= env('APP_URL').'/images/logo_mbr_digital.svg'?>" width="300" class="col-md-offset-5 logocenter" />
 
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+
+            <div class="panel panel-default">
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">{{trans('auth.email')}}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                            <div class="col-md-12">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus placeholder="{{trans('auth.email')}}">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -26,10 +29,8 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">{{trans('auth.password')}}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                            <div class="col-md-12">
+                                <input id="password" type="password" class="form-control" name="password" required placeholder="{{trans('auth.password')}}">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -50,12 +51,12 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn loginbutton col-md-12">
                                     Login
                                 </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                            </div>
+                                <a class="btn btn-link col-md-6 col-md-offset-3" href="{{ route('password.request') }}">
                                     {{trans('auth.forgot')}}
                                 </a>
                             </div>

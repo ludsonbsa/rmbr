@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Contatos::class, function (Faker $faker) {
+$factory->define(App\Contato::class, function (Faker $faker) {
 
     return [
         'nome_do_produto' => 'Pompoarismo Cátia Damasceno',
