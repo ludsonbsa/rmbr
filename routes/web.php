@@ -34,9 +34,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
     $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
+    Route::get('leads/listar', 'Contatos@listar');
+
     Route::group(['middleware' => 'can:admin'], function(){
         Route::get('home', 'HomeController@index')->name('home');
-        Route::get('leads', 'ContatoController@index')->name('contato');
+        Route::get('leads', 'Contatos@index')->name('leads');
+        Route::get('teste', 'Contatos@teste')->name('teste');
     });
 
 

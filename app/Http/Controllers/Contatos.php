@@ -6,20 +6,36 @@ use App\Contato;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 
 class Contatos extends Controller
 {
     public function index(Request $request){
-        $str = $request->get('str',"");
+        //$str = $request->get('str',"");
 
-        if($str){
-            //$courses = Course::where('name','like','%'.$str.'%')->orWhere('description','like','%'.$str.'%')->get();
-            //Search que vai buscar no algolia através do searchable(trait) inserida no controller
-            $contatos = Contato::search($str)->get();
-        }else{
-            $contatos = Contato::all();
-        }
+        $contatos = Contato::all('*');
 
-        return view('contatos.angular', ['contatos' => $contatos, 'str' => $str]);
+        return view('contatos.leads.leads');
+    }
+
+    // Listando pessoas
+    public function listar()
+    {
+        return DB::table('tb_contatos')->whereNull('aprovado')->whereNull('pos_atendimento')->get();
+    }
+
+    public function teste(Request $request){
+        //$str = $request->get('str',"");
+
+        /*$contatos = Contato::all('*');
+        $lead = DB::table('tb_contatos')->whereNull('aprovado')->whereNull('pos_atendimento');
+*/
+        $lead = DB::table('tb_contatos')
+            ->whereNull('aprovado')
+            ->whereNull('pos_atendimento')
+            ->join('tb_atendimento','id','=','at_id_contato')
+            ->paginate(10);
+
+        return view('contatos.leads.teste', ['contatos' => $lead]);
     }
 }

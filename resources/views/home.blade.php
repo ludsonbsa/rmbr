@@ -2,6 +2,6 @@
 
 @section('content')
 
-    @include('layouts.leads.leads')
+    Essa é só a home mano
 
 @endsection

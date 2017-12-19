@@ -5,10 +5,13 @@
 <p><img src="https://mbr.digital/public/assets/admin/images/uiface2.png" alt="" height="40" width="40" /> Bem-vindo  Ludson Almeida </p>
 </div>-->
 
+<div class="container" ng-controller="Contatos">
     <div class="buttons">
-        <form name="busca" action="/admin/contatos/buscar/" method="get">
-            <input type="search" name="busca" placeholder="Digite o e-mail, nome ou telefone para buscar um contato">
+
+        <form action="/" method="get">
+            <input type="search" id="aa-search-input" class="aa-input-search form-control" placeholder="Pesquisar" name="" autocomplete="on" spellcheck="false" ng-keyup="search()" ng-model="query" />
         </form>
+
     </div>
 
     <div class="buttons">
@@ -42,5 +45,32 @@
         </ul>
     </div>
 </section>
+
+<!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
+<script src="{{asset('js/algoliasearch.min.js')}}"></script>
+<script src="{{asset('js/autocomplete.min.js')}}"></script>
+<script src="{{asset('js/angular.min.js')}}"></script>
+<script src="{{asset('js/angular-sanitize.min.js')}}"></script>
+
+<script>
+    angular.module('AlgoliaApp', ['ngSanitize'])
+        .factory('Contatos',function(){
+            var client = algoliasearch("D4EIHRAU95", "44a22a5413aeb6e6c366eb92e132ce45");
+            var index = client.initIndex('tb_contatos');
+
+            return index;
+        })
+        .controller('Contatos',function($scope, Contatos){
+            $scope.hits = [];
+            $scope.query = '';
+            $scope.initRun = true;
+            $scope.search = function(){
+                Contatos.search($scope.query, function(success, content){
+                    $scope.hits = content.hits;
+                });
+            };
+            $scope.search();
+        });
+</script>
 
 
