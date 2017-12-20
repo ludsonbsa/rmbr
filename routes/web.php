@@ -38,7 +38,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
     Route::group(['middleware' => 'can:admin'], function(){
         Route::get('home', 'HomeController@index')->name('home');
+
+        //LEADS
         Route::get('leads', 'Contatos@index')->name('leads');
+        Route::get('leads/editar/{id}', 'Contatos@editar')->name('editar');
+        //FIM DE LEADS
+
         Route::get('teste', 'Contatos@teste')->name('teste');
     });
 

@@ -52,21 +52,24 @@
 
                             <tbody>
                                 @foreach($contatos as $contato)
-                                <tr class="" >
-                                    <td></td>
-                                    <td>{{$contato->nome}}</td>
-                                    <td>{{$contato->telefone}}</td>
+                                <tr class="">
+
+                                    <td class="nome">{{$contato->nome}}</td>
+                                    <td>({{$contato->ddd}}){{$contato->telefone}}</td>
                                     <td>{{$contato->email}}</td>
-                                    <td>{{$contato->insercao_hotmart}}</td>
+                                    <td class="meio"><span>{{$contato->insercao_hotmart}}</span></td>
                                     <td>{{$contato->prioridade}}</td>
-                                    <td></td>
+                                    <td>{{$contato->user_nome}}</td>
+                                    <td class="acao"><a href="#" class="atender">Atender</a></td>
                                 </tr>
-                                    @endforeach
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
+
+                    {{$contatos->links()}}
                 </div>
-                {{$contatos->links()}}
+
             </div>
         </div>
 

@@ -2,14 +2,14 @@
     <ul>
         <li>
 
-            <a href="/admin/contatos/" title="Leads" alt="[Leads]"><img src="/images/leads/leads_menu.svg" width="30" title="" alt="">Leads</a>
+            <a href="/admin/leads/" title="Leads" alt="[Leads]"><img src="/images/leads/leads_menu.svg" width="30" title="" alt="">Leads</a>
 
         </li>
 
 
         <li class="sub">
 
-            <a href="/admin/contatos/add" title="Add Lead" alt="[Add Lead]">Adicionar Lead</a>
+            <a href="/admin/leads/add" title="Add Lead" alt="[Add Lead]">Adicionar Lead</a>
 
         </li>
 

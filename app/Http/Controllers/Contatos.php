@@ -11,30 +11,36 @@ use Illuminate\Support\Facades\DB;
 class Contatos extends Controller
 {
     public function index(Request $request){
-        //$str = $request->get('str',"");
-
-        $contatos = Contato::all('*');
-
-        return view('contatos.leads.leads');
-    }
-
-    // Listando pessoas
-    public function listar()
-    {
-        return DB::table('tb_contatos')->whereNull('aprovado')->whereNull('pos_atendimento')->get();
-    }
-
-    public function teste(Request $request){
-        //$str = $request->get('str',"");
-
-        /*$contatos = Contato::all('*');
-        $lead = DB::table('tb_contatos')->whereNull('aprovado')->whereNull('pos_atendimento');
-*/
         $lead = DB::table('tb_contatos')
-            ->whereNull('aprovado')
-            ->whereNull('pos_atendimento')
-            ->join('tb_atendimento','id','=','at_id_contato')
-            ->paginate(10);
+            ->selectRaw("tb_contatos.id,  tb_contatos.data_de_venda, tb_contatos.nome, tb_contatos.ddd, tb_contatos.telefone, tb_contatos.email, tb_contatos.obs_followup, tb_contatos.observacao, tb_contatos.status, tb_contatos.documento_usuario, tb_contatos.em_atendimento, tb_contatos.insercao_hotmart, tb_contatos.prioridade, tb_contatos.id_responsavel, t2.user_nome")
+            ->groupBy('tb_contatos.email')
+            ->join('users as t2','tb_contatos.id_responsavel','=','t2.id')
+            ->whereRaw("(tb_contatos.aprovado IS NULL AND tb_contatos.pos_atendimento IS NULL)")
+            ->whereRaw("(tb_contatos.status != 'Boleto Impresso' AND tb_contatos.status != 
+'Expirado')")
+            ->paginate();
+
+        return view('contatos.leads.leads', ['contatos' => $lead]);
+    }
+
+    public function editar($id)
+    {
+        $query = DB::table('tb_contatos')
+            ->join('users as t2','tb_contatos.id_responsavel','=','t2.id')
+            ->where('tb_contatos.id','=', $id)
+            ->get();
+        return view('contatos.leads.editar', ['contato' => $query]);
+    }
+
+    public function teste(){
+        $lead = DB::table('tb_contatos')
+            ->selectRaw("tb_contatos.id,  tb_contatos.data_de_venda, tb_contatos.nome, tb_contatos.ddd, tb_contatos.telefone, tb_contatos.email, tb_contatos.obs_followup, tb_contatos.observacao, tb_contatos.status, tb_contatos.documento_usuario, tb_contatos.em_atendimento, tb_contatos.insercao_hotmart, tb_contatos.prioridade, tb_contatos.id_responsavel, t2.user_nome")
+            ->groupBy('tb_contatos.email')
+            ->join('users as t2','tb_contatos.id_responsavel','=','t2.id')
+            ->whereRaw("(tb_contatos.aprovado IS NULL AND tb_contatos.pos_atendimento IS NULL)")
+            ->whereRaw("(tb_contatos.status != 'Boleto Impresso' AND tb_contatos.status != 
+'Expirado')")
+            ->paginate(15);
 
         return view('contatos.leads.teste', ['contatos' => $lead]);
     }
