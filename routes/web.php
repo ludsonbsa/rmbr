@@ -41,8 +41,19 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
         //LEADS
         Route::get('leads', 'Contatos@index')->name('leads');
-        Route::get('leads/editar/{id}', 'Contatos@editar')->name('editar');
+
+        //Atender atribui as informações de atendente
+        Route::get('leads/atender/{id}', 'Contatos@atender')->name('atender');
+
+        //Editar não atribui informações de quem está editando
+        Route::get('leads/editar/{id}', 'Contatos@find')->name('editar');
+
+        //Adicionar Lead
+        Route::get('leads/add/', 'Contatos@add')->name('add');
         //FIM DE LEADS
+
+        //COMISSOES
+        Route::get('comissoes/', 'Comissoes@show')->name('comissoes-listar');
 
         Route::get('teste', 'Contatos@teste')->name('teste');
     });

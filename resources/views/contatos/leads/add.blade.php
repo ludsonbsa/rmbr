@@ -1,0 +1,87 @@
+@extends(layout())
+
+@section('content')
+<section class="content" style="background:url('images/bglead.jpg') repeat-x #f0f0f0;">
+
+    <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Adicionar Contato</h1>
+
+    <section class="widget" style="min-height:560px;">
+
+        <div class="faixa"></div>
+        <br>
+        <div class="content">
+
+            <form name="formulario" action="" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="data_de_venda" value="" />
+                <input type="hidden" name="tb_users_id" value="">
+
+                <div class="field-wrap t60">
+                    <label>Nome:</label>
+                    <input type="text" name="nome" value="" class="t100" placeholder="" required="required">
+                </div>
+
+                <div class="field-wrap t10">
+                    <label>DDD:</label>
+                    <input type="tel" id="ddd" maxlength="2" name="ddd" class="t90" required="required" placeholder="Ex.:61">
+
+                </div>
+
+                <div class="field-wrap t20">
+                    <label>Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" maxlength="9" class="t90" required="required" placeholder="">
+                </div>
+
+
+                <div class="field-wrap t60">
+                    <label>E-mail:</label>
+                    <input type="text" name="email" value="" class="t100" placeholder="">
+                </div>
+
+
+                <div class="field-wrap t30">
+                    <label>Meio de inserção:</label>
+                    <br>
+                    <select name="insercao_hotmart" required>
+                        <option value="Whatsapp">Whatsapp</option>
+                        <option value="Chat">Chat</option>
+                        <option value="E-mail">E-mail</option>
+                        <option value="Facebook">Facebook</option>
+                        <!--<option value="Pr�-Checkout">Pr�-Checkout</option> -->
+                    </select>
+                </div>
+
+
+                <div class="field-wrap t50">
+                    <label>Produto:</label>
+                    <br>
+                    <select name="nome_do_produto" required>
+                    <option value="Pompoarismo Cátia Damasceno">Pompoarismo Cátia Damasceno</option>
+                    </select>
+                </div>
+
+                <div class="field-wrap t40">
+                    <label>Prioridade:</label>
+                    <br>
+                    <select name="prioridade" required>
+                        <option value="Dúvidas sobre como pagar">Dúvidas sobre como pagar</option>
+                        <option value="Dúvidas profundas sobre o curso">Dúvidas profundas sobre o curso</option>
+                    </select>
+                </div>
+
+
+                <div class="field-wrap t94">
+                    <label>Observações sobre o pedido: </label>
+                    <br><br>
+                    <textarea name="observacao"></textarea>
+                </div>
+
+                <div class="field-wrap t94">
+                    <button type="submit" name="sendForm" class="enviar">Inserir Contato</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+</section>
+@endsection

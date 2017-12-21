@@ -76,13 +76,13 @@
     angular.module('AlgoliaApp', ['ngSanitize'])
         .factory('Contatos',function(){
             var client = algoliasearch("D4EIHRAU95", "44a22a5413aeb6e6c366eb92e132ce45");
-            var index = client.initIndex('contatos');
+            var index = client.initIndex('tb_contatos');
 
             return index;
         })
         .controller('Contatos',function($scope, Contatos){
             $scope.hits = [];
-            $scope.query = '';
+            $scope.query = 'Edna';
             $scope.initRun = true;
             $scope.search = function(){
                 Contatos.search($scope.query, function(success, content){

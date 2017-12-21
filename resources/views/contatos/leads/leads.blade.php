@@ -59,17 +59,16 @@
                                     <td class="meio"><span>{{$contato->insercao_hotmart}}</span></td>
                                     <td>{{$contato->prioridade}}</td>
                                     <td>{{$contato->user_nome}}</td>
-                                    <td class="acao"><a href="/admin/leads/editar/{{$contato->id}}" class="atender">Atender</a></td>
+                                    <td class="acao"><a href="" class="atender">Atender</a></td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
                     </div>
 
-                    {{$contatos->links()}}
                 </div>
-
             </div>
+            <?php echo $contatos->links();?>
         </div>
 
         </div><!--container de header search -->
