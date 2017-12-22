@@ -29,17 +29,13 @@
 </div>
 
 <!-- Scripts -->
+<script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
 
 <!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
-<script src="{{ asset('js/algoliasearch.min.js') }}"></script>
-<script src="{{ asset('js/autocomplete.min.js') }}"></script>
-<script src="{{ asset('js/angular.min.js') }}"></script>
-<script src="{{ asset('js/angular-sanitize.min.js') }}"></script>
-<script src="{{ asset('js/jquery-3.2.1.slim.min.js') }}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="{{ asset('js/popper.min.js') }}" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+
+
 
 </body>
 </html>

@@ -40,22 +40,28 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::get('home', 'HomeController@index')->name('home');
 
         //LEADS
-        Route::get('leads', 'Contatos@index')->name('leads');
+        Route::get('leads', 'ContatosController@index')->name('leads');
 
         //Atender atribui as informações de atendente
-        Route::get('leads/atender/{id}', 'Contatos@atender')->name('atender');
+        Route::get('leads/atender/{id}', 'ContatosController@atender')->name('atender');
 
         //Editar não atribui informações de quem está editando
-        Route::get('leads/editar/{id}', 'Contatos@find')->name('editar');
+        Route::get('leads/editar/{id}', 'ContatosController@find')->name('lead.editar');
 
         //Adicionar Lead
-        Route::get('leads/add/', 'Contatos@add')->name('add');
+        Route::get('leads/add/', 'ContatosController@add')->name('lead.add');
         //FIM DE LEADS
 
         //COMISSOES
-        Route::get('comissoes/', 'Comissoes@show')->name('comissoes-listar');
+        Route::get('comissoes/', 'ComissoesController@conferencia')->name('comissoes.listar');
 
-        Route::get('teste', 'Contatos@teste')->name('teste');
+        Route::get('teste', 'ContatosController@teste')->name('teste');
+
+        Route::get('leads/importar', 'ImportacoesController@index')->name('importar');
+
+        /****************USUÁRIOS****************/
+        Route::get('usuarios/listar', 'UserController@index')->name('listar.usuarios');
+
     });
 
 

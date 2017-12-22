@@ -16,11 +16,11 @@
 
     <div class="buttons">
         <ul><!-- Atendente -->
-            <a href="/admin/contatos/add/" title="MBR Follow Up - Adicionar Lead" alt="[Adicionar Lead]">
+            <a href="{{route('admin.lead.add')}}" title="MBR Follow Up - Adicionar Lead" alt="[Adicionar Lead]">
                 <li><img src="/images/leads/new_lead.svg" width="20" class="icone" title="MBR Follow Up - Adicionar Lead" alt="[Adicionar Lead]"></li>
             </a>
 
-            <a href="/admin/importar/" title="MBR Follow Up - Importar" alt="[Importar]">
+            <a href="{{route('admin.importar')}}" title="MBR Follow Up - Importar" alt="[Importar]">
                 <li><img src="/images/leads/upload.svg" width="20" class="icone" title="MBR Follow Up - Importar Planilha" alt="[Importar Planilha]"></li>
             </a>
 

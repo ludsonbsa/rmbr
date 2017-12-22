@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Contato;
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Contatos;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 
-class Contatos extends Controller
+class ContatosController extends Controller
 {
     public function index(Request $request){
         $lead = DB::table('tb_contatos')
@@ -50,7 +50,7 @@ class Contatos extends Controller
             ->groupBy('tb_contatos.email')
             ->join('users as t2','tb_contatos.id_responsavel','=','t2.id')
             ->whereRaw("(tb_contatos.aprovado IS NULL AND tb_contatos.pos_atendimento IS NULL)")
-            ->whereRaw("(tb_contatos.status != 'Boleto Impresso' AND tb_contatos.status != 
+            ->whereRaw("(tb_contatos.status != 'Boleto Impresso' AND tb_contatos.status !=
 'Expirado')")
             ->paginate(15);*/
 
@@ -62,7 +62,6 @@ class Contatos extends Controller
     }
 
     public function add(){
-
         return view('contatos.leads.add');
     }
 }
