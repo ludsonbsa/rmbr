@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Contatos;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Contatos;
-use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -63,5 +62,10 @@ class ContatosController extends Controller
 
     public function add(){
         return view('contatos.leads.add');
+    }
+
+    public function cadastrar(Request $request){
+        Contatos::create($request->all());
+        return var_dump($request);
     }
 }

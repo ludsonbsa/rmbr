@@ -1,6 +1,6 @@
 
 <section class="user">
-    <a href="/admin/dashboard/"><img src="/images/logo_mbr_digital.svg" width="200" style="position:absolute;"></a>
+    <a href="{{route('admin.dashboard')}}"><img src="/images/logo_mbr_digital.svg" width="200" style="position:absolute;"></a>
     <!--<div class="profile-img">
 <p><img src="https://mbr.digital/public/assets/admin/images/uiface2.png" alt="" height="40" width="40" /> Bem-vindo  Ludson Almeida </p>
 </div>-->
@@ -9,7 +9,7 @@
     <div class="buttons">
 
         <form action="/" method="get">
-            <input type="search" id="aa-search-input" class="aa-input-search form-control" placeholder="Pesquisar" name="" autocomplete="on" spellcheck="false" ng-keyup="search()" ng-model="query" />
+            <input type="search" id="aa-search-input" class="" placeholder="Pesquisar" name="" autocomplete="on" spellcheck="false" ng-keyup="search()" ng-model="query" style="margin-right:-40px; max-width: 70%"/>
         </form>
 
     </div>

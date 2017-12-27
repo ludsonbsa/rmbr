@@ -11,9 +11,11 @@
         <br>
         <div class="content">
 
-            <form name="formulario" action="" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="data_de_venda" value="" />
-                <input type="hidden" name="tb_users_id" value="">
+            <form name="formulario" action="{{route('admin.lead.cadastrar')}}" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="_method" value="PUT">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <input type="hidden" name="data_de_venda" value="{{date('d/m/Y H:i:s')}}" />
+                <input type="hidden" name="id_responsavel" value="{{Auth::id()}}">
 
                 <div class="field-wrap t60">
                     <label>Nome:</label>

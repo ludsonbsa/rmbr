@@ -1,0 +1,91 @@
+@extends(layout())
+
+@section('content')
+<section class="content" style="background:url('/images/bglead.jpg') repeat-x #f0f0f0;">
+    <h1 style="font-size:25px; font-weight: bold; margin-bottom:20px;">Conferência de Brindes<a href='#' id="refresher" title="Atualizar Dados"><img src="/images/refresh.svg" width="25" class="refresher" /></a></h1>
+    <div class="widget">
+
+        <div class="tabs-content">
+            <div class="tabs-menu">
+                <ul>
+                    <li><a class="active-tab-menu" href="#" data-tab="tab1">Conferir Brinde</a></li>
+                    <li><a href="#" data-tab="tab2">Resultado de Conferência</a></li>
+                    <li><a href="#" data-tab="tab3">Aprovar Manualmente</a></li>
+                    <li><a href="#" data-tab="tab4">Gerar Etiquetas Pendentes</a></li>
+                    <li><a href="#" data-tab="tab5">Baixar Etiquetas</a></li>
+                </ul>
+            </div> <!-- tabs-menu -->
+
+
+            <div class="tab1 tabs first-tab">
+
+                <table id="myTable" border="0" width="100">
+                    <thead>
+                    <tr>
+                        <th class="header">Nome</th>
+                        <th class="header">Telefone</th>
+                        <th class="header">Meio de Inserção</th>
+                        <th class="header">E-mail</th>
+                        <th class="header">Responsável</th>
+                        <th class="header" colspan="2">Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <form action="" name="enviarQueries" method="post">
+
+                        <tr class="odd">
+
+                            <td class="nome"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td class="acao">
+                                <a href="/admin/brindes/editar?id=" title="Editar Registro" class="atender">Editar</a>
+                            </td>
+
+                            <td><a href="?remover=" class="atender"><img src="/images/excluir.svg" width="30" class="icone" title="Excluir Contato" alt="[Excluir]" /></a></td>
+
+                            <input type="hidden" name="cpf" value="">
+                            <input type="hidden" name="telefone" value="">
+                            <input type="hidden" name="email" value="">
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <div class="field-wrap" style="float:right; margin-top:0px; padding:17px; width:96.75%;">
+                    <h3 style="font-size:18px; float:left; font-weight: 500; color:#636363; margin-top:8px;">Você precisa conferir  brindes</h3>
+
+                       <button type="submit" name="enviaQueryBrinde" class="enviar">Conferir Brindes</button>
+
+                </div>
+
+                </form>
+
+            </div>
+
+            <div id="loader"></div>
+            <div class="tab2 tabs">
+
+            </div> <!-- .tab2 -->
+
+            <div class="tab3 tabs">
+
+            </div> <!-- .tab3 -->
+
+            <div class="tab4 tabs">
+
+            </div> <!-- .tab4 -->
+
+            <div class="tab5 tabs">
+
+            </div> <!-- .tab5 -->
+
+
+        </div>
+@endsection

@@ -43,7 +43,7 @@
 
                     <td class="nome"><img src="/images/avatar.svg" width="40" height="40" class="atendente perfilEdit"><span class="comis">{{$user->user_nome}}</span></td>
 
-                    <td>{{$user->role_name}}</td>
+                    <td>{{utf8_decode($user->role_name)}}</td>
 
                     <?php ($user->status == 1 ? $status = 'Ativado' : $status = 'Desativado'); ?>
 
@@ -74,7 +74,7 @@
         <div id="loader"></div>
 
         <div class="tab2 tabs">
-
+            @include('usuarios.add')
         </div> <!-- .tab2 -->
 
     </div>

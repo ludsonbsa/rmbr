@@ -68,7 +68,8 @@
 
                 </div>
             </div>
-            <?php echo $contatos->links();?>
+
+            {!! $contatos->links() !!}
         </div>
 
         </div><!--container de header search -->

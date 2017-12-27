@@ -6,27 +6,27 @@
         </li>
 
         <li class="sub">
-            <a href="/admin/leads/add" title="Add Lead" alt="[Add Lead]">Adicionar Lead</a>
+            <a href="{{route('admin.lead.add')}}" title="Add Lead" alt="[Add Lead]">Adicionar Lead</a>
         </li>
 
         <li>
-            <a href="/admin/comissoes/" title="Comissões" alt="[Comissões]"><img src="/images/leads/comissoes_menu.svg" width="30" title="" alt="">Comissões</a>
+            <a href="{{route('admin.comissoes.listar')}}" title="Comissões" alt="[Comissões]"><img src="/images/leads/comissoes_menu.svg" width="30" title="" alt="">Comissões</a>
         </li>
 
 
         <li>
-            <a href="/admin/brindes/listar/" title="Brindes" alt="[Brindes]"><img src="/images/leads/brinde_menu.svg" width="30" title="" alt="">Brindes</a>
+            <a href="{{route('admin.listar.brindes')}}" title="Brindes" alt="[Brindes]"><img src="/images/leads/brinde_menu.svg" width="30" title="" alt="">Brindes</a>
 
         </li>
 
 
         <li class="sub">
-            <a href="/admin/brindes/add" title="Add Brinde" alt="[Add Lead]">Adicionar Brinde</a>
+            <a href="{{route('admin.brindes.add')}}" title="Add Brinde" alt="[Add Lead]">Adicionar Brinde</a>
         </li>
 
 
         <li class="sub">
-            <a href="/admin/brindes/buscar" title="Buscar Brinde" alt="[Buscar Brinde]">Buscar Brinde</a>
+            <a href="{{route('admin.brindes.buscar')}}" title="Buscar Brinde" alt="[Buscar Brinde]">Buscar Brinde</a>
         </li>
 
 
@@ -40,7 +40,7 @@
         </li>
 
         <li>
-            <a href="/admin/configs/" title="Configurações" alt="[Configurações]"><img src="/images/leads/config_menu.svg" width="30" title="" alt="">Configurações</a>
+            <a href="{{route('admin.config')}}" title="Configurações" alt="[Configurações]"><img src="/images/leads/config_menu.svg" width="30" title="" alt="">Configurações</a>
         </li>
 
 
