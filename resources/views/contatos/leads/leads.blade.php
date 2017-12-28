@@ -44,23 +44,28 @@
 
                                 <th class="header">Responsável</th>
 
-                                <th colspan="2"></th>
+                                <th colspan="3"></th>
 
                             </tr>
                             </thead>
 
-
+                            @include('modal')
                             <tbody>
                             @foreach($contatos as $contato)
                                 <tr class="">
                                     <td class="nome">{{$contato->nome}}</td>
-                                    <td>({{$contato->ddd}}){{$contato->telefone}}</td>
+                                    <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
                                     <td>{{$contato->email}}</td>
                                     <td class="meio"><span>{{$contato->insercao_hotmart}}</span></td>
                                     <td>{{$contato->prioridade}}</td>
                                     <td>{{$contato->user_nome}}</td>
-                                    <td class="acao"><a href="" class="atender">Atender</a></td>
+                                    <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
+                                    <td class="acao">
+                                        <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
+                                    </td>
+                                    <td><img src="/images/excluir.svg" width="30" class="icone del" data-id="{{$contato->id}}" title="Excluir Contato" alt="[Excluir]"></td>
                                 </tr>
+
                             @endforeach
                             </tbody>
                         </table>
@@ -74,6 +79,7 @@
 
         </div><!--container de header search -->
     </section>
+
 
     <!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
     <script src="{{asset('js/algoliasearch.min.js')}}"></script>

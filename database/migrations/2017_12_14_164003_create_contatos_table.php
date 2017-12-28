@@ -13,7 +13,7 @@ class CreateContatosTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_contatos', function (Blueprint $table) {
+        Schema::create('contatos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome_do_produto', 255)->nullable();
             $table->string('nome_do_produtor', 255)->nullable();

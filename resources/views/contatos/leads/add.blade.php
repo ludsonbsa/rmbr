@@ -1,7 +1,9 @@
 @extends(layout())
 
 @section('content')
-<section class="content" style="background:url('images/bglead.jpg') repeat-x #f0f0f0;">
+<section class="content" style="background:url('/images/bglead.jpg') repeat-x #f0f0f0;">
+
+    {!! Session::get('message')  !!}
 
     <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Adicionar Contato</h1>
 

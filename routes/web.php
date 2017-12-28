@@ -47,15 +47,19 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         //Editar não atribui informações de quem está editando
         Route::get('leads/editar/{id}', 'ContatosController@find')->name('lead.editar');
 
+        //Editar não atribui informações de quem está editando
+        Route::get('leads/deletar/{id}', 'ContatosController@deletar')->name('lead.deletar');
+
         //Adicionar Lead
         Route::get('leads/add/', 'ContatosController@add')->name('lead.add');
         Route::put('leads/cadastrar', 'ContatosController@cadastrar')->name('lead.cadastrar');
+        Route::get('leads/importar', 'ImportacoesController@index')->name('importar');
         //FIM DE LEADS
 
         //COMISSOES
         Route::get('comissoes/', 'ComissoesController@conferencia')->name('comissoes.listar');
         Route::get('teste', 'ContatosController@teste')->name('teste');
-        Route::get('leads/importar', 'ImportacoesController@index')->name('importar');
+
 
         /****************USUÁRIOS****************/
         Route::get('usuarios/listar', 'UserController@index')->name('listar.usuarios');
@@ -65,7 +69,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::get('brindes/listar', 'BrindesController@index')->name('listar.brindes');
         Route::get('brindes/add', 'BrindesController@add')->name('brindes.add');
         Route::get('brindes/buscar', 'BrindesController@buscar')->name('brindes.buscar');
-
 
         /*********CONFIG********/
         Route::get('config', 'ConfigController@index')->name('config');

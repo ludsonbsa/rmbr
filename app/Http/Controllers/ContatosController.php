@@ -6,6 +6,8 @@ use App\Contatos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use App\User;
+use App\Notifications\NotifyContato;
 
 class ContatosController extends Controller
 {
@@ -60,12 +62,22 @@ class ContatosController extends Controller
 
     }
 
+    public function deletar(Request $request, $id){
+
+    }
+
     public function add(){
         return view('contatos.leads.add');
     }
 
     public function cadastrar(Request $request){
-        Contatos::create($request->all());
-        return var_dump($request);
+        if(Contatos::create($request->all())){
+            $msg = '<div class="alert alert-success"><strong>Lead</strong> cadastrado com sucesso</div>';
+        }else{
+            $msg = '<div class="alert alert-danger"><strong>Lead</strong> não cadastrado</div>';
+        }
+
+        return response()->redirectToRoute('admin.lead.add')->with('message',$msg);
+
     }
 }

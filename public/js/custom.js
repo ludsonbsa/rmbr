@@ -32,6 +32,26 @@ $(document).ready(function() {
         return false;
     });
 
+/**TESTE DE MODAL **/
+    $('.del').on('click', function(e){
+        e.preventDefault();
+        $('.modal').fadeIn('500');
+        var id = $('.del').attr('data-id');
+
+        $('#leads_deletar').on('click',function(e){
+            var rota = $(this).attr('data-route');
+            alert(rota+'/'+id);
+            e.preventDefault();
+        });
+        return false;
+    });
+
+    $('button[data-dismiss=modal]').click( function(e){
+        e.preventDefault();
+        $('.modal').fadeOut();
+    });
+
+    /**TESTE DE MODAL **/
     /*$('.tabs-menu ul li:nth-child(3) a').click(function(){
         alert('vai');
 
@@ -323,6 +343,8 @@ $(document).ready(function() {
             url: "https://mbr.digital/admin/logout/"
         });
     });
+
+
 
 });
 
