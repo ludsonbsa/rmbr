@@ -33,18 +33,24 @@ $(document).ready(function() {
     });
 
 /**TESTE DE MODAL **/
-    $('.del').on('click', function(e){
-        e.preventDefault();
-        $('.modal').fadeIn('500');
-        var id = $('.del').attr('data-id');
+$('.leads').click(function(){
+    //Pego dados do data-id
+    var dados = $(this).attr('data-id');
+    var email = $(this).attr('data-email');
+    var nome = $(this).attr('data-nome');
+    //Abro a modal
+    $('.modal').fadeIn('500');
+    $('.modal .idlead').text(nome+' <'+email+'> ?');
 
-        $('#leads_deletar').on('click',function(e){
-            var rota = $(this).attr('data-route');
-            alert(rota+'/'+id);
-            e.preventDefault();
-        });
-        return false;
-    });
+    var trocar ='/admin/leads/deletar/'+dados;
+    //Atribuo o URL de delete com o id chamado
+    $('.dataRoute').attr('href', trocar);
+    //Jogar as informações do lead pra dentro dos atributos e jogar no alert
+});
+
+
+
+
 
     $('button[data-dismiss=modal]').click( function(e){
         e.preventDefault();

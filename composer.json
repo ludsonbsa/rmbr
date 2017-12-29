@@ -25,7 +25,8 @@
     "autoload": {
         "files":[
             "app/Helpers.php",
-            "app/Helpers/functions.php"
+            "app/Helpers/functions.php",
+            "app/Helpers/PlanilhaImport.php"
 
         ],
         "classmap": [

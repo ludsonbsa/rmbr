@@ -68,6 +68,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         /*********BRINDES********/
         Route::get('brindes/listar', 'BrindesController@index')->name('listar.brindes');
         Route::get('brindes/add', 'BrindesController@add')->name('brindes.add');
+        Route::put('brindes/cadastrar', 'BrindesController@cadastrar')->name('brindes.cadastrar');
         Route::get('brindes/buscar', 'BrindesController@buscar')->name('brindes.buscar');
 
         /*********CONFIG********/

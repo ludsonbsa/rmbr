@@ -3,6 +3,7 @@
 @section('content')
 
     <section class="content" style="background:url('/images/bglead.jpg') repeat-x #f0f0f0;">
+        {!! Session::get('message')  !!}
 
         <h1 style="font-size:25px; font-weight: bold; margin-bottom:20px;">Leads <a href='#' id="refresher" title="Atualizar Dados"><img src="/images/refresh.svg" width="25" class="refresher" /></a></h1>
 
@@ -49,9 +50,10 @@
                             </tr>
                             </thead>
 
-                            @include('modal')
+                            @include('modalLead')
                             <tbody>
                             @foreach($contatos as $contato)
+
                                 <tr class="">
                                     <td class="nome">{{$contato->nome}}</td>
                                     <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
@@ -63,7 +65,10 @@
                                     <td class="acao">
                                         <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
                                     </td>
-                                    <td><img src="/images/excluir.svg" width="30" class="icone del" data-id="{{$contato->id}}" title="Excluir Contato" alt="[Excluir]"></td>
+                                    <td>
+                                        <a href="#" class="leads" data-nome="{{$contato->nome}}" data-email="{{$contato->email}}"
+                                           data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
+                                    </td>
                                 </tr>
 
                             @endforeach

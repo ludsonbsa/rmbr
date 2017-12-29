@@ -31,45 +31,50 @@
                     </tr>
                     </thead>
                     <tbody>
-
+                    @include('modalLead')
                     <form action="" name="enviarQueries" method="post">
 
+                        @foreach($brindes as $brinde)
                         <tr class="odd">
 
-                            <td class="nome"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="nome">{{$brinde->nome}}</td>
+                            <td>{{$brinde->telefone}}</td>
+                            <td>{{$brinde->insercao_hotmart}}</td>
+                            <td>{{$brinde->email}}</td>
+                            <td>{{$brinde->user_nome}}</td>
 
                             <td class="acao">
                                 <a href="/admin/brindes/editar?id=" title="Editar Registro" class="atender">Editar</a>
                             </td>
 
-                            <td><a href="?remover=" class="atender"><img src="/images/excluir.svg" width="30" class="icone" title="Excluir Contato" alt="[Excluir]" /></a></td>
+                            <td>
+                                <a href="#" class="leads" data-nome="{{$brinde->nome}}" data-email="{{$brinde->email}}"
+                                   data-id="{{$brinde->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
+                            </td>
 
                             <input type="hidden" name="cpf" value="">
                             <input type="hidden" name="telefone" value="">
                             <input type="hidden" name="email" value="">
 
                         </tr>
+                        @endforeach
 
                     </tbody>
 
                 </table>
 
-                <div class="field-wrap" style="float:right; margin-top:0px; padding:17px; width:96.75%;">
-                    <h3 style="font-size:18px; float:left; font-weight: 500; color:#636363; margin-top:8px;">Você precisa conferir  brindes</h3>
+                {!! $brindes->links() !!}
 
+                <div class="field-wrap" style="float:right; margin-top:0px; padding:17px; width:100%;">
+                    <h3 style="font-size:18px; float:left; font-weight: 500; color:#636363; margin-top:8px;">Você precisa conferir {{$brindes->total()}}  brindes</h3>
                        <button type="submit" name="enviaQueryBrinde" class="enviar">Conferir Brindes</button>
-
                 </div>
 
                 </form>
 
             </div>
 
-            <div id="loader"></div>
+
             <div class="tab2 tabs">
 
             </div> <!-- .tab2 -->

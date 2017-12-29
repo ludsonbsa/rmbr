@@ -25,8 +25,8 @@
                 </div>
 
                 <div class="field-wrap t10">
-                    <label>DDD:</label>
-                    <input type="tel" id="ddd" maxlength="2" name="ddd" class="t90" required="required" placeholder="Ex.:61">
+                    <label>DDI+DDD:</label>
+                    <input type="tel" id="ddd" maxlength="4" name="ddd" class="t90" required="required" placeholder="Ex.:61">
 
                 </div>
 
