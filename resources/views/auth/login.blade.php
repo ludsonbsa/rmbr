@@ -14,7 +14,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+                        <?php echo  csrf_field()  ?>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <div class="col-md-12">
@@ -61,6 +61,7 @@
                                 </a>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>

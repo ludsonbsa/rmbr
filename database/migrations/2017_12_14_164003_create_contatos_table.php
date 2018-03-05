@@ -13,7 +13,7 @@ class CreateContatosTable extends Migration
      */
     public function up()
     {
-        Schema::create('contatos', function (Blueprint $table) {
+        Schema::create('tb_contatos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome_do_produto', 255)->nullable();
             $table->string('nome_do_produtor', 255)->nullable();
@@ -73,6 +73,7 @@ class CreateContatosTable extends Migration
             $table->integer('arquivo_etiqueta')->nullable();
             $table->timestamp('data_ligar_depois');
             $table->integer('em_atendimento')->nullable();
+            $table->timestamp('data_etiqueta');
             $table->timestamps();
         });
     }

@@ -17,7 +17,6 @@ Route::get('/', 'Auth\LoginController@showLoginForm');
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
-
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     // Authentication Routes...
     $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -41,6 +40,22 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         //LEADS
         Route::get('leads', 'ContatosController@index')->name('leads');
 
+        Route::get('leads/vendidos-nao-conferidos', 'ContatosController@vendidos_nao_conferidos')->name('leads.vendidos-nao-conferidos');
+
+        Route::get('leads/nao-vendidos', 'ContatosController@nao_vendidos')->name('leads.nao-vendidos');
+
+        Route::get('leads/boletos-gerados', 'ContatosController@boletos_gerados')->name('leads.nao-vendidos');
+
+        Route::get('leads/ligar-depois', 'ContatosController@ligar_depois')->name('leads.ligar-depois');
+
+        Route::get('leads/recuperar-boletos', 'ContatosController@recuperar_boletos')->name('leads.recuperar-boletos');
+
+        Route::get('leads/nao-atendidos', 'ContatosController@nao_atendidos')->name('leads.nao_atendidos');
+
+        Route::post('leads/atender-update/{id}', 'ContatosController@atender_update')->name('leads.atender_update');
+
+        Route::post('leads/search', 'ContatosController@search')->name('leads.search');
+
         //Atender atribui as informações de atendente
         Route::get('leads/atender/{id}', 'ContatosController@atender')->name('atender');
 
@@ -53,7 +68,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         //Adicionar Lead
         Route::get('leads/add/', 'ContatosController@add')->name('lead.add');
         Route::put('leads/cadastrar', 'ContatosController@cadastrar')->name('lead.cadastrar');
+
+        #Cancelar Atendimento
+        Route::get('leads/cancelar/{id}', 'ContatosController@atender_cancelar')->name('lead.cancelar');
+
+        #Importações
         Route::get('leads/importar', 'ImportacoesController@index')->name('importar');
+        Route::post('leads/importar/upload', 'ImportacoesController@planilhaImport')
+            ->name('importar.upload');
+
+        #Leads Aprovados
+        Route::get('leads/aprovados/', 'ImportacoesController@aprovados')->name('lead.aprovado');
         //FIM DE LEADS
 
         //COMISSOES

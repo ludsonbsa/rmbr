@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Config;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ConfigController extends Controller
 {
@@ -14,7 +15,10 @@ class ConfigController extends Controller
      */
     public function index()
     {
-        return view('config.config');
+        $produtos = DB::table('tb_produtos')
+            ->selectRaw("*")
+            ->get();
+        return view('config.config', ['produtos' => $produtos]);
     }
 
 
@@ -24,9 +28,9 @@ class ConfigController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function add_produto(Request $request)
     {
-        //
+        var_dump($request);
     }
 
 

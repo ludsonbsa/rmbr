@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
@@ -14,8 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        \Blade::setEchoFormat('e(utf8_decode(%s))');
         Schema::defaultStringLength(191);
-        \Blade::setEchoFormat('e(utf8_encode(%s))');
     }
 
     /**
@@ -28,5 +29,6 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment() !== 'production') {
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
         }
+
     }
 }

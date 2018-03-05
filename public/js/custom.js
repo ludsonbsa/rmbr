@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $('.ui-helper-hidden-accessible').hide();
     $("#loader").hide();
     $( ".tool" ).tooltip({
@@ -13,10 +14,46 @@ $(document).ready(function() {
         var active_tab_class = 'active-tab-menu';
         var the_tab = '.' + a.attr('data-tab');
 
-        $('.tabs-menu ul li a').removeClass(active_tab_class);
+       $('.tabs-menu ul li a').removeClass(active_tab_class);
         a.addClass(active_tab_class);
 
-        $.ajax({
+        if(the_tab == '.tab1'){
+            location.href='http://localhost:8000/admin/leads';
+        }else if(the_tab == '.tab2'){
+            var tab1 = 'http://localhost:8000/admin/leads/vendidos-nao-conferidos';
+        }
+        else if(the_tab == '.tab3'){
+            var tab1 = 'http://localhost:8000/admin/leads/nao-vendidos';
+        }
+        else if(the_tab == '.tab4'){
+            var tab1 = 'http://localhost:8000/admin/leads/boletos-gerados';
+        }
+        else if(the_tab == '.tab5'){
+            var tab1 = 'http://localhost:8000/admin/leads/ligar-depois';
+        }
+        else if(the_tab == '.tab6'){
+            alert("Ainda não existem registros agendados");
+        }
+        else if(the_tab == '.tab7'){
+            var tab1 = 'http://localhost:8000/admin/leads/recuperar-boletos';
+        }
+        else if(the_tab == '.tab8'){
+            $('#loader').fadeIn();
+            var tab1 = 'http://localhost:8000/admin/leads/nao-atendidos';
+        }
+
+        $(".widget").html("<div id='loader'></div>").load(tab1,function(responseTxt, statusTxt, xhr){
+            if(statusTxt == "success")
+
+            if(statusTxt == "error")
+                alert("Error: " + xhr.status + ": " + xhr.statusText);
+        });
+
+        $('#aa-search-input').submit(function(){
+            alert("SUBMIT");
+            return false;
+        });
+        /*$.ajax({
             beforeSend: function() {
                 $('.tabs').fadeOut();
                 $('#loader').fadeIn();
@@ -26,7 +63,7 @@ $(document).ready(function() {
             //$('.tabs').show();
             $('.tabs-content .tabs').fadeOut();
             $(the_tab).fadeIn('fast');
-        });
+        });*/
 
 
         return false;
@@ -350,8 +387,86 @@ $(document).ready(function() {
         });
     });
 
+});
 
+$(document).ready(function(){
+
+    var ligarDepois = $('.ligarD');
+
+    var direitoBrinde = $('.direitoBrinde');
+
+    var kits = $('.kits');
+
+    kits.hide();
+
+
+    var valAtend = $('.pos_atendimento');
+
+
+    if(valAtend.val() == 'Ligar Depois'){
+        ligarDepois.show();
+    }
+
+
+    $('.pos_atendimento').on('change', function() {
+
+        if(this.value == 'Ligar Depois'){
+
+            ligarDepois.fadeIn('slow');
+
+            kits.fadeOut();
+
+            direitoBrinde.fadeOut('slow');
+
+        }else
+
+        if(this.value == 'Vendido'){
+
+            kits.fadeIn('slow');
+
+            ligarDepois.fadeOut('slow');
+
+        }else
+
+        if(this.value == 'Boleto Gerado'){
+
+            kits.fadeIn('slow');
+
+            ligarDepois.fadeOut('slow');
+
+        }else{
+
+            ligarDepois.fadeOut('slow');
+
+            kits.fadeOut();
+
+            direitoBrinde.fadeOut('slow')
+
+        }
+
+
+
+    });
+
+
+
+    $('.kit').on('change', function() {
+
+        if(this.value == 1){
+
+            direitoBrinde.fadeIn('slow');
+
+
+        }else{
+            direitoBrinde.fadeOut('slow');
+
+        }
+
+    })
 
 });
+
+
+
 
 

@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/nprogress.css') }}" rel="stylesheet">
 <!-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> -->
 </head>
 <body>
@@ -27,15 +28,18 @@
     <?php endif; //Checar se está logado ?>
     @yield('content')
 </div>
+<script>
+    /* Progress Bar */
+    function fnProgressBarLoading(){
+        NProgress.start();
+        window.addEventListener("load",function(event){
+            NProgress.done();
+        });
+    }
 
-<!-- Scripts -->
-<script src="{{ asset('js/jquery.js') }}"></script>
+</script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
-
-<!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
-
-
-
+<script src="{{ asset('js/nprogress.js') }}"></script>
 </body>
 </html>

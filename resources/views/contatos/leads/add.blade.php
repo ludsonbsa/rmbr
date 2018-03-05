@@ -38,7 +38,7 @@
 
                 <div class="field-wrap t60">
                     <label>E-mail:</label>
-                    <input type="text" name="email" value="" class="t100" placeholder="">
+                    <input type="email" required name="email" value="" class="t100" placeholder="">
                 </div>
 
 
@@ -58,8 +58,11 @@
                 <div class="field-wrap t50">
                     <label>Produto:</label>
                     <br>
+
                     <select name="nome_do_produto" required>
-                    <option value="Pompoarismo Cátia Damasceno">Pompoarismo Cátia Damasceno</option>
+                    @foreach($produtos as $produto)
+                        <option value="{{$produto->prod_nome_do_produto}}">{{$produto->prod_nome_do_produto}}</option>
+                    @endforeach
                     </select>
                 </div>
 

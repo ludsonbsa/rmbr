@@ -8,8 +8,9 @@
 <div class="container" ng-controller="Contatos">
     <div class="buttons">
 
-        <form action="/" method="get">
-            <input type="search" id="aa-search-input" class="" placeholder="Pesquisar" name="" autocomplete="on" spellcheck="false" ng-keyup="search()" ng-model="query" style="margin-right:-40px; max-width: 70%"/>
+        <form action="{{route('admin.leads.search')}}" method="post">
+            {{csrf_field()}}
+            <input type="search" id="aa-search-input" class="" placeholder="Pesquisar" name="search" autocomplete="on" spellcheck="false" ng-keyup="search()" ng-model="query" style="margin-right:-40px; max-width: 70%"/>
         </form>
 
     </div>
@@ -38,7 +39,7 @@
 
                 </li></a>
             <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
+                <?php echo csrf_field(); ?>
             </form>
             <a href="{{ route('admin.logout') }}" title="MBR Follow Up - Logout" alt="[Logout]" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><li><img src="/images/leads/logout.svg" width="20" class="icone"></li></a>
 

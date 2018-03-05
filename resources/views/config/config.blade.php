@@ -3,16 +3,29 @@
 @section('content')
     <section class="content" style="background:url('/images/bglead.jpg') repeat-x #f0f0f0;">
     <h1 style="font-size:25px; font-weight: bold; margin-bottom:20px;">Configurações do Sistema</h1>
-    <section class="widget" style="min-height:260px;">
+    <section class="widget" style="min-height:400px;">
         <div class="faixa"></div>
         <br>
         <div class="content">
+
+            <div style="display:block; margin-bottom:20px;">
+                <h1 style="font-size:20px; margin-bottom:20px;">Listagem de Produtos</h1>
+                <small style="display:block;margin-bottom:10px;">Produto/Comissão</small>
+                <select>
+                    @foreach($produtos as $prod)
+                    <option>{{$prod->prod_nome_do_produto}}/R${{$prod->prod_valor_comissao}}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <hr />
+            <br />
             <form name="formulario" action="" method="post" enctype="multipart/form-data">
 
                 <div class="field-wrap t60">
                     <label>Produto <span class="produto">(Insira o nome igual está no Hotmart)</span></label>
                     <input type="hidden" name="id" value=""/>
-                    <input type="text" name="nome_do_produto" disabled class="t100" value="" required="required" />
+                    <input type="text" name="nome_do_produto" class="t100" value="" required="required" />
                 </div>
 
                 <div class="field-wrap t30">
