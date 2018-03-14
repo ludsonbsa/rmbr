@@ -22,7 +22,7 @@
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{!!  $errors->first('email') !!}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -60,9 +60,10 @@
                                     {{trans('auth.forgot')}}
                                 </a>
                             </div>
+                    </form>
                         </div>
 
-                    </form>
+
                 </div>
             </div>
         </div>

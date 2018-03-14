@@ -3,7 +3,15 @@
 @section('content')
 
     <section class="content" style="background:url('/images/bglead.jpg') repeat-x #f0f0f0;">
-        {!! Session::get('message')  !!}
+        @if(session()->has('msg'))
+            <div class='alert alert-success'>
+                {{ session('msg') }}
+            </div>
+        @elseif(session()->has('msg-error'))
+            <div class='alert alert-danger'>
+                {{ session('msg-error') }}
+            </div>
+        @endif
 
         <h1 style="font-size:25px; font-weight: bold; margin-bottom:20px;">Leads <a href='#' id="refresher" title="Atualizar Dados"><img src="/images/refresh.svg" width="25" class="refresher" /></a></h1>
 

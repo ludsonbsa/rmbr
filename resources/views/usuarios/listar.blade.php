@@ -43,22 +43,22 @@
 
                     <td class="nome"><img src="/images/avatar.svg" width="40" height="40" class="atendente perfilEdit"><span class="comis">{{$user->user_nome}}</span></td>
 
-                    <td>{{utf8_decode($user->role_name)}}</td>
+                    <td>{!! $user->role_name !!}</td>
 
                     <?php ($user->status == 1 ? $status = 'Ativado' : $status = 'Desativado'); ?>
 
-                    <td>{{$status}}</td>
+                    <td>{!! $status !!}</td>
 
-                    <td><a href="/admin/profile?user="><img src="/images/editar.svg" width="30" class="icone"/></a></td>
+                    <td><a href="{{route('admin.editar.usuario', $user->id)}}"><img src="/images/editar.svg" width="30" class="icone"/></a></td>
 
 
-                    <td> <a href="/admin/users/?" title="">
-
-                            <div class="{{ ucfirst($status)}} "></div></a>
+                    <td>
+                        <a href="/admin/users/?" title="">Ativar/Desativar
+                            <div class="{{ ucfirst($status)}} "></div>
+                        </a>
                     </td>
 
                     <td>
-
                         <a href="/admin/users/?excluir="><img src="/images/excluir.svg" width="33" class="icone" title="Excluir" /></a>
 
                     </td>

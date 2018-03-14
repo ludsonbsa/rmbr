@@ -54,6 +54,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
         Route::post('leads/atender-update/{id}', 'ContatosController@atender_update')->name('leads.atender_update');
 
+        Route::post('leads/editar-update/{id}', 'ContatosController@editar_update')->name('leads.editar-update');
+
         Route::post('leads/search', 'ContatosController@search')->name('leads.search');
 
         //Atender atribui as informações de atendente
@@ -89,6 +91,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         /****************USUÁRIOS****************/
         Route::get('usuarios/listar', 'UserController@index')->name('listar.usuarios');
         Route::put('usuarios/cadastrar', 'UserController@cadastrar')->name('cadastrar.usuarios');
+
+        Route::get('usuarios/editar/{id}', 'UserController@editar')->name('editar.usuario');
+
+        Route::post('usuarios/editar-update/{id}', 'UserController@editar_update')->name('editar-update.usuario');
 
         /*********BRINDES********/
         Route::get('brindes/listar', 'BrindesController@index')->name('listar.brindes');

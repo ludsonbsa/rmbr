@@ -20,7 +20,7 @@
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{!! $errors->first('name') !!}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -34,7 +34,7 @@
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{!! $errors->first('email') !!}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -44,17 +44,17 @@
                             <label for="name" class="col-md-4 control-label">Função</label>
 
                             <div class="col-md-6">
-                                <select name="role" id="">
-                                    <option value="1">Admin</option>
-                                    <option value="2">Responsável</option>
-                                    <option value="3">Atendente</option>
-                                    <option value="4">Suporte</option>
-                                    <option value="5">At. Temporário</option>
+                                <select name="role_name" id="">
+                                    <option value="Admin">Admin</option>
+                                    <option value="Responsável">Responsável</option>
+                                    <option value="Atendente">Atendente</option>
+                                    <option value="Suporte">Suporte</option>
+                                    <option value="At. Temporário">At. Temporário</option>
 
                                 </select>
                                 @if ($errors->has('funcao'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('role') }}</strong>
+                                        <strong>{!! $errors->first('role') !!}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -68,7 +68,7 @@
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong>{!! $errors->first('password') !!}</strong>
                                     </span>
                                 @endif
                             </div>

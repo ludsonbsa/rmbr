@@ -6,6 +6,10 @@ $(document).ready(function() {
         tooltipClass: "tooltip",
     });
 
+    $(".alert-success").click(function(){
+        $(this).fadeOut();
+    });
+
     $("#loader").fadeOut();
 
     $('.tabs-menu ul li a').click(function(){

@@ -9,7 +9,7 @@
     <div class="buttons">
 
         <form action="{{route('admin.leads.search')}}" method="post">
-            {{csrf_field()}}
+            {!!csrf_field()!!}
             <input type="search" id="aa-search-input" class="" placeholder="Pesquisar" name="search" autocomplete="on" spellcheck="false" ng-keyup="search()" ng-model="query" style="margin-right:-40px; max-width: 70%"/>
         </form>
 

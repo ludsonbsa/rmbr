@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Intervention\Image\Image;
 
 class UserController extends Controller
@@ -19,7 +20,6 @@ class UserController extends Controller
 
     public function cadastrar(Request $request)
     {
-        var_dump($request->all());
         if($request->input('role')){
             switch ($request->input('role')){
                 case 1:
@@ -62,15 +62,32 @@ class UserController extends Controller
 
 
 
-    public function show($id)
+    public function editar($id)
     {
-        //
+        $listar = DB::select('SELECT * FROM users WHERE id = '.$id);
+        return view('usuarios.editar', ['usuario' => $listar]);
     }
 
 
-    public function edit($id)
+    public function editar_update(Request $request, $id)
     {
-        //
+        $param = $request->all();
+        $pass = $param['password'];
+
+        if($pass == NULL) {
+            $param = $request->except(['_token', 'sendForm', 'password']);
+            var_dump($request->all());
+        }else{
+            $param = $request->except(['_token','sendForm']);
+            $request['password'] = bcrypt($request['password']);
+            var_dump($request->all());
+        }
+
+        //var_dump($request->all());
+        $param = $request->except(['_token','sendForm']);
+        $user = User::where('id', '=', $id);
+        $user->update($param);
+        //return response()->redirectToRoute('admin.listar.usuarios');
     }
 
 
