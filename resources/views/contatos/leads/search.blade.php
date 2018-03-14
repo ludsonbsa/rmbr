@@ -37,11 +37,11 @@
                             @foreach($contatos as $contato)
 
                                 <tr class="">
-                                    <td class="nome">{{$contato->nome}}</td>
-                                    <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
-                                    <td>{{$contato->email}}</td>
-                                    <td class="meio"><span>{{$contato->insercao_hotmart}}</span></td>
-                                    <td>{{$contato->prioridade}}</td>
+                                    <td class="nome">{!! $contato->nome !!}</td>
+                                    <td>({!! $contato->ddd!!}) {{$contato->telefone}}</td>
+                                    <td>{!! $contato->email!!}</td>
+                                    <td class="meio"><span>{!! $contato->insercao_hotmart!!}</span></td>
+                                    <td>{!!$contato->prioridade!!}</td>
                                     <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
                                     <td class="acao">
                                         <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>

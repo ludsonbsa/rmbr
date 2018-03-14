@@ -20,14 +20,14 @@
             <div class="tabs-menu">
 
                 <ul>
-                    <li><a class="active-tab-menu" href="#1" data-tab="tab1">Atender Leads</a></li>
-                    <li><a href="#2" data-tab="tab2">Vendidos Não Conferidos</a></li>
-                    <li><a href="#3" data-tab="tab3">Não Vendidos</a></li>
-                    <li><a href="#4" data-tab="tab4">Boletos Gerados</a></li>
-                    <li><a href="#5" data-tab="tab5">Ligar Depois</a></li>
-                    <li><a href="#6" data-tab="tab6">Agendado</a></li>
-                    <li><a href="#7" data-tab="tab7">Recuperar Boletos</a></li>
-                    <li><a href="#8" data-tab="tab8">Não Atendidos</a></li>
+                    <li><a class="active-tab-menu" href="#1" data-tab="lead-tab1">Atender Leads</a></li>
+                    <li><a href="#2" data-tab="lead-tab2">Vendidos Não Conferidos</a></li>
+                    <li><a href="#3" data-tab="lead-tab3">Não Vendidos</a></li>
+                    <li><a href="#4" data-tab="lead-tab4">Boletos Gerados</a></li>
+                    <li><a href="#5" data-tab="lead-tab5">Ligar Depois</a></li>
+                    <li><a href="#6" data-tab="lead-tab6">Agendado</a></li>
+                    <li><a href="#7" data-tab="lead-tab7">Recuperar Boletos</a></li>
+                    <li><a href="#8" data-tab="lead-tab8">Não Atendidos</a></li>
 
                 </ul>
             </div> <!-- tabs-menu -->
@@ -40,7 +40,6 @@
                         <table id="myTable" border="0" width="100" >
                             <thead>
                             <tr>
-
                                 <th class="header">Nome</th>
 
                                 <th class="header">Telefone</th>
@@ -57,19 +56,6 @@
 
                             </tr>
                             </thead>
-                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                            <script>
-
-
-                                $(document).ready(function() {
-                                    $.ajax({
-                                        url: '/uploads/em_atendimento.txt',
-                                        async: true
-                                    }).done(function(data) {
-
-                                    });
-                                });
-                            </script>
 
                             @include('modalLead')
                             <tbody>
@@ -103,18 +89,13 @@
                         </table>
                     </div>
                     {!! $contatos->links() !!}
-                </div>
             </div>
+        </div>
 
-            <div class="tab2 tabs">
 
-                <?php //include(route('admin.leads.vendidos-nao-conferidos'))?>
+    </div>
 
-            </div> <!-- .tab2 -->
-
-</div>
-
-</div><!--container de header search -->
+    </div><!--container de header search -->
 </section>
 
 @endsection

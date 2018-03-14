@@ -21,29 +21,45 @@ $(document).ready(function() {
        $('.tabs-menu ul li a').removeClass(active_tab_class);
         a.addClass(active_tab_class);
 
-        if(the_tab == '.tab1'){
-            location.href='http://localhost:8000/admin/leads';
-        }else if(the_tab == '.tab2'){
-            var tab1 = 'http://localhost:8000/admin/leads/vendidos-nao-conferidos';
+        //Verificação de LEAD MENU
+        if(the_tab == '.lead-tab1'){
+            location.href='/admin/leads';
+        }else if(the_tab == '.lead-tab2'){
+            var tab1 = '/admin/leads/vendidos-nao-conferidos';
         }
-        else if(the_tab == '.tab3'){
-            var tab1 = 'http://localhost:8000/admin/leads/nao-vendidos';
+        else if(the_tab == '.lead-tab3'){
+            var tab1 = '/admin/leads/nao-vendidos';
         }
-        else if(the_tab == '.tab4'){
-            var tab1 = 'http://localhost:8000/admin/leads/boletos-gerados';
+        else if(the_tab == '.lead-tab4'){
+            var tab1 = '/admin/leads/boletos-gerados';
         }
-        else if(the_tab == '.tab5'){
-            var tab1 = 'http://localhost:8000/admin/leads/ligar-depois';
+        else if(the_tab == '.lead-tab5'){
+            var tab1 = '/admin/leads/ligar-depois';
         }
-        else if(the_tab == '.tab6'){
+        else if(the_tab == '.lead-tab6'){
             alert("Ainda não existem registros agendados");
         }
-        else if(the_tab == '.tab7'){
-            var tab1 = 'http://localhost:8000/admin/leads/recuperar-boletos';
+        else if(the_tab == '.lead-tab7'){
+            var tab1 = '/admin/leads/recuperar-boletos';
         }
-        else if(the_tab == '.tab8'){
+        else if(the_tab == '.lead-tab8'){
             $('#loader').fadeIn();
-            var tab1 = 'http://localhost:8000/admin/leads/nao-atendidos';
+            var tab1 = '/admin/leads/nao-atendidos';
+        } else
+        //Verificação de Comissões Menu
+        if(the_tab == '.com-tab1'){
+            location.href='/admin/comissoes';
+        }else if(the_tab == '.com-tab2'){
+            var tab1 = '/admin/comissoes/conferidas';
+        }
+        else if(the_tab == '.com-tab3'){
+            var tab1 = '/admin/comissoes/aprovar-manualmente';
+        }
+        else if(the_tab == '.com-tab4'){
+            var tab1 = '/admin/comissoes/comissionar-pendentes';
+        }
+        else if(the_tab == '.com-tab5'){
+            var tab1 = '/admin/comissoes/gerada';
         }
 
         $(".widget").html("<div id='loader'></div>").load(tab1,function(responseTxt, statusTxt, xhr){
@@ -57,37 +73,24 @@ $(document).ready(function() {
             alert("SUBMIT");
             return false;
         });
-        /*$.ajax({
-            beforeSend: function() {
-                $('.tabs').fadeOut();
-                $('#loader').fadeIn();
-            }
-        }).done(function() {
-            $('#loader').fadeOut();
-            //$('.tabs').show();
-            $('.tabs-content .tabs').fadeOut();
-            $(the_tab).fadeIn('fast');
-        });*/
-
-
         return false;
     });
 
-/**TESTE DE MODAL **/
-$('.leads').click(function(){
-    //Pego dados do data-id
-    var dados = $(this).attr('data-id');
-    var email = $(this).attr('data-email');
-    var nome = $(this).attr('data-nome');
-    //Abro a modal
-    $('.modal').fadeIn('500');
-    $('.modal .idlead').text(nome+' <'+email+'> ?');
+        /**TESTE DE MODAL **/
+    $('.leads').click(function(){
+        //Pego dados do data-id
+        var dados = $(this).attr('data-id');
+        var email = $(this).attr('data-email');
+        var nome = $(this).attr('data-nome');
+        //Abro a modal
+        $('.modal').fadeIn('500');
+        $('.modal .idlead').text(nome+' <'+email+'> ?');
 
-    var trocar ='/admin/leads/deletar/'+dados;
-    //Atribuo o URL de delete com o id chamado
-    $('.dataRoute').attr('href', trocar);
-    //Jogar as informações do lead pra dentro dos atributos e jogar no alert
-});
+        var trocar ='/admin/leads/deletar/'+dados;
+        //Atribuo o URL de delete com o id chamado
+        $('.dataRoute').attr('href', trocar);
+        //Jogar as informações do lead pra dentro dos atributos e jogar no alert
+    });
 
 
 
@@ -105,28 +108,7 @@ $('.leads').click(function(){
     });*/
 
     //Tab de comissões -> Levar para a aba específica de aprovar manualmente
-    $('#aprovarmanual').click(function(){
-        var a = $('.tabs-menu ul li:nth-child(3) a');
-        var active_tab_class = 'active-tab-menu';
-        var the_tab = '.' + a.attr('data-tab');
 
-        $('.tabs-menu ul li a').removeClass(active_tab_class);
-        a.addClass(active_tab_class);
-
-        $.ajax({
-            beforeSend: function() {
-                $('.tabs').fadeOut();
-                $('#loader').fadeIn();
-            }
-        }).done(function() {
-            $('#loader').hide();
-            //$('.tabs').show();
-            $('.tabs-content .tabs').fadeOut();
-            $(the_tab).fadeIn('fast');
-        });
-
-        return false;
-    });
 
     //Tab de comissões -> Levar para a aba específica de comissões
     $('#comissionar').click(function(){

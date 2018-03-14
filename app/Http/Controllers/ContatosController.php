@@ -24,8 +24,6 @@ class ContatosController extends Controller
             ->groupBy('t1.email')
             ->orderBy('t1.email','DESC')
             ->paginate(50);
-            //VEr poque quando vc adiciona o lead em adicionar, ele não tá caindo na condição aqui de cima
-
 
         $veratendimento = DB::select('SELECT id FROM tb_contatos WHERE em_atendimento = 1');
 
@@ -41,7 +39,7 @@ class ContatosController extends Controller
      .at_nome_atendente != 'Sistema'")
             ->orderBy('t1.at_final_atendimento','DESC')
             ->get();
-        //VEr poque quando vc adiciona o lead em adicionar, ele não tá caindo na condição aqui de cima
+
         return view('contatos.leads.vendidos-nao-conferidos', ['contatos' => $lead]);
     }
 
@@ -131,8 +129,6 @@ class ContatosController extends Controller
             ->where('tb_contatos.id','=', $id)
             ->get();
 
-
-
         return view('contatos.leads.atender', ['contato' => $query]);
     }
 
@@ -148,12 +144,16 @@ class ContatosController extends Controller
         $param = $request->except(['ligarDepois','ligarDepois-hora','_token','at_inicio_atendimento', 'sendForm']);
         $param['data_ligar_depois'] = date('Y-m-d H:i', strtotime($dia.' '.$horas));
 
+        #Qual email é pra buscar no sistema pra fazer o update
         $contatos = Contatos::where('email', 'LIKE', $email);
-        $up = $contatos->update($param);
 
-        #Precisa fazer um update com LIKE no e-email
+        #Defino qual dado quero que atualize
+        $dados = [ 'pos_atendimento' => $param['pos_atendimento'] ];
+
+        #Assume o pós atendimento marcado para este contato, e todos os outros que tenham o mesmo email
+        $up = $contatos->update($dados);
+
         $idContato = $id;
-
         #Update na tabela de atendimento
         $atendimento = DB::table('tb_atendimento')
             ->insertGetId(

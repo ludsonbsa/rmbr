@@ -28,7 +28,7 @@
             @foreach($contatos as $contato)
 
                 <tr class="">
-                    <td class="nome">{{$contato->nome}}</td>
+                    <td class="nome">{!! $contato->nome !!}</td>
                     <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
                     <td>{{$contato->email}}</td>
                     <td class="meio"><span class="vendido">{{$contato->pos_atendimento}}</span></td>

@@ -61,7 +61,7 @@
 
                     <select name="nome_do_produto" required>
                     @foreach($produtos as $produto)
-                        <option value="{{$produto->prod_nome_do_produto}}">{{$produto->prod_nome_do_produto}}</option>
+                        <option value="{!! $produto->prod_nome_do_produto !!}">{!!$produto->prod_nome_do_produto!!}</option>
                     @endforeach
                     </select>
                 </div>
