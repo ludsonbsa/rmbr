@@ -8,28 +8,27 @@
                 <th class="header">Mes/Ano</th>
                 <th class="header">Quantidade de Vendas</th>
                 <th class="header">Soma de Vendas</th>
-                <!--<th class="header">Pagamento</th>-->
             </tr>
             </thead>
             <tbody>
             <form action="" method="post">
 
-                @foreach($contato as $contato)
-                    <?php
-                $qtde = $contato['COUNT(t1.com_id_user)'];
+                @foreach($contatos as $contato)
+                <?php
+                $qtde = $contato->count_id_user;
 
-                $soma = $contato['SUM(t1.com_final)'];
+                $soma = $contato->soma_final;
 
-                $final = $contato['com_final'];
+                $final = $contato->com_final;
                 $calc = $qtde*$final;
                 ?>
                 <tr class="odd">
 
-                    <td><img src="<?=HOMEP;?><?php if(isset($contato['avatar'])){ echo $contato['avatar'];} else{ echo 'avatar/avatar.svg'; } ; ?>" width="40" height="40" class="atendente perfilEdit" alt="[Avatar]" /> <span class="comis"><?php echo $contato['user_nome'];?></span></td>
-                    <td><?php echo $contato['com_produto'];?></td>
-                    <td class="meio"><span><?php echo $contato['com_mes'].'/'.$contato['com_ano'];?></span></td>
-                    <td><?php echo $contato['COUNT(t1.com_id_user)'];?></td>
-                    <td class="meio"><span class="vendido"><?php echo 'R$ '.$soma;?></span></td>
+                    <td><img src="{!! $contato->avatar !!}" width="40" height="40" class="atendente perfilEdit" alt="[Avatar]" /> <span class="comis">{!!  $contato->user_nome !!}</span></td>
+                    <td>{!! $contato->com_produto !!}</td>
+                    <td class="meio"><span>{!! $contato->com_mes !!} / {!! $contato->com_ano !!}</span></td>
+                    <td>{!! $contato->count_id_user !!}</td>
+                    <td class="meio"><span class="vendido">R$ {!! $soma !!}</span></td>
                     <!--<td>
 
                       <select name="pago">

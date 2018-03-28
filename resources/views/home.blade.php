@@ -2,6 +2,6 @@
 
 @section('content')
 
-    Essa é só a home mano
+    Essa é só a home
 
 @endsection

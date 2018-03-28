@@ -19,13 +19,11 @@
                 {!! csrf_field() !!}
                 <div class="field-wrap t30">
 
-                    <img src="{{$user->avatar}}" width="308" height="308" class="perfilEdit" />
+                    <img src="{{$user->avatar}}" width="308" height="308" class="perfilEdit avatar" />
 
                     <label for="upload" id="forup" class="forup">Selecionar um arquivo &#187;</label>
 
                     <input type="file" name="avatar" id="upload" class="upload" style="display:none;">
-
-
 
                     <img src="/images/alerticon.png" style="margin:8px 5px; float:left"/>
 
@@ -37,7 +35,7 @@
 
                     <br>
 
-                    <p style="margin-left:12px;">Seu nível de usuário atual é: {{$user->role_name}} <span style="color:#ff7659"></span> <img src="/images/nivel.svg" width="16" style="margin-bottom:-5px; margin-left:10px; position:relative"/></p>
+                    <p style="margin-left:12px;">Seu nível de usuário atual é: {!!$user->role_name!!} <span style="color:#ff7659"></span> <img src="/images/nivel.svg" width="16" style="margin-bottom:-5px; margin-left:10px; position:relative"/></p>
 
 
 
@@ -45,7 +43,7 @@
 
                         <p>Nome Completo:</p>
 
-                        <input type="text" name="user_nome" class="t100" required value="{{$user->user_nome}}" placeholder="">
+                        <input type="text" name="user_nome" class="t100" required value="{!! $user->user_nome  !!}" placeholder="">
 
                     </div>
 
@@ -104,10 +102,15 @@
                                 {{ $roleName = "Aux. Admin" }}
                                 @break
 
+                                @case(6)
+                                {{ $roleValue = 6 }}
+                                {{ $roleName = "At. Temporário" }}
+                                @break
+
 
                             @endswitch
 
-                            <option selected="selected" value="{{$roleName}}"> {!! $roleName; !!}</option>
+                            <option selected="selected" value="{!! $roleName !!}"> {!! $roleName; !!}</option>
 
                             <option disabled>================</option>
 
@@ -120,6 +123,8 @@
                             <option value="Suporte">Suporte</option>
 
                             <option value="Aux. Admin">Aux. Admin</option>
+
+                            <option value="At. Temporário">At. Temporário</option>
 
                         </select>
 

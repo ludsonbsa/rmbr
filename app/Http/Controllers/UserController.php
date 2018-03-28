@@ -6,6 +6,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Image;
 
 class UserController extends Controller
@@ -17,9 +19,15 @@ class UserController extends Controller
         return view('usuarios.listar', ['usuarios' => $listar]);
     }
 
+    public function add(){
+        return view('usuarios.add');
+    }
+
 
     public function cadastrar(Request $request)
     {
+        $param = $request->all();
+
         if($request->input('role')){
             switch ($request->input('role')){
                 case 1:
@@ -39,21 +47,31 @@ class UserController extends Controller
                     break;
 
                 case 5:
+                    $request->merge(array('role_name' => "Aux. Admin"));
+                    break;
+
+                case 6:
                     $request->merge(array('role_name' => "At. Temporário"));
                     break;
             }
+
         }
 
-        //var_dump($request->input('role_name'));
-
-        /*if($request->hasFile('avatar')){
+        if($request->hasFile('avatar')){
+            $file = Input::file('avatar');
             $avatar = $request->file('avatar');
             $filename = time() . '.' .$avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300,300)->save(public_path('/uploads/avatars/'.$filename));
-            $user = Auth::user();
-            $user->avatar = $filename;
-            $user->save();
-        }*/
+            $destinationPath = public_path('/uploads/avatar/');
+            try{
+                $file->move($destinationPath, $filename);
+
+            }catch (FileNotFoundException $e){
+                echo $e;
+            }
+            $param['avatar'] = '/uploads/avatar/'.$filename;
+        }else{
+            $param = $request->except(['_token','sendForm','avatar']);
+        }
 
         User::create($request->all());
         return response()->redirectToRoute('admin.listar.usuarios');
@@ -74,31 +92,58 @@ class UserController extends Controller
         $param = $request->all();
         $pass = $param['password'];
 
-        if($pass == NULL) {
-            $param = $request->except(['_token', 'sendForm', 'password']);
-            var_dump($request->all());
+        $param = $request->except(['_token','sendForm']);
+        $validator = Validator::make($request->all(), [
+            'file' => 'max:500000',
+        ]);
+
+
+        if($request->hasFile('avatar')){
+            $file = Input::file('avatar');
+            $avatar = $request->file('avatar');
+            $filename = time() . '.' .$avatar->getClientOriginalExtension();
+            $destinationPath = public_path('/uploads/avatar/');
+            try{
+                $file->move($destinationPath, $filename);
+
+            }catch (FileNotFoundException $e){
+                echo $e;
+            }
+            $param['avatar'] = '/uploads/avatar/'.$filename;
         }else{
-            $param = $request->except(['_token','sendForm']);
-            $request['password'] = bcrypt($request['password']);
-            var_dump($request->all());
+            $param = $request->except(['_token','sendForm','avatar']);
         }
 
-        //var_dump($request->all());
-        $param = $request->except(['_token','sendForm']);
+
         $user = User::where('id', '=', $id);
         $user->update($param);
-        //return response()->redirectToRoute('admin.listar.usuarios');
+        return response()->redirectToRoute('admin.listar.usuarios');
     }
 
 
-    public function update(Request $request, $id)
+    public function status($status, $id)
     {
-        //
+        if($status == 'desativado'){
+            $param = ['status' => 1];
+
+            $user = User::where('id', '=', $id);
+            $user->update($param);
+
+        }elseif($status == 'ativado'){
+            $param = ['status' => 0];
+            $user = User::where('id', '=', $id);
+            $user->update($param);
+        }
+
+        return response()->redirectToRoute('admin.listar.usuarios');
     }
 
 
-    public function destroy($id)
+    public function excluir($id)
     {
-        //
+        $user = User::where('id', '=', $id);
+        User::destroy($id);
+
+        return response()->redirectToRoute('admin.listar.usuarios');
     }
 }

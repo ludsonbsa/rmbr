@@ -1,5 +1,7 @@
 <?php
-
+use App\Http\Middleware\Admin;
+use App\Http\Middleware\Atendente;
+use App\Http\Middleware\Suporte;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,6 @@
 */
 
 Route::get('/', 'Auth\LoginController@showLoginForm');
-
 
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
@@ -33,9 +34,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
     $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
-    Route::get('leads/listar', 'Contatos@listar');
-
-    Route::group(['middleware' => 'can:admin'], function(){
         Route::get('home', 'ConfigController@dashboard')->name('home');
         //LEADS
         Route::get('leads', 'ContatosController@index')->name('leads');
@@ -76,6 +74,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
         #Importações
         Route::get('leads/importar', 'ImportacoesController@index')->name('importar');
+        Route::get('leads/recuperacao', 'ImportacoesController@recuperacao')->name('recuperacao');
         Route::post('leads/importar/upload', 'ImportacoesController@planilhaImport')
             ->name('importar.upload');
 
@@ -92,22 +91,35 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
         Route::get('comissoes/comissionar-pendentes', 'ComissoesController@comissionar_pendentes')->name('comissoes.comissionar_pendentes');
 
+        Route::get('comissoes/relatorio', 'ComissoesController@relatorio')->name('comissoes.relatorio');
+
         Route::get('comissoes/geradas', 'ComissoesController@geradas')->name('comissoes.geradas');
 
         Route::get('comissoes/aprovar/{id}', 'ComissoesController@aprovar')->name('comissoes.aprovar');
 
         Route::get('comissoes/reprovar/{id}', 'ComissoesController@reprovar')->name('comissoes.reprovar');
 
+        Route::post('comissoes/comissionar', 'ComissoesController@comissionar')->name('comissoes.comissionar');
+
+        Route::get('comissoes/relatorio-pendente', 'ComissoesController@relatorio_comissinar_pendente')->name('comissoes.relatorio-pendente');
 
         /****************USUÁRIOS****************/
         Route::get('usuarios/listar', 'UserController@index')->name('listar.usuarios');
         Route::put('usuarios/cadastrar', 'UserController@cadastrar')->name('cadastrar.usuarios');
 
+        Route::get('usuarios/add', 'UserController@add')->name('add.usuarios');
+
         Route::get('usuarios/editar/{id}', 'UserController@editar')->name('editar.usuario');
 
         Route::post('usuarios/editar-update/{id}', 'UserController@editar_update')->name('editar-update.usuario');
 
-        /*********BRINDES********/
+        Route::get('usuarios/status/{status}/{id}', [
+            'uses' => 'UserController@status',
+        ])->name('status');
+
+        Route::get('usuarios/excluir/{id}', 'UserController@excluir')->name('excluir');
+
+        /********* BRINDES ********/
         Route::get('brindes/listar', 'BrindesController@index')->name('listar.brindes');
         Route::get('brindes/add', 'BrindesController@add')->name('brindes.add');
         Route::put('brindes/cadastrar', 'BrindesController@cadastrar')->name('brindes.cadastrar');
@@ -116,8 +128,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         /*********CONFIG********/
         Route::get('config', 'ConfigController@index')->name('config');
         Route::get('dashboard', 'ConfigController@dashboard')->name('dashboard');
-    });
 
+    /****************************************SUPORTE********************************************/
 
 });
 

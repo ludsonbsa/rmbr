@@ -50,7 +50,6 @@
                         <option value="Chat">Chat</option>
                         <option value="E-mail">E-mail</option>
                         <option value="Facebook">Facebook</option>
-                        <!--<option value="Pr�-Checkout">Pr�-Checkout</option> -->
                     </select>
                 </div>
 

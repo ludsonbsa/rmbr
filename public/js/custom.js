@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
     $('.ui-helper-hidden-accessible').hide();
     $("#loader").hide();
@@ -59,8 +59,23 @@ $(document).ready(function() {
             var tab1 = '/admin/comissoes/comissionar-pendentes';
         }
         else if(the_tab == '.com-tab5'){
-            var tab1 = '/admin/comissoes/gerada';
+            var tab1 = '/admin/comissoes/geradas';
         }
+
+        //Verificação de Usuário
+        if(the_tab == '.tab1-user'){
+            location.href='/admin/usuarios/listar';
+        }else if(the_tab == '.tab2-user'){
+            var tab1 = '/admin/usuarios/add';
+        }
+
+        //Verificação de Importação
+        if(the_tab == '.tab1-imp'){
+            location.href='/admin/leads/importar';
+        }else if(the_tab == '.tab2-imp'){
+            var tab1 = '/admin/leads/recuperacao';
+        }
+
 
         $(".widget").html("<div id='loader'></div>").load(tab1,function(responseTxt, statusTxt, xhr){
             if(statusTxt == "success")
@@ -94,12 +109,11 @@ $(document).ready(function() {
 
 
 
-
-
     $('button[data-dismiss=modal]').click( function(e){
         e.preventDefault();
         $('.modal').fadeOut();
     });
+
 
     /**TESTE DE MODAL **/
     /*$('.tabs-menu ul li:nth-child(3) a').click(function(){
@@ -195,8 +209,28 @@ $(document).ready(function() {
         return false;
     });
 
+
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('.avatar').attr('src', e.target.result);
+                $('.avatar').fadeIn('slow');
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#upload").click(function(){
+        $('.avatar').fadeOut('fast');
+    });
+
     $("#upload").change(function() {
-        $('#forup').html($('input[type="file"]').val());
+        readURL(this);
+        var arq = this.files[0];
+        $(this).val(arq.name);
     });
 
 

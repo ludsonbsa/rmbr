@@ -155,7 +155,7 @@
 
                         <br>
 
-                        <select name="pos_atendimento" class="pos_atendimento">
+                        <select name="pos_atendimento" class="pos_atendimento" required>
 
                             @if($cont->pos_atendimento != null)
                                 {!!'<option>'.$cont->pos_atendimento.'</option>'!!}
@@ -182,8 +182,6 @@
                         </select>
 
                     </div>
-
-
 
 
 

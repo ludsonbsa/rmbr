@@ -11,9 +11,9 @@
             <div style="display:block; margin-bottom:20px;">
                 <h1 style="font-size:20px; margin-bottom:20px;">Listagem de Produtos</h1>
                 <small style="display:block;margin-bottom:10px;">Produto/Comissão</small>
-                <select>
+                <select name="produtos">
                     @foreach($produtos as $prod)
-                    <option>{{$prod->prod_nome_do_produto}}/R${{$prod->prod_valor_comissao}}</option>
+                    <option value="{{$prod->prod_valor_comissao}}">{!! $prod->prod_nome_do_produto !!} / R${{$prod->prod_valor_comissao}}</option>
                     @endforeach
                 </select>
             </div>

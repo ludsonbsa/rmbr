@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class LoginController extends Controller
@@ -28,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/admin/dashboard';
 
     /**
      * Create a new controller instance.
@@ -41,11 +42,6 @@ class LoginController extends Controller
 
     }
 
-    //Redirecionar URLS, definir os ROLES e direcionar
-    public function redirectTo(){
-        return \Auth::user()->role == User::ROLE_ADMIN ? '/admin/home' : '/home';
-    }
-
     public function logout(Request $request)
     {
         $this->guard()->logout();
@@ -53,5 +49,11 @@ class LoginController extends Controller
         $request->session()->regenerate();
 
         return redirect($request->is('admin/*')?'/admin/login':'login');
+    }
+
+    #Override method para conferir STATUS = 1 ou seja, ativo.
+    protected function credentials(Request $request)
+    {
+        return ['email'=>$request->{$this->username()},'password' => $request->password, 'status' => 1];
     }
 }

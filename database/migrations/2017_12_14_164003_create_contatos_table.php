@@ -33,7 +33,7 @@ class CreateContatosTable extends Migration
             $table->string('recorrencia', 45)->nullable();
             $table->string('data_de_venda', 45)->nullable();
             $table->string('data_de_confirmacao', 45)->nullable();
-            $table->string('status', 45)->nullable();
+            $table->string('status', 45);
             $table->string('nome', 255);
             $table->string('documento_usuario', 45)->nullable();
             $table->string('email', 145)->nullable();

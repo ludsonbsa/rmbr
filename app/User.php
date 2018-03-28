@@ -12,7 +12,8 @@ class User extends Authenticatable
     const ROLE_RESPONSAVEL = 2;
     const ROLE_ATENDENTE = 3;
     const ROLE_SUPORTE = 4;
-    const ROLE_AT_TEMPORARIO = 5;
+    const ROLE_AUX_ADMIN = 5;
+    const ROLE_AT_TEMPORARIO = 6;
     /**
      * The attributes that are mass assignable.
      *
@@ -35,6 +36,8 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($password);
     }
+
+
 
     public function setRememberToken($value)
     {

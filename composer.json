@@ -17,6 +17,7 @@
         "laravelcollective/html": "^5.2.0",
         "maatwebsite/excel": "^2.1",
         "pusher/pusher-php-server": "^3.0",
+        "setasign/fpdf": "1.8.1",
         "wilgucki/csv": "^0.6.2"
     },
     "require-dev": {
@@ -32,7 +33,8 @@
             "app/Helpers/functions.php",
             "app/Helpers/PlanilhaImport.php",
             "app/Helpers/CSV.php",
-            "app/Helpers/CSVLine.php"
+            "app/Helpers/CSVLine.php",
+            "app/Helpers/Permissoes.php"
 
         ],
         "classmap": [

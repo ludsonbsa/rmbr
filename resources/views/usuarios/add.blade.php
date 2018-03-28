@@ -7,14 +7,14 @@
 
         <form name="formulario" action="{{route('admin.cadastrar.usuarios')}}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_method" value="put">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            {!! csrf_field() !!}
             <input type="hidden" name="role_name" value="">
 
             <div class="field-wrap t30">
-                <img src="/images/avatar.svg" width="308" height="308" class="perfilEdit" />
+                <img src="/images/avatar.svg" width="308" height="308" class="perfilEdit avatar" />
 
                 <label for="upload" id="forup" class="forup">Selecionar um arquivo &#187;</label>
-                <input type="file" name="avatar" id="upload" class="upload">
+                <input type="file" name="avatar" id="upload" class="upload" style="display:none;">
 
                 <img src="/images/alerticon.png" style="margin:8px 5px; float:left"/>
                 <p style="color:#ccc" class="t100">A imagem escolhida deve estar no formato JPG, PNG ou GIF, com no máximo 1 MB de tamanho.</p>
@@ -82,5 +82,30 @@
 </section>
 
 
+<script>
+    $(function(){
+        function readURL(input) {
 
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.avatar').attr('src', e.target.result);
+                    $('.avatar').fadeIn('slow');
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#upload").click(function(){
+            $('.avatar').fadeOut('fast');
+        });
+
+        $("#upload").change(function() {
+            readURL(this);
+            var arq = this.files[0];
+            $(this).val(arq.name);
+        });
+    });
+</script>
 

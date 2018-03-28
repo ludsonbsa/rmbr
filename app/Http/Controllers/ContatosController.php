@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contatos;
+use App\Helpers\Permissoes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -17,15 +18,15 @@ class ContatosController extends Controller
     public function index(Request $request){
 
         $lead = DB::table('tb_contatos as t1')
-            ->selectRaw("t1.id,  t1.data_de_venda, t1.nome, t1.ddd, t1.telefone, t1.email, t1.obs_followup, t1.observacao, t1.status, t1.documento_usuario, t1.em_atendimento, t1.insercao_hotmart, t1.prioridade, t1.id_responsavel, t2.user_nome")
+            ->selectRaw("t1.id, t1.data_de_venda, t1.nome,t1.ddd, t1.telefone, t1.email, t1.obs_followup, t1.observacao, t1.status, t1.documento_usuario, t1.em_atendimento, t1.insercao_hotmart, t1.prioridade, t1.id_responsavel, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereNull('t1.aprovado')
             ->whereNull('t1.pos_atendimento')
+            ->where('t1.status','!=', 'Boleto Impresso')
+            ->where('t1.status','!=', 'Expirado')
             ->groupBy('t1.email')
-            ->orderBy('t1.email','DESC')
+            ->orderBy('t1.data_de_venda','ASC')
             ->paginate(50);
-
-        $veratendimento = DB::select('SELECT id FROM tb_contatos WHERE em_atendimento = 1');
 
         return view('contatos.leads.leads', ['contatos' => $lead]);
     }
@@ -33,7 +34,7 @@ class ContatosController extends Controller
     public function vendidos_nao_conferidos(){
 
         $lead = DB::table('tb_atendimento as t1')
-            ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd, t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento")
+            ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd, t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento, t2.id_responsavel")
             ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
             ->whereRaw("t2.pos_atendimento = 'Vendido' AND t2.conferencia = 0 AND t1
      .at_nome_atendente != 'Sistema'")
@@ -47,7 +48,7 @@ class ContatosController extends Controller
     public function nao_vendidos(){
         $lead = DB::table('tb_atendimento as t1')
             ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.ddd, t2.nome, t2
-.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento")
+.telefone, t2.email, t2.id_responsavel, t2.status, t2.insercao_hotmart, t2.pos_atendimento")
             ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
             #Tem que pegar o charset que veio do modelo antigo, e o novo
             ->whereRaw("t2.pos_atendimento IN('NÃ£o Vendido', 'Não Vendido')")
@@ -59,7 +60,7 @@ class ContatosController extends Controller
 
     public function boletos_gerados(){
         $lead = DB::table('tb_atendimento as t1')
-            ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd, t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento")
+            ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd, t2.id_responsavel, t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento")
             ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
             ->whereRaw("t2.conferencia = 0 AND t2.pos_atendimento = 'Boleto Gerado'")
             ->orderBy('t1.at_final_atendimento','DESC')
@@ -71,7 +72,7 @@ class ContatosController extends Controller
     public function ligar_depois(){
         $lead = DB::table('tb_atendimento as t1')
             ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t1.at_data_ligar_depois, t2
-.id, t2.nome, t2.telefone, t2.email, t2.observacao, t2.obs_followup, t2.status, t2.insercao_hotmart, t2.ddd, t2.pos_atendimento, t2.data_ligar_depois")
+.id, t2.nome, t2.telefone, t2.email, t2.observacao, t2.id_responsavel, t2.obs_followup, t2.status, t2.insercao_hotmart, t2.ddd, t2.pos_atendimento, t2.data_ligar_depois")
             ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
             ->whereRaw("t2.pos_atendimento = 'Ligar Depois' AND t1.at_nome_atendente != 'Sistema'")
             ->orderBy('data_ligar_depois','ASC')
@@ -94,7 +95,7 @@ class ContatosController extends Controller
 
     public function nao_atendidos(){
         $lead = DB::table('tb_atendimento as t1')
-            ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.ddd, t2.nome, t2.telefone, t2.email, t2.status, t2.obs_followup, t2.insercao_hotmart, t2.pos_atendimento")
+            ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.ddd, t2.nome, t2.telefone, t2.id_responsavel, t2.email, t2.status, t2.obs_followup, t2.insercao_hotmart, t2.pos_atendimento")
             ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
             ->whereRaw("t2.pos_atendimento IN('Boleto NÃ£o Atendido', 'NÃ£o Atendeu') OR t2.pos_atendimento IN('Boleto Não Atendido', 'Não Atendeu')")
             ->orderBy('t1.at_final_atendimento','DESC')
@@ -220,10 +221,26 @@ class ContatosController extends Controller
     }
 
     public function cadastrar(Request $request){
-        if(Contatos::create($request->all())){
+        $param = $request->all();
+        $email = $param['email'];
+
+        #Fazer select de e-mail, se existir email notificar usuário de que não pode ter registro de email duplicado no sistema
+
+        $lead = DB::table('tb_contatos')
+            ->selectRaw("id, email")
+            ->whereRaw("email LIKE '%{$email}%'")
+            ->get();
+
+        $retorno = $lead->count();
+
+        if($retorno == 0){
+            Contatos::create($request->all());
             $msg = '<div class="alert alert-success"><strong>Lead</strong> cadastrado com sucesso</div>';
         }else{
-            $msg = '<div class="alert alert-danger"><strong>Lead</strong> não cadastrado</div>';
+            foreach($lead as $reg);
+            $id = $reg->id;
+            $msg = '<div class="alert alert-danger"><strong></strong> Já existe um registro com este e-mail, clique aqui para atender
+ este registro: <a href='.route('admin.atender', $id).'>'.$email.'</a></div>';
         }
 
         return response()->redirectToRoute('admin.lead.add')->with('message',$msg);

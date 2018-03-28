@@ -22,6 +22,11 @@ class ImportacoesController extends Controller
         return view('contatos.importar');
     }
 
+    public function recuperacao()
+    {
+        return view('contatos.recuperacao');
+    }
+
     private function setArquivo($arquivo){
         return $this->arquivo = $arquivo;
     }
@@ -39,8 +44,6 @@ class ImportacoesController extends Controller
             if (!is_dir($logicpath)) {
                 mkdir($logicpath, 0777, true);
             }
-
-            $this->aprovados();
 
             //Move planilha pra pasta de planilhas
             $file = Input::file('planilha');
@@ -74,7 +77,7 @@ class ImportacoesController extends Controller
 
                         try {
                             $results = DB::table('tb_contatos')
-                                ->whereRaw("email = '{$email}' AND (status != 'Aprovado' OR status != 'Completo') AND (pos_atendimento IS NULL)")->get();
+                                ->whereRaw("email = '{$email}' AND (status != 'Aprovado' OR status != 'Completo') AND (pos_atendimento IS NULL) AND completo = 0")->get();
 
                             foreach ($results as $v):
                                 $dad = [
@@ -97,7 +100,10 @@ class ImportacoesController extends Controller
 
                 #Executa query que insere os dados de planilha no banco de dados
                 $this->queryHotmart(Auth::id());
+                #Verifica Aprovados
                 $this->aprovados();
+                #verifica Pos-atendimento
+                $this->verificapa();
 
             }else{
                 return back()->with('msg-error',"Permitido somente arquivos em .CSV");
@@ -123,7 +129,7 @@ class ImportacoesController extends Controller
 
     public function aprovados(){
         #Adicionar linhas do banco de dados no arquivo CSV
-        $aprovados = DB::select("SELECT nome_do_produto, nome, documento_usuario, status, email, transacao FROM tb_contatos WHERE status = 'aprovado' OR status = 'completo'");
+        $aprovados = DB::select("SELECT nome_do_produto, nome, documento_usuario, status, email, transacao FROM tb_contatos WHERE (status = 'aprovado' OR status = 'completo') AND completo = 0");
 
         $csv = new Helpers\CSV();
         #Instanciar gerador CSV*/
@@ -147,12 +153,12 @@ class ImportacoesController extends Controller
             $email = $data[4];
 
             $query = "SELECT id ,documento_usuario, email, status
-        FROM tb_contatos WHERE documento_usuario LIKE '%{$cpf}%' AND (status = 'Aprovado' OR status = 'completo')";
+        FROM tb_contatos WHERE documento_usuario LIKE '%{$cpf}%' AND (status = 'Aprovado' OR status = 'completo') AND completo = 0";
 
             #Se vazio CPF, então busca por e-mail
             if (empty($cpf)) {
                 $query = "SELECT id, documento_usuario, email, status
-        FROM tb_contatos WHERE email LIKE '%{$email}%' AND (status = 'aprovado' OR status = 'completo')";
+        FROM tb_contatos WHERE email LIKE '%{$email}%' AND (status = 'aprovado' OR status = 'completo') AND completo = 0";
 
             }
 
@@ -207,11 +213,82 @@ class ImportacoesController extends Controller
         }
         #Precisa rever isso aqui, tá muito pesado os dados
         /**/
-        #$this->verificapa();
+
         #$this->atribuirPosAt();
         //REZA!
         return $this;
     }
+
+    public function verificapa(){
+        #Função que registra em um CSV Todos os pos_atendimentos EXISTENTES, que ja recebeu atendimento pela atendente.
+        #BUSCANDO OS REGISTROS
+        $query = "SELECT id, documento_usuario, email, telefone, nome FROM tb_contatos WHERE pos_atendimento IS NOT NULL AND completo = 0";
+
+        try {
+            $resultado = DB::select($query);
+        } catch (\PDOException $e) {
+            return $e->getCode() . " - " . $e->getMessage() . " - " . $e->getLine();
+        }
+
+        //Instanciar gerador CSV
+        $csv = new Helpers\CSV();
+
+        //Adicionar linhas do banco de dados no arquivo CSV
+        foreach ($resultado as $registro):
+            $csv
+                ->addLine(new Helpers\CSVLine($registro->id, $registro->nome, $registro->documento_usuario, $registro->email, $registro->telefone));
+        endforeach;
+
+        return $csv->save("uploads/planilhas/pos_atendimento.csv");
+    }
+
+    /*public function atribuirPosAt(){
+        #Modificar
+        $handle = fopen('uploads/planilhas/pos_atendimento.csv', "r");
+
+        $cpfs = array();
+        $emails = array();
+        $telefones = array();
+
+        while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+            $cpf = $data[2];
+            $email = $data[3];
+            $telefone = $data[4];
+
+            $bus = "SELECT id, documento_usuario, email, telefone, nome
+        FROM tb_contatos
+        WHERE documento_usuario LIKE '%{$cpf}%' AND pos_atendimento IS NULL";
+
+            if (empty($cpf)) {
+                $bus = "SELECT id, documento_usuario, email, telefone, nome
+        FROM tb_contatos
+        WHERE email LIKE '%{$email}%' AND pos_atendimento IS NULL";
+            }
+            if (empty($email)) {
+                $bus = "SELECT id, documento_usuario, email, telefone, nome
+        FROM tb_contatos
+        WHERE telefone = '{$telefone}' AND pos_atendimento IS NULL";
+            }
+
+            $this->busca = $bus;
+
+            $result = $bus = DB::select($bus);
+
+            foreach ($result as $re):
+
+                $upd = "UPDATE tb_contatos SET pos_atendimento = 1 WHERE id ={$re->id}";
+                $this->pdo->query($upd);
+
+                array_push($cpfs, $re['documento_usuario']);
+                array_push($emails, $re['email']);
+                array_push($telefones, $re['telefone']);
+
+            endforeach;
+        }
+
+
+        fclose($handle);
+    }*/
 
     public function planilhaRecuperacao(){
 

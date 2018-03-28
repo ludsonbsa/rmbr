@@ -5,6 +5,7 @@
         <th class="header">CPF</th>
         <th class="header">Telefone</th>
         <th class="header">E-mail</th>
+        <th class="header">Produto</th>
         <th class="header">Responsável</th>
         <th class="header" colspan="2">Ações</th>
     </tr>
@@ -17,6 +18,7 @@
         <td>{!! $contato->documento_usuario !!}</td>
         <td>{!! $contato->telefone !!}</td>
         <td>{!! $contato->email !!}</td>
+        <td>{!! $contato->nome_do_produto !!}</td>
         <td>{!! $contato->user_nome !!}</td>
         <td>
             <a href="#" class="reprovar" data-id="{!! $contato->id !!}"><img src="/images/reprovar.svg" title="Reprovar" alt="[Reprovar]" class="icone" width="50" /></a>
@@ -32,7 +34,7 @@
 
 @if($contagem != 0)
 <div class="field-wrap" style="float: right;">
-    <a href="?relatorio=1" class="enviar"><button class="enviar">Gerar PDF</button></a>
+    <a href="{{route('admin.comissoes.relatorio')}}" class="enviar"><button class="enviar">Gerar PDF</button></a>
 </div>
 @endif
 
