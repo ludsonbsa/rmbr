@@ -76,6 +76,22 @@ $(function() {
             var tab1 = '/admin/leads/recuperacao';
         }
 
+        //Verificação de Brinde Menu
+        if(the_tab == '.brinde-tab1'){
+            location.href='/admin/brindes';
+        }else if(the_tab == '.brinde-tab2'){
+            var tab1 = '/admin/comissoes/conferidas';
+        }
+        else if(the_tab == '.brinde-tab3'){
+            var tab1 = '/admin/comissoes/aprovar-manualmente';
+        }
+        else if(the_tab == '.brinde-tab4'){
+            var tab1 = '/admin/comissoes/comissionar-pendentes';
+        }
+        else if(the_tab == '.brinde-tab5'){
+            var tab1 = '/admin/comissoes/geradas';
+        }
+
 
         $(".widget").html("<div id='loader'></div>").load(tab1,function(responseTxt, statusTxt, xhr){
             if(statusTxt == "success")

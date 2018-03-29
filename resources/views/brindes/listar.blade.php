@@ -8,11 +8,11 @@
         <div class="tabs-content">
             <div class="tabs-menu">
                 <ul>
-                    <li><a class="active-tab-menu" href="#" data-tab="tab1">Conferir Brinde</a></li>
-                    <li><a href="#" data-tab="tab2">Resultado de Conferência</a></li>
-                    <li><a href="#" data-tab="tab3">Aprovar Manualmente</a></li>
-                    <li><a href="#" data-tab="tab4">Gerar Etiquetas Pendentes</a></li>
-                    <li><a href="#" data-tab="tab5">Baixar Etiquetas</a></li>
+                    <li><a class="active-tab-menu" href="#" data-tab="brinde-tab1">Conferir Brinde</a></li>
+                    <li><a href="#" data-tab="brinde-tab2">Resultado de Conferência</a></li>
+                    <li><a href="#" data-tab="brinde-tab3">Aprovar Manualmente</a></li>
+                    <li><a href="#" data-tab="brinde-tab4">Gerar Etiquetas Pendentes</a></li>
+                    <li><a href="#" data-tab="brinde-tab5">Baixar Etiquetas</a></li>
                 </ul>
             </div> <!-- tabs-menu -->
 
@@ -37,18 +37,18 @@
                         @foreach($brindes as $brinde)
                         <tr class="odd">
 
-                            <td class="nome">{{$brinde->nome}}</td>
+                            <td class="nome">{!!$brinde->nome!!}</td>
                             <td>{{$brinde->telefone}}</td>
-                            <td>{{$brinde->insercao_hotmart}}</td>
-                            <td>{{$brinde->email}}</td>
-                            <td>{{$brinde->user_nome}}</td>
+                            <td>{!!$brinde->insercao_hotmart!!}</td>
+                            <td>{!!$brinde->email!!}</td>
+                            <td>{!!$brinde->user_nome!!}</td>
 
                             <td class="acao">
                                 <a href="/admin/brindes/editar?id=" title="Editar Registro" class="atender">Editar</a>
                             </td>
 
                             <td>
-                                <a href="#" class="leads" data-nome="{{$brinde->nome}}" data-email="{{$brinde->email}}"
+                                <a href="#" class="leads" data-nome="{!!$brinde->nome!!}" data-email="{{$brinde->email}}"
                                    data-id="{{$brinde->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
                             </td>
 
@@ -73,24 +73,6 @@
                 </form>
 
             </div>
-
-
-            <div class="tab2 tabs">
-
-            </div> <!-- .tab2 -->
-
-            <div class="tab3 tabs">
-
-            </div> <!-- .tab3 -->
-
-            <div class="tab4 tabs">
-
-            </div> <!-- .tab4 -->
-
-            <div class="tab5 tabs">
-
-            </div> <!-- .tab5 -->
-
 
         </div>
 @endsection
