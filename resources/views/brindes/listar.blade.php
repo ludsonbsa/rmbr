@@ -3,23 +3,27 @@
 @section('content')
 <section class="content" style="background:url('/images/bglead.jpg') repeat-x #f0f0f0;">
     <h1 style="font-size:25px; font-weight: bold; margin-bottom:20px;">Conferência de Brindes<a href='#' id="refresher" title="Atualizar Dados"><img src="/images/refresh.svg" width="25" class="refresher" /></a></h1>
-    <div class="widget">
 
-        <div class="tabs-content">
-            <div class="tabs-menu">
+
+    <div class="tabs-content">
+
+        <div class="tabs-menu">
                 <ul>
-                    <li><a class="active-tab-menu" href="#" data-tab="brinde-tab1">Conferir Brinde</a></li>
-                    <li><a href="#" data-tab="brinde-tab2">Resultado de Conferência</a></li>
-                    <li><a href="#" data-tab="brinde-tab3">Aprovar Manualmente</a></li>
-                    <li><a href="#" data-tab="brinde-tab4">Gerar Etiquetas Pendentes</a></li>
-                    <li><a href="#" data-tab="brinde-tab5">Baixar Etiquetas</a></li>
+                    <li><a class="active-tab-menu" href="#1" data-tab="brinde-tab1">Conferir Brinde</a></li>
+                    <li><a href="#2" data-tab="brinde-tab2">Resultado de Conferência</a></li>
+                    <li><a href="#3" data-tab="brinde-tab3">Aprovar Manualmente</a></li>
+                    <li><a href="#4" data-tab="brinde-tab4">Gerar Etiquetas Pendentes</a></li>
+                    <li><a href="#5" data-tab="brinde-tab5">Baixar Etiquetas</a></li>
                 </ul>
             </div> <!-- tabs-menu -->
 
-
             <div class="tab1 tabs first-tab">
 
-                <table id="myTable" border="0" width="100">
+                <div class="widget">
+                    <div class="content">
+
+                    <table id="myTable" border="0" width="100">
+
                     <thead>
                     <tr>
                         <th class="header">Nome</th>
@@ -69,10 +73,13 @@
                     <h3 style="font-size:18px; float:left; font-weight: 500; color:#636363; margin-top:8px;">Você precisa conferir {{$brindes->total()}}  brindes</h3>
                        <button type="submit" name="enviaQueryBrinde" class="enviar">Conferir Brindes</button>
                 </div>
-
+                    </div>
+                </div>
                 </form>
+
 
             </div>
 
-        </div>
+        </div><!--container de header search -->
+</section>
 @endsection

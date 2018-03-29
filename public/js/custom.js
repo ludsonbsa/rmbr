@@ -78,18 +78,18 @@ $(function() {
 
         //Verificação de Brinde Menu
         if(the_tab == '.brinde-tab1'){
-            location.href='/admin/brindes';
+            location.href='/admin/brindes/listar';
         }else if(the_tab == '.brinde-tab2'){
-            var tab1 = '/admin/comissoes/conferidas';
+            var tab1 = '/admin/brindes/resultado-conferencia';
         }
         else if(the_tab == '.brinde-tab3'){
-            var tab1 = '/admin/comissoes/aprovar-manualmente';
+            var tab1 = '/admin/brindes/aprovar-manualmente';
         }
         else if(the_tab == '.brinde-tab4'){
-            var tab1 = '/admin/comissoes/comissionar-pendentes';
+            var tab1 = '/admin/brindes/gerar-etiquetas';
         }
         else if(the_tab == '.brinde-tab5'){
-            var tab1 = '/admin/comissoes/geradas';
+            var tab1 = '/admin/brindes/baixar-etiquetas';
         }
 
 

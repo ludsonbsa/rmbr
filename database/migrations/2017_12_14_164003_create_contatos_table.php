@@ -75,6 +75,8 @@ class CreateContatosTable extends Migration
             $table->integer('em_atendimento')->nullable();
             $table->timestamp('data_etiqueta');
             $table->timestamps();
+
+            //$table->index('');
         });
     }
 
