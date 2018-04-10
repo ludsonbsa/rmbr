@@ -72,10 +72,11 @@
 
                                     @if($contato->em_atendimento == Auth::id())
                                     <a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a>
-                                    @elseif($contato->em_atendimento != Auth::id() ||  $contato->em_atendimento != 0 ||  $contato->em_atendimento != NULL)
-                                    <p style="margin-bottom:0px;">Em atendimento</p>
-                                    @else
+
+                                    @elseif($contato->em_atendimento == 0 || $contato->em_atendimento == NULL)
                                     <a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a>
+                                        @else
+                                    <p>Em atendimento</p>
                                 @endif
 
                                         </td>
