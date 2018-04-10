@@ -61,7 +61,7 @@
                             <tbody>
                             @foreach($contatos as $contato)
 
-                                <tr class="" @if($contato->em_atendimento == 1) style="background:#e4e4e4; color:#ccc" disabled="" @endif>
+                                <tr class="" @if($contato->em_atendimento != 0 || $contato->em_atendimento != NULL) style="background:#e4e4e4; color:#ccc" disabled="" @endif>
                                     <td class="nome">{!! $contato->nome !!}</td>
                                     <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
                                     <td>{{$contato->email}}</td>

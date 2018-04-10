@@ -79,7 +79,7 @@ class ImportacoesController extends Controller implements ShouldQueue
                 #$this->aprovados();
 
 
-                dispatch(new ImportarPlanilha(Auth::id(), $completo));
+                dispatch_now(new ImportarPlanilha(Auth::id(), $completo));
                 #dispatchNow(new ImportarPlanilha(Auth::id(), $this->getArquivo()));
                 fclose($handle1);
 
