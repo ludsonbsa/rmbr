@@ -18,7 +18,7 @@ class ContatosController extends Controller
     public function index(Request $request){
 
         $lead = DB::table('tb_contatos as t1')
-            ->selectRaw("t1.id, t1.data_de_venda, t1.nome,t1.ddd, t1.telefone, t1.email, t1.obs_followup, t1.observacao, t1.status, t1.documento_usuario, t1.em_atendimento, t1.insercao_hotmart, t1.prioridade, t1.id_responsavel, t2.user_nome")
+            ->selectRaw("t1.id, t1.data_de_venda, t1.nome,t1.ddd, t1.telefone, t1.email, t1.obs_followup, t1.observacao, t1.status, t1.documento_usuario, t1.em_atendimento, t1.em_atendendo, t1.insercao_hotmart, t1.prioridade, t1.id_responsavel, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereNull('t1.aprovado')
             ->whereNull('t1.pos_atendimento')
@@ -108,7 +108,7 @@ class ContatosController extends Controller
     {
 
         $query = DB::table('tb_contatos')
-            ->selectRaw("tb_contatos.id, tb_contatos.em_atendimento, tb_contatos.pos_atendimento, tb_contatos.nome_do_produto, tb_contatos.data_de_venda, tb_contatos.nome, tb_contatos.ddd, tb_contatos.telefone, tb_contatos.email, tb_contatos.obs_followup, tb_contatos.observacao, tb_contatos.status, tb_contatos.documento_usuario, tb_contatos.estado, tb_contatos.em_atendimento, tb_contatos.insercao_hotmart, tb_contatos.prioridade, tb_contatos.id_responsavel, t2.user_nome")
+            ->selectRaw("tb_contatos.id, tb_contatos.em_atendimento, tb_contatos.pos_atendimento, tb_contatos.nome_do_produto, tb_contatos.data_de_venda, tb_contatos.nome, tb_contatos.ddd, tb_contatos.telefone, tb_contatos.email, tb_contatos.obs_followup, tb_contatos.observacao, tb_contatos.status, tb_contatos.em_atendendo, tb_contatos.documento_usuario, tb_contatos.estado, tb_contatos.em_atendimento, tb_contatos.insercao_hotmart, tb_contatos.prioridade, tb_contatos.id_responsavel, t2.user_nome")
             ->join('users as t2','tb_contatos.id_responsavel','=','t2.id')
             ->where('tb_contatos.id','=', $id)
             ->get();
@@ -119,13 +119,13 @@ class ContatosController extends Controller
     public function atender($id)
     {
         #Fazer update em atendimento
-        $dado = ['em_atendimento' => Auth::id()];
+        $dado = ['em_atendimento' => Auth::id(), 'em_atendendo' => Auth::user()->user_nome];
         $upd = DB::table('tb_contatos')
             ->where('id', $id)
             ->update($dado);
 
         $query = DB::table('tb_contatos')
-            ->selectRaw("tb_contatos.id, tb_contatos.nome_do_produto, tb_contatos.data_de_venda, tb_contatos.nome, tb_contatos.ddd, tb_contatos.telefone, tb_contatos.email, tb_contatos.obs_followup, tb_contatos.observacao, tb_contatos.status, tb_contatos.documento_usuario, tb_contatos.em_atendimento, tb_contatos.insercao_hotmart, tb_contatos.estado, tb_contatos.data_ligar_depois, tb_contatos.pos_atendimento, tb_contatos.prioridade, tb_contatos.id_responsavel, t2.user_nome")
+            ->selectRaw("tb_contatos.id, tb_contatos.nome_do_produto, tb_contatos.data_de_venda, tb_contatos.nome, tb_contatos.ddd, tb_contatos.telefone, tb_contatos.email, tb_contatos.obs_followup, tb_contatos.observacao, tb_contatos.status, tb_contatos.documento_usuario, tb_contatos.em_atendimento, tb_contatos.em_atendendo, tb_contatos.insercao_hotmart, tb_contatos.estado, tb_contatos.data_ligar_depois, tb_contatos.pos_atendimento, tb_contatos.prioridade, tb_contatos.id_responsavel, t2.user_nome")
             ->join('users as t2','tb_contatos.id_responsavel','=','t2.id')
             ->where('tb_contatos.id','=', $id)
             ->get();
@@ -162,7 +162,8 @@ class ContatosController extends Controller
             );
 
         #Fazer update em atendimento - Quando conclui atendimento, volta pra zero
-        $dado = ['em_atendimento' => 0];
+        $dado = ['em_atendimento' => 0, 'em_atendendo' => NULL];
+
         $upd = DB::table('tb_contatos')
             ->where('id', $id)
             ->update($dado);
@@ -184,7 +185,7 @@ class ContatosController extends Controller
 
     public function atender_cancelar($id){
         #Clicou em cancelar atendimento
-        $dado = ['em_atendimento' => 0];
+        $dado = ['em_atendimento' => 0, 'em_atendendo' => NULL];
         $upd = DB::table('tb_contatos')
             ->where('id', $id)
             ->update($dado);
