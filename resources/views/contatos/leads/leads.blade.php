@@ -71,15 +71,12 @@
                                     <td class="acao">
                                         @if($contato->em_atendimento != 0)
                                             <p style="margin-bottom:0px;">Em atendimento</p>
+                                            @elseif($contato->em_atendimento == Auth::id())
+                                            <a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a>
                                             @else
                                             <a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a>
                                         @endif
-
-                                        @if($contato->em_atendimento == Auth::id())
-                                             <a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a>
-                                        @endif;
-
-
+                                        
                                         </td>
                                     @if(Auth::user()->role == 1)
                                     <td class="acao">
