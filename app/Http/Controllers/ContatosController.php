@@ -119,7 +119,7 @@ class ContatosController extends Controller
     public function atender($id)
     {
         #Fazer update em atendimento
-        $dado = ['em_atendimento' => 1];
+        $dado = ['em_atendimento' => Auth::id()];
         $upd = DB::table('tb_contatos')
             ->where('id', $id)
             ->update($dado);
