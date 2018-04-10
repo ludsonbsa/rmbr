@@ -2,17 +2,17 @@
 namespace App\Helpers;
 
 /**
- * Gera um documento com valores separados por v�rgula
+ *
  */
 class CSV {
     /**
-     * Matriz que ir� armazenar todas as linhas do CSV
+
      * @var array
      */
     private $data = array();
 
     /**
-     * N�mero de colunas
+     * Numero de colunas
      * @var integer
      */
     private $fields = 0;
@@ -27,13 +27,14 @@ class CSV {
 
         if ( !empty( $dir ) ){
             if ( !is_dir( $dir ) ){
-                throw new Exception( "O diret�rio n�o existe." );
+                echo $dir;
+                throw new \Exception("O diretório não existe.");
             }
         }
 
         if ( file_exists( $file ) ){
             if ( !is_writable( $file ) ){
-                throw new Exception( "O arquivo de destino n�o � grav�vel." );
+                throw new \Exception( "O arquivo de destino não é gravável." );
             }
         }
 
@@ -43,7 +44,7 @@ class CSV {
             fclose( $fh );
             $ret = true;
         } else {
-            throw new Exception( "N�o foi poss�vel abrir/criar o arquivo para grava��o." );
+            throw new \Exception("Não foi possivel abrir/criar o arquivo para gravação.");
         }
 
         return( $ret );
@@ -51,14 +52,14 @@ class CSV {
 
     /**
      * Adiciona uma nova linha ao CSV
-     * @param CSVLine $line A linha que ser� adicionada
-     * @return CSV Refer�ncia ao pr�prio objeto
+     * @param CSVLine $line A linha que sera adicionada
+     * @return CSV Referencia ao proprio objeto
      */
     public function addLine( CSVLine $line ){
         if ( !count( $this->data ) ){
             $this->fields = $line->count();
         } elseif ( $this->fields != $line->count() ){
-            throw new Exception( "Todas as linhas devem ter o mesmo n�mero de colunas" );
+            throw new \Exception( "Todas as linhas devem ter o mesmo numero de colunas" );
         }
 
         $this->data[] = $line;
@@ -66,7 +67,7 @@ class CSV {
     }
 
     /**
-     * Converte o objeto para sua representa��o em string
+
      * @return string
      */
     public function __toString(){

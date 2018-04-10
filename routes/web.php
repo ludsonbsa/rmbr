@@ -125,18 +125,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
         Route::get('brindes/resultado-conferencia', 'BrindesController@resultado_conferencia')->name('brindes.resultado-conferencia');
 
-    Route::get('brindes/baixar-etiquetas', 'BrindesController@baixar_etiquetas')->name('brindes.baixar_etiqueta');
+        Route::get('brindes/baixar-etiquetas', 'BrindesController@baixar_etiquetas')->name('brindes.baixar_etiqueta');
 
-
-    Route::get('brindes/aprovar-manualmente', 'BrindesController@aprovar_manualmente')->name('brindes.aprovar-manualmente');
-
-    Route::get('brindes/gerar-etiquetas', 'BrindesController@gerar_etiquetas')->name('brindes.gerar_etiquetas');
-
-
+        Route::get('brindes/aprovar-manualmente', 'BrindesController@aprovar_manualmente')->name('brindes.aprovar-manualmente');
+        Route::get('brindes/gerar-etiquetas', 'BrindesController@gerar_etiquetas')->name('brindes.gerar_etiquetas');
         Route::get('brindes/add', 'BrindesController@add')->name('brindes.add');
         Route::put('brindes/cadastrar', 'BrindesController@cadastrar')->name('brindes.cadastrar');
         Route::get('brindes/buscar', 'BrindesController@buscar')->name('brindes.buscar');
-
 
 
         /*********CONFIG********/

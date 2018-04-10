@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Contatos;
-use App\Importacoes;
+use App\Console\Commands\Arquivo;
+use App\Jobs\ImportarPlanilha;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Http\Request;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\Jobs\Job;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -13,8 +16,10 @@ use App\Helpers;
 
 
 
-class ImportacoesController extends Controller
+class ImportacoesController extends Controller implements ShouldQueue
 {
+    use InteractsWithQueue;
+
     public $arquivo;
 
     public function index()
@@ -27,88 +32,67 @@ class ImportacoesController extends Controller
         return view('contatos.recuperacao');
     }
 
-    private function setArquivo($arquivo){
+    public function setArquivo($arquivo){
         return $this->arquivo = $arquivo;
     }
 
     public function getArquivo(){
+
        return $this->arquivo;
     }
 
     public function planilhaImport()
     {
 
-        if(Input::hasFile('planilha')){
+        if (Input::hasFile('planilha')){
             //Se não existir pasta de planilhas
-            $logicpath = public_path().'/uploads/planilhas';
+            $logicpath = public_path() . '/uploads/planilhas';
             if (!is_dir($logicpath)) {
                 mkdir($logicpath, 0777, true);
             }
-
             //Move planilha pra pasta de planilhas
             $file = Input::file('planilha');
             $fileExtension = $file->getClientOriginalExtension();
 
             //Verifica se o arquivo é CSV.
-            if($fileExtension == 'csv'){
+            if ($fileExtension == 'csv') {
 
                 //Faz upload antes da importação
-
                 #Seria bom pegar o nome do arquivo, mudar para um padrão sempre.
                 $filename = $file->getClientOriginalName();
 
-                $insere = $file->move($logicpath, $file->getClientOriginalName());
-
+                $file->move($logicpath, $file->getClientOriginalName());
 
                 # Abrir o arquivo em CSV
-                $handle1 = fopen($logicpath."/".$file->getClientOriginalName(), 'r');
+                $handle1 = fopen($logicpath . "/" . $file->getClientOriginalName(), 'r');
+
+                $caminho = $logicpath."/".$file->getClientOriginalName();
+
 
                 #Seto o nome do arquivo e salvo na função
-                $this->setArquivo(env('DOCUMENT_ROOT')."uploads/planilhas/".$file->getClientOriginalName());
+                $this->setArquivo(public_path() ."/uploads/planilhas/" . $file->getClientOriginalName());
+                $completo = $this->getArquivo();
 
-                # Ler as linhas separadas por ; somente as verdadeiras ou existentes
-                while (($datas = fgetcsv($handle1, 1000, ";")) !== FALSE) {
+                $completo = str_replace('\\','/', $completo);
+                #$this->queryHotmart(Auth::id());
+                #Verificação de Aprovados
+                #$this->aprovados();
 
-                    if(!empty($datas[18]) && $datas[21]){
 
-                        #Atribui os campos de e-mail e status as variáveis
-                        $status = $datas[18];
-                        $email = $datas[21];
-
-                        try {
-                            $results = DB::table('tb_contatos')
-                                ->whereRaw("email = '{$email}' AND (status != 'Aprovado' OR status != 'Completo') AND (pos_atendimento IS NULL) AND completo = 0")->get();
-
-                            foreach ($results as $v):
-                                $dad = [
-                                    'status' => $status
-                                ];
-                                //ler se existe, em caso afirmativo faz o update
-                                $query =
-                                    DB::table('tb_contatos')
-                                    ->where('email', $email)
-                                    ->update($dad);
-                            endforeach;
-
-                        } catch (QueryException $e) {
-                            echo $e->getMessage();
-                        }
-                    }
-                }
-
+                dispatch(new ImportarPlanilha(Auth::id(), $completo));
+                #dispatchNow(new ImportarPlanilha(Auth::id(), $this->getArquivo()));
                 fclose($handle1);
 
                 #Executa query que insere os dados de planilha no banco de dados
-                $this->queryHotmart(Auth::id());
+                //Event::dispatch($this->queryHotmart(Auth::id()));
                 #Verifica Aprovados
-                $this->aprovados();
+                // Event::dispatch($this->aprovados());
+                //$this->aprovados();
                 #verifica Pos-atendimento
-                $this->verificapa();
-
-            }else{
-                return back()->with('msg-error',"Permitido somente arquivos em .CSV");
+                //$this->verificapa();
             }
         }
+
         return back()->with('msg',"Planilha adicionada com sucesso!");
 
     }
@@ -129,7 +113,13 @@ class ImportacoesController extends Controller
 
     public function aprovados(){
         #Adicionar linhas do banco de dados no arquivo CSV
+        $executionStartTimeAP = microtime(true);
+
         $aprovados = DB::select("SELECT nome_do_produto, nome, documento_usuario, status, email, transacao FROM tb_contatos WHERE (status = 'aprovado' OR status = 'completo') AND completo = 0");
+        $executionStartTimeAPEND = microtime(true);
+
+        $totalAP = $executionStartTimeAPEND - $executionStartTimeAP;
+        \Log::info("SELECT AP - Aprovados e completos: {$totalAP}");
 
         $csv = new Helpers\CSV();
         #Instanciar gerador CSV*/
@@ -148,6 +138,7 @@ class ImportacoesController extends Controller
         $cpfs = array();
         $emails = array();
 
+        $executionStartTimeALLAP = microtime(true);
         while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
             $cpf = $data[2];
             $email = $data[4];
@@ -159,11 +150,10 @@ class ImportacoesController extends Controller
             if (empty($cpf)) {
                 $query = "SELECT id, documento_usuario, email, status
         FROM tb_contatos WHERE email LIKE '%{$email}%' AND (status = 'aprovado' OR status = 'completo') AND completo = 0";
-
             }
-
           #Faço uma query PDO para atualizar status aprovado a todos os registros que forem aprovados
             $bus = DB::select($query);
+
             foreach ($bus as $re):
                 //Update de aprovação
                 $dad = [
@@ -178,7 +168,6 @@ class ImportacoesController extends Controller
                 array_push($cpfs, $re->documento_usuario);
                 array_push($emails, $re->email);
             endforeach;
-
             /******
              * Fazer uma consulta de CPF dentro dos CPF existentes aprovados, e marcar CAMPO aprovado = 1
              * mesmo para os CPFs com estado cancelados ou expirados porem que já possuam algum status aprovado ou completo.
@@ -207,15 +196,16 @@ class ImportacoesController extends Controller
                         return $e->getCode() . $e->getMessage();
                     }
                 }
-
             endforeach;
 
         }
         #Precisa rever isso aqui, tá muito pesado os dados
         /**/
 
-        #$this->atribuirPosAt();
-        //REZA!
+        $executionStartTimeALLAP2 = microtime(true);
+        $totalAP2 =  $executionStartTimeALLAP2 - $executionStartTimeALLAP;
+        \Log::info("SELECT AP - Pega os ap com cpf e email: {$totalAP2}");
+
         return $this;
     }
 
