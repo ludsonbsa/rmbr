@@ -54,11 +54,13 @@ class ComissoesController extends Controller
         $query = DB::table('tb_contatos as t1')
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t1.ddd, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
-            ->whereRaw("(t1.pos_atendimento = 'Boleto Gerado' OR t1.pos_atendimento = 
-'Vendido') AND (t1.insercao_hotmart != 'Pagina Externa') AND t1.conferencia = 0 AND completo = 0")
+            ->whereRaw("(t1.pos_atendimento ='Boleto Gerado' OR t1.pos_atendimento = 
+'Vendido') AND (t1.insercao_hotmart != 'Pagina Externa') AND t1.conferencia = 0")
+            ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')->get();
 
         foreach($query as $resultado){
+
             $cpf = $resultado->documento_usuario;
             $email = $resultado->email;
             $telefone = $resultado->telefone;
@@ -74,7 +76,7 @@ class ComissoesController extends Controller
                 ];
 
                 $upd = DB::table('tb_contatos')
-                    ->where('documento_usuario', $cpf)
+                    ->where('documento_usuario', '=', $cpf)
                     ->update($dados);
 
             #Se não tiver CPF, e existir e-mail, então faz update para todos como aquele e-mail
@@ -101,8 +103,9 @@ class ComissoesController extends Controller
                     'conferencia' => 1
                 ];
                 $upd = DB::table('tb_contatos')
-                    ->where('telefone', $telefone)
+                    ->where('telefone', '=', $telefone)
                     ->update($dados);
+
             }
 
             /*$queryString = DB::table('tb_contatos')
@@ -112,7 +115,7 @@ class ComissoesController extends Controller
 
             #Fiz um select com a query do caso acima, apenas para ver em tela os dados
         }
-        return response()->redirectToRoute('admin.comissoes.listar')->with('message',"teste");
+        return response()->redirectToRoute('admin.comissoes.listar')->with('message',"Conferência realizada");
     }
 
     public function aprovar_manualmente(){
@@ -161,18 +164,42 @@ class ComissoesController extends Controller
 
     public function aprovar($id){
         $dados = [ 'aprovado' => 1 ];
-        $update = DB::table('tb_contatos')
-            ->where('id', $id)
-            ->update($dados);
-        return $id;
+        $query = DB::table('tb_contatos as t1')
+            ->selectRaw('t1.email, t1.id')
+            ->where('t1.id','=', $id)
+            ->get();
+
+        #Busco os registros que contém este e-mail.
+        foreach($query as $contato){
+            $email = $contato->email;
+            $id = $contato->id;
+
+            #Faço update em todos os e-mails deste registro.
+            DB::table('tb_contatos')
+                ->where('email', 'LIKE', $email)
+                ->update($dados);
+        }
     }
 
     public function reprovar($id){
         $dados = [ 'aprovado' => 0 ];
-        $update = DB::table('tb_contatos')
-            ->where('id', $id)
-            ->update($dados);
-        return $id;
+        #Busco através do ID os e-mails(registros) existentes
+        $query = DB::table('tb_contatos as t1')
+            ->selectRaw('t1.email, t1.id')
+            ->where('t1.id','=', $id)
+            ->get();
+
+        #Busco os registros que contém este e-mail.
+        foreach($query as $contato){
+            $email = $contato->email;
+            $id = $contato->id;
+
+            #Faço update em todos os e-mails deste registro.
+            DB::table('tb_contatos')
+                ->where('email', 'LIKE', $email)
+                ->update($dados);
+        }
+
     }
 
     public function comissionar_pendentes(){

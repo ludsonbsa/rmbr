@@ -86,7 +86,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         //COMISSOES
         Route::get('comissoes/', 'ComissoesController@conferencia')->name('comissoes.listar');
         Route::get('comissoes/conferidas', 'ComissoesController@conferidas')->name('comissoes.conferidas');
-        Route::post('comissoes/conferir', 'ComissoesController@conferir')->name('comissoes.conferir');
+        Route::get('comissoes/conferir', 'ComissoesController@conferir')->name('comissoes.conferir');
 
         Route::get('comissoes/aprovar-manualmente', 'ComissoesController@aprovar_manualmente')->name('comissoes.aprovar_manualmente');
 

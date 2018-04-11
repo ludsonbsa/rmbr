@@ -47,6 +47,7 @@ t1.estado, t1.nome_do_produto, t1
     public function editar_update(Request $request, $id){
         #Update na tabela contatos com as informações
         $param = $request->all();
+        $cpf = $param['documento_usuario'];
         $param['data_de_venda'] = date('d/m/Y H:i:s');
         $param['em_atendimento'] = NULL;
         $param['pais'] = 'Brasil';
@@ -55,7 +56,7 @@ t1.estado, t1.nome_do_produto, t1
         $param['conferencia'] = 2;
 
         $param = $request->except('_token','sendForm');
-        $brindes = Brindes::where('id', '=', $id);
+        $brindes = Brindes::where('documento_usuario', '=', $cpf);
         $brindes->update($param);
 
         return response()->redirectToRoute('admin.listar.brindes')->with('msg',"Brinde editado com sucesso");
@@ -207,7 +208,7 @@ t1.estado, t1.nome_do_produto, t1
             ->selectRaw("t1.id, t1.nome_do_produto, t1.data_de_venda, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t1.endereco, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereRaw("(t1.conferencia_brinde = 1 AND t1.aprovado = 1) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND (t1.etiqueta_gerada IS NULL)")
-            ->groupBy('t1.email')
+            ->groupBy('t1.documento_usuario')
             ->orderBy('t1.data_de_venda','ASC')
             ->get();
         $count = $query->count();
@@ -314,24 +315,41 @@ t1.estado, t1.nome_do_produto, t1
     }
 
     public function aprovar($id){
-                $dados = [ 'aprovado' => 1 ];
+        $dados = [ 'aprovado' => 1 ];
+        $query = DB::table('tb_contatos as t1')
+            ->selectRaw('t1.email, t1.id')
+            ->where('t1.id','=', $id)
+            ->get();
 
-                DB::table('tb_contatos')
-                    ->where('id', $id)
-                    ->update($dados);
-                $return = $id;
+        #Busco os registros que contém este e-mail.
+        foreach($query as $contato){
+            $email = $contato->email;
+            $id = $contato->id;
 
-        return $return;
+            #faço update em todos os e-mails deste registro.
+            DB::table('tb_contatos')
+                ->where('email', 'LIKE', $email)
+                ->update($dados);
+        }
     }
 
     public function reprovar($id){
-                $dados = [ 'aprovado' => 0 ];
-                DB::table('tb_contatos')
-                    ->where('id', $id)
-                    ->update($dados);
-                $return = $id;
+        $dados = [ 'aprovado' => 0 ];
+        $query = DB::table('tb_contatos as t1')
+            ->selectRaw('t1.email, t1.id')
+            ->where('t1.id','=', $id)
+            ->get();
 
-        return $return;
+        #Busco os registros que contém este e-mail.
+        foreach($query as $contato){
+            $email = $contato->email;
+            $id = $contato->id;
+
+            #faço update em todos os e-mails deste registro.
+            DB::table('tb_contatos')
+                ->where('email', 'LIKE', $email)
+                ->update($dados);
+        }
     }
 
     public function etiquetaRelatorioPendente(){

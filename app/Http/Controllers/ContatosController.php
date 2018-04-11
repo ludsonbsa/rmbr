@@ -121,7 +121,7 @@ class ContatosController extends Controller
         #Fazer update em atendimento
         $dado = ['em_atendimento' => Auth::id(), 'em_atendendo' => Auth::user()->user_nome];
         $upd = DB::table('tb_contatos')
-            ->where('id', $id)
+            ->where('id', '=', $id)
             ->update($dado);
 
         $query = DB::table('tb_contatos')
@@ -138,7 +138,6 @@ class ContatosController extends Controller
         #Update na tabela contatos com as informações
         $param = $request->all();
 
-        var_dump($param);
         $email = $param['email'];
         $envkit = $param['enviar_kit'];
         $dia = $param['ligarDepois'];
@@ -170,11 +169,11 @@ class ContatosController extends Controller
         $dado = ['em_atendimento' => 0, 'em_atendendo' => NULL];
 
         $upd = DB::table('tb_contatos')
-            ->where('id', $id)
+            ->where('id','=', $id)
             ->update($dado);
         $msg = "Lead atualizado com sucesso";
 
-        //return response()->redirectToRoute('admin.leads')->with('message',$msg);
+        return response()->redirectToRoute('admin.leads')->with('message',$msg);
     }
 
     public function editar_update(Request $request, $id)

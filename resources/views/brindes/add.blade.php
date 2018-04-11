@@ -31,7 +31,7 @@
 
                     <label>CPF:</label>
 
-                    <input type="text" name="documento_usuario" class="t100">
+                    <input type="text" name="documento_usuario" class="t100" required>
 
                 </div>
 

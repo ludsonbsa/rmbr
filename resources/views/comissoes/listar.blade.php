@@ -21,7 +21,6 @@
 
                     <div class="content" ng-controller="Contatos" ng-model="Contatos">
 
-                    <form action="{{route('admin.comissoes.conferir')}}" name="enviarQueries" method="post">
                         <table id="myTable" border="0" width="100" >
                             <thead>
                                 <tr>
@@ -39,10 +38,6 @@
                             <td>{!! $contato->ddd!!} {!!$contato->telefone !!}</td>
                             <td>{!! $contato->insercao_hotmart !!}</td>
                             <td>{!! $contato->email !!}</td>
-                            {!! csrf_field() !!}
-                            <input type="hidden" name="cpf" value="{!!$contato->documento_usuario!!}">
-                            <input type="hidden" name="telefone" value="{!!$contato->telefone!!}">
-                            <input type="hidden" name="email" value="{!!$contato->email!!}">
                         </tr>
                          @endforeach
 
@@ -51,7 +46,7 @@
 
                         <div class="field-wrap" style="float:right; margin-top:0px; padding:17px; width:96.75%;">
                             <h3 style="font-size:18px; float:left; font-weight: 500; color:#636363; margin-top:8px;">Você precisa conferir {{$count}} vendas</h3>
-                            <button type="submit" name="enviarQueryConferencia1" class="enviar">Conferir Vendas</button>
+                            <a href="{{route('admin.comissoes.conferir')}}"> <button type="submit" name="" class="enviar">Conferir Vendas</button></a>
                         </div>
                      </form>
                     </div>
