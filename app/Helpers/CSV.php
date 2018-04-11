@@ -2,17 +2,17 @@
 namespace App\Helpers;
 
 /**
- *
+ * Gera um documento com valores separados por v�rgula
  */
 class CSV {
     /**
-
+     * Matriz que ir� armazenar todas as linhas do CSV
      * @var array
      */
     private $data = array();
 
     /**
-     * Numero de colunas
+     * N�mero de colunas
      * @var integer
      */
     private $fields = 0;
@@ -27,14 +27,13 @@ class CSV {
 
         if ( !empty( $dir ) ){
             if ( !is_dir( $dir ) ){
-                echo $dir;
-                throw new \Exception("O diretório não existe.");
+                throw new \Exception( "O diretorio nao existe." );
             }
         }
 
         if ( file_exists( $file ) ){
             if ( !is_writable( $file ) ){
-                throw new \Exception( "O arquivo de destino não é gravável." );
+                throw new \Exception( "O arquivo de destino nao e gravavel." );
             }
         }
 
@@ -44,7 +43,7 @@ class CSV {
             fclose( $fh );
             $ret = true;
         } else {
-            throw new \Exception("Não foi possivel abrir/criar o arquivo para gravação.");
+            throw new \Exception( "Nao foi possivel abrir/criar o arquivo para gravacao." );
         }
 
         return( $ret );
@@ -52,8 +51,8 @@ class CSV {
 
     /**
      * Adiciona uma nova linha ao CSV
-     * @param CSVLine $line A linha que sera adicionada
-     * @return CSV Referencia ao proprio objeto
+     * @param CSVLine $line A linha que ser� adicionada
+     * @return CSV Refer�ncia ao pr�prio objeto
      */
     public function addLine( CSVLine $line ){
         if ( !count( $this->data ) ){
@@ -67,7 +66,7 @@ class CSV {
     }
 
     /**
-
+     * Converte o objeto para sua representa��o em string
      * @return string
      */
     public function __toString(){

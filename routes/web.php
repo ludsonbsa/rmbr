@@ -34,6 +34,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
     $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
+    Route::middleware([ 'middleware' => 'auth'])->group(function () {
         Route::get('home', 'ConfigController@dashboard')->name('home');
         //LEADS
         Route::get('leads', 'ContatosController@index')->name('leads');
@@ -128,15 +129,37 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::get('brindes/baixar-etiquetas', 'BrindesController@baixar_etiquetas')->name('brindes.baixar_etiqueta');
 
         Route::get('brindes/aprovar-manualmente', 'BrindesController@aprovar_manualmente')->name('brindes.aprovar-manualmente');
+
         Route::get('brindes/gerar-etiquetas', 'BrindesController@gerar_etiquetas')->name('brindes.gerar_etiquetas');
+
+        Route::get('brindes/etiquetas/deletar/{etiqueta}', 'BrindesController@deletar_etiqueta')->name('brindes.deletar_etiqueta');
+
+        Route::get('brindes/etiquetas/baixar/{etiqueta}', 'BrindesController@baixar')->name('brindes.baixar_etiqueta');
+
         Route::get('brindes/add', 'BrindesController@add')->name('brindes.add');
         Route::put('brindes/cadastrar', 'BrindesController@cadastrar')->name('brindes.cadastrar');
+        Route::get('brindes/editar/{id}', 'BrindesController@editar')->name('brindes.editar');
+        Route::post('brindes/editar-update/{id}', 'BrindesController@editar_update')->name('brindes.editar-update');
         Route::get('brindes/buscar', 'BrindesController@buscar')->name('brindes.buscar');
 
+        Route::get('brindes/conferir', 'BrindesController@conferirBrindes')->name('brindes.conferir');
 
-        /*********CONFIG********/
-        Route::get('config', 'ConfigController@index')->name('config');
-        Route::get('dashboard', 'ConfigController@dashboard')->name('dashboard');
+        Route::get('brindes/criar-etiquetas', 'BrindesController@criar_etiquetas')->name('brindes.criar-etiquetas');
+
+        Route::get('brindes/gerarpdf-pendente', 'BrindesController@gerarpdf_pendentes')->name('brindes.gerarpdf-pendentes');
+
+        Route::get('brindes/gerarpdf-aprovarmanual', 'BrindesController@aprovar_manualmente_pdf')->name('brindes.gerarpdf-aprovarmanual');
+
+        Route::get('brindes/aprovar/{id}', 'BrindesController@aprovar')->name('brindes.aprovar');
+
+        Route::get('brindes/reprovar/{id}', 'BrindesController@reprovar')->name('brindes.reprovar');
+
+        Route::post('brindes/buscar-brinde/', 'BrindesController@buscar_brinde')->name('brindes.buscar-brinde');
+
+    /*********CONFIG********/
+    Route::get('config', 'ConfigController@index')->name('config');
+    Route::get('dashboard', 'ConfigController@dashboard')->name('dashboard');
+    });
 
     /****************************************SUPORTE********************************************/
 

@@ -63,6 +63,7 @@
 ?>
 
     @foreach($contato as $cont) @endforeach
+  <form action="{{route('admin.leads.atender_update',$cont->id)}}" method="post">
         <section class="content">
 
             <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Atendimento de Contato</h1>
@@ -126,7 +127,7 @@
 
         </section>
 
-    <form action="{{route('admin.leads.atender_update',$cont->id)}}" method="post">
+
         <section class="content" style="margin-top:-120px;">
 
             <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Preencha informações de Atendimento</h1>
@@ -472,11 +473,12 @@
         <div class="field-wrap t60 floatRight" style="margin-top:-40px; padding-bottom:20px;">
 
         <button type="submit" name="sendForm" class="enviar">Finalizar Atendimento</button>
-         </form>
+
 
          <a href="{{route('admin.lead.cancelar', $cont->id)}}">
              <span name="cancelar" class="cancelar floatRight">Cancelar Atendimento</span>
          </a>
 
         </div>
+    </form>
 @endsection

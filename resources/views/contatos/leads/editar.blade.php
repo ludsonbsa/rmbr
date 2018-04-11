@@ -1,3 +1,7 @@
+<!--
+ Editar do ADD Lead de quem inseriu.
+ Só o atender edita endereço, editar não, a não se que seja admin.
+-->
 @extends(layout())
 
 @section('content')
@@ -99,6 +103,14 @@
                 <br />
                 <p>Meio de inserção: &nbsp;
                     <span class="telefone" style="margin-top:-10px;">
+                        <select name="insercao_hotmart" id="">
+                            <option value="{!! $cont->insercao_hotmart !!}">{!! $cont->insercao_hotmart !!}</option>
+                            <option disabled>---------------------</option>
+                            <option value="Whatsapp">Whatsapp</option>
+                            <option value="Chat">Chat</option>
+                            <option value="E-mail">E-mail</option>
+                            <option value="Facebook">Facebook</option>
+                        </select>
                             <input type="text" name="insercao_hotmart" value="{!! $cont->insercao_hotmart !!}"></span>
                  </p>
                  <br /> <br />
@@ -132,14 +144,15 @@
                             </select>
                         </span></p>
 
+                    <input type="text" name="">
                 </div>
 
                     <div style="clear:both;"></div><br /><br /><br /><br /><br />
 
             <div class="field-wrap t60 floatRight" style="margin-top:-40px; padding-bottom:20px;">
                 <button type="submit" style="margin-left:20px;" name="sendForm" class="enviar">Finalizar
-                    Atendimento</button>
-                <a href="{{route('admin.leads')}}"><button class="enviar" style="background:#333">Voltar</button></a>
+                    Edição</button>
+                <a href="{{route('admin.leads')}}"><button class="enviar" style="background:#333">Cancelar Edição</button></a>
             </div>
 
             </form>

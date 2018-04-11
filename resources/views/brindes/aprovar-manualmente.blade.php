@@ -34,22 +34,17 @@
 
 @if($contagem != 0)
     <div class="field-wrap" style="float: right;">
-        <a href="{{route('admin.comissoes.relatorio')}}" class="enviar"><button class="enviar">Gerar PDF</button></a>
+        <a href="{{route('admin.brindes.gerarpdf-aprovarmanual')}}" class="enviar"><button class="enviar">Gerar PDF</button></a>
     </div>
 @endif
 
-<?php
-if($contagem == 0){
-    echo "<h3 style=\"font-size:18px; float:left; font-weight: 500; color:#636363; margin-left:18px; margin-top:18px;\">Nenhuma venda pendente</h3>";
-}
-;?>
 
 <script>
     $(function(){
         $('.reprovar').click(function(){
 
             var id = $(this).attr('data-id');
-            var url = '/admin/comissoes/reprovar/'+id;
+            var url = '/admin/brindes/reprovar/'+id;
             var vai = $('.'+id);
 
             $.ajax({
@@ -69,7 +64,7 @@ if($contagem == 0){
         $('.aprovar').click(function(){
 
             var id = $(this).attr('data-id');
-            var url = '/admin/comissoes/aprovar/'+id;
+            var url = '/admin/brindes/aprovar/'+id;
             var vai = $('.'+id);
 
             $.ajax({

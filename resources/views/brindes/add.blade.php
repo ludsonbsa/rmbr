@@ -23,7 +23,7 @@
 
                     <label>Nome Completo:</label>
 
-                    <input type="text" name="nome" required class="t100" value="">
+                    <input type="text" name="nome" required class="t100">
 
                 </div>
 
@@ -31,7 +31,7 @@
 
                     <label>CPF:</label>
 
-                    <input type="text" name="documento_usuario" class="t100" value="">
+                    <input type="text" name="documento_usuario" class="t100">
 
                 </div>
 
@@ -39,7 +39,7 @@
 
                     <label>E-mail:</label>
 
-                    <input type="text" name="email" required class="t100" value="">
+                    <input type="text" name="email" required class="t100">
 
                 </div>
 
@@ -49,7 +49,13 @@
 
                     <input type="hidden" name="ddd" value="">
 
-                    <input type="text" name="telefone" class="t100" value="">
+                    <input type="hidden" name="conferencia" value="1">
+
+                    <input type="hidden" name="enviar_kit" value="1">
+
+                    <input type="hidden" name="insercao_hotmart" value="Add Brinde">
+
+                    <input type="text" name="telefone" class="t100">
 
                 </div>
 
@@ -65,11 +71,7 @@
 
                     <label>Estado:</label>
 
-                    <br>
-
-                    <select name="estado" id="uf" required class="t100">
-                        <option value="DF">Distrito Federal</option>
-                    </select>
+                    <input type="text" name="estado" id="uf" class="t100">
 
                 </div>
 

@@ -137,7 +137,10 @@ class ContatosController extends Controller
     {
         #Update na tabela contatos com as informações
         $param = $request->all();
+
+        var_dump($param);
         $email = $param['email'];
+        $envkit = $param['enviar_kit'];
         $dia = $param['ligarDepois'];
         $horas = $param['ligarDepois-hora'];
         $token = $param['_token'];
@@ -149,10 +152,12 @@ class ContatosController extends Controller
         $contatos = Contatos::where('email', 'LIKE', $email);
 
         #Defino qual dado quero que atualize
-        $dados = [ 'pos_atendimento' => $param['pos_atendimento'] ];
+        $dados = [ 'pos_atendimento' => $param['pos_atendimento'], 'enviar_kit' => $envkit ];
 
         #Assume o pós atendimento marcado para este contato, e todos os outros que tenham o mesmo email
         $up = $contatos->update($dados);
+
+        $contatos->update($param);
 
         $idContato = $id;
         #Update na tabela de atendimento
@@ -169,7 +174,7 @@ class ContatosController extends Controller
             ->update($dado);
         $msg = "Lead atualizado com sucesso";
 
-        return response()->redirectToRoute('admin.leads')->with('message',$msg);
+        //return response()->redirectToRoute('admin.leads')->with('message',$msg);
     }
 
     public function editar_update(Request $request, $id)

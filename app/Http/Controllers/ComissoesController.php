@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Comissoes;
 use App\Helpers;
 
 class ComissoesController extends Controller
@@ -89,7 +88,7 @@ class ComissoesController extends Controller
                 ];
 
                 $upd = DB::table('tb_contatos')
-                    ->where('email', $email)
+                    ->where('email', 'LIKE', $email)
                     ->update($dados);
 
             #Se não tiver CPF, e e nem e-mail, então faz update para todos como telefone
@@ -106,10 +105,10 @@ class ComissoesController extends Controller
                     ->update($dados);
             }
 
-            $queryString = DB::table('tb_contatos')
+            /*$queryString = DB::table('tb_contatos')
                 ->selectRaw("email, documento_usuario, telefone")
                 ->whereRaw("{$query} LIKE '%{$like}%' AND status = 'aprovado'")
-                ->get();
+                ->get();*/
 
             #Fiz um select com a query do caso acima, apenas para ver em tela os dados
         }
@@ -247,33 +246,35 @@ class ComissoesController extends Controller
 
         #Criar Planilha de Comissão Geral
         $queryPlanilha = DB::table('tb_contatos as t1')
-            ->selectRaw("t1.id, t1.aprovado, t1.nome_do_produto, t1.conferencia, t1.comissao_gerada, t2.at_id_contato, t2.at_id_responsavel, t2.at_nome_atendente, t2.at_final_atendimento")
+            ->selectRaw("t1.id, t1.email, t1.aprovado, t1.nome_do_produto, t1.conferencia, t1.comissao_gerada, t2.at_id_contato, t2.at_id_responsavel, t2.at_nome_atendente, t2.at_final_atendimento")
             ->join('tb_atendimento as t2','t1.id','=','t2.at_id_contato')
             ->whereRaw("(t1.aprovado = 1 AND t1.conferencia = 1) AND (t1.comissao_gerada = 1) AND completo = 1")
             ->get();
+
+        #Verificar se o mês das vendas equivalem ao mês atual?...
 
         $csv = new Helpers\CSV();
 
         foreach ($queryPlanilha as $comissoesMes):
             $csv->addLine(new Helpers\CSVLine($comissoesMes->at_id_responsavel, $comissoesMes->at_id_contato, $comissoesMes->at_final_atendimento, $comissoesMes->nome_do_produto, $comissoesMes->at_nome_atendente));
         endforeach;
-        $csv->save("uploads/planilhas/comissoes-geradas-".date('d-m').".csv");
+        $csv->save("uploads/planilhas/comissoes-geradas-".date('d-m H').".csv");
 
-        foreach ($query as $contato) {
+        foreach ($queryPlanilha as $contato) {
             #Atribui completo pros e-mails aprovados e ja adicionados na planilha
             $email = $contato->email;
             $dados = [
                 'completo' => 2
             ];
             $update = DB::table('tb_contatos')
-                ->where('email', $email)
+                ->where('email','LIKE', $email)
                 ->update($dados);
         }
         #Cria planilha, lê ela e insere os dados dela na tabela de comissões
         $this->geraPlanilha();
 
         #Tem que deletar pra não duplicar comissões
-        $deletar = unlink('uploads/planilhas/comissoes-geradas-'.date('d-m').'.csv');
+        $deletar = unlink('uploads/planilhas/comissoes-geradas-'.date('d-m H').'.csv');
 
         return response()->redirectToRoute('admin.comissoes.listar');
 
@@ -284,7 +285,7 @@ class ComissoesController extends Controller
 
         /*****LER CSV e COLOCAR NA TABELA COMISSÕES******/
         /**Precisa ser inserir no banco os registros dos arquivos pra não processar o banco de dados de novo*/
-        $handle = fopen('uploads/planilhas/comissoes-geradas-'.date('d-m').'.csv', "r+");
+        $handle = fopen('uploads/planilhas/comissoes-geradas-'.date('d-m H').'.csv', "r+");
 
         while (!feof($handle)) {
 
@@ -306,6 +307,32 @@ class ComissoesController extends Controller
 
 
             switch ($produto):
+                case 'Programa Mulheres Bem Resolvidas':
+                    #Pegar o valor do produto de pompoarismo, e o valor da comissão
+                    $queryProd = DB::table('tb_produtos')
+                        ->select('*')
+                        ->where('prod_id', '=', 3)
+                        ->get();
+
+                    foreach($queryProd as $p);
+                    $valor_produto = $p->prod_valor_do_produto;
+                    $comissao = $p->prod_valor_comissao;
+
+                    $dadosEntrada = [
+                        'com_id_user' => $id_atendente,
+                        'com_id_contato' => $id_contato,
+                        'com_ano' => $ano,
+                        'com_mes' => $mes,
+                        'com_produto' => $produto,
+                        'com_valor_produto' => $valor_produto,
+                        'com_final' => $comissao,
+                        'com_pago' => 0
+                    ];
+                    DB::table('tb_comissoes')->insert($dadosEntrada);
+
+                    break;
+
+
                 case 'Pompoarismo Cátia Damasceno':
                     #Pegar o valor do produto de pompoarismo, e o valor da comissão
                     $queryProd = DB::table('tb_produtos')
@@ -330,6 +357,7 @@ class ComissoesController extends Controller
                         DB::table('tb_comissoes')->insert($dadosEntrada);
 
                     break;
+
 
                 case 'Principios da Atração':
                     #Pegar o valor do produto de pompoarismo, e o valor da comissão
@@ -358,7 +386,7 @@ class ComissoesController extends Controller
             endswitch;
         }
         fclose($handle);
-        return $this;
+
     }
 
     public function geradas(){
