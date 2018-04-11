@@ -74,22 +74,11 @@ class ImportacoesController extends Controller implements ShouldQueue
                 $completo = $this->getArquivo();
 
                 $completo = str_replace('\\','/', $completo);
-                #$this->queryHotmart(Auth::id());
-                #Verificação de Aprovados
-                #$this->aprovados();
 
-
-                dispatch_now(new ImportarPlanilha(Auth::id(), $completo));
+                dispatch(new ImportarPlanilha(Auth::id(), $completo));
                 #dispatchNow(new ImportarPlanilha(Auth::id(), $this->getArquivo()));
                 fclose($handle1);
 
-                #Executa query que insere os dados de planilha no banco de dados
-                //Event::dispatch($this->queryHotmart(Auth::id()));
-                #Verifica Aprovados
-                // Event::dispatch($this->aprovados());
-                //$this->aprovados();
-                #verifica Pos-atendimento
-                //$this->verificapa();
             }
         }
 

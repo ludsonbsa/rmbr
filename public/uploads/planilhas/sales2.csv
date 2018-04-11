@@ -1,0 +1,833 @@
+Nome do Produto;Nome do Produtor;Documento do Produtor;Nome do Afiliado;Transação;Meio de Pagamento;Origem;Moeda;Preço do Produto;Moeda;Preço da Oferta;Taxa de Câmbio;Moeda;Preço Original;Número da Parcela;Recorrência;Data de Venda;Data de Confirmação;Status;Nome;Documento;Email;DDD;Telefone;CEP;Cidade;Estado;Bairro;País;Endereço;Número;Complemento;chave;Código do Produto;Código da Afiliação;Código de Oferta;Origem de Checkout;Tipo de Pagamento;Período Grátis;Tem co-produção;Origem da Comissão;Preço Total;Tipo pagamento oferta;Taxa de Câmbio Real;Preço Total Convertido
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14715196127845;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;4;;25/02/2018 23:39;25/02/2018 23:39;Aprovado;Priscila Lira;3951981431;vanessamanso@hotmail.com;81;996480962;;;;;Brasil;;;;1zq1519612784000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;528.32;Parcelamento padrão (até 12×);1.000.000;528.32
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15115196112414;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;2;;25/02/2018 23:14;25/02/2018 23:14;Aprovado;Nilma Noronha Huck;4072237892;nilmahuck@gmail.com;13;996268196;;;;;Brasil;;;;r9h1519611242000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;515.64;Parcelamento padrão (até 12×);1.000.000;515.64
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19115196110321;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;25/02/2018 23:10;;Cancelado;Nilma Noronha Huck;4072237892;nilmahuck@gmail.com;13;996268196;;;;;Brasil;;;;19i1519611033000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11815196109646;HotPay;;BRL;512.00;BRL;477.72;;;;12;;25/02/2018 23:09;25/02/2018 23:09;Aprovado;Ellen CS Pereira;66777976787;clellen5@gmail.com;15;997555769;;;;;Brasil;;;;37i1519610964000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17615196097231;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;4;;25/02/2018 22:48;25/02/2018 22:48;Aprovado;ROSIANE;843565020;rosiane.lima.margarida@gmail.com;51;984199334;;;;;Brasil;;;;97o1519609724000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;528.32;Parcelamento padrão (até 12×);1.000.000;528.32
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13215196096045;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;6;;25/02/2018 22:46;25/02/2018 22:46;Aprovado;Dayane;7266066930;dayane.villani@gmail.com;44;998759957;;;;;Brasil;;;;d8k1519609604000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;541.20;Parcelamento padrão (até 12×);1.000.000;541.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16515196074211;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;3;;25/02/2018 22:10;25/02/2018 22:10;Aprovado;Camila Alves;10577371789;camilaalve@live.com;27;997841381;;;;;Brasil;;;;2n81519607421000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;521.94;Parcelamento padrão (até 12×);1.000.000;521.94
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13815196065283;HotPay;;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 21:55;;Cancelado;Vera Lucia M Noguchi;46233121787;veranoguchi@gmail.com;21;993237912;;;;;Brasil;;;;jn41519606528000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19415196060702;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 21:47;25/02/2018 21:47;Aprovado;Brenda Cardoso Azevedo da Silva;5144271405;brenda.c.azevedo@hotmail.com;81;998121941;;;;;Brasil;;;;hcm1519606071000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15315196054736;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 21:37;;Cancelado;Pierina Maria Pelinser;13067419049;anireyp7@yahoo.com.br;51;996693865;;;;;Brasil;;;;0s11519605473000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19815196052806;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 21:34;25/02/2018 21:34;Aprovado;OLIVIA DRANKA;58666222972;oliviadranka@gmail.com;41;999778788;;;;;Brasil;;;;o5a1519605281000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18415196043067;HotPay;;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 21:18;;Cancelado;Mariane;6377606540;marianesantss@gmail.com;79;996805951;;;;;Brasil;;;;eqz1519604307000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18415196042663;HotPay;;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 21:17;;Cancelado;Mariane;6377606540;marianesantss@gmail.com;79;996805951;;;;;Brasil;;;;am71519604266000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14415196041384;HotPay;;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 21:15;;Cancelado;Mariane;6377606540;marianesantss@gmail.com;79;996805951;;;;;Brasil;;;;1lv1519604138000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10415196040348;HotPay;;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 21:13;;Cancelado;Mariane;6377606540;marianesantss@gmail.com;79;996805951;;;;;Brasil;;;;llw1519604035000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11415196039260;HotPay;;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 21:12;;Cancelado;Mariane;6377606540;marianesantss@gmail.com;79;996805951;;;;;Brasil;;;;0xr1519603926000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11415196038723;HotPay;;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 21:11;;Cancelado;Mariane;6377606540;marianesantss@gmail.com;79;996805951;;;;;Brasil;;;;5mt1519603873000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18415196038228;HotPay;;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 21:10;;Cancelado;Mariane;6377606540;marianesantss@gmail.com;79;996805951;;;;;Brasil;;;;u8t1519603823000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12115196008593;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 20:21;;Cancelado;Fatima Toledo;97595543649;fatimaftoledo@hotmail.com;31;987166456;;;;;Brasil;;;;a6t1519600860000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10415196000000;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 20:06;25/02/2018 20:06;Aprovado;Roseli;12554582831;roseli_midori@hotmail.com;11;996728831;;;;;Brasil;;;;3mc1519600000000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP49615195963466;HotPay;videoantigo;USD;155.00;USD;144.42;0.311871;BRL;497.00;1;;25/02/2018 19:05;25/02/2018 19:08;Aprovado;Michelle Goncalves;;michelleag@globo.com;19;544948023;;;;;Estados Unidos;;;;3cx1519596347000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;155.00;Parcelamento padrão (até 12×);1.000.000;155.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18115195947463;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;25/02/2018 18:39;;Cancelado;Joseane aparecida alexandre;7982535925;joseane.ale@hotmail.com;49;988136921;;;;;Brasil;;;;k791519594746000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14115195946668;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;25/02/2018 18:37;;Cancelado;Joseane aparecida alexandre;7982535925;joseane.ale@hotmail.com;49;988136921;;;;;Brasil;;;;2gr1519594667000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17515195944538;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 18:34;25/02/2018 18:34;Aprovado;Elaine Dantas;12030236187;elainedayse@hotmail.com;61;999833900;;;;;Brasil;;;;5sa1519594453000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15915195892412;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 17:07;;Cancelado;sandra regina petik gonçalves;2090216913;sandra.petik@hotmail.com;46;999792882;;;;;Brasil;;;;ded1519589242000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18915195886031;HotPay;;BRL;512.00;BRL;477.72;;;;12;;25/02/2018 16:56;25/02/2018 16:56;Aprovado;Daiane Silva;34847994809;daiane2205@hotmail.com;11;985391563;;;;;Brasil;;;;o3c1519588603000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15215195865586;HotPay;;BRL;512.00;BRL;477.72;;;;4;;25/02/2018 16:22;25/02/2018 16:22;Aprovado;Patrícia Rossi Ros;12839770873;patricia.rossi.ros@gmail.com;11;992437543;;;;;Brasil;;;;jtj1519586558000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;544.28;Parcelamento padrão (até 12×);1.000.000;544.28
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP41915195860330;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;25/02/2018 16:13;25/02/2018 16:16;Aprovado;Zahara;10582713773;florrara17@yahoo.fr;21;988817572;;;;;Brasil;;;;6gy1519586034000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12015195858146;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;2;;25/02/2018 16:10;25/02/2018 16:10;Aprovado;Carolina Nolasco;8784995718;nolascoc@hotmail.com;21;994184106;;;;;Brasil;;;;e9p1519585815000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;515.64;Parcelamento padrão (até 12×);1.000.000;515.64
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19015195851483;HotPay;;BRL;512.00;BRL;477.72;;;;12;;25/02/2018 15:59;25/02/2018 15:59;Aprovado;Édina sperandio dos santos;2695115040;edina.sperandio@hotmail.com;55;999688918;;;;;Brasil;;;;so01519585148000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16515195841442;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;2;;25/02/2018 15:42;25/02/2018 15:42;Aprovado;Maria jose Conceição de melo;87181606549;dinhamelo14637@gmail.com;75;991785532;;;;;Brasil;;;;mr31519584144000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;515.64;Parcelamento padrão (até 12×);1.000.000;515.64
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15915195829834;HotPay;;BRL;512.00;BRL;477.72;;;;1;;25/02/2018 15:23;25/02/2018 15:23;Aprovado;Daiane Silva;34847994809;daiane2205@hotmail.com;11;985391563;;;;;Brasil;;;;hll1519582984000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;512.00;Parcelamento padrão (até 12×);1.000.000;512.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19615195829675;HotPay;;BRL;512.00;BRL;477.72;;;;5;;25/02/2018 15:22;25/02/2018 15:22;Aprovado;Beatriz Maria Tenório de Souza;73376264104;beatrizmaria_tenorio@hotmail.com;62;991726927;;;;;Brasil;;;;vff1519582968000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;550.85;Parcelamento padrão (até 12×);1.000.000;550.85
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12715195755476;HotPay;;BRL;512.00;BRL;477.72;;;;1;;25/02/2018 13:19;25/02/2018 13:19;Aprovado;Carla Arruda;22905663812;carlinha_manaus@hotmail.com;11;953353423;;;;;Brasil;;;;82o1519575548000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;512.00;Parcelamento padrão (até 12×);1.000.000;512.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18415195732700;HotPay;;BRL;512.00;BRL;477.72;;;;12;;25/02/2018 12:41;25/02/2018 12:41;Aprovado;Priscila Sabino Uchoa;385968302;priscilauchoa@hotmail.com;85;999463090;;;;;Brasil;;;;y521519573270000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12215195719014;HotPay;;BRL;512.00;BRL;477.72;;;;12;;25/02/2018 12:18;25/02/2018 12:18;Aprovado;Edina Mari de Souza da cunha;36071013291;dina.cunha39@hotmail.com;68;999609269;;;;;Brasil;;;;xa41519571902000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17515195700728;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 11:47;25/02/2018 11:47;Aprovado;Janice Luiza weber;48645338068;fazendaentrerios1@hotmail.com;55;996062882;;;;;Brasil;;;;g911519570073000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15515195671941;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 10:59;;Cancelado;Maristela Barbosa Martins;1660107156;maristellabarbossa@gmail.com;62;95567529;;;;;Brasil;;;;kgi1519567195000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10415195670293;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;2;;25/02/2018 10:57;25/02/2018 10:57;Aprovado;Roberta;8486108810;roberta@dicapri.com.br;11;999512717;;;;;Brasil;;;;v2j1519567029000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;515.64;Parcelamento padrão (até 12×);1.000.000;515.64
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19215195670070;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;25/02/2018 10:56;25/02/2018 10:56;Aprovado;Cynthia Tamura;25344844867;cynthiatamura@hotmail.com;31;983506776;;;;;Brasil;;;;xt61519567008000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Programa Mulheres Bem Resolvidas;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14115195640444;HotPay;;BRL;1497.00;BRL;1398.69;;;;12;;25/02/2018 10:07;25/02/2018 10:07;Aprovado;Patrícia de Melo Santos;66407346134;patriciasantoscoach@gmail.com;64;999240226;;;;;Brasil;;;;dkz1519564044000;163010;D6206256T;eb6tbre1;;Cartão de Crédito;Não;Não;;1750.20;Parcelamento padrão (até 12×);1.000.000;1750.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11115195627593;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 09:45;25/02/2018 09:46;Aprovado;Patrícia de Melo Santos;66407346134;patriciasantoscoach@gmail.com;64;999240226;;;;;Brasil;;;;6al1519562759000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11615195617566;HotPay;;BRL;512.00;BRL;477.72;;;;12;;25/02/2018 09:29;25/02/2018 09:29;Aprovado;Cleonice de Melo de Almeida;90030109949;cleonicemelo.almeida@gemail.com;43;996609620;;;;;Brasil;;;;01t1519561756000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Programa Mulheres Bem Resolvidas;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16815195617006;HotPay;;BRL;1497.00;BRL;1398.69;;;;12;;25/02/2018 09:28;25/02/2018 09:28;Aprovado;Dayse Pessoa de Azevedo;6466425967;daysepessoa@gmail.com;41;996544345;;;;;Brasil;;;;7rp1519561700000;163010;D6206256T;eb6tbre1;;Cartão de Crédito;Não;Não;;1750.20;Parcelamento padrão (até 12×);1.000.000;1750.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11815195602472;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;6;;25/02/2018 09:04;25/02/2018 09:04;Aprovado;Dayse Pessoa de Azevedo;6466425967;daysepessoa@gmail.com;41;996544345;;;;;Brasil;;;;a7l1519560247000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;541.20;Parcelamento padrão (até 12×);1.000.000;541.20
+Programa Mulheres Bem Resolvidas;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14815195598793;HotPay;;BRL;1497.00;BRL;1398.69;;;;12;;25/02/2018 08:58;25/02/2018 08:58;Aprovado;Jucimeire Lavor Moura;65802284234;jucimeirelm2011@icloud.com;94;992779740;;;;;Brasil;;;;5dq1519559880000;163010;D6206256T;eb6tbre1;;Cartão de Crédito;Não;Não;;1750.20;Parcelamento padrão (até 12×);1.000.000;1750.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18815195597868;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;5;;25/02/2018 08:56;25/02/2018 08:56;Aprovado;Jucimeire Lavor Moura;65802284234;jucimeirelm2011@icloud.com;94;992779740;;;;;Brasil;;;;y0q1519559786000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;534.75;Parcelamento padrão (até 12×);1.000.000;534.75
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18215195310431;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 00:57;25/02/2018 00:57;Aprovado;Fabiana do Carmo Batista Nascimento;4409799606;fabianadocarmobatista@hotmail.com;33;984136570;;;;;Brasil;;;;5,04152E+15;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18615195284886;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 00:14;25/02/2018 00:14;Aprovado;Rosemary Paula Basso;3656389861;rosemarybasso@gmail.com;19;989169996;;;;;Brasil;;;;tcc1519528488000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18715195281575;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;25/02/2018 00:09;25/02/2018 00:09;Aprovado;Thais Casagrande;4053015960;thaisapolar1@gmail.com;41;999121428;;;;;Brasil;;;;clp1519528157000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18215195227486;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;10;;24/02/2018 22:39;24/02/2018 22:39;Aprovado;Aline;6179309965;alipichler@hotmail.com;46;991072217;;;;;Brasil;;;;67g1519522749000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;567.60;Parcelamento padrão (até 12×);1.000.000;567.60
+Programa Mulheres Bem Resolvidas;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18415195225818;HotPay;;BRL;1497.00;BRL;1398.69;;;;12;;24/02/2018 22:36;24/02/2018 22:36;Aprovado;Marcia Sirotheau;48277274149;marciasirotheau@yahoo.com.br;61;981754081;;;;;Brasil;;;;hgc1519522582000;163010;D6206256T;eb6tbre1;;Cartão de Crédito;Não;Não;;1750.20;Parcelamento padrão (até 12×);1.000.000;1750.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15415195225441;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 22:35;24/02/2018 22:35;Aprovado;Marcia Sirotheau;48277274149;marciasirotheau@yahoo.com.br;61;981754081;;;;;Brasil;;;;5ns1519522545000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18415195193507;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 21:42;;Cancelado;Marlene Silva;3305345136;marcalixtosilva@outlook.com;62;981900552;;;;;Brasil;;;;36m1519519350000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14415195191458;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 21:39;;Cancelado;Marlene Silva;3305345136;marcalixtosilva@outlook.com;62;981900552;;;;;Brasil;;;;w861519519146000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10415195191242;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 21:38;;Cancelado;Marlene Silva;3305345136;marcalixtosilva@outlook.com;62;981900552;;;;;Brasil;;;;ro51519519125000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16415195190053;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 21:36;;Cancelado;Marlene Silva;3305345136;marcalixtosilva@outlook.com;62;981900552;;;;;Brasil;;;;6d51519519005000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11415195189783;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 21:36;;Cancelado;Marlene Silva;3305345136;marcalixtosilva@outlook.com;62;981900552;;;;;Brasil;;;;mls1519518978000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17415195189442;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 21:35;;Cancelado;Marlene Silva;3305345136;marcalixtosilva@outlook.com;62;981900552;;;;;Brasil;;;;jn71519518945000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10415195188898;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 21:34;;Cancelado;Marlene Silva;3305345136;marcalixtosilva@outlook.com;62;981900552;;;;;Brasil;;;;b8h1519518890000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11415195188526;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 21:34;;Cancelado;Marlene Silva;3305345136;marcalixtosilva@outlook.com;62;981900552;;;;;Brasil;;;;r6k1519518853000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16415195188144;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 21:33;;Cancelado;Marlene Silva;3305345136;marcalixtosilva@outlook.com;62;981900552;;;;;Brasil;;;;odb1519518814000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17715195186826;HotPay;;BRL;512.00;BRL;477.72;;;;12;;24/02/2018 21:31;24/02/2018 21:31;Aprovado;Marines;94325057072;tessarimarines@gmail.com;54;996719076;;;;;Brasil;;;;p831519518683000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15915195174535;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;10;;24/02/2018 21:10;24/02/2018 21:10;Aprovado;Elizabete Braga Vilas Bõas;85500275704;elizabetevilasboas@hotmail.com;21;994180906;;;;;Brasil;;;;s3m1519517453000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;567.60;Parcelamento padrão (até 12×);1.000.000;567.60
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12415195161590;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 20:49;24/02/2018 20:49;Aprovado;Ivanete Maria Cabral Amaral;44961529168;netecarola@hotmail.com;62;992887628;;;;;Brasil;;;;yfx1519516159000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13215195140196;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;10;;24/02/2018 20:13;;Cancelado;Sirleide da Silva sousa;82720207349;sirleide1977@hotmail.com;89;994082620;;;;;Brasil;;;;s901519514019000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;567.60;Parcelamento padrão (até 12×);1.000.000;567.60
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17215195139395;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;10;;24/02/2018 20:12;;Cancelado;Sirleide da Silva sousa;82720207349;sirleide1977@hotmail.com;89;994082620;;;;;Brasil;;;;wj71519513940000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;567.60;Parcelamento padrão (até 12×);1.000.000;567.60
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11515195118805;HotPay;;BRL;512.00;BRL;477.72;;;;12;;24/02/2018 19:38;24/02/2018 19:38;Aprovado;Lília Tomie Higa;8836431895;tomiehiga@hotmail.com;11;985795476;;;;;Brasil;;;;2i91519511880000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Autoridade Fitness;HP17815195118683;HotPay;videoantigo;BRL;497.00;BRL;231.84;;;;8;;24/02/2018 19:37;24/02/2018 19:37;Aprovado;aline albuquerque barros holanda;4227062306;holanda.aab@gmail.com;85;996555436;;;;;Brasil;;;;w041519511868000;150610;O6603912K;7xia7djp;;Cartão de Crédito;Não;Não;Produtor;554.32;Parcelamento padrão (até 12×);1.000.000;554.32
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Autoridade Fitness;HP12815195117964;HotPay;videoantigo;BRL;497.00;BRL;231.84;;;;8;;24/02/2018 19:36;;Cancelado;aline albuquerque barros holanda;4227062306;holanda.aab@gmail.com;85;996555436;;;;;Brasil;;;;mry1519511796000;150610;O6603912K;7xia7djp;;Cartão de Crédito;Não;Não;Produtor;554.32;Parcelamento padrão (até 12×);1.000.000;554.32
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14215195114603;HotPay;;BRL;512.00;BRL;477.72;;;;5;;24/02/2018 19:31;24/02/2018 19:31;Aprovado;Berenice Mendes Machado;13212512709;beremmachado@gmail.com;21;982470610;;;;;Brasil;;;;03o1519511461000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;550.85;Parcelamento padrão (até 12×);1.000.000;550.85
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15215195109582;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 19:22;24/02/2018 19:22;Aprovado;ALICE LEITE COUGO;15321037;lice9898@yahoo.com.br;51;993574252;;;;;Brasil;;;;b2a1519510958000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10115195108497;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 19:20;;Cancelado;Elisandra Fernandes de Carvalho;1678375918;carv.danda@gmail.com;49;988063939;;;;;Brasil;;;;y4y1519510849000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15115195104958;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 19:14;;Cancelado;Elisandra Fernandes de Carvalho;1678375918;carv.danda@gmail.com;49;988063939;;;;;Brasil;;;;ylc1519510495000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10215195093398;HotPay;;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 18:55;24/02/2018 18:55;Aprovado;BRUNA NAIARA CASTELO BRANCO MAFALDO;7837919688;bruna.contabeis2008@gmail.com;31;985173152;;;;;Brasil;;;;24e1519509340000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13415195057694;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;4;;24/02/2018 17:56;24/02/2018 17:56;Aprovado;Silvia Carone5491;14762991880;sbcarone@gmail.com;11;969280844;;;;;Brasil;;;;1rw1519505770000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;528.32;Parcelamento padrão (até 12×);1.000.000;528.32
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15315195014880;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;4;;24/02/2018 16:44;24/02/2018 16:44;Aprovado;Marília Queiroz Thum;7385690467;mariliathum@gmail.com;81;988251648;;;;;Brasil;;;;jfy1519501488000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;528.32;Parcelamento padrão (até 12×);1.000.000;528.32
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13115195007926;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 16:33;24/02/2018 16:33;Aprovado;Laura miraglia;82667616049;lauramiraglia7@gmail.com;55;996192694;;;;;Brasil;;;;oh51519500792000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12215194980942;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 15:48;24/02/2018 15:48;Aprovado;Erika;57100950104;erikacunhamonteiro@gmail.com;65;992510569;;;;;Brasil;;;;k3b1519498094000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13215194969337;HotPay;;BRL;512.00;BRL;477.72;;;;3;;24/02/2018 15:28;24/02/2018 15:28;Aprovado;Nathália franco;35205657812;nathalia.ffranco@gmail.com;11;983358335;;;;;Brasil;;;;4,71519E+14;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;537.72;Parcelamento padrão (até 12×);1.000.000;537.72
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16415194957695;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 15:09;24/02/2018 15:09;Aprovado;Hélida Pinto Medeiro;5494730417;helidamedeiros@gmail.com;81;982043129;;;;;Brasil;;;;f4l1519495769000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Programa Mulheres Bem Resolvidas;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11015194950268;HotPay;;BRL;1497.00;BRL;1398.69;;;;12;;24/02/2018 14:57;24/02/2018 14:57;Aprovado;Marcia Fernandes Coelho;8874436726;marciafcoelho2016@gmail.com;21;997655132;;;;;Brasil;;;;l5v1519495027000;163010;D6206256T;eb6tbre1;;Cartão de Crédito;Não;Não;;1750.20;Parcelamento padrão (até 12×);1.000.000;1750.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15615194920638;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;24/02/2018 14:07;24/02/2018 14:07;Aprovado;Natália;38620385801;dra.natalia@hotmail.com;11;953070104;;;;;Brasil;;;;o861519492063000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13815194919698;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;3;;24/02/2018 14:06;24/02/2018 14:06;Aprovado;Karine Jost;73185000153;karinejost@gmail.com;21;998549062;;;;;Brasil;;;;8hl1519491969000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;521.94;Parcelamento padrão (até 12×);1.000.000;521.94
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10015194912786;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;4;;24/02/2018 13:54;24/02/2018 13:54;Aprovado;Marcia Fernandes Coelho;8874436726;marciafcoelho2016@gmail.com;21;997655132;;;;;Brasil;;;;7mm1519491278000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;528.32;Parcelamento padrão (até 12×);1.000.000;528.32
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15215194858813;HotPay;;BRL;497.00;BRL;463.69;;;;7;;24/02/2018 12:24;;Cancelado;rosilane valentim da silva;83627081587;annevls@hotmail.com;71;986847351;;;;;Brasil;;;;nv01519485882000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;547.75;Parcelamento padrão (até 12×);1.000.000;547.75
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13215194823423;HotPay;;BRL;512.00;BRL;477.72;;;;12;;24/02/2018 11:25;;Cancelado;Ravila Pinheiro valverde;2149993198;ravila.valverde@gmail.com;62;991614682;;;;;Brasil;;;;oei1519482343000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14715194793156;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;4;;24/02/2018 10:35;24/02/2018 10:35;Aprovado;Lenita Francioni;17161334837;lenitagf@yahoo.com.br;19;999294849;;;;;Brasil;;;;4gt1519479315000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;528.32;Parcelamento padrão (até 12×);1.000.000;528.32
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Autoridade Fitness;HP10215194789155;HotPay;videoantigo;BRL;497.00;BRL;231.84;;;;12;;24/02/2018 10:28;24/02/2018 10:28;Aprovado;Veridiana da Silva Santos;34921775818;veridiana.vess@gmail.com;11;954843620;;;;;Brasil;;;;u631519478915000;150610;O6603912K;7xia7djp;;Cartão de Crédito;Não;Não;Produtor;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10915194783818;HotPay;;BRL;512.00;BRL;477.72;;;;12;;24/02/2018 10:19;24/02/2018 10:19;Aprovado;Raquel Juliani Imasava;28039805848;raquel@polomarmores.com.br;11;996335633;;;;;Brasil;;;;55e1519478382000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17515194761914;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 09:43;24/02/2018 09:43;Aprovado;Cíntia Pavesi Maciel;7325618921;c.pavesimaciel@hotmail.com;47;991453738;;;;;Brasil;;;;r1b1519476192000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12815194747590;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;24/02/2018 09:19;24/02/2018 09:19;Aprovado;Tatiane Silva;1563059177;tatiane_economiaufg@hotmail.com;62;996155534;;;;;Brasil;;;;xz51519474759000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14915194704656;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;3;;24/02/2018 08:07;24/02/2018 08:07;Aprovado;Sandra;7927839802;sandrahei13@gmail.com;11;993981254;;;;;Brasil;;;;s7s1519470466000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;521.94;Parcelamento padrão (até 12×);1.000.000;521.94
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18715194696296;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;24/02/2018 07:53;24/02/2018 07:53;Aprovado;PRISCILA FRANCO;5217366761;priscilafranco89@hotmail.com;21;971316757;;;;;Brasil;;;;ihv1519469629000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP44715194684780;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;24/02/2018 07:34;24/02/2018 07:37;Aprovado;Luciana;96240954934;agendaluciana@lupaarquitetos.com;47;991078427;;;;;Brasil;;;;jmn1519468478000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Programa Mulheres Bem Resolvidas;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13515194645554;HotPay;;BRL;1497.00;BRL;1398.69;;;;8;;24/02/2018 06:29;24/02/2018 06:29;Aprovado;Marcia Serevincins;2210758793;marciaserevincis@gmail.com;11;981183493;;;;;Brasil;;;;e8k1519464556000;163010;D6206256T;eb6tbre1;;Cartão de Crédito;Não;Não;;1669.52;Parcelamento padrão (até 12×);1.000.000;1669.52
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12915194638551;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 06:17;24/02/2018 06:17;Aprovado;Ana Carolina;83180842334;carolnoliveira@uol.com.br;85;987134167;;;;;Brasil;;;;3gl1519463856000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16515194637478;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;3;;24/02/2018 06:15;24/02/2018 06:15;Aprovado;Marcia Serevincins;2210758793;marciaserevincis@gmail.com;11;981183493;;;;;Brasil;;;;2x61519463747000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;521.94;Parcelamento padrão (até 12×);1.000.000;521.94
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18915194485124;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;2;;24/02/2018 02:01;24/02/2018 02:01;Aprovado;Gilsemaria schotten;91283655934;gilschotten@hotmail.com;48;999966661;;;;;Brasil;;;;6qq1519448513000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;515.64;Parcelamento padrão (até 12×);1.000.000;515.64
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17115194477093;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;24/02/2018 01:48;24/02/2018 01:48;Aprovado;Alessandra Coelho;13393686844;alessandracoelho@aasp.org.br;13;997394330;;;;;Brasil;;;;r551519447710000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11015194423805;HotPay;;BRL;512.00;BRL;477.72;;;;1;;24/02/2018 00:19;24/02/2018 00:19;Aprovado;Marcella Biroli;40412511843;m.biroli@hotmail.com;11;971538612;;;;;Brasil;;;;89k1519442381000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;512.00;Parcelamento padrão (até 12×);1.000.000;512.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13015194421867;HotPay;;BRL;512.00;BRL;477.72;;;;1;;24/02/2018 00:16;;Cancelado;Marcella Biroli;40412511843;m.biroli@hotmail.com;11;971538612;;;;;Brasil;;;;62i1519442186000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;512.00;Parcelamento padrão (até 12×);1.000.000;512.00
+Programa Mulheres Bem Resolvidas;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12615194402275;HotPay;;BRL;1497.00;BRL;1398.69;;;;12;;23/02/2018 23:43;23/02/2018 23:43;Aprovado;vivian spanemberg macuglia;96048867034;vivianmacuglia@hotmail.com;55;991387420;;;;;Brasil;;;;vr51519440228000;163010;D6206256T;eb6tbre1;;Cartão de Crédito;Não;Não;;1750.20;Parcelamento padrão (até 12×);1.000.000;1750.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15615194382981;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 23:11;23/02/2018 23:11;Aprovado;vivian spanemberg macuglia;96048867034;vivianmacuglia@hotmail.com;55;991387420;;;;;Brasil;;;;y391519438298000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18915194373623;HotPay;;BRL;512.00;BRL;477.72;;;;1;;23/02/2018 22:56;23/02/2018 22:56;Aprovado;Cleide Natal;60516950100;cleideregina2@hotmail.com;61;999948837;;;;;Brasil;;;;3ve1519437363000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;512.00;Parcelamento padrão (até 12×);1.000.000;512.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP44815194343034;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;23/02/2018 22:05;23/02/2018 22:17;Aprovado;Priscila Bezerra Moreira;30517517825;priscila83.bezerra@gmail.com;11;972314517;;;;;Brasil;;;;qlu1519434303000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12215194330452;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 21:44;23/02/2018 21:44;Aprovado;Elizabete El-Katib Penido;30865395691;elkatib@yahoo.com.br;31;991663957;;;;;Brasil;;;;j3j1519433045000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15615194308493;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 21:07;23/02/2018 21:07;Aprovado;Debora Leite de Moraes Marotinho;43024416153;deboramarotinho@gmail.com;62;985795669;;;;;Brasil;;;;il21519430849000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18115194304893;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;3;;23/02/2018 21:01;23/02/2018 21:01;Aprovado;Lucineia;27236512826;lucia_amm@hotmail.com;15;996297671;;;;;Brasil;;;;aau1519430489000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;521.94;Parcelamento padrão (até 12×);1.000.000;521.94
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15715194290996;HotPay;manychat;BRL;496.00;BRL;462.76;;;;11;;23/02/2018 20:38;;Cancelado;Samara Martins de Farias;5650838305;samaramartins1901@gmail.com;88;996928490;;;;;Brasil;;;;mqt1519429100000;150610;P5869941R;ql7fst69;;Cartão de Crédito;Não;Não;;573.10;Parcelamento padrão (até 12×);1.000.000;573.10
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10315194275640;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 20:12;;Cancelado;Dwan Mayara Santos Passos;2793565369;dwan_mayara@hotmail.com;86;998414681;;;;;Brasil;;;;cqs1519427564000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10815194261284;HotPay;;BRL;512.00;BRL;477.72;;;;7;;23/02/2018 19:48;;Cancelado;Kátia Guion;15844531841;katia.guion@yahoo.com.br;19;983224642;;;;;Brasil;;;;0gw1519426128000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;564.27;Parcelamento padrão (até 12×);1.000.000;564.27
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11815194260204;HotPay;;BRL;512.00;BRL;477.72;;;;7;;23/02/2018 19:47;;Cancelado;Kátia Guion;15844531841;katia.guion@yahoo.com.br;19;983224642;;;;;Brasil;;;;q7j1519426020000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;564.27;Parcelamento padrão (até 12×);1.000.000;564.27
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12915194250873;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 19:31;23/02/2018 19:31;Aprovado;Mayara Gomes Guedes;41342229827;mayaragomes7273@gmail.com;11;949859838;;;;;Brasil;;;;76o1519425088000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP41215194247077;HotPay;;BRL;512.00;BRL;477.72;;;;1;;23/02/2018 19:25;;Expirado;Fatima Ananias;23346434400;fafaem2015@gmail.com;81;999770491;;;;;Brasil;;;;l971519424707000;150610;P5869941R;66rqyql0;;PayPal;Não;Não;;512.00;Parcelamento padrão (até 12×);1.000.000;512.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12115194229380;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 18:55;23/02/2018 18:55;Aprovado;Vivian;1195257120;vivi.kiry@gmail.com;64;984235750;;;;;Brasil;;;;t5s1519422938000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15815194222557;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;23/02/2018 18:44;23/02/2018 18:44;Aprovado;Grasiele de Araujo de castro;98795627120;grasigac@gmail.com;61;984041869;;;;;Brasil;;;;uaw1519422256000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10715194210813;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;6;;23/02/2018 18:24;23/02/2018 18:24;Aprovado;Emiliana Maria da Costa Coelho Veras;83375422172;emilianaveras@gmail.com;61;999942073;;;;;Brasil;;;;jti1519421082000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;541.20;Parcelamento padrão (até 12×);1.000.000;541.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11515194206582;HotPay;;BRL;512.00;BRL;477.72;;;;10;;23/02/2018 18:17;23/02/2018 18:17;Aprovado;Raimunda Mourão;21785848291;rayraymourao@yahoo.com.br;68;992112703;;;;;Brasil;;;;0bj1519420658000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;584.70;Parcelamento padrão (até 12×);1.000.000;584.70
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18315194199585;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;23/02/2018 18:05;23/02/2018 18:06;Aprovado;Fernanda Serravalle;91813395500;fernandaserravalle@yahoo.com;79;998119719;;;;;Brasil;;;;4iw1519419959000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11615194158233;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;2;;23/02/2018 16:57;23/02/2018 16:57;Aprovado;Karen;12442537745;ksantos1987@gmail.con;21;999838278;;;;;Brasil;;;;2oa1519415823000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;515.64;Parcelamento padrão (até 12×);1.000.000;515.64
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16815194136488;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 16:20;23/02/2018 16:20;Aprovado;Fabiana Faria Gomes;10549053719;fabianaffgomes@gmail.com;21;970310004;;;;;Brasil;;;;b4k1519413648000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10515194118834;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;5;;23/02/2018 15:51;23/02/2018 15:51;Aprovado;Patricia Menegatti Siqueira;14078126880;patriciamsiqueira@ig.com.br;11;997350001;;;;;Brasil;;;;8jb1519411883000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;534.75;Parcelamento padrão (até 12×);1.000.000;534.75
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13615194085411;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 14:55;23/02/2018 14:55;Aprovado;Patricia;3109179725;patriciacratzz@gmail.com;27;999417760;;;;;Brasil;;;;ukx1519408542000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10715194078794;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 14:44;23/02/2018 14:44;Aprovado;Rosemeire Terezinha de Sá Siqueira;10273597876;rosimeiresiquera@hotmail.com;17;997625169;;;;;Brasil;;;;owa1519407879000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19715194071503;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 14:32;;Cancelado;Rosemeire Terezinha de Sá Siqueira;10273597876;rosimeiresiquera@hotmail.com;17;997625169;;;;;Brasil;;;;uot1519407151000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18415194070105;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 14:30;23/02/2018 14:30;Aprovado;Heliana Ligia Nascimento Seabra;41626516120;ligia_seabra@hotmail.com;61;984101293;;;;;Brasil;;;;rzb1519407010000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15815194068357;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 14:27;23/02/2018 14:27;Aprovado;Caroline Scalioni;28031014833;carolinemaciel@hotmail.com;12;991681017;;;;;Brasil;;;;iwu1519406835000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP45015194060735;HotPay;videoantigo;EUR;125.00;USD;143.57;0.251509;BRL;497.00;1;;23/02/2018 14:14;23/02/2018 14:17;Aprovado;Margarida Almeida;;mipaguida@sapo.pt;91;918124070;;;;;Portugal;;;;x291519406074000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;153.75;Parcelamento padrão (até 12×);1.233.656;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10115194057093;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;23/02/2018 14:08;23/02/2018 14:08;Aprovado;Elieth Maria da Fonseca;9704726686;eliethfonseca@ymail.com;32;988624360;;;;;Brasil;;;;giw1519405710000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12115194050996;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;23/02/2018 13:58;;Cancelado;Elieth Maria da Fonseca;9704726686;eliethfonseca@ymail.com;32;988624360;;;;;Brasil;;;;8wj1519405100000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12115194050206;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;23/02/2018 13:57;;Cancelado;Elieth Maria da Fonseca;9704726686;eliethfonseca@ymail.com;32;988624360;;;;;Brasil;;;;3bv1519405021000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17515194039751;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;23/02/2018 13:39;23/02/2018 13:39;Aprovado;Marcia Mattiollo;91505607949;marcia.mattiollo@gmail.com;47;991881904;;;;;Brasil;;;;a531519403975000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17615194038723;HotPay;;BRL;497.00;BRL;463.69;;;;1;;23/02/2018 13:37;23/02/2018 13:37;Aprovado;ANA PAULA RODRIGUES DOS SANTOS;26404703882;msg.anapaula@gmail.com;11;973564586;;;;;Brasil;;;;n631519403872000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11615193980561;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;6;;23/02/2018 12:00;23/02/2018 12:01;Aprovado;Luciana Santos;88710181172;carol_ishi@hotmail.com;66;996242038;;;;;Brasil;;;;1x41519398056000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;541.20;Parcelamento padrão (até 12×);1.000.000;541.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11715193971265;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;10;;23/02/2018 11:45;23/02/2018 11:45;Aprovado;Elaine;10823154866;elaine_dlr@hotmail.com;11;972650067;;;;;Brasil;;;;zf71519397127000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;567.60;Parcelamento padrão (até 12×);1.000.000;567.60
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP40215193948884;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;23/02/2018 11:08;;Expirado;Mariah;7389832924;mariahfaraujo@gmail.com;48;996049570;;;;;Brasil;;;;0hp1519394889000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10915193918517;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;7;;23/02/2018 10:17;23/02/2018 10:17;Aprovado;Lais Moro da Silva;39797388840;lais.moro@yahoo.com.br;11;994801511;;;;;Brasil;;;;hkp1519391851000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;547.75;Parcelamento padrão (até 12×);1.000.000;547.75
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18415193878436;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 09:10;23/02/2018 09:10;Aprovado;Andressa Monteiro Ricetti;85320897987;andressa15211@yahoo.com.br;41;999504064;;;;;Brasil;;;;b651519387844000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12015193869058;HotPay;;BRL;512.00;BRL;477.72;;;;6;;23/02/2018 08:55;;Cancelado;Elisane Cavol Alerico;61455938068;alerico_@hotmail.com;54;991564987;;;;;Brasil;;;;p3u1519386905000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;557.52;Parcelamento padrão (até 12×);1.000.000;557.52
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17715193771262;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;23/02/2018 06:12;23/02/2018 06:12;Aprovado;Cristina Lopes;7468732809;lopesxcristina@gmail.com;32;988432815;;;;;Brasil;;;;qj21519377126000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12615193666443;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 03:17;;Cancelado;Selma Pelaccia;14484221837;jumaduconf@outlook.com;15;981188365;;;;;Brasil;;;;l051519366644000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13415193622571;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 02:04;23/02/2018 02:04;Aprovado;Aurelia Andre Alves;53388356734;aurelia.andre@terra.com.br;21;994367706;;;;;Brasil;;;;7t31519362257000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15015193578034;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;4;;23/02/2018 00:50;23/02/2018 00:50;Aprovado;Milena;3520937492;milenarocha_c@hotmail.com;81;999483799;;;;;Brasil;;;;eok1519357804000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;528.32;Parcelamento padrão (até 12×);1.000.000;528.32
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14215193575930;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 00:46;;Cancelado;Karla Alonso Casamayor Pinheiro;13674875870;karla.casamayor@gmail.com;11;992060649;;;;;Brasil;;;;aik1519357594000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11215193574723;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;23/02/2018 00:44;;Cancelado;Karla Alonso Casamayor Pinheiro;13674875870;karla.casamayor@gmail.com;11;992060649;;;;;Brasil;;;;o701519357473000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18115193574553;HotPay;;BRL;512.00;BRL;477.72;;;;12;;23/02/2018 00:44;23/02/2018 00:44;Aprovado;Sandra Maria da Silva Marques;64341640763;asicial.sandramarques@gmail.com;21;987701345;;;;;Brasil;;;;xdh1519357455000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP47115193561713;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;23/02/2018 00:22;;Expirado;Priscila Flores Machado;2604999005;priscilamachado93@gmail.com;55;992142220;;;;;Brasil;;;;e091519356172000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10015193480001;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 22:06;22/02/2018 22:06;Aprovado;Ariana Pereira Candiani;5515899652;ariana_candiani@hotmail.com;16;997529973;;;;;Brasil;;;;wf21519348001000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19015193457953;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 21:29;22/02/2018 21:29;Aprovado;Lenice mendknca;41958187615;lenicemendonca66@gmail.com;31;984547147;;;;;Brasil;;;;czr1519345795000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17215193441795;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;3;;22/02/2018 21:03;22/02/2018 21:03;Aprovado;Nelci de Moraes Martins;3295799679;nelci-moraisentrefolha@hotmail.com;27;995194635;;;;;Brasil;;;;zcc1519344180000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;521.94;Parcelamento padrão (até 12×);1.000.000;521.94
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10415193423526;HotPay;;BRL;512.00;BRL;477.72;;;;12;;22/02/2018 20:32;;Cancelado;elenice avila da silva;82292949091;avilanice82@gmail.com;51;981020370;;;;;Brasil;;;;2ta1519342353000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17415193422873;HotPay;;BRL;512.00;BRL;477.72;;;;12;;22/02/2018 20:31;;Cancelado;elenice avila da silva;82292949091;avilanice82@gmail.com;51;981020370;;;;;Brasil;;;;lwk1519342287000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18415193422305;HotPay;;BRL;512.00;BRL;477.72;;;;12;;22/02/2018 20:30;;Cancelado;elenice avila da silva;82292949091;avilanice82@gmail.com;51;981020370;;;;;Brasil;;;;kbd1519342231000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18415193422006;HotPay;;BRL;512.00;BRL;477.72;;;;12;;22/02/2018 20:30;;Cancelado;elenice avila da silva;82292949091;avilanice82@gmail.com;51;981020370;;;;;Brasil;;;;umm1519342201000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11115193330508;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 17:57;;Cancelado;Izamara;2914153341;izasousakids985@gmail.com;98;988056670;;;;;Brasil;;;;s6p1519333050000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15315193322166;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 17:43;;Cancelado;Renata Dominique;9254547611;renatadominiquemedeiros@gmail.com;33;999036995;;;;;Brasil;;;;77j1519332217000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19315193319370;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 17:38;;Cancelado;Renata Dominique;9254547611;renatadominiquemedeiros@gmail.com;33;999036995;;;;;Brasil;;;;qkd1519331937000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15315193316013;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 17:33;;Cancelado;Renata Dominique;9254547611;renatadominiquemedeiros@gmail.com;33;999036995;;;;;Brasil;;;;o4s1519331601000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12315193312445;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 17:27;;Cancelado;Renata Dominique;9254547611;renatadominiquemedeiros@gmail.com;33;999036995;;;;;Brasil;;;;khr1519331245000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP40615193301284;HotPay;videoantigo;EUR;125.00;USD;142.97;0.251509;BRL;497.00;1;;22/02/2018 17:08;22/02/2018 17:11;Aprovado;Priscila;;prisciladfr@gmail.com;3;51966021208;;;;;Portugal;;;;1us1519330128000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;153.75;Parcelamento padrão (até 12×);1.228.474;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16115193292075;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;4;;22/02/2018 16:53;22/02/2018 16:53;Aprovado;larissa brasinha;8277225911;largabi@hotmail.com;44;998990441;;;;;Brasil;;;;pkx1519329207000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;528.32;Parcelamento padrão (até 12×);1.000.000;528.32
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19915193280394;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;5;;22/02/2018 16:33;22/02/2018 16:34;Aprovado;Fernanda Oranges;39352497805;fernanda.oranges@gmail.com;19;981696266;;;;;Brasil;;;;pba1519328039000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;534.75;Parcelamento padrão (até 12×);1.000.000;534.75
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10815193244904;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;5;;22/02/2018 15:34;;Cancelado;Dina;83880968934;dinaedi10@hotmail.com;41;988049409;;;;;Brasil;;;;44k1519324490000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;534.75;Parcelamento padrão (até 12×);1.000.000;534.75
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12715193217241;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;10;;22/02/2018 14:48;22/02/2018 14:48;Aprovado;Daniela Pelizzoni;12920049836;dani@pelizzoni.com.br;11;997027980;;;;;Brasil;;;;v931519321725000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;567.60;Parcelamento padrão (até 12×);1.000.000;567.60
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13215193214528;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;2;;22/02/2018 14:44;;Cancelado;Adriana waltrick;27433647856;kawulk@gmail.com;21;996206299;;;;;Brasil;;;;w3g1519321453000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;508.26;Parcelamento padrão (até 12×);1.000.000;508.26
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10215193213886;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;2;;22/02/2018 14:43;;Cancelado;Adriana waltrick;27433647856;kawulk@gmail.com;21;996206299;;;;;Brasil;;;;od91519321389000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;506.38;Parcelamento padrão (até 12×);1.000.000;506.38
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14215193212481;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;4;;22/02/2018 14:40;;Cancelado;Adriana waltrick;27433647856;kawulk@gmail.com;21;996206299;;;;;Brasil;;;;qdr1519321249000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;528.32;Parcelamento padrão (até 12×);1.000.000;528.32
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14915193206837;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;2;;22/02/2018 14:31;22/02/2018 14:31;Aprovado;Tatiana;32161466852;tatiana_brisa@hotmail.com;21;983015053;;;;;Brasil;;;;sf21519320684000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;515.64;Parcelamento padrão (até 12×);1.000.000;515.64
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11715193103942;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 11:39;22/02/2018 11:39;Aprovado;Adélia Barros;4674531101;adelia.barros12@hotmail.com;21;999752036;;;;;Brasil;;;;qzw1519310394000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16915193077268;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 10:55;22/02/2018 10:55;Aprovado;Patrícia Stewart Ferraz;1163683736;pstewartferraz@gmail.com;48;999119914;;;;;Brasil;;;;kcn1519307726000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10315193076203;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 10:53;22/02/2018 10:53;Aprovado;rosane;584187335;rosane.rb2017@gmail.com;88;996021371;;;;;Brasil;;;;is81519307620000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17215193075835;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 10:53;22/02/2018 10:53;Aprovado;Luciene;26024200854;lucieneafontes@hotmail.com;11;982741813;;;;;Brasil;;;;vtd1519307584000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;547.28;Parcelamento padrão (até 12×);1.000.000;547.28
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13215193074241;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 10:50;;Cancelado;Luciene;26024200854;lucieneafontes@hotmail.com;11;982741813;;;;;Brasil;;;;fog1519307425000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11015193058745;HotPay;;BRL;512.00;BRL;477.72;;;;12;;22/02/2018 10:24;22/02/2018 10:24;Aprovado;ISABEL CRISTINA CORREA;6092312867;isabel.correaadv@gmail.com;11;998956938;;;;;Brasil;;;;5w71519305875000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10215193052748;HotPay;;BRL;512.00;BRL;477.72;;;;12;;22/02/2018 10:14;22/02/2018 10:14;Aprovado;Ivani Maria Garcia;693459883;ivani.garcia@terra.com.br;11;940391322;;;;;Brasil;;;;bco1519305275000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18915193051286;HotPay;;BRL;512.00;BRL;477.72;;;;2;;22/02/2018 10:12;22/02/2018 10:12;Aprovado;Solange Moreira Batista Borges;2652939955;asggborges@gmail.com;41;998632368;;;;;Brasil;;;;n5t1519305129000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;531.20;Parcelamento padrão (até 12×);1.000.000;531.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15515193051230;HotPay;;BRL;512.00;BRL;477.72;;;;12;;22/02/2018 10:12;;Cancelado;REGINA PEREIRA DE SOUZA LUCATI;13724478810;resouzalucati@hotmail.com;14;998462646;;;;;Brasil;;;;7ah1519305124000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17515193050937;HotPay;;BRL;512.00;BRL;477.72;;;;7;;22/02/2018 10:11;;Cancelado;REGINA PEREIRA DE SOUZA LUCATI;13724478810;resouzalucati@hotmail.com;14;998462646;;;;;Brasil;;;;m4u1519305093000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;564.27;Parcelamento padrão (até 12×);1.000.000;564.27
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18715192983623;HotPay;;BRL;512.00;BRL;477.72;;;;12;;22/02/2018 08:19;22/02/2018 08:19;Aprovado;Camila Forneck;1853446076;caforneck@gmail.com;42;991550595;;;;;Brasil;;;;gsd1519298363000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10615192958866;HotPay;;BRL;512.00;BRL;477.72;;;;3;;22/02/2018 07:38;22/02/2018 07:38;Aprovado;gilda aparecida feitosa da silva;83598278187;gildaaparecidafeitosa@gmail.com;66;34151116;;;;;Brasil;;;;w291519295887000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;537.72;Parcelamento padrão (até 12×);1.000.000;537.72
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14715192938737;HotPay;;BRL;512.00;BRL;477.72;;;;12;;22/02/2018 07:04;22/02/2018 07:04;Aprovado;Sandra Caetano Cardoso;41887077200;sandracaetano.sp@gmail.com;19;993951955;;;;;Brasil;;;;uxt1519293873000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18115192759533;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 02:05;22/02/2018 02:06;Aprovado;Erica;90012178349;bia_erica@hotmail.com;11;982870863;;;;;Brasil;;;;srg1519275954000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16915192742655;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;22/02/2018 01:37;;Cancelado;Solange de Matos Queiroz;66349796772;solmq@uol.com.br;21;985195551;;;;;Brasil;;;;vgo1519274265000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13615192716381;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;22/02/2018 00:53;22/02/2018 00:54;Aprovado;Isabela Ramos Philippi;6284305907;bela_philippi@hotmail.com;48;988329809;;;;;Brasil;;;;h0b1519271639000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13615192684132;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;2;;22/02/2018 00:00;22/02/2018 00:00;Aprovado;Elena Orta;70641277172;elenagarcia201477@yahoo.com;61;999070016;;;;;Brasil;;;;yb11519268413000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;515.64;Parcelamento padrão (até 12×);1.000.000;515.64
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13515192680312;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;6;;21/02/2018 23:53;21/02/2018 23:53;Aprovado;Vera Lúcia Butzkr;42159300900;veraluciavbutzke@gmail.com;48;999158686;;;;;Brasil;;;;77w1519268031000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;541.20;Parcelamento padrão (até 12×);1.000.000;541.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14215192595645;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 21:32;21/02/2018 21:32;Aprovado;Angelica;16163582896;buffet@papilloneventos.com.br;12;997922202;;;;;Brasil;;;;7s91519259564000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17415192551127;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 20:18;21/02/2018 20:18;Aprovado;Ana Paula Siqueira;66408660649;anap.siqueira@gmail.com;31;992051015;;;;;Brasil;;;;occ1519255113000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12415192537323;HotPay;;BRL;512.00;BRL;477.72;;;;12;;21/02/2018 19:55;;Cancelado;Ana Paula Siqueira;66408660649;anap.siqueira@gmail.com;31;992051015;;;;;Brasil;;;;xpk1519253733000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14615192496411;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 18:47;21/02/2018 18:47;Aprovado;Denise;12773498860;nisedse@hotmail.com;11;982602666;;;;;Brasil;;;;9fl1519249642000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11315192496241;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 18:47;21/02/2018 18:47;Aprovado;michele carvalho velozo pinheiro;1314442392;michele.carvalho.prof@hotmail.com;91;981686321;;;;;Brasil;;;;71o1519249625000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13315192494714;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 18:44;;Cancelado;michele carvalho velozo pinheiro;1314442392;michele.carvalho.prof@hotmail.com;91;981686321;;;;;Brasil;;;;gz71519249472000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP00115192486901;HotPay;;BRL;497.00;BRL;463.69;;;;1;;21/02/2018 18:31;24/02/2018 07:48;Aprovado;Aline de Amorim;2959549902;alinemtm@yahoo.com.br;48;999274921;;;;;Brasil;;;;6pu1519248690000;150610;P5869941R;7xia7djp;;Boleto Bancário;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16915192481758;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;3;;21/02/2018 18:22;21/02/2018 18:22;Aprovado;Eliete Á Siqueira;2039343342;elietes2siqueira@gmail.com;69;984588866;;;;;Brasil;;;;phm1519248175000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;521.94;Parcelamento padrão (até 12×);1.000.000;521.94
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12115192479251;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 18:18;21/02/2018 18:18;Aprovado;CIDINHA FERNANDES;44078846149;cidinha_majb@hotmail.com;62;996721467;;;;;Brasil;;;;bkj1519247926000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19815192446755;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;21/02/2018 17:24;21/02/2018 17:24;Aprovado;Kelvia;70987971204;kelvia@fibralink.net.br;94;991319012;;;;;Brasil;;;;zx51519244675000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19615192446138;HotPay;;BRL;512.00;BRL;477.72;;;;12;;21/02/2018 17:23;21/02/2018 17:23;Aprovado;Tamara Miranda De souza;12679697766;tamarajk@gmail.com;21;991697965;;;;;Brasil;;;;zch1519244614000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14215192445374;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;5;;21/02/2018 17:22;21/02/2018 17:22;Aprovado;DIONE SILVA;5756448187;dione.candidos@gmail.com;61;999662151;;;;;Brasil;;;;f2j1519244537000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;531.07;Parcelamento padrão (até 12×);1.000.000;531.07
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14115192418362;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 16:37;21/02/2018 16:37;Aprovado;Marileusa;68846908287;marileusa_menezes@hotmail.com;12;991273239;;;;;Brasil;;;;oeb1519241837000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19615192390172;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 15:50;21/02/2018 15:50;Aprovado;regiane dos santos;4030515924;regiane2521@gmail.com;81;996826024;;;;;Brasil;;;;vcx1519239017000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP41315192389665;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;21/02/2018 15:49;;Expirado;Ilana Caroline;9706558438;ilanacnascimento@hotmail.com;83;987804489;;;;;Brasil;;;;0wa1519238966000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12315192389496;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;7;;21/02/2018 15:49;;Cancelado;Ilana Caroline;9706558438;ilanacnascimento@hotmail.com;83;987804489;;;;;Brasil;;;;qm51519238950000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;547.68;Parcelamento padrão (até 12×);1.000.000;547.68
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14315192388632;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;7;;21/02/2018 15:47;;Cancelado;Ilana Caroline;9706558438;ilanacnascimento@hotmail.com;83;987804489;;;;;Brasil;;;;m531519238863000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;547.75;Parcelamento padrão (até 12×);1.000.000;547.75
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18315192388317;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;7;;21/02/2018 15:47;;Cancelado;Ilana Caroline;9706558438;ilanacnascimento@hotmail.com;83;987804489;;;;;Brasil;;;;be91519238831000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;547.75;Parcelamento padrão (até 12×);1.000.000;547.75
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11915192386500;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 15:44;;Cancelado;Danielle Tavares;36183643858;danyafl@hotmail.com;11;973673306;;;;;Brasil;;;;hg01519238650000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19915192356138;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 14:53;21/02/2018 14:53;Aprovado;Juliana;9860374783;julyjuba@yahoo.com.br;61;992393723;;;;;Brasil;;;;qhg1519235614000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10015192340891;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 14:28;21/02/2018 14:28;Aprovado;marli terezinha de almeida ramsdorf;55827845949;mramsdorf@gmail.com;49;999960434;;;;;Brasil;;;;ztb1519234090000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14015192340678;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;3;;21/02/2018 14:27;21/02/2018 14:27;Aprovado;ELONETE LOIOLA CASSEMIRO;38906929234;loiolanete@hotmail.com;69;984514097;;;;;Brasil;;;;zv81519234068000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;521.94;Parcelamento padrão (até 12×);1.000.000;521.94
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17915192329868;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 14:09;21/02/2018 14:09;Aprovado;Leila Maria;402812301;leila1maria@hotmail.com;62;985045401;;;;;Brasil;;;;55i1519232987000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13415192282841;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;21/02/2018 12:51;21/02/2018 12:51;Aprovado;Meire Maria Monteiro Reis;35204923187;escolacontagius@gmail.com;63;992757607;;;;;Brasil;;;;3ug1519228285000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13215192276628;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;21/02/2018 12:41;21/02/2018 12:41;Aprovado;Sabrina Dornelas Mota;7886131622;sabrinadmota@hotmail.com;34;999416300;;;;;Brasil;;;;iob1519227662000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14615192264053;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 12:20;21/02/2018 12:20;Aprovado;Maria Luisa Sampere Serna Cruz;1803277807;m.l.sampere@uol.com.br;13;997082335;;;;;Brasil;;;;1,43152E+15;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11415192260891;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 12:14;21/02/2018 12:14;Aprovado;Viviane pinzon;60147253004;viviane_pietro@hotmail.com;51;33420387;;;;;Brasil;;;;1bj1519226089000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14415192248006;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;3;;21/02/2018 11:53;21/02/2018 11:53;Aprovado;Julia Barzotto Wegener;1416330348;julia_wegener@hotmail.com;99;984324162;;;;;Brasil;;;;d091519224800000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;521.94;Parcelamento padrão (até 12×);1.000.000;521.94
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11215192240977;HotPay;;BRL;512.00;BRL;477.72;;;;5;;21/02/2018 11:41;21/02/2018 11:41;Aprovado;Ana Lúcia da Silva;79574254615;anabrancasjdr@gmail.com;32;999194729;;;;;Brasil;;;;ev11519224098000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;550.85;Parcelamento padrão (até 12×);1.000.000;550.85
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16715192212150;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;2;;21/02/2018 10:53;21/02/2018 10:53;Aprovado;Sayuri;31104219840;sayuri.unicamp@gmail.com;11;997314337;;;;;Brasil;;;;jx61519221215000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;515.64;Parcelamento padrão (até 12×);1.000.000;515.64
+Programa Mulheres Bem Resolvidas;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11515192181736;HotPay;;BRL;1497.00;BRL;1398.69;;;;12;;21/02/2018 10:02;21/02/2018 10:02;Aprovado;Cleusa Warken Palmer;2605230627;cleusapalmer@yahoo.com;;;;;;;Brasil;;;;ikt1519218174000;163010;D6206256T;eb6tbre1;;Cartão de Crédito;Não;Não;;1750.20;Parcelamento padrão (até 12×);1.000.000;1750.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP48515192156281;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;21/02/2018 09:20;;Expirado;Rodrigo Rodrigues Noleto;99611171153;rodriguesnoleto@gmail.com;63;992220290;;;;;Brasil;;;;9ci1519215629000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14715192148652;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 09:07;21/02/2018 09:07;Aprovado;Lygia maria de godoy batista cavalcanti;17471826487;lygiagodoy@hotmail.com;84;999831153;;;;;Brasil;;;;fw21519214865000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Programa Mulheres Bem Resolvidas;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17515192141615;HotPay;;BRL;1497.00;BRL;1398.69;;;;12;;21/02/2018 08:56;21/02/2018 08:56;Aprovado;Mirian Rocha  Santos Diniz;81987382153;mirian.rocha10@hotmail.com;62;985623501;;;;;Brasil;;;;h3m1519214162000;163010;D6206256T;eb6tbre1;;Cartão de Crédito;Não;Não;;1750.20;Parcelamento padrão (até 12×);1.000.000;1750.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11515192138871;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 08:51;21/02/2018 08:51;Aprovado;Mirian Rocha  Santos Diniz;81987382153;mirian.rocha10@hotmail.com;62;985623501;;;;;Brasil;;;;k9g1519213887000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP40615192084181;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;21/02/2018 07:20;;Expirado;Laura michelon vincenzi;3003911961;laurajair@gmail.com;45;998610147;;;;;Brasil;;;;ngj1519208419000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14615192083356;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 07:18;;Cancelado;Laura michelon vincenzi;3003911961;laurajair@gmail.com;45;998610147;;;;;Brasil;;;;uw51519208335000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16415192014267;HotPay;videoantigo;USD;155.00;USD;144.42;0.311871;BRL;497.00;1;;21/02/2018 05:23;;Cancelado;Luamar;;zingg1989@gmai.com;7;99638501;;;;;Suíça;;;;2m41519201427000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;155.00;Parcelamento padrão (até 12×);1.000.000;155.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19915191850501;HotPay;;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 00:50;21/02/2018 00:50;Aprovado;Eloá Paulo do Carmo;13522055721;eloadocarmo@gmail.com;21;995580566;;;;;Brasil;;;;hb11519185051000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18015191825145;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;21/02/2018 00:08;;Cancelado;Roberta;11702342670;roberta.s.s@hotmail.comro;31;982724800;;;;;Brasil;;;;lhz1519182515000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12215191795603;HotPay;;BRL;512.00;BRL;477.72;;;;1;;20/02/2018 23:19;20/02/2018 23:19;Aprovado;FABIANA Foppa Bassegio;94103798068;fabibassegio@brturbo.com.br;51;999155322;;;;;Brasil;;;;1hw1519179560000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;512.00;Parcelamento padrão (até 12×);1.000.000;512.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19215191786946;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;5;;20/02/2018 23:04;20/02/2018 23:04;Aprovado;Vasti Viveiros Santos Carvalho;11476865809;vastiviveiros@hotmail.com;11;982336832;;;;;Brasil;;;;hae1519178694000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;534.75;Parcelamento padrão (até 12×);1.000.000;534.75
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18015191786211;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;3;;20/02/2018 23:03;20/02/2018 23:03;Aprovado;Fernanda Oliveira Santos;29489663883;fer.stos@yahoo.com.br;11;996137966;;;;;Brasil;;;;70t1519178622000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;521.94;Parcelamento padrão (até 12×);1.000.000;521.94
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12615191754131;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 22:10;;Cancelado;Denise;12773498860;nisedse@hotmail.com;11;982602666;;;;;Brasil;;;;ufu1519175413000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11815191737276;HotPay;;BRL;512.00;BRL;477.72;;;;12;;20/02/2018 21:42;20/02/2018 21:42;Aprovado;Marina Fabiana de Paula Barreto;7960978794;marinabarretok@gmail.com;21;985536715;;;;;Brasil;;;;qlp1519173728000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11115191729232;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 21:28;20/02/2018 21:28;Aprovado;MARCIA REGINA SALES CHAPETTA;245326731;marciasales2403@gmail.com;21;991613099;;;;;Brasil;;;;ymf1519172924000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP48915191729218;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 21:28;;Expirado;MARINA OLIVEIRA;11866696670;almeidaeandrade@outlook.com;33;988722159;;;;;Brasil;;;;t0j1519172922000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14415191721264;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 21:15;20/02/2018 21:15;Aprovado;Luciana Tonin Poersch;40504174053;lulilat@hotmail.com;54;999942745;;;;;Brasil;;;;1tr1519172126000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Autoridade Fitness;HP19015191721134;HotPay;videoantigo;BRL;497.00;BRL;231.84;;;;12;;20/02/2018 21:15;20/02/2018 21:15;Aprovado;Rubiana Moura da Silva;3460477067;rubianasilvajc@outlook.com;55;996895131;;;;;Brasil;;;;bf31519172113000;150610;O6603912K;7xia7djp;;Cartão de Crédito;Não;Não;Produtor;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP48015191705180;HotPay;videoantigo;MXN;2859.00;USD;142.06;5.752.515;BRL;497.00;1;;20/02/2018 20:48;20/02/2018 20:52;Aprovado;Bruna Luciano;;bru_luciano@hotmail.com;5;1141785447;;;;;México;;;;fh61519170518000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;2859.00;Parcelamento padrão (até 12×);0.053375;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16015191704208;HotPay;videoantigo;MXN;2859.00;USD;142.06;5.752.515;BRL;497.00;1;;20/02/2018 20:47;;Cancelado;Bruna Luciano;;bru_luciano@hotmail.com;5;1141785447;;;;;México;;;;5il1519170421000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;2859.00;Parcelamento padrão (até 12×);0.053375;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13015191703536;HotPay;videoantigo;MXN;2859.00;USD;142.06;5.752.515;BRL;497.00;1;;20/02/2018 20:45;;Cancelado;Bruna Luciano;;bru_luciano@hotmail.com;5;23315721692;;;;;México;;;;yw21519170354000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;2859.00;Parcelamento padrão (até 12×);0.053375;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17915191698304;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 20:37;20/02/2018 20:37;Aprovado;Gladis;43995950000;gladisesribeiro@gmail.com;53;30252915;;;;;Brasil;;;;eku1519169831000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14515191663478;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 19:39;;Cancelado;Márcia Duarte;4415505929;marcia_dv@hotmail.com;46;988135421;;;;;Brasil;;;;y9o1519166347000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17515191662725;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 19:37;;Cancelado;Márcia Duarte;4415505929;marcia_dv@hotmail.com;46;988135421;;;;;Brasil;;;;nac1519166273000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18315191656844;HotPay;;BRL;512.00;BRL;477.72;;;;12;;20/02/2018 19:28;20/02/2018 19:28;Aprovado;Irani Aparecida Fitz;54703484900;iraniapfitz@hotmail.com;43;999768896;;;;;Brasil;;;;k3t1519165685000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP01915191656195;HotPay;;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 19:26;;Expirado;Rute Rodrigues Oliveira pereira;69868581168;rutedesigndeinteriores@gmail.com;61;992353663;;;;;Brasil;;;;wbn1519165619000;150610;P5869941R;7xia7djp;;Boleto Bancário;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10415191640171;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 19:00;20/02/2018 19:00;Aprovado;Lindaura Santos;1450965806;lindaurapagliuca@gmail.com;11;996401951;;;;;Brasil;;;;3ik1519164018000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15615191633297;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 18:48;;Cancelado;Denise;12773498860;nisedse@hotmail.com;11;982602666;;;;;Brasil;;;;05d1519163330000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17615191632165;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 18:46;;Cancelado;Denise;12773498860;nisedse@hotmail.com;11;982602666;;;;;Brasil;;;;ppu1519163216000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10915191630704;HotPay;videoantigo;MXN;2859.00;USD;142.06;5.752.515;BRL;497.00;1;;20/02/2018 18:44;;Cancelado;JULIANA;;jpgoncalez@gmail.com;11;999612520;;;;;México;;;;bue1519163070000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;2859.00;Parcelamento padrão (até 12×);0.053375;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10915191630100;HotPay;videoantigo;MXN;2859.00;USD;142.06;5.752.515;BRL;497.00;1;;20/02/2018 18:43;;Cancelado;JULIANA;;jpgoncalez@gmail.com;11;999612520;;;;;México;;;;wle1519163010000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;2859.00;Parcelamento padrão (até 12×);0.053375;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12815191614694;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 18:17;;Cancelado;Juliana santos;5550380927;julsantos943@gmail.com;49;99929813;;;;;Brasil;;;;bmu1519161470000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15815191614370;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 18:17;;Cancelado;Juliana santos;5550380927;julsantos943@gmail.com;49;99929813;;;;;Brasil;;;;i401519161437000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19315191608413;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;6;;20/02/2018 18:07;;Cancelado;Naize Dias dos Santos;7271860606;naize.dias@hotmail.com;11;986806604;;;;;Brasil;;;;7qc1519160841000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;541.20;Parcelamento padrão (até 12×);1.000.000;541.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11715191604402;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 18:00;;Cancelado;Gabriela Montezuma;4871346137;gabrielabsb1@gmail.com;61;999850220;;;;;Brasil;;;;93z1519160440000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP14915191584472;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 17:27;20/02/2018 17:27;Aprovado;maria helena alves ang;5264958807;helena.ang@uol.com.br;11;997946571;;;;;Brasil;;;;3ej1519158448000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP43615191582660;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 17:24;;Expirado;Maria Núbia Pires de Magalhães neta;41831662841;nubiamoncaomagalhaes@gmail.com;11;952953651;;;;;Brasil;;;;ulo1519158267000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP40615191581955;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 17:23;;Expirado;Maria Núbia Pires de Magalhães neta;41831662841;nubiamoncaomagalhaes@gmail.com;11;952953651;;;;;Brasil;;;;o051519158195000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13615191569794;HotPay;;BRL;497.00;BRL;463.69;;;;5;;20/02/2018 17:02;20/02/2018 17:03;Aprovado;MARIA BERNADETE PEREIRA ALMEIDA;18509797153;berna2.almeida@hotmail.com;61;999876915;;;;;Brasil;;;;0hn1519156979000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;534.75;Parcelamento padrão (até 12×);1.000.000;534.75
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19615191565011;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;10;;20/02/2018 16:55;20/02/2018 16:55;Aprovado;Adriana Cardoso de oliveira;63495058168;adrianacoc@hotmail.com;66;981152448;;;;;Brasil;;;;hnz1519156501000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;567.60;Parcelamento padrão (até 12×);1.000.000;567.60
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16415191557083;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 16:41;20/02/2018 16:41;Aprovado;Renata Pereira;32957567830;renata.rs424@gmail.com;14;997914338;;;;;Brasil;;;;9zx1519155708000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12815191556100;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 16:40;20/02/2018 16:40;Aprovado;Raíra Mesquita Maschmann;1902885074;raira0205@hotmail.com;51;999831788;;;;;Brasil;;;;nl81519155610000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19515191542533;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 16:17;;Cancelado;Salete;78416485100;salete_felizz@hotmail.com;67;996446486;;;;;Brasil;;;;vfv1519154254000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16915191541817;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 16:16;20/02/2018 16:16;Aprovado;Vânia de Oliveira Paula;1033446165;vania_paula01@hotmail.com;66;997102349;;;;;Brasil;;;;4b51519154181000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13415191510763;HotPay;;BRL;512.00;BRL;477.72;;;;3;;20/02/2018 15:24;20/02/2018 15:24;Aprovado;Silvana Gorniski;46675884034;silvana_gor@yahoo.com.br;51;999355158;;;;;Brasil;;;;nc51519151077000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;537.72;Parcelamento padrão (até 12×);1.000.000;537.72
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18315191489414;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 14:49;20/02/2018 14:49;Aprovado;Paola Potente Esteves Rodrigues;13585246702;paolapotenteer@gmail.com;24;981284306;;;;;Brasil;;;;6h61519148941000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP44015191475497;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 14:25;;Expirado;Dênia;60806966653;d_emerick@yahoo.com.br;37;991929186;;;;;Brasil;;;;4pf1519147549000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP00015191469937;HotPay;;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 14:16;21/02/2018 08:58;Aprovado;FERNANDA FERREIRA BARBATO;9948640780;fer.barbato@gmail.com;21;998881379;;;;;Brasil;;;;u041519146994000;150610;P5869941R;7xia7djp;;Boleto Bancário;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP08315191468086;HotPay;;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 14:13;;Expirado;Andreia;3006622111;aga_barros@hotmail.com;61;995103553;;;;;Brasil;;;;7xo1519146809000;150610;P5869941R;7xia7djp;;Boleto Bancário;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10915191464461;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 14:07;20/02/2018 14:07;Aprovado;Juraci Silva de Jesus Ferreira;750723432;lojafulosexshop@hotmail.com;81;86002305;;;;;Brasil;;;;akv1519146446000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19815191457658;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 13:56;20/02/2018 13:56;Aprovado;cristina Edneia da Silva;82490660659;cristinaed0421@gmail.com;31;988895912;;;;;Brasil;;;;o2x1519145765000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP12715191447791;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 13:39;20/02/2018 13:39;Aprovado;Fabiola Panasowicz Hwung;5406487957;fabiola_hwung@yahoo.com.br;48;999440014;;;;;Brasil;;;;6w31519144780000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10915191410863;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 12:38;20/02/2018 12:38;Aprovado;Karina Alves;2713492122;karina_sevla@hotmail.com;64;992855791;;;;;Brasil;;;;1ry1519141086000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11015191410530;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 12:37;20/02/2018 12:37;Aprovado;Jussara S. J. Giorgi;492271810;jusjg@terra.com.br;11;998246424;;;;;Brasil;;;;6j01519141053000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP11915191409898;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 12:36;;Cancelado;Karina Alves;2713492122;karina_sevla@hotmail.com;64;992855791;;;;;Brasil;;;;idg1519140989000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Programa Mulheres Bem Resolvidas;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP10915191408248;HotPay;;BRL;1497.00;BRL;1398.69;;;;12;;20/02/2018 12:33;20/02/2018 12:33;Aprovado;Giulia;77222288953;giulia.sch@gmail.com;65;981172929;;;;;Brasil;;;;w441519140825000;163010;D6206256T;eb6tbre1;;Cartão de Crédito;Não;Não;;1750.20;Parcelamento padrão (até 12×);1.000.000;1750.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13115191408056;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 12:33;20/02/2018 12:33;Aprovado;Ana Carolina pellagio;38568456820;anapellagio@gmail.com;11;950512772;;;;;Brasil;;;;gwn1519140805000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP40115191403144;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 12:25;;Expirado;michele;1107737133;michele_goveia@hotmail.com;67;984315142;;;;;Brasil;;;;6g41519140314000;150610;P5869941R;7xia7djp;;PayPal;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15315191400711;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 12:21;20/02/2018 12:21;Aprovado;Zilie Marques de Carvalho;31340396807;zillie.piveta@gmail.com;17;991113432;;;;;Brasil;;;;anb1519140072000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16915191388515;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 12:00;20/02/2018 12:00;Aprovado;Giulia;77222288953;giulia.sch@gmail.com;65;981172929;;;;;Brasil;;;;qk41519138851000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP00515191362247;HotPay;;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 11:17;;Expirado;Iolanda;72199245187;iolandaroriz@gmail.com;61;981395490;;;;;Brasil;;;;s8s1519136224000;150610;P5869941R;7xia7djp;;Boleto Bancário;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16715191358803;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;4;;20/02/2018 11:11;20/02/2018 11:11;Aprovado;Thaís Carvalho;5154721152;thaisbarros_24@hotmail.com;62;999121933;;;;;Brasil;;;;vhs1519135881000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;528.32;Parcelamento padrão (até 12×);1.000.000;528.32
+Programa Mulheres Bem Resolvidas;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15215191358332;HotPay;;BRL;1497.00;BRL;1398.69;;;;12;;20/02/2018 11:10;20/02/2018 11:10;Aprovado;Karina;49016377387;karinathe@hotmail.com;86;981321616;;;;;Brasil;;;;5ns1519135833000;163010;D6206256T;eb6tbre1;;Cartão de Crédito;Não;Não;;1750.20;Parcelamento padrão (até 12×);1.000.000;1750.20
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17215191345437;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 10:49;20/02/2018 10:49;Aprovado;Karina;49016377387;karinathe@hotmail.com;86;981321616;;;;;Brasil;;;;i0w1519134544000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP16715191329037;HotPay;;BRL;512.00;BRL;477.72;;;;12;;20/02/2018 10:21;20/02/2018 10:21;Aprovado;Vanessa Cristina Leal  Sarlo;5343498701;sarlo_vanessaleal@yahoo.com.br;21;994007625;;;;;Brasil;;;;9gw1519132904000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP15215191285784;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;1;;20/02/2018 09:09;20/02/2018 09:09;Aprovado;Ester limão;19821301215;gerencia@parquimica.com.br;91;981199505;;;;;Brasil;;;;4a91519128578000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;497.00;Parcelamento padrão (até 12×);1.000.000;497.00
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP17915191252730;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 08:14;20/02/2018 08:14;Aprovado;Juliana Scherer Mastella;2530391009;julianasmastella@gmail.com;51;993509272;;;;;Brasil;;;;1ww1519125273000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18515191246233;HotPay;;BRL;512.00;BRL;477.72;;;;12;;20/02/2018 08:03;20/02/2018 08:03;Aprovado;Leny;1000263118;lenynha16@gmail.com;61;991244465;;;;;Brasil;;;;ao71519124624000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP18915191212750;HotPay;;BRL;512.00;BRL;477.72;;;;12;;20/02/2018 07:07;20/02/2018 07:08;Aprovado;Eva Antunes;73479926053;evantunestst@yahoo.com.br;51;999696432;;;;;Brasil;;;;p541519121276000;150610;P5869941R;66rqyql0;;Cartão de Crédito;Não;Não;;598.56;Parcelamento padrão (até 12×);1.000.000;598.56
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP13915191208035;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;12;;20/02/2018 07:00;20/02/2018 07:00;Aprovado;Ademilde da Penha Schaefer;8225363744;ademilde1980@icloud.com;27;998019682;;;;;Brasil;;;;miw1519120804000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;581.04;Parcelamento padrão (até 12×);1.000.000;581.04
+Pompoarismo Cátia Damasceno;MBR EDITORA;2,67621E+13;Leandro Ladeira;HP19815191200272;HotPay;videoantigo;BRL;497.00;BRL;463.69;;;;5;;20/02/2018 06:47;20/02/2018 06:47;Aprovado;Sandra Gonzalo;5492038850;sagonzalo@uol.com.br;12;981962030;;;;;Brasil;;;;ytv1519120028000;150610;P5869941R;7xia7djp;;Cartão de Crédito;Não;Não;;534.75;Parcelamento padrão (até 12×);1.000.000;534.75
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
