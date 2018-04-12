@@ -425,7 +425,7 @@
 
                     <label>Cidade:</label>
 
-                    <input type="text" name="cidade" id="cidade" value="">
+                    <input type="text" name="cidade" id="cidade" value="{!! $cont->cidade !!}">
 
                 </div>
 
@@ -435,7 +435,7 @@
 
                     <label>Bairro:</label>
 
-                    <input type="text" name="bairro" id="bairro" class="t100" value="">
+                    <input type="text" name="bairro" id="bairro" class="t100" value="{!! $cont->bairro !!}">
 
                 </div>
 
@@ -445,7 +445,7 @@
 
                     <label>Endereço:</label>
 
-                    <input type="text" name="endereco"  id="endereco" class="t100" value="">
+                    <input type="text" name="endereco"  id="endereco" class="t100" value="{!! $cont->endereco !!}">
 
                 </div>
 
@@ -453,7 +453,7 @@
 
                     <label>Número:</label>
 
-                    <input type="text" name="numero" id="numero" class="t100" value="">
+                    <input type="text" name="numero" id="numero" class="t100" value="{!! $cont->numero !!}">
 
                 </div>
 
@@ -461,7 +461,7 @@
 
                     <label>Complemento:</label>
 
-                    <input type="text" name="complemento"  class="t100" value="">
+                    <input type="text" name="complemento"  class="t100" value="{!! $cont->complemento !!}">
 
                 </div>
             </section>
