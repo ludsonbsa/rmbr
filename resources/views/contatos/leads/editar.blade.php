@@ -1,166 +1,123 @@
-<!--
- Editar do ADD Lead de quem inseriu.
- Só o atender edita endereço, editar não, a não se que seja admin.
--->
 @extends(layout())
 
 @section('content')
-    <?php
+    <section class="content" style="background:url('/images/bglead.jpg') repeat-x #f0f0f0;">
+        {!! Session::get('message')  !!}
+        <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Editar Contato</h1>
 
-    $estadosBrasileiros = array(
+        <section class="widget" style="min-height:560px;">
 
-        'AC'=>'Acre',
+            <div class="faixa"></div>
 
-        'AL'=>'Alagoas',
+            <br>
+            @foreach($contato as $brinde)
 
-        'AP'=>'Amapá',
+                <form name="formulario" action="{{route('admin.leads.editar-update', $brinde->id)}}" method="post" enctype="multipart/form-data">
 
-        'AM'=>'Amazonas',
+                    <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-        'BA'=>'Bahia',
+                    <div class="content">
+                        <div class="field-wrap t70">
 
-        'CE'=>'Ceará',
+                            <label>Nome Completo:</label>
 
-        'DF'=>'Distrito Federal',
+                            <input type="text" name="nome" required class="t100"  value="{!! $brinde->nome !!}">
 
-        'ES'=>'Espírito Santo',
+                        </div>
 
-        'GO'=>'Goiás',
+                        <div class="field-wrap t25">
 
-        'MA'=>'Maranhão',
+                            <label>CPF:</label>
 
-        'MT'=>'Mato Grosso',
+                            <input type="text" name="documento_usuario" class="t100" value="{!! $brinde->documento_usuario !!}">
 
-        'MS'=>'Mato Grosso do Sul',
+                        </div>
 
-        'MG'=>'Minas Gerais',
+                        <div class="field-wrap t40">
 
-        'PA'=>'Pará',
+                            <label>E-mail:</label>
 
-        'PB'=>'Paraíba',
+                            <input type="text" name="email" required class="t100" value="{!! $brinde->email !!}">
 
-        'PR'=>'Paraná',
+                        </div>
 
-        'PE'=>'Pernambuco',
+                        <div class="field-wrap t30">
 
-        'PI'=>'Piauí',
+                            <label>Telefone:</label>
 
-        'RJ'=>'Rio de Janeiro',
+                            <input type="text" name="ddd" class="t30" value="{!! $brinde->ddd !!}">
 
-        'RN'=>'Rio Grande do Norte',
+                            <input type="text" name="telefone" class="t60" value="{!! $brinde->telefone !!}">
 
-        'RS'=>'Rio Grande do Sul',
+                        </div>
 
-        'RO'=>'Rondônia',
+                        <div class="field-wrap t22">
 
-        'RR'=>'Roraima',
+                            <label>CEP:</label>
 
-        'SC'=>'Santa Catarina',
+                            <input type="text"  name="cep" size="10" maxlength="9" id="cep" class="t100" value="{!! $brinde->cep !!}">
 
-        'SP'=>'São Paulo',
+                        </div>
 
-        'SE'=>'Sergipe',
+                        <div class="field-wrap t20">
 
-        'TO'=>'Tocantins'
+                            <label>Estado:</label>
+                            <input type="text" name="estado" id="uf" maxlength="2" class="t100" placeholder="Digite apenas o UF">
 
-    );
-    ?>
-
-@foreach($contato as $cont)
+                        </div>
 
 
-<section class="content">
+                        <div class="field-wrap t30">
 
-    <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Atendimento de Contato</h1>
-    <br /><br />
-        <section class="widget" style="height:480px; background:#f7f7f7;">
+                            <label>Cidade:</label>
 
-            <div class="dados">
-                <form action="{{route('admin.leads.editar-update',$cont->id)}}" method="post">
-                <div class="t30 floatLeft">
-                    <img src="/images/leads/perfil.png" class="perfil" />
-                </div>
+                            <input type="text" name="cidade" id="cidade" class="t100" value="{!! $brinde->cidade !!}">
 
-                <div class="t70 floatRight">
-                    <p><img src="/images/e-mail.svg" width="23" /> <span>
-                            {!! csrf_field() !!}
-                            <input type="text" name="email" value="{!! $cont->email !!}">
-                    </span></p>
 
-                    <p><img src="/images/leads/phone.svg" width="23" />
-                        <span class="telefone">
-                            <input type="text" name="ddd" maxlength="2" value="{!! $cont->ddd !!}" style="width:50px;"> <input type="text" name="telefone" value="{!! $cont->telefone !!}" style="width:120px;"></span></p>
-                    <br />
+                        </div>
 
-                <input type="hidden" name="at_inicio_atendimento" value="<?php echo date('Y-m-d H:i');?>" />
-                    <br />
+                        <div class="field-wrap t42">
 
-                    <p>Data de cadastro:
-                        {!! $cont->data_de_venda !!}</p>
+                            <label>Bairro:</label>
 
-                    <br />
-                <p>Inserido por: {!! $cont->user_nome !!}</p>
-                <br />
-                <p>Meio de inserção: &nbsp;
-                    <span class="telefone" style="margin-top:-10px;">
-                        <select name="insercao_hotmart" id="">
-                            <option value="{!! $cont->insercao_hotmart !!}">{!! $cont->insercao_hotmart !!}</option>
-                            <option disabled>---------------------</option>
-                            <option value="Whatsapp">Whatsapp</option>
-                            <option value="Chat">Chat</option>
-                            <option value="E-mail">E-mail</option>
-                            <option value="Facebook">Facebook</option>
-                        </select>
-                            <input type="text" name="insercao_hotmart" value="{!! $cont->insercao_hotmart !!}"></span>
-                 </p>
-                 <br /> <br />
-                 <p>Prioridade de Atendimento: <span class="telefone" style="margin-top:-10px;"><input type="text" name="prioridade" value="{!! $cont->prioridade!!}"></span></p>
-                 <br /><br />
-                 <p>Produto: <span class="telefone" style="margin-top:-10px;"><input type="text" name="nome_do_produto" value="{!! $cont->nome_do_produto !!}"></span></p>
-                    <br /><br />
-                  <p>Observação:  <span class="telefone" style="margin-top:-10px;"><input type="text" name="observacao" value="{!! $cont->observacao !!}"></span></p>
-                    <br /><br />
-                    <p>Em atendimento: &nbsp; <span class="" style="margin-top:-15px;">
-                            <select name="em_atendimento" id="">
-                                @if($cont->em_atendimento == NULL)
-                                        <option value="0">Sem atendimento</option>
-                                    @else
-                                        @switch($cont->em_atendimento)
-                                            @case(1)
-                                                {{ $atendimentoValor = 1 }}
-                                                {{ $atendimento = "Em atendimento" }}
-                                            @break;
+                            <input type="text" name="bairro" id="bairro" class="t100" value="{!! $brinde->bairro !!}">
 
-                                            @case(0)
-                                                {{ $atendimentoValor = 0 }}
-                                                {{ $atendimento = "Sem atendimento" }}
-                                            @break;
+                        </div>
 
-                                            @endswitch;
-                                @endif;
-                                <option disabled>-----------------</option>
-                                <option value="1">Em atendimento</option>
-                                <option value="0">Sem atendimento</option>
-                            </select>
-                        </span></p>
+                        <div class="field-wrap t85">
 
-                    <input type="text" name="">
-                </div>
+                            <label>Endereço:</label>
 
-                    <div style="clear:both;"></div><br /><br /><br /><br /><br />
+                            <input type="text" name="endereco" id="rua"  class="t100" value="{!! $brinde->endereco !!}">
 
-            <div class="field-wrap t60 floatRight" style="margin-top:-40px; padding-bottom:20px;">
-                <button type="submit" style="margin-left:20px;" name="sendForm" class="enviar">Finalizar
-                    Edição</button>
-                <a href="{{route('admin.leads')}}"><button class="enviar" style="background:#333">Cancelar Edição</button></a>
-            </div>
+                        </div>
 
-            </form>
-            </div>
+                        <div class="field-wrap t10">
+
+                            <label>Número:</label>
+
+                            <input type="text" name="numero" class="t100" value="{!! $brinde->numero !!}">
+
+                        </div>
+
+                        <div class="field-wrap t96">
+
+                            <label>Complemento:</label>
+
+                            <input type="text" name="complemento" class="t100" value="{!! $brinde->complemento !!}">
+
+                        </div>
+
+                    </div>
+
+                    <div class="field-wrap t94">
+                        <button type="submit" name="sendForm" class="enviar">Atualizar Contato</button>
+                    </div>
+                    @endforeach
+                </form>
+
 
         </section>
 
-        </div>
-</section>
-@endforeach
+    </section>
 @endsection

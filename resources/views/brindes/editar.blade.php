@@ -62,7 +62,7 @@
                     <div class="field-wrap t20">
 
                         <label>Estado:</label>
-                        <input type="text" name="estado" id="uf" class="t100">
+                        <input type="text" name="estado" maxlength="2" id="uf" class="t100" placeholder="Digite apenas o UF">
 
                     </div>
 

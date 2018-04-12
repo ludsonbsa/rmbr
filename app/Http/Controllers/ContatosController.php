@@ -108,7 +108,7 @@ class ContatosController extends Controller
     {
 
         $query = DB::table('tb_contatos')
-            ->selectRaw("tb_contatos.id, tb_contatos.em_atendimento, tb_contatos.pos_atendimento, tb_contatos.nome_do_produto, tb_contatos.data_de_venda, tb_contatos.nome, tb_contatos.ddd, tb_contatos.telefone, tb_contatos.email, tb_contatos.obs_followup, tb_contatos.observacao, tb_contatos.status, tb_contatos.em_atendendo, tb_contatos.documento_usuario, tb_contatos.estado, tb_contatos.em_atendimento, tb_contatos.insercao_hotmart, tb_contatos.prioridade, tb_contatos.id_responsavel, t2.user_nome")
+            ->selectRaw("tb_contatos.id, tb_contatos.em_atendimento, tb_contatos.pos_atendimento, tb_contatos.nome_do_produto, tb_contatos.data_de_venda, tb_contatos.nome, tb_contatos.ddd, tb_contatos.telefone, tb_contatos.email, tb_contatos.obs_followup, tb_contatos.cep, tb_contatos.endereco, tb_contatos.cidade, tb_contatos.estado, tb_contatos.bairro, tb_contatos.numero, tb_contatos.complemento, tb_contatos.observacao, tb_contatos.status, tb_contatos.em_atendendo, tb_contatos.documento_usuario, tb_contatos.estado, tb_contatos.em_atendimento, tb_contatos.insercao_hotmart, tb_contatos.prioridade, tb_contatos.id_responsavel, t2.user_nome")
             ->join('users as t2','tb_contatos.id_responsavel','=','t2.id')
             ->where('tb_contatos.id','=', $id)
             ->get();
