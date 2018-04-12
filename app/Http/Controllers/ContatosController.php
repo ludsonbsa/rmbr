@@ -33,13 +33,24 @@ class ContatosController extends Controller
 
     public function vendidos_nao_conferidos(){
 
-        $lead = DB::table('tb_atendimento as t1')
-            ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd, t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento, t2.id_responsavel")
-            ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
-            ->whereRaw("t2.pos_atendimento = 'Vendido' AND t2.conferencia = 0 AND t1
+        if(Auth::user()->role == 1){
+            $lead = DB::table('tb_atendimento as t1')
+                ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd, t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento, t2.id_responsavel")
+                ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
+                ->whereRaw("t2.pos_atendimento = 'Vendido' AND t2.conferencia = 0 AND t1
      .at_nome_atendente != 'Sistema'")
-            ->orderBy('t1.at_final_atendimento','DESC')
-            ->get();
+                ->orderBy('t1.at_final_atendimento','DESC')
+                ->get();
+        }else{
+            $lead = DB::table('tb_atendimento as t1')
+                ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd, t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento, t2.id_responsavel")
+                ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
+                ->whereRaw("t2.pos_atendimento = 'Vendido' AND t2.conferencia = 0 AND t1
+     .at_nome_atendente != 'Sistema' AND t2.at_id_responsavel = ".Auth::user()->id)
+                ->orderBy('t1.at_final_atendimento','DESC')
+                ->get();
+        }
+
 
         return view('contatos.leads.vendidos-nao-conferidos', ['contatos' => $lead]);
     }
