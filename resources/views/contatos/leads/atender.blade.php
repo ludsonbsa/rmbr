@@ -306,6 +306,13 @@
                         <br>
 
                         <select name="enviar_kit" class="kit" title="KIT">
+
+                            @if($cont->enviar_kit == 1)
+                                <option value="1">Sim, terá direito.</option>
+                            @else
+                                <option value="0">Não terá direito.</option>
+                            @endif
+
                             <option>Selecione uma opção</option>
 
                             <option disabled=disabled>-----------</option>
@@ -380,7 +387,7 @@
 
                     <label>CEP:</label>
 
-                    <input type="text" id="cep" name="cep" class="t90" value="" placeholder="">
+                    <input type="text" id="cep" name="cep" class="t90" value="{!! $cont->cep !!}">
 
                 </div>
 
@@ -392,30 +399,7 @@
 
                     <br>
 
-                    <select name="estado" id="estado" class="t90">
-
-                        @if($cont->estado == null)
-                            {!! '<option></option>' !!}
-                            @endif
-                        <?php
-
-                        if(isset($registro['estado'])){
-
-                            echo "<option value='{$registro['estado']}'>{$registro['estado']}</option>";
-
-                            echo "<option disabled='disabled'>======= Estados Brasileiros =======</option>";
-
-                        }
-
-                        foreach ($estadosBrasileiros as $uf => $estado) {
-
-                            echo "<option value='{$uf}'>{$estado}</option>";
-
-                        }
-
-                        ?>
-
-                    </select>
+                    <input type="text" name="estado" id="uf" maxlength="2" class="t100" value="{!! $cont->estado !!}" placeholder="Digite apenas o UF">
 
                 </div>
 
