@@ -82,7 +82,7 @@ class ImportacoesController extends Controller implements ShouldQueue
             }
         }
 
-        return back()->with('msg',"Planilha adicionada com sucesso!");
+        return back()->with('msg',"Planilha adicionada, estamos verificando e atualizando os dados, aguarde o e-mail de confirmação!");
 
     }
 
