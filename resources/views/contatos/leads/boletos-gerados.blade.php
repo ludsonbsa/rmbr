@@ -31,8 +31,8 @@
                     <td class="nome">{!! $contato->nome !!}</td>
                     <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
                     <td>{{$contato->email}}</td>
-                    <td class="meio"><span class="vendido">{{$contato->pos_atendimento}}</span></td>
-                    <td>{!! $contato->insercao_hotmart !!}}</td>
+                    <td class="meio"><span class="vendido">{!! $contato->pos_atendimento !!}</span></td>
+                    <td>{!! $contato->insercao_hotmart !!}</td>
                     <td>{!! $contato->at_nome_atendente !!}</td>
                     <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
 

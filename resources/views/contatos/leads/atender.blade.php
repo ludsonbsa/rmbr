@@ -1,66 +1,6 @@
 @extends(layout())
 
 @section('content')
-    <?php
-    $estadosBrasileiros = array(
-
-    'AC'=>'Acre',
-
-    'AL'=>'Alagoas',
-
-    'AP'=>'Amapá',
-
-    'AM'=>'Amazonas',
-
-    'BA'=>'Bahia',
-
-    'CE'=>'Ceará',
-
-    'DF'=>'Distrito Federal',
-
-    'ES'=>'Espírito Santo',
-
-    'GO'=>'Goiás',
-
-    'MA'=>'Maranhão',
-
-    'MT'=>'Mato Grosso',
-
-    'MS'=>'Mato Grosso do Sul',
-
-    'MG'=>'Minas Gerais',
-
-    'PA'=>'Pará',
-
-    'PB'=>'Paraíba',
-
-    'PR'=>'Paraná',
-
-    'PE'=>'Pernambuco',
-
-    'PI'=>'Piauí',
-
-    'RJ'=>'Rio de Janeiro',
-
-    'RN'=>'Rio Grande do Norte',
-
-    'RS'=>'Rio Grande do Sul',
-
-    'RO'=>'Rondônia',
-
-    'RR'=>'Roraima',
-
-    'SC'=>'Santa Catarina',
-
-    'SP'=>'São Paulo',
-
-    'SE'=>'Sergipe',
-
-    'TO'=>'Tocantins'
-
-    );
-
-?>
 
     @foreach($contato as $cont) @endforeach
   <form action="{{route('admin.leads.atender_update',$cont->id)}}" method="post">
@@ -84,7 +24,7 @@
 
                     <div class="t30 floatLeft"></div>
 
-                    <div class="t70 floatRight"> <h1>{{$cont->nome}}</h1></div>
+                    <div class="t70 floatRight"> <h1>{!! $cont->nome !!}</h1></div>
 
                 </div>
 
@@ -109,15 +49,15 @@
 
                         <p>Data de cadastro: <strong>{{date('d/m/Y H:i:s', strtotime($cont->data_de_venda))}}</strong></p>
 
-                        <p>Inserido por: <strong>{{$cont->user_nome}}</strong></p>
+                        <p>Inserido por: <strong>{!! $cont->user_nome !!}</strong></p>
 
-                        <p>Meio de inserção: <strong>{{$cont->insercao_hotmart}}</strong></p>
+                        <p>Meio de inserção: <strong>{!!$cont->insercao_hotmart!!}</strong></p>
 
                         <p>Prioridade de Atendimento: <strong>{!! $cont->prioridade !!}</strong></p>
 
                         <p>Produto: <strong>{!! $cont->nome_do_produto !!}</strong></p>
 
-                        <p>Obs.: <strong style="color:red">{{$cont->observacao}}</strong></p>
+                        <p>Obs.: <strong style="color:red">{!! $cont->observacao !!}</strong></p>
 
                     </div>
 
@@ -141,7 +81,7 @@
 
                         <br>
 
-                        <textarea name="obs_followup" class="t100">{{$cont->obs_followup}}</textarea>
+                        <textarea name="obs_followup" class="t100">{!! $cont->obs_followup !!}</textarea>
 
                     </div>
                     {!! csrf_field()!!}
@@ -393,11 +333,10 @@
 
 
 
-                <div class="field-wrap t20">
+                <div class="field-wrap t30">
 
                     <label>Estado:</label>
 
-                    <br>
 
                     <input type="text" name="estado" id="uf" maxlength="2" class="t100" value="{!! $cont->estado !!}" placeholder="Digite apenas o UF">
 
@@ -405,7 +344,7 @@
 
 
 
-                <div class="field-wrap t20">
+                <div class="field-wrap t30">
 
                     <label>Cidade:</label>
 
