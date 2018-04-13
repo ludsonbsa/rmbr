@@ -25,7 +25,7 @@
                     <li><a href="#3" data-tab="lead-tab3">Não Vendidos</a></li>
                     <li><a href="#4" data-tab="lead-tab4">Boletos Gerados</a></li>
                     <li><a href="#5" data-tab="lead-tab5">Ligar Depois</a></li>
-                    <li><a href="#6" data-tab="lead-tab6">Agendado</a></li>
+                   <!-- <li><a href="#6" data-tab="lead-tab6">Agendado</a></li> -->
                     <li><a href="#7" data-tab="lead-tab7">Recuperar Boletos</a></li>
                     <li><a href="#8" data-tab="lead-tab8">Não Atendidos</a></li>
 

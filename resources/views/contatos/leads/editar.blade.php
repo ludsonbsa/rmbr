@@ -5,7 +5,7 @@
         {!! Session::get('message')  !!}
         <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Editar Contato</h1>
 
-        <section class="widget" style="min-height:560px;">
+        <section class="widget" style="min-height:692px;">
 
             <div class="faixa"></div>
 
@@ -107,6 +107,28 @@
                             <input type="text" name="complemento" class="t100" value="{!! $brinde->complemento !!}">
 
                         </div>
+
+                        @if(Auth::user()->role == 1)
+                        <div class="field-wrap t96">
+
+                            <label>Em atendimento:</label>
+                            <br>
+                            <?php
+                                if($brinde->em_atendimento == 1){
+                                    $atendimento = "Em atendimento";
+                                }else{
+                                    $atendimento = "Sem atendimento";
+                                }
+                            ?>
+                            <select name="em_atendimento">
+                                <option value="{{$brinde->em_atendimento}}">{!! $atendimento !!}</option>
+                                <option disabled>--------------</option>
+                                <option value="1">Em Atendimento</option>
+                                <option value="0">Cancelar Atendimento</option>
+                            </select>
+
+                        </div>
+                            @endif
 
                     </div>
 
