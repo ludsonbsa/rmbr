@@ -85,6 +85,9 @@ class ImportarPlanilha implements ShouldQueue
         $emails = array();
 
         $executionStartTimeALLAP = microtime(true);
+
+
+
         while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
             $cpf = $data[2];
             $email = $data[4];
@@ -120,35 +123,36 @@ class ImportarPlanilha implements ShouldQueue
              * Fazer uma consulta de CPF dentro dos CPF existentes aprovados, e marcar CAMPO aprovado = 1
              * mesmo para os CPFs com estado cancelados ou expirados porem que já possuam algum status aprovado ou completo.
              *****/
-            foreach ($cpfs as $indice => $valor):
-                if (!empty($valor)) {
-                    $updateS = ['aprovado' => 1, 'completo' => 2];
-                    try {
-                        DB::table('tb_contatos')
-                            ->where('documento_usuario', $valor)
-                            ->update($updateS);
-                        echo "Item por cpf :".$valor."\n";
-                    } catch (\PDOException $e) {
-                        return $e->getCode() . $e->getMessage();
-                    }
-                }
-            endforeach;
 
-            foreach ($emails as $indice => $valor):
-                if (!empty($valor)) {
-                    $updateS = ['aprovado' => 1, 'completo' => 2];
-                    echo "Item por e-mail :".$valor."\n";
-                    try {
-                        DB::table('tb_contatos')
-                            ->where('email', $valor)
-                            ->update($updateS);
-                    } catch (\PDOException $e) {
-                        return $e->getCode() . $e->getMessage();
-                    }
-                }
-            endforeach;
         }
+        #Coloquei agora pra fazer fora da leitura, um teste apenas.
+        foreach ($cpfs as $indice => $valor):
+            if (!empty($valor)) {
+                $updateS = ['aprovado' => 1, 'completo' => 2];
+                try {
+                    DB::table('tb_contatos')
+                        ->where('documento_usuario', $valor)
+                        ->update($updateS);
+                    echo "Item por cpf :".$valor."\n";
+                } catch (\PDOException $e) {
+                    return $e->getCode() . $e->getMessage();
+                }
+            }
+        endforeach;
 
+        foreach ($emails as $indice => $valor):
+            if (!empty($valor)) {
+                $updateS = ['aprovado' => 1, 'completo' => 2];
+                echo "Item por e-mail :".$valor."\n";
+                try {
+                    DB::table('tb_contatos')
+                        ->where('email', $valor)
+                        ->update($updateS);
+                } catch (\PDOException $e) {
+                    return $e->getCode() . $e->getMessage();
+                }
+            }
+        endforeach;
 
         $executionStartTimeALLAP2 = microtime(true);
         $totalAP2 =  $executionStartTimeALLAP2 - $executionStartTimeALLAP;
