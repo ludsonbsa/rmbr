@@ -103,12 +103,14 @@ class ImportarPlanilha implements ShouldQueue
             foreach ($bus as $re):
                 //Update de aprovação
                 $dad = [
-                    'aprovado' => 1
+                    'aprovado' => 1,
+                    'completo' => 2
                 ];
                 //ler se existe, em caso afirmativo faz o update
                 DB::table('tb_contatos')
                     ->where('id', $re->id)
                     ->update($dad);
+                echo "Primeiro Update \n";
 
                 #Vai Acrescentando os valores de CPF e email nos arrays.
                 array_push($cpfs, $re->documento_usuario);
@@ -120,11 +122,12 @@ class ImportarPlanilha implements ShouldQueue
              *****/
             foreach ($cpfs as $indice => $valor):
                 if (!empty($valor)) {
-                    $updateS = ['aprovado' => 1];
+                    $updateS = ['aprovado' => 1, 'completo' => 2];
                     try {
                         DB::table('tb_contatos')
                             ->where('documento_usuario', $valor)
                             ->update($updateS);
+                        echo "Item por cpf :".$valor."\n";
                     } catch (\PDOException $e) {
                         return $e->getCode() . $e->getMessage();
                     }
@@ -133,7 +136,8 @@ class ImportarPlanilha implements ShouldQueue
 
             foreach ($emails as $indice => $valor):
                 if (!empty($valor)) {
-                    $updateS = ['aprovado' => 1];
+                    $updateS = ['aprovado' => 1, 'completo' => 2];
+                    echo "Item por e-mail :".$valor."\n";
                     try {
                         DB::table('tb_contatos')
                             ->where('email', $valor)
