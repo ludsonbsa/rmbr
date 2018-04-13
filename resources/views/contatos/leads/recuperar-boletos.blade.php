@@ -16,7 +16,7 @@
 
                 <th class="header">Prioridade</th>
 
-                <th class="header">Atendente</th>
+                <th class="header">Responsável</th>
 
                 <th colspan="3"></th>
 

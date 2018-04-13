@@ -32,7 +32,8 @@
                 </li>
             </a>
 
-            <a href="/admin/profile/" style="color:#333" class="userperfil" title="Ver Perfil"><li>
+            <a href="{{ route('admin.editar.usuario', Auth::user()->id) }}" style="color:#333" class="userperfil" title="Ver
+            Perfil"><li>
                     <div class="foto">{{ Auth::user()->user_nome }}</div>
                     <span>{{ Auth::user()->role_name }}</span>
                     <img src="{{ Auth::user()->avatar }}" width="40" height="40" class="atendente perfilEdit">
