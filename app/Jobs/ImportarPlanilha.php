@@ -50,6 +50,8 @@ class ImportarPlanilha implements ShouldQueue
     public function handle(){
         $this->queryHotmart($this->id);
         $this->aprovados();
+        $this->verificapa();
+        $this->atribuirPosAt();
         Mail::to($this->email)->send(new UserImporter());
 
     }
@@ -164,6 +166,88 @@ class ImportarPlanilha implements ShouldQueue
         $executionStartTimeALLAP2 = microtime(true);
         $totalAP2 = $executionStartTimeALLAP2 - $executionStartTimeALLAP;
         \Log::info("SELECT AP - Pega os ap com cpf e email: {$totalAP2}");
+    }
+
+
+    public function verificapa(){
+        #Função que registra em um CSV Todos os pos_atendimentos EXISTENTES, que ja recebeu atendimento pela atendente.
+        #BUSCANDO OS REGISTROS
+        $executionStartTimeVAT1 = microtime(true);
+        $query = "SELECT id, documento_usuario, email, telefone, nome FROM tb_contatos WHERE pos_atendimento IS NOT NULL AND completo = 0";
+
+        try {
+            $resultado = DB::select($query);
+        } catch (\PDOException $e) {
+            return $e->getCode() . " - " . $e->getMessage() . " - " . $e->getLine();
+        }
+
+        //Instanciar gerador CSV
+        $csv = new Helpers\CSV();
+
+        //Adicionar linhas do banco de dados no arquivo CSV
+        foreach ($resultado as $registro):
+            $csv
+                ->addLine(new Helpers\CSVLine($registro->id, $registro->nome, $registro->documento_usuario, $registro->email, $registro->telefone));
+        endforeach;
+
+        $csv->save(public_path() . "/uploads/planilhas/pos_atendimento.csv");
+
+        $executionStartTimeALLVAT = microtime(true);
+        $totalAP4 =  $executionStartTimeALLVAT - $executionStartTimeVAT1;
+        \Log::info("Verificar pós atendimentos: {$totalAP4}");
+    }
+
+    public function atribuirPosAt(){
+        #Modificar
+        $executionStartTimeAT1 = microtime(true);
+
+        $handle = fopen(public_path() . '/uploads/planilhas/pos_atendimento.csv', "r");
+
+        $cpfs = array();
+        $emails = array();
+        $telefones = array();
+
+        while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+            $cpf = $data[2];
+            $email = $data[3];
+            $telefone = $data[4];
+
+            $bus = "SELECT id, documento_usuario, email, telefone, nome
+        FROM tb_contatos
+        WHERE documento_usuario LIKE '%{$cpf}%' AND pos_atendimento IS NULL AND completo = 0";
+
+            if (empty($cpf)) {
+                $bus = "SELECT id, documento_usuario, email, telefone, nome
+        FROM tb_contatos
+        WHERE email LIKE '%{$email}%' AND pos_atendimento IS NULL AND completo = 0";
+            }
+            if (empty($email)) {
+                $bus = "SELECT id, documento_usuario, email, telefone, nome
+        FROM tb_contatos
+        WHERE telefone = '{$telefone}' AND pos_atendimento IS NULL AND completo = 0";
+            }
+
+            $result = DB::select($bus);
+
+            foreach ($result as $re):
+
+                $dad = ['pos_atendimento' => 1];
+                //ler se existe, em caso afirmativo faz o update
+                DB::table('tb_contatos')
+                    ->where('id', $re->id)
+                    ->update($dad);
+
+                array_push($cpfs, $re->documento_usuario);
+                array_push($emails, $re->email);
+                array_push($telefones, $re->telefone);
+
+            endforeach;
+        }
+        fclose($handle);
+
+        $executionStartTimeALLAT = microtime(true);
+        $totalAP3 =  $executionStartTimeALLAT - $executionStartTimeAT1;
+        \Log::info("Atribuir pós atendimentos: {$totalAP3}");
     }
 
 }
