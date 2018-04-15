@@ -11,7 +11,8 @@
 
         <br>
 
-        <form action="" name="encontrarBrinde" id="brindeFind" method="post">
+        <form action="{{route('admin.brindes.buscar-brinde')}}" name="encontrarBrinde" id="brindeFind" method="post">
+            {!! csrf_field() !!}
             <div class="field-wrap t96">
                 <label>Digite o E-mail:</label>
                 <br>
@@ -21,35 +22,5 @@
 
     </section>
 
-    <div id="loader"></div>
-
-    <section id="resultado" style="display:none;">
-
-        <h1 style="font-size:25px; font-weight: bold;" id="resultadoBusca"></h1>
-        <br><br>
-        <div class="field-wrap floatLeft dentro" style="width:40%; padding-right:30px; border-right: 2px solid #dbdbdb;">
-
-            <img src="/images/perfil.png" class="perfil floatLeft" />
-            <div class="field-wrap floatRight t55">
-                <br>
-
-                <p style="color:#ff8169; font-size:24px;" id="nome"></p>
-                <p><small id="email"></small></p>
-                <p>CEP: <small id="cep"></small></p>
-
-                <p id="comprou"></p>
-                <p id="dataVenda"></p>
-            </div>
-        </div>
-        <div class="field-wrap t45">
-            <br><br>
-            <p id="etiqueta_gerada" style="font-weight: bold; line-height: 30px; text-align: center; font-size:26px; color:#878787;">A etiqueta ainda não foi gerada</p>
-            <br>
-
-            <a href="#" class="enviar"><button class="enviar t96">Você pode editar este endereço</button></a>
-        </div>
-    </section>
-
-    <p id="notify" style="display:none"></p>
 </section>
 @endsection

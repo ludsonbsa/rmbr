@@ -289,58 +289,59 @@ $(function() {
 });
 
 $(document).ready(function() {
-    var buscarBrinde = $('#buscaBr').val();
-    $('form[name="encontrarBrinde"]').submit(function () {
-        var buscarBrinde = $('#buscaBr').val();
-        $.ajax({
-            type: 'POST',
-            url: 'https://mbr.digital/brinde-ajax',
-            data: $(this).serialize(),
-            dataType: 'json',
-            encode:true,
-            beforeSend: function(){
-                $('#loader').fadeIn();
-                $('#resultado').fadeOut();
-            }
-        }).done(function(data) {
-            if(data){
-                $('#loader').fadeOut();
-                $('#nome').delay(500).text(data.nome);
-                $('#email').delay(500).text(data.email);
-                $('#cep').delay(500).text(data.cep);
+    /*var buscarBrinde = $('#buscaBr').val();
+     $('form[name="encontrarBrindes"]').submit(function () {
+         var buscarBrinde = $('#buscaBr').val();
 
-                if(data.etiqueta_gerada == 1){
-                    $('#etiqueta_gerada').text("Etiqueta já gerada, não é possível editar o endereço");
-                    $('.enviar').hide();
-                }else{
-                    $('#etiqueta_gerada').text("A etiqueta ainda não foi gerada");
-                    $('.enviar').attr('href','editar?id='+data.id);
-                }
+         $.ajax({
+             type: 'POST',
+             url: '/admin/brindes/buscar-brinde',
+             data: $(this).serialize(),
+             dataType: 'json',
+             encode:true,
+             beforeSend: function(){
+                 $('#loader').fadeIn();
+                 $('#resultado').fadeOut();
+             }
+         }).done(function(data) {
+             if(data){
+                 $('#loader').fadeOut();
+                 $('#nome').delay(500).text(data.nome);
+                 $('#email').delay(500).text(data.email);
+                 $('#cep').delay(500).text(data.cep);
 
-                if(data.aprovado == 1){
-                    $('#comprou').html("<p style='text-align: left;'>É aluna ou já comprou</p>");
-                    $('#dataVenda').html("<p style='text-align: left;'>Data de transação: "+data.data_de_venda+"</p>");
-                }else{
-                    $('#comprou').html("<p style='text-align: left;'>Não é aluna ou não comprou</p>");
-                }
+                 if(data.etiqueta_gerada == 1){
+                     $('#etiqueta_gerada').text("Etiqueta já gerada, não é possível editar o endereço");
+                     $('.enviar').hide();
+                 }else{
+                     $('#etiqueta_gerada').text("A etiqueta ainda não foi gerada");
+                     $('.enviar').attr('href','editar?id='+data.id);
+                 }
 
-                $('#email').text(data.email);
+                 if(data.aprovado == 1){
+                     $('#comprou').html("<p style='text-align: left;'>É aluna ou já comprou</p>");
+                     $('#dataVenda').html("<p style='text-align: left;'>Data de transação: "+data.data_de_venda+"</p>");
+                 }else{
+                     $('#comprou').html("<p style='text-align: left;'>Não é aluna ou não comprou</p>");
+                 }
 
-                if(data.enviar_kit == 1){
+                 $('#email').text(data.email);
 
-                }
+                 if(data.enviar_kit == 1){
 
-                $('#notify').fadeOut();
-                $('#resultado').delay(600).fadeIn();
-            }else{
-                $('#loader').fadeOut();
-                $('#notify').fadeIn(300).html("<p style='font-size:20px;'>Este contato não se encontra na base de Brindes</p><p style='font-size:18px;'><a href='/admin/brindes/add?email="+buscarBrinde+"'>Clique aqui</a> para adicionar um brinde a este contato</p>");
-            }
-        }).fail(function(){
-            console.log("Deu erro");
-        });
-        event.preventDefault();
-    });
+                 }
+
+                 $('#notify').fadeOut();
+                 $('#resultado').delay(600).fadeIn();
+             }else{
+                 $('#loader').fadeOut();
+                 $('#notify').fadeIn(300).html("<p style='font-size:20px;'>Este contato não se encontra na base de Brindes</p><p style='font-size:18px;'><a href='/admin/brindes/add?email="+buscarBrinde+"'>Clique aqui</a> para adicionar um brinde a este contato</p>");
+             }
+         }).fail(function(){
+             console.log("Deu erro");
+         });
+         event.preventDefault();
+     });*/
 
 
     function limpa_formulário_cep() {

@@ -32,6 +32,25 @@ class BrindesController extends Controller
         return view('brindes.buscar');
     }
 
+    public function buscar_brinde(Request $request){
+        $emailBusca = $request['buscarBrinde'];
+        $brindes = \DB::table('tb_contatos as t1')
+            ->selectRaw('t1.id, t1.nome, t1.email, t1.cep, t1.data_de_venda, t1.etiqueta_gerada, t1.endereco, t1.bairro, t1.complemento, t1.aprovado, t1.completo, t1.cidade, t1.estado, t1.numero, t1.enviar_kit')
+            ->where('enviar_kit','=', 1)
+            ->where('t1.email','=', $emailBusca)
+            ->groupBy('t1.email')
+            ->get();
+
+        $contagem = $brindes->count();
+
+        if($contagem == 0){
+            $msg = "Nenhum registro encontrado";
+            return view('brindes.buscar')->with($msg);
+        }else{
+            return view('brindes.buscar-brinde', ['brindes' => $brindes]);
+        }
+    }
+
     public function editar($id){
         $brindes = DB::table('tb_contatos as t1')
             ->selectRaw('t1.id, t1.documento_usuario, t1.endereco, t1.cep, t1.numero, t1.complemento, t1.bairro, t1.cidade, t1.cidade, 

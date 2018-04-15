@@ -140,7 +140,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         Route::put('brindes/cadastrar', 'BrindesController@cadastrar')->name('brindes.cadastrar');
         Route::get('brindes/editar/{id}', 'BrindesController@editar')->name('brindes.editar');
         Route::post('brindes/editar-update/{id}', 'BrindesController@editar_update')->name('brindes.editar-update');
+
         Route::get('brindes/buscar', 'BrindesController@buscar')->name('brindes.buscar');
+
+        Route::post('brindes/buscar-brinde','BrindesController@buscar_brinde')->name('brindes.buscar-brinde');
 
         Route::get('brindes/conferir', 'BrindesController@conferirBrindes')->name('brindes.conferir');
 
