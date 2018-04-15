@@ -94,6 +94,7 @@ t1.estado, t1.nome_do_produto, t1
         $all['pais'] = 'Brasil';
         $all['id_responsavel'] = Auth::id();
         $all['pos_atendimento'] = 'Vendido';
+        $all['enviar_kit'] = 1;
         $all['conferencia'] = 2;
 
         if(Brindes::create($all)){
@@ -110,6 +111,7 @@ t1.estado, t1.nome_do_produto, t1
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart,t1.ddd, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereRaw("(t1.conferencia_brinde = 1 AND t1.aprovado IS NULL) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL)")
+
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')->get();
 
@@ -118,7 +120,7 @@ t1.estado, t1.nome_do_produto, t1
         $queryBrindesAP = DB::table('tb_contatos as t1')
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart,t1.ddd, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
-            ->whereRaw("(t1.conferencia_brinde = 1 AND t1.aprovado = 1 AND etiqueta_gerada IS NULL)  AND (t1.pos_atendimento = 'Boleto Gerado' OR t1.pos_atendimento = 'Vendido')")
+            ->whereRaw("(t1.conferencia_brinde = 1 AND t1.aprovado = 1) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND (t1.etiqueta_gerada IS NULL)")
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')->get();
         $countBAP = $queryBrindesAP->count();
