@@ -21,6 +21,8 @@
         </form>
 
     </section>
-
+    @if(session()->has('msg'))
+        <h1>{!! session('msg') !!}</h1>
+    @endif
 </section>
 @endsection

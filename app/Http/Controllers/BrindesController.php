@@ -45,7 +45,7 @@ class BrindesController extends Controller
 
         if($contagem == 0){
             $msg = "Nenhum registro encontrado";
-            return view('brindes.buscar')->with($msg);
+           return response()->redirectToRoute('admin.brindes.buscar')->with('msg', $msg);
         }else{
             return view('brindes.buscar-brinde', ['brindes' => $brindes]);
         }
