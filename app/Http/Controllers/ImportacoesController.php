@@ -75,8 +75,9 @@ class ImportacoesController extends Controller implements ShouldQueue
 
                 $completo = str_replace('\\','/', $completo);
 
-                dispatch(new ImportarPlanilha(Auth::id(), $completo));
-                #dispatchNow(new ImportarPlanilha(Auth::id(), $this->getArquivo()));
+                $email = \Auth::user()->email;
+
+                dispatch(new ImportarPlanilha(Auth::id(), $completo, $email));
                 fclose($handle1);
 
             }
@@ -221,7 +222,7 @@ class ImportacoesController extends Controller implements ShouldQueue
         return $csv->save("uploads/planilhas/pos_atendimento.csv");
     }
 
-    /*public function atribuirPosAt(){
+    public function atribuirPosAt(){
         #Modificar
         $handle = fopen('uploads/planilhas/pos_atendimento.csv', "r");
 
@@ -267,7 +268,7 @@ class ImportacoesController extends Controller implements ShouldQueue
 
 
         fclose($handle);
-    }*/
+    }
 
     public function planilhaRecuperacao(){
 

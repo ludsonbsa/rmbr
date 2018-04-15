@@ -2,14 +2,17 @@
 
 namespace App\Jobs;
 
+use App\Mail\UserImporter;
 use Illuminate\Bus\Queueable;
-use Illuminate\Database\QueryException;
+use App\User;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Helpers;
+use Illuminate\Support\Facades\Mail;
 
 class ImportarPlanilha implements ShouldQueue
 {
@@ -17,11 +20,13 @@ class ImportarPlanilha implements ShouldQueue
 
     public $id;
     public $arquivo;
+    public $email;
 
-    public function __construct($id, $arquivo)
+    public function __construct($id, $arquivo, $email)
     {
         $this->id = $id;
         $this->setArquivo($arquivo);
+        $this->email = $email;
     }
 
     /**
@@ -45,6 +50,8 @@ class ImportarPlanilha implements ShouldQueue
     public function handle(){
         $this->queryHotmart($this->id);
         $this->aprovados();
+        Mail::to($this->email)->send(new UserImporter());
+
     }
 
     public function queryHotmart($id){
@@ -55,7 +62,8 @@ class ImportarPlanilha implements ShouldQueue
         \Log::info("Foi QueryHOTMART");
     }
 
-    public function aprovados(){
+    public function aprovados()
+    {
         #Adicionar linhas do banco de dados no arquivo CSV
         $executionStartTimeAP = microtime(true);
 
@@ -67,25 +75,24 @@ class ImportarPlanilha implements ShouldQueue
 
         $csv = new Helpers\CSV();
         #Instanciar gerador CSV*/
-        foreach($aprovados as $registro){
+        foreach ($aprovados as $registro) {
             #Adiciona a linha de cada aprovado
             $csv->addLine(new Helpers\CSVLine($registro->nome_do_produto, $registro->nome, $registro->documento_usuario, $registro->status, $registro->email, $registro->transacao));
         }
 
 
-        $csv->save(public_path()."/uploads/planilhas/aprovados.csv");
+        $csv->save(public_path() . "/uploads/planilhas/aprovados.csv");
 
         #Problemas : Toda vez ele vai selecionar do banco de dados inteiro pra verificar os aprovados e completos, com um banco de 100 mil registros vai ser foda..
         /* Abre o arquivo de aprovados, para leitura de dados */
 
         #Abrir o arquivo com os aprovados pra não precisar ler aprovados mais de uma vez
-        $handle = fopen(public_path().'/uploads/planilhas/aprovados.csv', "r");
+        $handle = fopen(public_path() . '/uploads/planilhas/aprovados.csv', "r");
 
         $cpfs = array();
         $emails = array();
 
         $executionStartTimeALLAP = microtime(true);
-
 
 
         while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
@@ -133,7 +140,7 @@ class ImportarPlanilha implements ShouldQueue
                     DB::table('tb_contatos')
                         ->where('documento_usuario', $valor)
                         ->update($updateS);
-                    echo "Item por cpf :".$valor."\n";
+                    echo "Item por cpf :" . $valor . "\n";
                 } catch (\PDOException $e) {
                     return $e->getCode() . $e->getMessage();
                 }
@@ -143,7 +150,7 @@ class ImportarPlanilha implements ShouldQueue
         foreach ($emails as $indice => $valor):
             if (!empty($valor)) {
                 $updateS = ['aprovado' => 1, 'completo' => 2];
-                echo "Item por e-mail :".$valor."\n";
+                echo "Item por e-mail :" . $valor . "\n";
                 try {
                     DB::table('tb_contatos')
                         ->where('email', $valor)
@@ -155,9 +162,8 @@ class ImportarPlanilha implements ShouldQueue
         endforeach;
 
         $executionStartTimeALLAP2 = microtime(true);
-        $totalAP2 =  $executionStartTimeALLAP2 - $executionStartTimeALLAP;
+        $totalAP2 = $executionStartTimeALLAP2 - $executionStartTimeALLAP;
         \Log::info("SELECT AP - Pega os ap com cpf e email: {$totalAP2}");
-
     }
 
 }
