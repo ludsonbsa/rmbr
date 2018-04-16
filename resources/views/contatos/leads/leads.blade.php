@@ -50,6 +50,8 @@
 
                                 <th class="header">Prioridade</th>
 
+                                <th class="header">Produto</th>
+
                                 <th class="header">Responsável</th>
 
                                 <th colspan="3"></th>
@@ -67,6 +69,8 @@
                                     <td>{{$contato->email}}</td>
                                     <td class="meio"><span>{{$contato->insercao_hotmart}}</span></td>
                                     <td>{!!$contato->prioridade!!}</td>
+
+                                    <td @if($contato->nome_do_produto == "Programa Mulheres Bem Resolvidas") style="color:#762174; font-weight:bolder; background: rgb(230, 230, 230);" @endif>{!!$contato->nome_do_produto !!}</td>
                                     <td>{!! $contato->user_nome !!}</td>
                                     <td class="acao">
 

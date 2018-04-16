@@ -16,6 +16,8 @@
 
                 <th class="header">Meio</th>
 
+                <th class="header">Produto</th>
+
                 <th class="header">Atendente</th>
 
                 <th colspan="3"></th>
@@ -33,6 +35,7 @@
                     <td>{{$contato->email}}</td>
                     <td class="meio"><span class="vendido">{!! $contato->pos_atendimento !!}</span></td>
                     <td>{!! $contato->insercao_hotmart !!}</td>
+                    <td @if($contato->nome_do_produto == "Programa Mulheres Bem Resolvidas") style="color:#762174; font-weight:bolder; background: rgb(230, 230, 230);" @endif>{!!$contato->nome_do_produto !!}</td>
                     <td>{!! $contato->at_nome_atendente !!}</td>
 
 
