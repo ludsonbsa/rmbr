@@ -50,11 +50,13 @@
 
                                 <th class="header">Prioridade</th>
 
-                                <th class="header">Produto</th>
+                           <!--     <th class="header">Produto</th> -->
 
                                 <th class="header">Responsável</th>
 
-                                <th colspan="3"></th>
+
+                                <th colspan="4"></th>
+
 
                             </tr>
                             </thead>
@@ -63,18 +65,19 @@
                             <tbody>
                             @foreach($contatos as $contato)
 
-                                <tr class="" @if($contato->em_atendimento != 0 || $contato->em_atendimento != NULL) style="background:#e4e4e4; color:#ccc" disabled="" @endif @if($contato->em_atendendo != NULL)  @endif>
+                                <tr class="" @if($contato->em_atendimento != 0 || $contato->em_atendimento != NULL) style="background:#e4e4e4; color:#ccc" disabled="" @endif>
                                 <td class="nome">{!! $contato->nome !!}</td>
                                 <!--<td>({{$contato->ddd}}) {{$contato->telefone}}</td>-->
                                     <td>{{$contato->email}}</td>
                                     <td class="meio"><span>{{$contato->insercao_hotmart}}</span></td>
                                     <td>{!!$contato->prioridade!!}</td>
 
-                                    <td @if($contato->nome_do_produto == "Programa Mulheres Bem Resolvidas") style="" @endif>{!!$contato->nome_do_produto !!}</td>
+                                    <!--<td @if($contato->nome_do_produto == "Programa Mulheres Bem Resolvidas") style="" @endif>{!!$contato->nome_do_produto !!}</td>-->
                                     <td>{!! $contato->user_nome !!}</td>
 
                                     <!-- admin -->
                                     @if(Auth::user()->role == 1)
+
                                         <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
                                         <td class="acao">
                                             <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
@@ -82,7 +85,15 @@
                                         <td>
                                             <a href="#" class="leads" data-nome="{{$contato->nome}}" data-email="{{$contato->email}}"
                                                data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
+
                                         </td>
+
+                                        @if($contato->em_atendendo != NULL || $contato->em_atendendo != '')
+                                            <td><img src="{{$contato->em_atendendo}}" alt="" width="30" class="atendente perfilEdit"></td>
+                                            @else
+                                            <td></td>
+                                        @endif
+
                                     @endif
 
                                 <!-- RESPONSAVEL -->

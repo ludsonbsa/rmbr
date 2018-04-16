@@ -17,7 +17,7 @@
 
                 <th class="header">Responsável</th>
 
-                <th colspan="3"></th>
+                <th colspan="4"></th>
 
             </tr>
             </thead>
@@ -26,7 +26,7 @@
             <tbody>
             @foreach($contatos as $contato)
 
-                <tr class="">
+               <tr class="" @if($contato->em_atendimento != 0 || $contato->em_atendimento != NULL) style="background:#e4e4e4; color:#ccc" disabled="" @endif>
                   <td class="nome">{!! $contato->nome !!}</td>
                 <!--    <td>({{$contato->ddd}}) {{$contato->telefone}}</td> -->
                     <td>{{$contato->email}}</td>
@@ -44,6 +44,12 @@
                             <a href="#" class="leads" data-nome="{{$contato->nome}}" data-email="{{$contato->email}}"
                                data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
                         </td>
+
+                         @if($contato->em_atendendo != NULL || $contato->em_atendendo != '')
+                            <td><img src="{{$contato->em_atendendo}}" alt="" width="30" class="atendente perfilEdit"></td>
+                            @else
+                            <td></td>
+                        @endif
                     @endif
 
                 <!-- RESPONSAVEL -->
