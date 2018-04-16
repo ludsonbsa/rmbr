@@ -36,9 +36,11 @@ class BrindesController extends Controller
         $emailBusca = $request['buscarBrinde'];
         $brindes = \DB::table('tb_contatos as t1')
             ->selectRaw('t1.id, t1.nome, t1.email, t1.cep, t1.data_de_venda, t1.etiqueta_gerada, t1.endereco, t1.bairro, t1.complemento, t1.aprovado, t1.completo, t1.cidade, t1.estado, t1.numero, t1.enviar_kit')
-            ->where('enviar_kit','=', 1)
-            ->where('t1.email','=', $emailBusca)
+            ->where('t1.enviar_kit', '=', 1)
+            ->where('t1.email','=',$emailBusca)
+            ->orWhere('t1.cep', '=', $emailBusca)
             ->groupBy('t1.email')
+            ->limit(1)
             ->get();
 
         $contagem = $brindes->count();

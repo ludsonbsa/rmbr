@@ -33,7 +33,7 @@
                        <td class="meio"><span>{{$contato->insercao_hotmart}}</span></td>
                        <td>{!!$contato->prioridade!!}</td>
 
-                 
+
                        <td>{!! $contato->user_nome !!}</td>
 
                        <!-- admin -->
