@@ -90,7 +90,6 @@ class UserController extends Controller
     public function editar_update(Request $request, $id)
     {
         $param = $request->all();
-        $pass = $param['password'];
 
         $param = $request->except(['_token','sendForm']);
         $validator = Validator::make($request->all(), [

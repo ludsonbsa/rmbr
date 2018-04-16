@@ -60,13 +60,6 @@
                     <input type="hidden" name="role" value="{{$user->role}}" />
                     <input type="hidden" name="status" value="{{$user->status}}" />
 
-                    <div class="field-wrap t100">
-
-                        <p>Senha:</p>
-
-                        <input type="password" class="t100" name="password" value="" placeholder="">
-
-                    </div>
 
                     <div class="field-wrap t100">
 
