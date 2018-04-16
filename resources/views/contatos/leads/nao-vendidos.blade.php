@@ -34,7 +34,11 @@
                     <td class="meio"><span class="nao-vendido">{!! $contato->pos_atendimento !!}</span></td>
                     <td>{!! $contato->insercao_hotmart!!}</td>
                     <td>{!! $contato->at_nome_atendente !!}</td>
-                    <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Atender</a></td>
+
+
+                    @if(Auth::user()->role == 3 AND $contat->at_id_responsavel == Auth::user()->id)
+                        <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Atender</a></td>
+                    @endif
 
                     @if(Auth::user()->role == 1)
 
