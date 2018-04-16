@@ -27,7 +27,7 @@
             <tbody>
             @foreach($contatos as $contato)
 
-                <tr class="">
+                <tr class="" title="{!! $contato->obs_followup !!}">
                     <td class="nome">{!! $contato->nome !!}</td>
                     <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
                     <td>{{$contato->email}}</td>
@@ -47,7 +47,7 @@
                     @endif
 
                     @if(Auth::user()->role == 3)
-                        <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
+                        <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Ligar Novamente</a></td>
                         <td></td>
                     @endif
 
