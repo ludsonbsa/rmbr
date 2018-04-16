@@ -34,7 +34,7 @@
                     <td class="meio"><span class="nao-vendido">{!! $contato->pos_atendimento !!}</span></td>
                     <td>{!! $contato->insercao_hotmart!!}</td>
                     <td>{!! $contato->at_nome_atendente !!}</td>
-                    <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
+
 
                     @if(Auth::user()->role == 1)
                     <td class="acao">
@@ -43,6 +43,7 @@
                     @endif
 
                     @if(Auth::user()->role == 1 || Auth::user()->id == $contato->id_responsavel)
+                    <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
                     <td>
                         <a href="#" class="leads" data-nome="{!!$contato->nome!!}" data-email="{{$contato->email}}"
                            data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
