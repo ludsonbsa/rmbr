@@ -18,7 +18,7 @@ class ContatosController extends Controller
     public function index(Request $request){
 
         $lead = DB::table('tb_contatos as t1')
-            ->selectRaw("t1.id, t1.data_de_venda, t1.nome,t1.ddd, t1.telefone, t1.email, t1.obs_followup, t1.observacao, t1.status, t1.documento_usuario, t1.nome_do_produto, t1.em_atendimento, t1.em_atendendo, t1.insercao_hotmart, t1.prioridade, t1.id_responsavel, t2.user_nome")
+            ->selectRaw("t1.id, t1.data_de_venda, t1.nome,t1.ddd, t1.telefone, t1.email, t1.obs_followup, t1.observacao, t1.status, t1.documento_usuario, t1.nome_do_produto, t1.em_atendimento, t1.em_atendendo, t1.insercao_hotmart, t1.prioridade, t1.id_responsavel, t2.user_nome, t2.avatar")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereNull('t1.aprovado')
             ->whereNull('t1.pos_atendimento')

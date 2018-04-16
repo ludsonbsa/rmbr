@@ -47,6 +47,10 @@
                             <td>{!!$brinde->user_nome!!}</td>
 
 
+                            @if(Auth::user()->role == 1 || Auth::user()->id == $brinde->id_responsavel)
+
+                            @endif
+
                             @if(Auth::user()->role == 1 || Auth::user()->role == 4 )
                                 <td class="acao">
                                     <a href="{{route('admin.brindes.editar', $brinde->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
