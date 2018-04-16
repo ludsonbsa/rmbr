@@ -35,6 +35,8 @@
                     <td class="meio"><span>{{date('d/m/Y H:i', strtotime($contato->data_ligar_depois))}}</span></td>
                     <td>{!!$contato->at_nome_atendente!!}</td>
 
+
+
                     @if(Auth::user()->role == 1)
                         <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Atender</a></td>
                         <td class="acao">
