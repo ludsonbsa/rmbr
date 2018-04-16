@@ -7,7 +7,7 @@
 
                 <th class="header">Nome</th>
 
-                <th class="header">Telefone</th>
+           <!--     <th class="header">Telefone</th> -->
 
                 <th class="header">E-mail</th>
 
@@ -27,8 +27,8 @@
             @foreach($contatos as $contato)
 
                 <tr class="">
-                    <td class="nome">{!! $contato->nome !!}</td>
-                    <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
+                    <a href="{{route('admin.atender', $contato->id)}}"><td class="nome">{!! $contato->nome !!}</td></a>
+                <!--    <td>({{$contato->ddd}}) {{$contato->telefone}}</td> -->
                     <td>{{$contato->email}}</td>
                     <td class="meio"><span class="nao-vendido">{!! $contato->insercao_hotmart !!}</span></td>
                     <td>{!! $contato->prioridade !!}</td>

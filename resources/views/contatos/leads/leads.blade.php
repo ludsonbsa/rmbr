@@ -42,7 +42,7 @@
                             <tr>
                                 <th class="header">Nome</th>
 
-                                <th class="header">Telefone</th>
+                               <!-- <th class="header">Telefone</th> -->
 
                                 <th class="header">E-mail</th>
 
@@ -64,8 +64,8 @@
                             @foreach($contatos as $contato)
 
                                 <tr class="" @if($contato->em_atendimento != 0 || $contato->em_atendimento != NULL) style="background:#e4e4e4; color:#ccc" disabled="" @endif @if($contato->em_atendendo != NULL) title="{!! $contato->em_atendendo !!} está atendendo" @endif>
-                                    <td class="nome">{!! $contato->nome !!}</td>
-                                    <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
+                                    <a href="{{route('admin.atender', $contato->id)}}"><td class="nome">{!! $contato->nome !!}</td></a>
+                                <!--<td>({{$contato->ddd}}) {{$contato->telefone}}</td>-->
                                     <td>{{$contato->email}}</td>
                                     <td class="meio"><span>{{$contato->insercao_hotmart}}</span></td>
                                     <td>{!!$contato->prioridade!!}</td>
