@@ -61,8 +61,7 @@
                         <td class="acao">
                             <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
                         </td>
-                        <td></td>
-                        <td></td>
+                      
                         @endif
                 </tr>
 
