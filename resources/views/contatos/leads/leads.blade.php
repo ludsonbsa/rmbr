@@ -63,7 +63,7 @@
                             <tbody>
                             @foreach($contatos as $contato)
 
-                                <tr class="" @if($contato->em_atendimento != 0 || $contato->em_atendimento != NULL) style="background:#e4e4e4; color:#ccc" disabled="" @endif @if($contato->em_atendendo != NULL) title="{!! $contato->em_atendendo !!} está atendendo" @endif>
+                                <tr class="" @if($contato->em_atendimento != 0 || $contato->em_atendimento != NULL) style="background:#e4e4e4; color:#ccc" disabled="" @endif @if($contato->em_atendendo != NULL)  @endif>
                                 <td class="nome">{!! $contato->nome !!}</td>
                                 <!--<td>({{$contato->ddd}}) {{$contato->telefone}}</td>-->
                                     <td>{{$contato->email}}</td>
@@ -92,7 +92,7 @@
                                             <td class="acao">
                                             </td>
                                             @else
-                                            <td style="color:red;">Em atendimento</td>
+                                            <td><img src="{{$contato->em_atendendo}}" alt="" width="30" class="atendente perfilEdit" style="margin-left:20px;"></td>
                                         @endif
 
                                         @if($contato->id_responsavel == \Auth::user()->id)
@@ -116,7 +116,7 @@
                                             <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
 
                                             @else
-                                            <td style='color:red'><strong>Em atendimento... </strong></td>
+                                            <td ><img src="{{$contato->em_atendendo}}" alt="" width="30" class="atendente perfilEdit" style="margin-left:20px;"></td>
                                         @endif
                                         @if($contato->id_responsavel == \Auth::user()->id)
                                                 <td class="acao">
@@ -139,7 +139,7 @@
                                             <td class="acao">
                                             </td>
                                         @else
-                                            <td style="color:red;">Em atendimento</td>
+                                            <td><img src="{{$contato->em_atendendo}}" alt="" width="30" class="atendente perfilEdit" style="margin-left:20px;"></td>
                                         @endif
 
                                         @if($contato->id_responsavel == \Auth::user()->id)
