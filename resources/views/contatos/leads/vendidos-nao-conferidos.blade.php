@@ -64,8 +64,6 @@
                         <td></td>
                     @endif
 
-
-
                 </tr>
 
             @endforeach

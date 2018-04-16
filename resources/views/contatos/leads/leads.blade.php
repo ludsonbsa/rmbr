@@ -118,6 +118,7 @@
                                                 </td>
                                             @else
                                                 <td></td>
+                                                <td></td>
                                         @endif
                                     @endif
 
@@ -164,7 +165,7 @@
                                             </td>
                                         @else
                                             <td></td>
-                                                <td></td>
+                                            <td></td>
                                         @endif
                                     @endif
 
