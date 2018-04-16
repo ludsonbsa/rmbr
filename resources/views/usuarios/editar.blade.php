@@ -53,13 +53,14 @@
 
                         <p>E-mail:</p>
 
-                        <input type="email"  class="t100" required style="color:#e1e1e1;" name="email" value="{{$user->email}}" placeholder="">
+                        <input type="email"  class="t100" required style="color:#e1e1e1;" name="email" value="{{$user->email}}" readonly placeholder="">
 
                     </div>
 
                     <input type="hidden" name="role" value="{{$user->role}}" />
                     <input type="hidden" name="status" value="{{$user->status}}" />
 
+                    @if(\Auth::user()->role == 1)
 
                     <div class="field-wrap t100">
 
@@ -67,7 +68,7 @@
 
                         <br>
 
-                        <select name="role_name" class="t100">
+                        <select name="role" class="t100">
 
                             @switch($user->role)
                                 @case(1)
@@ -103,19 +104,19 @@
 
                             @endswitch
 
-                            <option selected="selected" value="{!! $roleName !!}"> {!! $roleName; !!}</option>
+                            <option selected="selected" value="{!! $roleValue !!}"> {!! $roleName; !!}</option>
 
                             <option disabled>================</option>
 
-                            <option value="Administrador">Administrador</option>
+                            <option value="1">Administrador</option>
 
-                            <option value="Responsável">Responsável</option>
+                            <option value="2">Responsável</option>
 
-                            <option value="Atendente">Atendente</option>
+                            <option value="3">Atendente</option>
 
-                            <option value="Suporte">Suporte</option>
+                            <option value="4">Suporte</option>
 
-                            <option value="Aux. Admin">Aux. Admin</option>
+                            <option value="5">At. Temporário</option>
 
                             <option value="At. Temporário">At. Temporário</option>
 
@@ -147,6 +148,8 @@
                         </select>
 
                     </div>
+
+                    @endif
                     <br>
 
                     <div class="field-wrap t100">

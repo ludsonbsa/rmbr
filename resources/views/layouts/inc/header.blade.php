@@ -5,7 +5,7 @@
 <p><img src="https://mbr.digital/public/assets/admin/images/uiface2.png" alt="" height="40" width="40" /> Bem-vindo  Ludson Almeida </p>
 </div>-->
 
-<div class="container" ng-controller="Contatos">
+<div class="container">
     <div class="buttons">
 
         <form action="{{route('admin.leads.search')}}" method="post">
@@ -26,9 +26,9 @@
             </a>
 
 
-            <a href="#" title="MBR Follow Up - Notificações" alt="[Notificações]">
+            <a href="http://mbrsuporte.helpsite.io/" class="html5lightbox" title="MBR Follow Up - Notificações" alt="[Notificações]">
 
-                <li><a href="http://mbrsuporte.helpsite.io/" class="html5lightbox"><img src="/images/leads/ajuda.svg" width="20" class="icone" title="MBR Follow Up - Help" alt="[Help]"></a>
+                <li><img src="/images/leads/ajuda.svg" width="20" class="icone" title="MBR Follow Up - Help" alt="[Help]">
                 </li>
             </a>
 

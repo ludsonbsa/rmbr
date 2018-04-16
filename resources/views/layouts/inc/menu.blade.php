@@ -135,10 +135,6 @@
     </li>
 
 
-    <li>
-        <a href="{{route('admin.importar')}}" title="Importações" alt="[Importações]"><img src="/images/leads/importar_menu.svg" width="30" title="" alt="">Importações</a>
-
-    </li>
     </ul>
 </nav>
 @endif <!-- Menu do Suporte -->
