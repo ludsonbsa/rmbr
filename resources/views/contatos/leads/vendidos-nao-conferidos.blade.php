@@ -29,13 +29,13 @@
             <tbody>
             @foreach($contatos as $contato)
 
-                <tr class="" title="{!! $contato->obs_followup !!}">
+                <tr class="" title="">
                     <td class="nome">{!! $contato->nome !!}</td>
                     <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
                     <td>{{$contato->email}}</td>
                     <td class="meio"><span class="vendido">{!! $contato->pos_atendimento !!}</span></td>
                     <td>{!! $contato->insercao_hotmart !!}</td>
-                    <td @if($contato->nome_do_produto == "Programa Mulheres Bem Resolvidas") style="color:#762174; font-weight:bolder; background: rgb(230, 230, 230);" @endif>{!!$contato->nome_do_produto !!}</td>
+                    <td @if($contato->nome_do_produto == "Programa Mulheres Bem Resolvidas") style="" @endif>{!!$contato->nome_do_produto !!}</td>
                     <td>{!! $contato->at_nome_atendente !!}</td>
 
 
@@ -49,6 +49,7 @@
                     </td>
                     @else
                         <td class="acao"></td>
+                        <td></td>
                     @endif
                 </tr>
 
