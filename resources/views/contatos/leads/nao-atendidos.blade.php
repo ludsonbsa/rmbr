@@ -27,20 +27,15 @@
             <tbody>
             @foreach($contatos as $contato)
 
-                <tr class="" title="{!! $contato->obs_followup !!}">
-                    <td class="nome">{!!$contato->nome!!}</td>
+                <tr class="">
+                    <td class="nome">{!! $contato->nome !!}</td>
                     <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
                     <td>{{$contato->email}}</td>
-                    <td class="meio"><span class="vendido">{!!$contato->pos_atendimento !!}</span></td>
-                    <td>{!!$contato->insercao_hotmart !!}</td>
+                    <td class="meio"><span class="nao-vendido">{!! $contato->pos_atendimento !!}</span></td>
+                    <td>{!! $contato->insercao_hotmart!!}</td>
                     <td>{!! $contato->at_nome_atendente !!}</td>
 
-                    @if(Auth::user()->role == 3 AND $contato->at_id_responsavel == Auth::user()->id)
-                        <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Atender</a></td>
-                    @endif
-
-                    @if(Auth::user()->role == 1)
-
+                    @if(Auth::user()->role == 1 || Auth::user()->id == $contato->id_responsavel)
                         <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
                         <td class="acao">
                             <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
@@ -49,21 +44,16 @@
                             <a href="#" class="leads" data-nome="{!!$contato->nome!!}" data-email="{{$contato->email}}"
                                data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
                         </td>
-                    @endif
-
-                    @if(Auth::user()->role == 1 || Auth::user()->id == $contato->id_responsavel)
-                        <td class="acao">
-                            <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
-                        </td>
+                    @elseif(Auth::user()->role == 3 AND $contato->at_id_responsavel == Auth::user()->id)
+                        <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Atender</a></td>
                         <td></td>
-                    <!-- <td>
-                        <a href="#" class="leads" data-nome="{!!$contato->nome!!}" data-email="{{$contato->email}}"
-                           data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
-                    </td> -->
+                        <td></td>
                     @else
                         <td class="acao"></td>
                         <td></td>
+                        <td></td>
                     @endif
+
                 </tr>
 
             @endforeach

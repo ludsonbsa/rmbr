@@ -16,7 +16,7 @@
 
                 <th class="header">Meio</th>
 
-                <th class="header">Produto</th>
+             <!--   <th class="header">Produto</th> -->
 
                 <th class="header">Atendente</th>
 
