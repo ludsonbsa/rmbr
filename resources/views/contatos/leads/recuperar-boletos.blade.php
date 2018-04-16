@@ -27,7 +27,7 @@
             @foreach($contatos as $contato)
 
                 <tr class="">
-                    <a href="{{route('admin.atender', $contato->id)}}"><td class="nome">{!! $contato->nome !!}</td></a>
+                  <td class="nome">  <a href="{{route('admin.atender', $contato->id)}}">{!! $contato->nome !!}</a></td>
                 <!--    <td>({{$contato->ddd}}) {{$contato->telefone}}</td> -->
                     <td>{{$contato->email}}</td>
                     <td class="meio"><span class="nao-vendido">{!! $contato->insercao_hotmart !!}</span></td>
