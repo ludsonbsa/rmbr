@@ -154,7 +154,7 @@ class ContatosController extends Controller
                 ->whereRaw("t2.pos_atendimento = 'Ligar Depois' AND t2.id_responsavel = ".Auth::user()->id)
                 ->orderBy('data_ligar_depois','ASC')
                 ->get();
-            
+
         }
         return view('contatos.leads.ligar-depois', ['contatos' => $lead]);
     }
