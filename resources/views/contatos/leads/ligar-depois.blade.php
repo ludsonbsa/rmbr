@@ -28,15 +28,14 @@
             @foreach($contatos as $contato)
 
                 <tr class="">
-                    <td class="nome">{{$contato->nome}}</td>
+                    <td class="nome">{!! $contato->nome !!}</td>
                     <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
                     <td>{{$contato->email}}</td>
-                    <td class="meio"><span class="ligardepoissp">{{$contato->pos_atendimento}}</span></td>
+                    <td class="meio"><span class="ligardepoissp">{!! $contato->pos_atendimento !!}</span></td>
                     <td class="meio"><span>{{date('d/m/Y H:i', strtotime($contato->data_ligar_depois))}}</span></td>
-                    <td>{{$contato->at_nome_atendente}}</td>
+                    <td>{!!$contato->at_nome_atendente!!}</td>
 
                     @if(Auth::user()->role == 1)
-
                         <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
                         <td class="acao">
                             <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
@@ -47,10 +46,16 @@
                         </td>
                     @endif
 
+                    @if(Auth::user()->role == 3)
+                        <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
+                        <td></td>
+                    @endif
+
                     @if(Auth::user()->role == 1 || Auth::user()->id == $contato->id_responsavel)
                         <td class="acao">
                             <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
                         </td>
+                    <td></td>
                     <!--  <td>
                             <a href="#" class="leads" data-nome="{!!$contato->nome!!}" data-email="{{$contato->email}}"
                                data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
