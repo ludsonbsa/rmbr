@@ -101,11 +101,11 @@ class ContatosController extends Controller
     }
 
     public function boletos_gerados(){
-        if(Auth::user()->role == 1){
+        if(Auth::user()->role == 1 || Auth::user()->role == 4){
         $lead = DB::table('tb_atendimento as t1')
             ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd, t2.id_responsavel, t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento")
             ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
-            ->whereRaw("t2.conferencia = 0 AND t2.pos_atendimento = 'Boleto Gerado'")
+            ->whereRaw("t2.conferencia = 0 AND t2.pos_atendimento LIKE '%Boleto Gerado%'")
             ->orderBy('t1.at_final_atendimento','DESC')
             ->get();
         }elseif(Auth::user()->role >= 3){
@@ -124,34 +124,37 @@ class ContatosController extends Controller
                 ->orderBy('t1.at_final_atendimento','DESC')
                 ->get();
 
-        }elseif(Auth::user()->role == 4){
-            $lead = DB::table('tb_atendimento as t1')
-                ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd, t2.id_responsavel, t1.at_id_responsavel, t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento")
-                ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
-                ->whereRaw("t2.conferencia = 0 AND t2.pos_atendimento = 'Boleto Gerado'")
-                ->orderBy('t1.at_final_atendimento','DESC')
-                ->get();
-
         }
         //Ver poque quando vc adiciona o lead em adicionar, ele não tá caindo na condição aqui de cima
         return view('contatos.leads.boletos-gerados', ['contatos' => $lead]);
     }
 
     public function ligar_depois(){
-        if(Auth::user()->role == 1){
+        if(Auth::user()->role == 1 || Auth::user()->role == 4){
         $lead = DB::table('tb_atendimento as t1')
             ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t1.at_data_ligar_depois, t2.id, t2.nome, t2.telefone, t2.email, t2.observacao, t2.id_responsavel, t2.obs_followup, t2.status, t2.insercao_hotmart, t2.ddd, t2.pos_atendimento, t2.data_ligar_depois")
             ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
             ->whereRaw("t2.pos_atendimento = 'Ligar Depois' AND t1.at_nome_atendente != 'Sistema'")
             ->orderBy('data_ligar_depois','ASC')
             ->get();
-        }else {
+
+        }elseif(Auth::user()->role >= 3){
             $lead = DB::table('tb_atendimento as t1')
                 ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t1.at_data_ligar_depois, t1.at_id_responsavel, t2.id, t2.nome, t2.telefone, t2.email, t2.observacao, t2.id_responsavel, t2.obs_followup, t2.status, t2.insercao_hotmart, t2.ddd, t2.pos_atendimento, t2.data_ligar_depois")
                 ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
-                ->whereRaw("t2.pos_atendimento = 'Ligar Depois' AND t1.at_nome_atendente != 'Sistema' AND t1.at_id_responsavel = ".Auth::user()->id)
+                ->whereRaw("t2.pos_atendimento = 'Ligar Depois' AND t1.at_id_responsavel = ".Auth::user()->id)
                 ->orderBy('data_ligar_depois','ASC')
                 ->get();
+
+
+        }elseif ($_SESSION['dados']['nivel'] == 2) {
+            $lead = DB::table('tb_atendimento as t1')
+                ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t1.at_data_ligar_depois, t1.at_id_responsavel, t2.id, t2.nome, t2.telefone, t2.email, t2.observacao, t2.id_responsavel, t2.obs_followup, t2.status, t2.insercao_hotmart, t2.ddd, t2.pos_atendimento, t2.data_ligar_depois")
+                ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
+                ->whereRaw("t2.pos_atendimento = 'Ligar Depois' AND t2.id_responsavel = ".Auth::user()->id)
+                ->orderBy('data_ligar_depois','ASC')
+                ->get();
+            
         }
         return view('contatos.leads.ligar-depois', ['contatos' => $lead]);
     }

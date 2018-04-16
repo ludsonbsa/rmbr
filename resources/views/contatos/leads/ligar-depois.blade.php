@@ -27,7 +27,7 @@
             <tbody>
             @foreach($contatos as $contato)
 
-                <tr class="" title="{!! $contato->obs_followup !!}">
+                <tr class="">
                     <td class="nome">{{$contato->nome}}</td>
                     <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
                     <td>{{$contato->email}}</td>
