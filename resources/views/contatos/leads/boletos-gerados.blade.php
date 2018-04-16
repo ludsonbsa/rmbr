@@ -36,7 +36,7 @@
                     <td>{!! $contato->at_nome_atendente !!}</td>
 
                     @if(Auth::user()->role == 1 || Auth::user()->id == $contato->id_responsavel)
-                        <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
+                        <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Atender</a></td>
                         <td class="acao">
                             <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
                         </td>

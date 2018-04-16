@@ -53,7 +53,7 @@
 
                         <p>E-mail:</p>
 
-                        <input type="email"  class="t100" required style="color:#e1e1e1;" name="email" value="{{$user->email}}" readonly placeholder="">
+                        <input type="email"  class="t100" required style="color:#e1e1e1;" name="email" value="{{$user->email}}" @if(\Auth::user()->role != 1) readonly @endif placeholder="">
 
                     </div>
 
