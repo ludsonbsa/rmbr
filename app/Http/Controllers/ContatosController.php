@@ -45,7 +45,7 @@ class ContatosController extends Controller
                 ->get();
         }else{
             $lead = DB::table('tb_atendimento as t1')
-                ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_id_responsavel, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd,  t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento, t2.id_responsavel")
+                ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_id_responsavel, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd,  t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.obs_followup, t2.pos_atendimento, t2.id_responsavel")
                 ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
                 ->whereRaw("t2.pos_atendimento = 'Vendido' AND t2.conferencia = 0 AND t1
      .at_nome_atendente != 'Sistema' AND t1.at_id_responsavel = ".Auth::user()->id)
@@ -123,7 +123,7 @@ class ContatosController extends Controller
 
     public function recuperar_boletos(){
         $lead = DB::table('tb_contatos as t1')
-            ->selectRaw("t1.id, t1.data_de_venda, t1.nome,t1.ddd, t1.telefone, t1.email, t1.status, t1.documento_usuario, t1.insercao_hotmart, t1.prioridade, t1.id_responsavel, t1.pos_atendimento, t2.user_nome")
+            ->selectRaw("t1.id, t1.data_de_venda, t1.nome,t1.ddd, t1.telefone, t1.email, t1.status, t1.documento_usuario, t1.insercao_hotmart, t1.obs_followup, t1.prioridade, t1.id_responsavel, t1.pos_atendimento, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereRaw("(t1.aprovado IS NULL AND t1.pos_atendimento IS NULL) AND (t1.status = 'Expirado' OR t1.status = 'Boleto impresso')")
             ->groupBy('t1.email')
@@ -258,7 +258,7 @@ class ContatosController extends Controller
     }
 
     public function add(){
-        $produtos = DB::select('SELECT * FROM tb_produtos');
+        $produtos = DB::select('SELECT * FROM tb_produtos ORDER BY prod_id DESC');
         return view('contatos.leads.add', ['produtos' => $produtos]);
     }
 

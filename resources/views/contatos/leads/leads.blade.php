@@ -67,7 +67,7 @@
                                     <td>{{$contato->email}}</td>
                                     <td class="meio"><span>{{$contato->insercao_hotmart}}</span></td>
                                     <td>{!!$contato->prioridade!!}</td>
-                                    <td>{{$contato->user_nome}}</td>
+                                    <td>{!! $contato->user_nome !!}</td>
                                     <td class="acao">
 
                                     @if($contato->em_atendimento == Auth::id())

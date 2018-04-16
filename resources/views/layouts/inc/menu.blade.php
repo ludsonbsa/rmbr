@@ -86,12 +86,8 @@
     </li>
 
         <li>
-            <a href="{{route('admin.listar.brindes')}}" title="Brindes" alt="[Brindes]"><img src="/images/leads/brinde_menu.svg" width="30" title="" alt="">Brindes</a>
+            <a href="{{route('admin.brindes.add')}}" title="Brindes" alt="[Brindes]"><img src="/images/leads/brinde_menu.svg" width="30" title="" alt="">Adicionar Brinde</a>
 
-        </li>
-
-        <li class="sub">
-            <a href="{{route('admin.brindes.add')}}" title="Add Brinde" alt="[Add Lead]">Adicionar Brinde</a>
         </li>
 
 
@@ -99,11 +95,6 @@
             <a href="{{route('admin.brindes.buscar')}}" title="Buscar Brinde" alt="[Buscar Brinde]">Buscar Brinde</a>
         </li>
 
-
-        <li>
-            <a href="{{route('admin.importar')}}" title="Importações" alt="[Importações]"><img src="/images/leads/importar_menu.svg" width="30" title="" alt="">Importações</a>
-
-        </li>
 
     </ul>
 </nav>

@@ -46,14 +46,25 @@
                             <td>{!!$brinde->email!!}</td>
                             <td>{!!$brinde->user_nome!!}</td>
 
-                            <td class="acao">
-                                <a href="{{route('admin.brindes.editar', $brinde->id)}}" title="Editar Registro" class="atender">Editar</a>
-                            </td>
 
-                            <td>
-                                <a href="#" class="leads" data-nome="{!!$brinde->nome!!}" data-email="{{$brinde->email}}"
-                                   data-id="{{$brinde->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
-                            </td>
+                            @if(Auth::user()->role == 1 || Auth::user()->role == 4 )
+                                <td class="acao">
+                                    <a href="{{route('admin.brindes.editar', $brinde->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
+                                </td>
+                            @endif
+
+                            @if(Auth::user()->role == 1 || Auth::user()->id == $brinde->id_responsavel)
+                                <td>
+                                    <a href="#" class="leads" data-nome="{{$brinde->nome}}" data-email="{{$brinde->email}}"
+                                       data-id="{{$brinde->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
+                                </td>
+                            @else
+                                <td class="acao"></td>
+                            @endif
+
+
+
+
 
                         </tr>
                         @endforeach
