@@ -66,7 +66,15 @@
 
             </li>
 
+            <li>
+                <a href="{{route('admin.brindes.add')}}" title="Brindes" alt="[Brindes]"><img src="/images/leads/brinde_menu.svg" width="30" title="" alt="">Adicionar Brinde</a>
 
+            </li>
+
+
+            <li class="sub">
+                <a href="{{route('admin.brindes.buscar')}}" title="Buscar Brinde" alt="[Buscar Brinde]">Buscar Brinde</a>
+            </li>
 
         </ul>
     </nav>

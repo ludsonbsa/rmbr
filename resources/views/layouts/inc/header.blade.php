@@ -28,7 +28,7 @@
 
             <a href="#" title="MBR Follow Up - Notificações" alt="[Notificações]">
 
-                <li><img src="/images/leads/ajuda.svg" width="20" class="icone" title="MBR Follow Up - Notificações" alt="[Notificações]">
+                <li><a href="http://mbrsuporte.helpsite.io/" class="html5lightbox"><img src="/images/leads/ajuda.svg" width="20" class="icone" title="MBR Follow Up - Help" alt="[Help]"></a>
                 </li>
             </a>
 

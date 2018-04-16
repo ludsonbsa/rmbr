@@ -75,6 +75,7 @@
 
                                         <!-- admin -->
                                     @if(Auth::user()->role == 1)
+                                        <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
                                         <td class="acao">
                                             <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
                                         </td>
@@ -95,6 +96,7 @@
                                         @endif
 
                                         @if($contato->id_responsavel == \Auth::user()->id)
+
                                                 <td class="acao">
                                                     <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
                                                 </td>

@@ -31,6 +31,7 @@
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
+<script type="text/javascript" src="{{ asset('html5lightbox/html5lightbox.js') }}"></script>
 
 </body>
 </html>

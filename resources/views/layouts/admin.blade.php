@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <!-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> -->
+
 </head>
 <body>
 <div id="app">
@@ -28,6 +29,7 @@
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
+<script src="{{ asset('html5lightbox/html5lightbox.js') }}" type="text/javascript" ></script>
 <script src="{{ asset('js/nprogress.js') }}"></script>
 </body>
 </html>
