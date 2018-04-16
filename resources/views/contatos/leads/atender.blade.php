@@ -47,7 +47,7 @@
 
                         <br>
 
-                        <p>Data de cadastro: <strong>{{date('d/m/Y H:i:s', strtotime($cont->data_de_venda))}}</strong></p>
+                        <p>Data de cadastro: <strong>{{$cont->data_de_venda}}</strong></p>
 
                         <p>Inserido por: <strong>{!! $cont->user_nome !!}</strong></p>
 

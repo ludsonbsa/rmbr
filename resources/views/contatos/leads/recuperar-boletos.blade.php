@@ -27,7 +27,7 @@
             <tbody>
             @foreach($contatos as $contato)
 
-                <tr class="" title="{!! $contato->obs_followup !!}">
+                <tr class="">
                     <td class="nome">{!! $contato->nome !!}</td>
                     <td>({{$contato->ddd}}) {{$contato->telefone}}</td>
                     <td>{{$contato->email}}</td>
@@ -36,19 +36,88 @@
                     <td>{{$contato->user_nome}}</td>
                     <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
 
+                    <!-- admin -->
                     @if(Auth::user()->role == 1)
-                    <td class="acao">
-                        <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
-                    </td>
-                @endif
+                        <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
+                        <td class="acao">
+                            <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
+                        </td>
+                        <td>
+                            <a href="#" class="leads" data-nome="{{$contato->nome}}" data-email="{{$contato->email}}"
+                               data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
+                        </td>
+                    @endif
 
-                @if(Auth::user()->role == 1 || Auth::user()->id == $contato->id_responsavel)
-                    <td>
-                        <a href="#" class="leads" data-nome="{!!$contato->nome !!}" data-email="{{$contato->email}}"
-                           data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
-                    </td>
-                     @else
-                       <td class="acao"></td>
+                <!-- RESPONSAVEL -->
+
+                    @if(Auth::user()->role == 2)
+                        @if($contato->em_atendimento == \Auth::user()->id OR $contato->em_atendimento == NULL)
+                            <td class="acao">
+                            </td>
+                            @else
+                            <td style="color:red;">Em atendimento</td>
+                        @endif
+
+                        @if($contato->id_responsavel == \Auth::user()->id)
+
+                                <td class="acao">
+                                    <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
+                                </td>
+
+                                <td>
+                                    <a href="#" class="leads" data-nome="{{$contato->nome}}" data-email="{{$contato->email}}"
+                                       data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
+                                </td>
+                            @else
+                                <td></td>
+                        @endif
+                    @endif
+
+                <!-- ATENDENTE -->
+                    @if(Auth::user()->role == 3 || Auth::user()->role == 5)
+                        @if($contato->em_atendimento == \Auth::user()->id OR $contato->em_atendimento == NULL)
+                            <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
+
+                            @else
+                            <td style='color:red'><strong>Em atendimento... </strong></td>
+                        @endif
+                        @if($contato->id_responsavel == \Auth::user()->id)
+                                <td class="acao">
+                                    <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
+                                </td>
+                            <td>
+                                <a href="#" class="leads" data-nome="{{$contato->nome}}" data-email="{{$contato->email}}"
+                                   data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
+                            </td>
+                            @else
+                            <td></td>
+                                <td></td>
+                        @endif
+                    @endif
+
+
+                <!-- SUPORTE -->
+                    @if(Auth::user()->role == 4)
+                        @if($contato->em_atendimento == \Auth::user()->id OR $contato->em_atendimento == NULL)
+                            <td class="acao">
+                            </td>
+                        @else
+                            <td style="color:red;">Em atendimento</td>
+                        @endif
+
+                        @if($contato->id_responsavel == \Auth::user()->id)
+                            <td class="acao">
+                                <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
+                            </td>
+
+                            <td>
+                                <a href="#" class="leads" data-nome="{{$contato->nome}}" data-email="{{$contato->email}}"
+                                   data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
+                            </td>
+                        @else
+                            <td></td>
+                                <td></td>
+                        @endif
                     @endif
                 </tr>
 

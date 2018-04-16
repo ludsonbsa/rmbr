@@ -147,7 +147,7 @@ class ContatosController extends Controller
                 ->get();
 
 
-        }elseif ($_SESSION['dados']['nivel'] == 2) {
+        }elseif (Auth::user()->role == 2) {
             $lead = DB::table('tb_atendimento as t1')
                 ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t1.at_data_ligar_depois, t1.at_id_responsavel, t2.id, t2.nome, t2.telefone, t2.email, t2.observacao, t2.id_responsavel, t2.obs_followup, t2.status, t2.insercao_hotmart, t2.ddd, t2.pos_atendimento, t2.data_ligar_depois")
                 ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')

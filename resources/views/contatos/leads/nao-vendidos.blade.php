@@ -52,10 +52,10 @@
                         <td class="acao">
                             <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
                         </td>
-                    <td>
+                   <!-- <td>
                         <a href="#" class="leads" data-nome="{!!$contato->nome!!}" data-email="{{$contato->email}}"
                            data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
-                    </td>
+                    </td> -->
                     @else
                         <td class="acao"></td>
                         <td></td>

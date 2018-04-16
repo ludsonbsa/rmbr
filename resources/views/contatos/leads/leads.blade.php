@@ -21,12 +21,12 @@
 
                 <ul>
                     <li><a class="active-tab-menu" href="#1" data-tab="lead-tab1">Atender Leads</a></li>
+                    <li><a href="#7" data-tab="lead-tab7">Recuperar Boletos</a></li>
                     <li><a href="#2" data-tab="lead-tab2">Vendidos Não Conferidos</a></li>
                     <li><a href="#3" data-tab="lead-tab3">Não Vendidos</a></li>
                     <li><a href="#4" data-tab="lead-tab4">Boletos Gerados</a></li>
                     <li><a href="#5" data-tab="lead-tab5">Ligar Depois</a></li>
                    <!-- <li><a href="#6" data-tab="lead-tab6">Agendado</a></li> -->
-                    <li><a href="#7" data-tab="lead-tab7">Recuperar Boletos</a></li>
                     <li><a href="#8" data-tab="lead-tab8">Não Atendidos</a></li>
 
                 </ul>
@@ -73,7 +73,7 @@
                                     <td @if($contato->nome_do_produto == "Programa Mulheres Bem Resolvidas") style="" @endif>{!!$contato->nome_do_produto !!}</td>
                                     <td>{!! $contato->user_nome !!}</td>
 
-                                        <!-- admin -->
+                                    <!-- admin -->
                                     @if(Auth::user()->role == 1)
                                         <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
                                         <td class="acao">
