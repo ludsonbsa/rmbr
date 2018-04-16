@@ -20,7 +20,7 @@
             <a href="{{route('admin.lead.add')}}" title="MBR Follow Up - Adicionar Lead" alt="[Adicionar Lead]">
                 <li><img src="/images/leads/new_lead.svg" width="20" class="icone" title="MBR Follow Up - Adicionar Lead" alt="[Adicionar Lead]"></li>
             </a>
-            @if(\Auth::user()->role == 3 AND \Auth::user()->role == 2)
+            @if(\Auth::user()->role == 3 OR \Auth::user()->role == 2)
 
                 @else
                 <a href="{{route('admin.importar')}}" title="MBR Follow Up - Importar" alt="[Importar]">
