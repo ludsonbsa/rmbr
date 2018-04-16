@@ -34,7 +34,7 @@
                     <td class="meio"><span class="vendido">{!!$contato->pos_atendimento !!}</span></td>
                     <td>{!!$contato->insercao_hotmart !!}</td>
                     <td>{!! $contato->at_nome_atendente !!}</td>
-                    <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Editar</a></td>
+                    <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Atender</a></td>
 
                     @if(Auth::user()->role == 1)
 
