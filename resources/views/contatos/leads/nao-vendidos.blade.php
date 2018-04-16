@@ -35,9 +35,6 @@
                     <td>{!! $contato->insercao_hotmart!!}</td>
                     <td>{!! $contato->at_nome_atendente !!}</td>
 
-
-
-
                     @if(Auth::user()->role == 1 || Auth::user()->id == $contato->id_responsavel)
                         <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
                         <td class="acao">
