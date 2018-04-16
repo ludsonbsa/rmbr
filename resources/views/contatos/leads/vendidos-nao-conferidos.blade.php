@@ -37,7 +37,7 @@
                     <td>{!! $contato->insercao_hotmart !!}</td>
                     <td @if($contato->nome_do_produto == "Programa Mulheres Bem Resolvidas") style="" @endif>{!!$contato->nome_do_produto !!}</td>
                     <td>{!! $contato->at_nome_atendente !!}</td>
-
+                    <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Editar</a></td>
 
                     @if(Auth::user()->role == 1 || Auth::user()->id == $contato->id_responsavel)
                     <td class="acao">

@@ -161,8 +161,10 @@ class ContatosController extends Controller
 
     public function recuperar_boletos(){
         $lead = DB::table('tb_contatos as t1')
-            ->selectRaw("t1.id, t1.data_de_venda, t1.nome,t1.ddd, t1.telefone, t1.email, t1.status, t1.documento_usuario, t1.insercao_hotmart, t1.obs_followup, t1.prioridade, t1.id_responsavel, t1.pos_atendimento, t2.user_nome")
+            ->selectRaw("t1.id, t1.data_de_venda, t1.nome,t1.ddd, t1.telefone, t1.email, t1.status, t1.documento_usuario, t1.insercao_hotmart, t1.em_atendimento, t1.em_atendendo, t1.obs_followup, t1.prioridade, t1.id_responsavel, t1.pos_atendimento, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
+            ->whereNotNull('t1.telefone')
+            ->where('t1.telefone', '!=','')
             ->whereRaw("(t1.aprovado IS NULL AND t1.pos_atendimento IS NULL) AND (t1.status = 'Expirado' OR t1.status = 'Boleto impresso')")
             ->groupBy('t1.email')
             ->orderBy('t1.id','DESC')
@@ -218,6 +220,29 @@ class ContatosController extends Controller
             ->get();
 
         return view('contatos.leads.atender', ['contato' => $query]);
+    }
+
+    public function atender_ligar_depois($id)
+    {
+        $query = DB::table('tb_contatos')
+            ->selectRaw("tb_contatos.id, tb_contatos.em_atendimento, tb_contatos.pos_atendimento, tb_contatos.nome_do_produto, tb_contatos.data_de_venda, tb_contatos.nome, tb_contatos.ddd, tb_contatos.telefone, tb_contatos.email, tb_contatos.obs_followup, tb_contatos.cep, tb_contatos.endereco, tb_contatos.cidade, tb_contatos.estado, tb_contatos.bairro, tb_contatos.numero, tb_contatos.complemento, tb_contatos.observacao, tb_contatos.data_ligar_depois, tb_contatos.enviar_kit, tb_contatos.status, tb_contatos.em_atendendo, tb_contatos.documento_usuario, tb_contatos.estado, tb_contatos.em_atendimento, tb_contatos.insercao_hotmart, tb_contatos.prioridade, tb_contatos.id_responsavel, t2.user_nome")
+            ->join('users as t2','tb_contatos.id_responsavel','=','t2.id')
+            ->where('tb_contatos.id','=', $id)
+            ->get();
+
+        return view('contatos.leads.atender-ligar-depois', ['contato' => $query]);
+    }
+
+    public function atender_ligar_depois_update(Request $request, $id)
+    {
+        #Update na tabela contatos com as informações
+        $param = $request->all();
+        $param = $request->except(['ligarDepois','ligarDepois-hora','_token','at_inicio_atendimento', 'sendForm']);
+        $contatos = Contatos::where('id', '=', $id);
+        $contatos->update($param);
+
+        return response()->redirectToRoute('admin.leads')->with('msg',"Lead editado com sucesso");
+
     }
 
     public function atender_update(Request $request, $id)

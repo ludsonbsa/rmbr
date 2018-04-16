@@ -63,6 +63,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         //Editar não atribui informações de quem está editando
         Route::get('leads/editar/{id}', 'ContatosController@find')->name('lead.editar');
 
+        Route::get('leads/editar-ligar-depois/{id}', 'ContatosController@atender_ligar_depois')->name('lead.editar-ligar-depois');
+
+        Route::post('leads/editar-update-ligar-depois/{id}', 'ContatosController@editar_update')->name('leads.editar-update-ligar-depois');
+
         //Editar não atribui informações de quem está editando
         Route::get('leads/deletar/{id}', 'ContatosController@deletar')->name('lead.deletar');
 

@@ -1,6 +1,5 @@
-
 <div class="widget">
-    <div class="content" ng-controller="Contatos" ng-model="Contatos">
+    <div class="content">
 
         <table id="myTable" border="0" width="100" >
             <thead>
@@ -34,7 +33,6 @@
                     <td class="meio"><span class="nao-vendido">{!! $contato->insercao_hotmart !!}</span></td>
                     <td>{!! $contato->prioridade !!}</td>
                     <td>{{$contato->user_nome}}</td>
-                    <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
 
                     <!-- admin -->
                     @if(Auth::user()->role == 1)
