@@ -51,18 +51,21 @@
                         <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Atender</a></td>
                         <td></td>
                         <td></td>
+
+                    @elseif( Auth::user()->id == $contato->id_responsavel AND Auth::user()->role == 2)
+                        <td class="acao">
+                            <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
+                        </td>
+                        <td></td>
+                        <td></td>
                     @else
                         <td class="acao"></td>
                         <td></td>
                         <td></td>
                     @endif
 
-                    @if( Auth::user()->id == $contato->id_responsavel AND Auth::user()->role == 2)
-                        <td class="acao">
-                            <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
-                        </td>
-                      
-                        @endif
+
+
                 </tr>
 
             @endforeach
