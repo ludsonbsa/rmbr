@@ -282,8 +282,13 @@ class ContatosController extends Controller
         #Update na tabela de atendimento
         $atendimento = DB::table('tb_atendimento')
             ->insertGetId(
-                ['at_status' => 1, 'at_id_responsavel' => Auth::id(), 'at_id_contato' => $idContato, 'at_final_atendimento' => date('Y-m-d H:i:s'), 'at_nome_atendente' => Auth::user()->user_nome, 'token' => $token]
+                ['at_status' => 1, 'at_id_responsavel' => Auth::id(), 'at_id_contato' => $idContato, 'at_final_atendimento' => date('Y-m-d H:i:s'), 'at_nome_atendente' => Auth::user()->user_nome, 'token' => $token,]
             );
+
+        $dado = ['em_atendimento' => 0, 'em_atendendo' => NULL];
+        $upd = DB::table('tb_contatos')
+            ->where('id', $id)
+            ->update($dado);
 
         $msg = "Lead atualizado com sucesso";
 
