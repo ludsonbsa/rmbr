@@ -264,8 +264,11 @@ class ContatosController extends Controller
         $horas = $param['ligarDepois-hora'];
         $token = $param['_token'];
 
-        $param = $request->except(['ligarDepois','ligarDepois-hora','_token','at_inicio_atendimento', 'sendForm']);
+
         $param['data_ligar_depois'] = date('Y-m-d H:i', strtotime($dia.' '.$horas));
+
+        $param = $request->except(['ligarDepois','ligarDepois-hora','_token','at_inicio_atendimento', 'sendForm']);
+
 
         #Qual email é pra buscar no sistema pra fazer o update
         $contatos = Contatos::where('email', 'LIKE', $email);
@@ -348,6 +351,7 @@ class ContatosController extends Controller
         $param = $request->all();
         $email = $param['email'];
 
+        return false;
         #Fazer select de e-mail, se existir email notificar usuário de que não pode ter registro de email duplicado no sistema
 
         $lead = DB::table('tb_contatos')

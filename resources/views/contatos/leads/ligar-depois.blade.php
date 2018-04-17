@@ -34,7 +34,7 @@
                     <td class="meio"><span class="nao-vendido">{!! $contato->pos_atendimento !!}</span></td>
                     <td class="meio"><span>{!! date('d/m/Y H:i:s', strtotime($contato->data_ligar_depois))
                     !!}</span></td>
-                    <td>{!! $contato->insercao_hotmart!!}</td>
+                    <td>{!! $contato->at_nome_atendente !!}</td>
 
 
                     @if(Auth::user()->role == 1 || Auth::user()->id == $contato->id_responsavel  AND Auth::user()->role != 2)
