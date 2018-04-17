@@ -42,8 +42,8 @@
                                     <td>{!! $contato->email!!}</td>
                                     <td class="meio"><span>{!! $contato->insercao_hotmart!!}</span></td>
                                     <td>{!!$contato->prioridade!!}</td>
-                                    
-                                    @if(Auth::user()->role == 1 || Auth::user()->id == $contato->id_responsavel  AND Auth::user()->role != 2)
+
+                                    @if(Auth::user()->role == 1 AND Auth::user()->role != 2)
                                         <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Atender</a></td>
                                         <td class="acao">
                                             <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
@@ -52,11 +52,11 @@
                                             <a href="#" class="leads" data-nome="{!!$contato->nome!!}" data-email="{{$contato->email}}"
                                                data-id="{{$contato->id}}"><img src="/images/excluir.svg" width="30" class="icone del"  title="Excluir Contato" alt="[Excluir]"></a>
                                         </td>
-                                    @elseif(Auth::user()->role == 3 AND $contato->at_id_responsavel == Auth::user()->id)
+                                    @elseif(Auth::user()->role == 3)
                                         <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Atender</a></td>
                                         <td></td>
                                         <td></td>
-                                    @elseif( Auth::user()->id == $contato->id_responsavel AND Auth::user()->role == 2)
+                                    @elseif(Auth::user()->role == 2)
                                         <td class="acao">
                                             <a href="{{route('admin.lead.editar', $contato->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
                                         </td>
