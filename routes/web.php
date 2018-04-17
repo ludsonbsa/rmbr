@@ -80,8 +80,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
         #Importações
         Route::get('leads/importar', 'ImportacoesController@index')->name('importar');
         Route::get('leads/recuperacao', 'ImportacoesController@recuperacao')->name('recuperacao');
+
         Route::post('leads/importar/upload', 'ImportacoesController@planilhaImport')
             ->name('importar.upload');
+
+        Route::post('leads/importar/recuperacao', 'ImportacoesController@recuperacaoPlanilha')
+            ->name('importar.recuperacao');
 
         #Leads Aprovados
         Route::get('leads/aprovados/', 'ImportacoesController@aprovados')->name('lead.aprovado');

@@ -38,7 +38,7 @@
 
                 <div class="field-wrap t60">
                     <label>E-mail:</label>
-                    <input type="email" required name="email" value="" class="t100" placeholder="">
+                    <input type="email" name="email" value="" class="t100" placeholder="">
                 </div>
 
 
@@ -46,8 +46,8 @@
                     <label>Meio de inserção:</label>
                     <br>
                     <select name="insercao_hotmart" required>
-                        <option value="Whatsapp">Whatsapp</option>
                         <option value="Chat">Chat</option>
+                        <option value="Whatsapp">Whatsapp</option>
                         <option value="E-mail">E-mail</option>
                         <option value="Facebook">Facebook</option>
                     </select>

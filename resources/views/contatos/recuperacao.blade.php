@@ -9,7 +9,7 @@
 
         <div class="widget">
         <div class="field-wrap-c t94">
-            <form name="adminform2" action="" method="post" enctype="multipart/form-data" _lpchecked="1">
+            <form name="adminform2" action="{{route('admin.importar.recuperacao')}}" method="post" enctype="multipart/form-data" _lpchecked="1">
                 <?php echo csrf_field(); ?>
                 <div class="field-wrap t90">
                     <label for="recuperacao" class="icone" id="planilhaHotmart"><img src="/images/import_input.svg" width="70" />
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="field-wrap t100">
-                    <button type="submit" name="enviarPlanilhaRecup" class="button enviar t30">Importar Planilha</button>
+                    <button type="submit" name="enviarPlanilhaRecup" id="planilhaConfig" class="button enviar t30">Importar Planilha</button>
                 </div>
 
             </form>

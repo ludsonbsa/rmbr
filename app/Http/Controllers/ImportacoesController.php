@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Console\Commands\Arquivo;
 use App\Jobs\ImportarPlanilha;
+use App\Jobs\RecuperacaoImport;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Http\Request;
 use Illuminate\Queue\InteractsWithQueue;
@@ -87,19 +88,52 @@ class ImportacoesController extends Controller implements ShouldQueue
 
     }
 
+    public function recuperacaoPlanilha(){
+
+        if (Input::hasFile('planilha2')){
+            //Se não existir pasta de planilhas
+            $logicpath = public_path() . '/uploads/planilhas';
+            if (!is_dir($logicpath)) {
+                mkdir($logicpath, 0777, true);
+            }
+            //Move planilha pra pasta de planilhas
+            $file = Input::file('planilha2');
+            $fileExtension = $file->getClientOriginalExtension();
+
+            //Verifica se o arquivo é CSV.
+            if ($fileExtension == 'csv') {
+
+                //Faz upload antes da importação
+                #Seria bom pegar o nome do arquivo, mudar para um padrão sempre.
+                $filename = $file->getClientOriginalName();
+
+                $file->move($logicpath, $file->getClientOriginalName());
+
+                # Abrir o arquivo em CSV
+                $handle1 = fopen($logicpath . "/" . $file->getClientOriginalName(), 'r');
+
+                $caminho = $logicpath."/".$file->getClientOriginalName();
+                #Seto o nome do arquivo e salvo na função
+                $this->setArquivo(public_path() ."/uploads/planilhas/" . $file->getClientOriginalName());
+
+                $completo = $this->getArquivo();
+                $completo = str_replace('\\','/', $completo);
+
+                dispatch(new RecuperacaoImport(Auth::id(), $completo));
+
+                fclose($handle1);
+
+            }
+        }
+
+        return back()->with('msg',"Planilha adicionada, estamos verificando e atualizando os dados, aguarde o e-mail de confirmação!");
+    }
+
     /**
      * @param $id //De quem está inserindo
      * @return $this
      * Código totalmente necessário, com ele posso inserir novos registros da tabela HOTMART mesmo se o registro já existir, a coluna de transacao no bando de dados está setado como UNIQUE então nada será replicado, apenas verificar ou acescentado caso não houver.
      */
-    public function queryHotmart($id){
-        $pdo = DB::connection()->getPdo();
-        $query = "LOAD DATA LOCAL INFILE '".$this->getArquivo()."' INTO TABLE tb_contatos CHARACTER SET UTF8 FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n' IGNORE 1 LINES
-	    (nome_do_produto, nome_do_produtor, documento_produtor, nome_afiliado, transacao, meio_de_pagamento, origem, moeda_1, preco_do_produto, moeda_2, preco_da_oferta, taxa_de_cambio, moeda_3, preco_original, numero_da_parcela, recorrencia, data_de_venda, data_de_confirmacao, status, nome, documento_usuario, email, ddd, telefone, cep, cidade, estado, bairro, pais, endereco, numero, complemento, chave, codigo_produto, codigo_afiliacao, codigo_oferta, origem_checkout, tipo_de_pagamento, periodo_gratis, coproducao, origem_comissao, preco_total, tipo_pagamento,insercao_hotmart,prioridade, observacao, id_responsavel, conferencia) set insercao_hotmart = 'Hotmart', prioridade = 'Oportunidade Hotmart', id_responsavel = '".$id."', conferencia = 0;";
-
-        $pdo->exec($query);
-        return $this;
-    }
 
     public function aprovados(){
         #Adicionar linhas do banco de dados no arquivo CSV

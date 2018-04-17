@@ -2,31 +2,40 @@
 
 namespace App\Jobs;
 
-use App\Mail\UserImporter;
 use Illuminate\Bus\Queueable;
-use App\User;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Helpers;
-use Illuminate\Support\Facades\Mail;
 
-class ImportarPlanilha implements ShouldQueue
+class RecuperacaoImport implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     public $id;
     public $arquivo;
-    public $email;
-
-    public function __construct($id, $arquivo, $email)
+    public $date = array();
+    /**
+     * Create a new job instance.
+     *
+     * @return void
+     */
+    public function __construct($id, $arquivo)
     {
         $this->id = $id;
         $this->setArquivo($arquivo);
-        $this->email = $email;
+    }
+
+    /**
+     * Execute the job.
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        $this->leituraEaction();
     }
 
     /**
@@ -45,24 +54,41 @@ class ImportarPlanilha implements ShouldQueue
         $this->arquivo = $arquivo;
     }
 
+    public function leituraEaction()
+    {
+        $handle = fopen($this->getArquivo(), "r");
 
+        while(($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+            $date['prod'] = $data[0];
+            $date['date'] = $data[1];
+            $date['url'] = $data[2];
+            $date['cidade'] = $data[3];
+            $date['afiliado'] = $data[4];
+            $date['oferta'] = $data[5];
+            $date['nome'] = $data[6];
+            $date['email'] = $data[7];
+            $date['cpf'] = $data[8];
+            $date['ddd'] = $data[9];
+            $date['telefone'] = $data[10];
+            $this->queryRecuperacao($this->getArquivo(), $this->id, $date);
+            $this->aprovados();
+            $this->verificapa();
+            $this->atribuirPosAt();
+        }
 
-    public function handle(){
-        $this->queryHotmart($this->id);
-        $this->aprovados();
-        $this->verificapa();
-        $this->atribuirPosAt();
-        Mail::to($this->email)->send(new UserImporter());
-
+        fclose($handle);
+        \Log::info("Query de Recuperação");
     }
 
-    public function queryHotmart($id){
-        $pdo = DB::connection()->getPdo();
-        $query = "LOAD DATA LOCAL INFILE '".$this->getArquivo()."' INTO TABLE tb_contatos CHARACTER SET UTF8 FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n' IGNORE 1 LINES
-	    (nome_do_produto, nome_do_produtor, documento_produtor, nome_afiliado, transacao, meio_de_pagamento, origem, moeda_1, preco_do_produto, moeda_2, preco_da_oferta, taxa_de_cambio, moeda_3, preco_original, numero_da_parcela, recorrencia, data_de_venda, data_de_confirmacao, status, nome, documento_usuario, email, ddd, telefone, cep, cidade, estado, bairro, pais, endereco, numero, complemento, chave, codigo_produto, codigo_afiliacao, codigo_oferta, origem_checkout, tipo_de_pagamento, periodo_gratis, coproducao, origem_comissao, preco_total, tipo_pagamento,insercao_hotmart,prioridade, observacao, id_responsavel, conferencia) set insercao_hotmart = 'Hotmart', prioridade = 'Oportunidade Hotmart', id_responsavel = '".$id."', conferencia = 0;";
+    public function queryRecuperacao($arquivo, $id, array $date){
+
+        $pdo = \DB::connection()->getPdo();
+        $query = "LOAD DATA LOCAL INFILE '".$arquivo."' INTO TABLE tb_contatos CHARACTER SET UTF8 FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n' IGNORE 1 LINES
+	     (nome_do_produto, nome_do_produtor, documento_produtor, nome_afiliado, transacao, meio_de_pagamento, origem, moeda_1, preco_do_produto, moeda_2, preco_da_oferta, taxa_de_cambio, moeda_3, preco_original, numero_da_parcela, recorrencia, data_de_venda, data_de_confirmacao, status, nome, documento_usuario, email, ddd, telefone, cep, cidade, estado, bairro, pais, endereco, numero, complemento, chave, codigo_produto, codigo_afiliacao, codigo_oferta, origem_checkout, tipo_de_pagamento, periodo_gratis, coproducao, origem_comissao, preco_total, tipo_pagamento,insercao_hotmart,prioridade, observacao, id_responsavel, conferencia)
+	     set insercao_hotmart = 'R.Hotmart', prioridade = 'Recuperação Hotmart', id_responsavel = '".$id."', conferencia = 0, nome_do_produto = '".$date['prod']."', nome_do_produtor = 'MBR EDITORA', documento_produtor = '26.762.111/0001-29', nome_afiliado = 'Leandro Ladeira', transacao = '".$date['url']."', meio_de_pagamento = 'HotPay', origem = '', moeda_1 = 'BRL', preco_do_produto = '',  moeda_2 = 'BRL', preco_da_oferta = '', taxa_de_cambio = '', moeda_3 = '', preco_original = '', numero_da_parcela = '', recorrencia = '', data_de_venda = '', data_de_confirmacao = '', status = 'Cancelado', email = '".$date['email']."', nome ='".$date['nome']."', ddd = '".$date['ddd']."', telefone = '".$date['telefone']."', cidade = '".$date['cidade']."', documento_usuario = '".$date['cpf']."', data_de_venda = '".date('d-m-Y H:i:s')."'";
+
         $pdo->exec($query);
 
-        \Log::info("Foi QueryHOTMART");
     }
 
     public function aprovados()
@@ -246,7 +272,6 @@ class ImportarPlanilha implements ShouldQueue
 
         $executionStartTimeALLAT = microtime(true);
         $totalAP3 =  $executionStartTimeALLAT - $executionStartTimeAT1;
-        \Log::info("Atribuir pós atendimentos: {$totalAP3}");
+        \Log::info("Atribuir pós atendimentos - Recuperação: {$totalAP3}");
     }
-
 }
