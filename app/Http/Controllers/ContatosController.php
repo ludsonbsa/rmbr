@@ -142,8 +142,9 @@ class ContatosController extends Controller
             $lead = DB::table('tb_atendimento as t1')
                 ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t1.at_data_ligar_depois, t1.at_id_responsavel, t2.obs_followup, t2.id, t2.nome, t2.telefone, t2.email, t2.observacao, t2.id_responsavel, t2.obs_followup, t2.status, t2.insercao_hotmart, t2.ddd, t2.pos_atendimento, t2.data_ligar_depois")
                 ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
-                ->whereRaw("t2.pos_atendimento = 'Ligar Depois' AND t1.at_id_responsavel = ".Auth::user()->id)
-                ->orderBy('data_ligar_depois','ASC')
+                ->where("t2.pos_atendimento", '=',"Ligar Depois")
+                ->where('t1.at_id_responsavel' ,'=', Auth::user()->id)
+                ->orderBy('t2.data_ligar_depois','ASC')
                 ->get();
 
 
@@ -151,8 +152,8 @@ class ContatosController extends Controller
             $lead = DB::table('tb_atendimento as t1')
                 ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t1.at_data_ligar_depois, t1.at_id_responsavel, t2.id, t2.obs_followup, t2.nome, t2.telefone, t2.email, t2.observacao, t2.id_responsavel, t2.obs_followup, t2.status, t2.insercao_hotmart, t2.ddd, t2.pos_atendimento, t2.data_ligar_depois")
                 ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
-                ->whereRaw("t2.pos_atendimento = 'Ligar Depois' AND t2.id_responsavel = ".Auth::user()->id)
-                ->orderBy('data_ligar_depois','ASC')
+                ->where('t1.at_id_responsavel' ,'=', Auth::user()->id)
+                ->orderBy('t2.data_ligar_depois','ASC')
                 ->get();
 
         }
@@ -282,16 +283,18 @@ class ContatosController extends Controller
         $contatos->update($param);
 
         $idContato = $id;
+
+        $dado = ['em_atendimento' => 0, 'em_atendendo' => NULL];
+        $upd = DB::table('tb_contatos')
+            ->where('id', $id)
+            ->update($dado);
+
         #Update na tabela de atendimento
         $atendimento = DB::table('tb_atendimento')
             ->insertGetId(
                 ['at_status' => 1, 'at_id_responsavel' => Auth::id(), 'at_id_contato' => $idContato, 'at_final_atendimento' => date('Y-m-d H:i:s'), 'at_nome_atendente' => Auth::user()->user_nome, 'token' => $token,]
             );
 
-        $dado = ['em_atendimento' => 0, 'em_atendendo' => NULL];
-        $upd = DB::table('tb_contatos')
-            ->where('id', $id)
-            ->update($dado);
 
         $msg = "Lead atualizado com sucesso";
 
