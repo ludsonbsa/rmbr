@@ -40,7 +40,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
                                     <label>
@@ -48,7 +48,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
 
                         <div class="form-group">
                             <div class="col-md-12">
@@ -56,9 +56,10 @@
                                     Login
                                 </button>
                             </div>
-                                <a class="btn btn-link col-md-6 col-md-offset-3" href="{{ route('password.request') }}">
+                               <!-- <a class="btn btn-link col-md-6 col-md-offset-3" href="{{ route('password.request')
+                               }}">
                                     {{trans('auth.forgot')}}
-                                </a>
+                                </a>-->
                             </div>
                     </form>
                         </div>
