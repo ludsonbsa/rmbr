@@ -350,7 +350,7 @@ class ContatosController extends Controller
     public function cadastrar(Request $request){
         $param = $request->all();
         $email = $param['email'];
-        
+
         #Fazer select de e-mail, se existir email notificar usuário de que não pode ter registro de email duplicado no sistema
 
         $lead = DB::table('tb_contatos')
