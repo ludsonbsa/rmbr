@@ -71,11 +71,12 @@ class RecuperacaoImport implements ShouldQueue
             $date['ddd'] = $data[9];
             $date['telefone'] = $data[10];
             $this->queryRecuperacao($this->getArquivo(), $this->id, $date);
-            $this->aprovados();
-            $this->verificapa();
-            $this->atribuirPosAt();
-        }
 
+        }
+        
+        $this->aprovados();
+        $this->verificapa();
+        $this->atribuirPosAt();
         fclose($handle);
         \Log::info("Query de Recuperação");
     }
