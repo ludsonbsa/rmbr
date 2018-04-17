@@ -15,7 +15,7 @@ use App\Http\Middleware\Suporte;
 
 Route::get('/', 'Auth\LoginController@showLoginForm');
 
-Route::get('/home', 'Auth\LoginController@login')->name('home');
+Route::get('/home', 'ContatosController@index')->name('home');
 Auth::routes();
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
