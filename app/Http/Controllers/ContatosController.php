@@ -89,7 +89,7 @@ class ContatosController extends Controller
 
         }elseif (Auth::user()->role == 2) {
             $lead = DB::table('tb_atendimento as t1')
-                ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd, t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento")
+                ->selectRaw("t1.at_id, t1.at_nome_atendente, t1.at_inicio_atendimento, t1.at_final_atendimento, t2.id, t2.nome, t2.ddd, t2.telefone, t2.email, t2.status, t2.insercao_hotmart, t2.pos_atendimento, t2.id_responsavel")
                 ->join('tb_contatos as t2','t1.at_id_contato','=','t2.id')
                 #Tem que pegar o charset que veio do modelo antigo, e o novo
                 ->whereRaw("t2.pos_atendimento IN('NÃ£o Vendido', 'Não Vendido') AND t2.id_responsavel = ".Auth::user()->id)
