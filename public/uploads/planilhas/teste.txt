@@ -2,8 +2,9 @@ GET /admin/infusion HTTP/1.1
 Accept:                    text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
 Accept-Encoding:           gzip, deflate, br
 Accept-Language:           pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,it;q=0.6
+Cache-Control:             max-age=0
 Connection:                keep-alive
-Cookie:                    PHPSESSID=pjfj9ll9giiim8vcg31uih8vnm; _ga=GA1.1.1102242985.1508499140; contactId=5415795; XSRF-TOKEN=eyJpdiI6IklDbTZFSGNmY3NYRkFCajlwZFhqVnc9PSIsInZhbHVlIjoiNW9aZTFpQVZTazdob0pwVGNoNHdBak9NbTBKNXBWWFVmM1YzaTBDQm5idkxGa2crY0FySW9wdkpnZzRNeGdaZVFDSFlWY2l3K1k1alZkTXpXXC9OWmJnPT0iLCJtYWMiOiIxMjhlMjUzYjhiM2Q2ZDI4ZTE3YjkzYjMxMTZlZjI0YzcyOTlhY2FjZmZjZjg0ZWUwMjQxY2NlY2Y1NDFkMTVhIn0%3D; mbr_session=eyJpdiI6InlYaWtXOTgwdkZuWHlBQTg5Y2p3cGc9PSIsInZhbHVlIjoiTWZjVTA1a3NPR1ljclB6b3VyaEZmVDRsbEdXeWN4TjhCQXRBNldIektDMFJKbThPVlV0OWFcL3p5Z3hKMmx6RkYzdUIwZXY5UUVENjVnQ0U4SzhZNnN3PT0iLCJtYWMiOiIwYTMwYTFjMDU0MjUzZDIyMTExYjc4ZGE2MzkyNmQwMjlhNDQ5ZmI0N2NhMTNlMGJjZmQ2ZTM4MzgzZGZhYzkzIn0%3D
+Cookie:                    PHPSESSID=pjfj9ll9giiim8vcg31uih8vnm; _ga=GA1.1.1102242985.1508499140; contactId=5415795; XSRF-TOKEN=eyJpdiI6IlJxSVpocnFxVkdkaEozclgwWm1oc1E9PSIsInZhbHVlIjoiemZOdnZSOFlZQU1JbHlSbGlcLzRGV2lZVTJtbFdrSGMwdEViYUIreFEwbzBpXC96TjRtS1BOM1NDTURYN21ObnFEOVwvc2t0VDM4NlR3TFB2d1d2TEJxU3c9PSIsIm1hYyI6ImFmNWI2NmQ3Y2E0ZWU1NjYwMDY1MTZjMDQ5YTA1N2NlMWU5OGU2YjhkM2IxNzdjZDNjZWVlZTAyY2Y3NThlOTAifQ%3D%3D; mbr_session=eyJpdiI6ImRZS21ZXC9iVEFGc0Vqa3Q1bStOWVFnPT0iLCJ2YWx1ZSI6IjNCTmlxZDl0RjVwM2FhaWthUFhIRG5IMTZzazMxY3d4K3FSdFZVTno2TmNFcm5VK21cL1NBdnpuV1hNQU1neldkNFlkWFprTGN4QjU0Qm5KaHFoTkRXZz09IiwibWFjIjoiODllZDU2ODExOWFmZjVjMWUwNDE3YTFhOTk3MmZkODQ2YmVlMmMwMzhiZmY3MmYwYThmMmYzMTAxMjAxZWMyYyJ9
 Host:                      localhost:8000
 Upgrade-Insecure-Requests: 1
 User-Agent:                Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36
@@ -14,29 +15,7 @@ Accept-Encoding:           gzip, deflate, br
 Accept-Language:           pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,it;q=0.6
 Cache-Control:             max-age=0
 Connection:                keep-alive
-Cookie:                    PHPSESSID=pjfj9ll9giiim8vcg31uih8vnm; _ga=GA1.1.1102242985.1508499140; contactId=5415795
-Host:                      localhost:8000
-Upgrade-Insecure-Requests: 1
-User-Agent:                Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36
-
-GET /admin/infusion HTTP/1.1
-Accept:                    text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
-Accept-Encoding:           gzip, deflate, br
-Accept-Language:           pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,it;q=0.6
-Cache-Control:             max-age=0
-Connection:                keep-alive
-Cookie:                    PHPSESSID=pjfj9ll9giiim8vcg31uih8vnm; _ga=GA1.1.1102242985.1508499140; contactId=5415795; XSRF-TOKEN=eyJpdiI6ImMyY2FLdHVzbnR0YUpaSjlKK25pSlE9PSIsInZhbHVlIjoibjhtMkRnMzZPS0ZIbGV2ZFBhRDRZNlR0THRINkxRbGpiYVd6dlFJVW5KWDJra1dadGQ1UG9VZllcL0dtcG1GQkJKQ3pEUHlWRzlPSGp2RXZHcGxYN2hBPT0iLCJtYWMiOiI3NzdjMzM0NzQxNjM2MTBmN2YyM2JkODM5Njk3Mjk0NjU5YjBhZTA4YTRiMWM3NTk0NTZlM2FiNGViNDQ4ZDg2In0%3D; mbr_session=eyJpdiI6InN4YllXM25rUFVJMlwvY0ZkVzRSNTNRPT0iLCJ2YWx1ZSI6ImdLaVh2bFVqbE9QMEVKdmIzclJTMjV4anVNcWxlUlR2TjZxaXlKZlVXdEVSZlpCRFJaT1d4RTh2UFwvTFlrdVluN01wNzM1SjVNemo5aGxpWVJUNmxtQT09IiwibWFjIjoiYTY2NjdiMTQ1YTVjZGUyNzFjOWViZmY5YTI4MTRkMzJmYTM4YTYyNzNiMWM4MzE2YWJjZTQ2ZjcwMTNkYTcwZSJ9
-Host:                      localhost:8000
-Upgrade-Insecure-Requests: 1
-User-Agent:                Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36
-
-GET /admin/infusion HTTP/1.1
-Accept:                    text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
-Accept-Encoding:           gzip, deflate, br
-Accept-Language:           pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,it;q=0.6
-Cache-Control:             max-age=0
-Connection:                keep-alive
-Cookie:                    PHPSESSID=pjfj9ll9giiim8vcg31uih8vnm; _ga=GA1.1.1102242985.1508499140; contactId=5415795; XSRF-TOKEN=eyJpdiI6ImFnbithVVwvejlWelUyRlBIWFYwTUFBPT0iLCJ2YWx1ZSI6InMzaVZxUFRPb2lxVGwyZVVsY3RMNWtNcVRrS2d3bEVXK2kzZUk2S2hpUW1MbnFrTXVlblFudU9RQkx6bWloQkVzaTB1eEQ5S2pBOGhSSEQ4NGM1dm9RPT0iLCJtYWMiOiJkMGQzYTczMzFkMmZmZDJhOTJhYjdjZjAyZWI3MzI5Y2RmOTNiOGE2YjRkZTZkYmYxZGU3MjliYTllOTFjODAzIn0%3D; mbr_session=eyJpdiI6IkY1SEtZUE5mVDhlMkxGcmF5XC9lRzNRPT0iLCJ2YWx1ZSI6ImdQcEVZMVwvUEFmQnhvZ29ncWtcLzNJbUJPQnVcL0FPN2FjdE5MUnFyYlR0VnVJblpHeEFoMFV0TEQ2M2FSUThNaTZTM2FNemFsNUpMRStRckpBa3JYMW9BPT0iLCJtYWMiOiJhNjc0MWM5MWE1OWEwYzg5YmRjMzI3NTU2ZTkxZDk1Njg2NTQ4OWZjMDk5NzJjN2JkMjdiN2U5MjhmYTVhOTZiIn0%3D
+Cookie:                    PHPSESSID=pjfj9ll9giiim8vcg31uih8vnm; _ga=GA1.1.1102242985.1508499140; contactId=5415795; XSRF-TOKEN=eyJpdiI6ImJPeFJuU050SUV0TjZVVmo4QnJKRWc9PSIsInZhbHVlIjoiaEN4Q3pYZG5RXC83MHBcL1lZeklPQ29GSHFud3U4anIzdEJQZXVJZUVIdWdJZGFveGFwSWJvcmp5bkJXNGNcLzRCMHlQd1wvTEtwSmk0bTl5SG9HOXFuVU5nPT0iLCJtYWMiOiJiMTEyZjM1ZDhiYmRkMTQ5ZjhiZjhhZTM4YjU1YjEwNzkzODdhYTc3YjYxNzE3OWU1ZjJiNDY5OWE3NGRhYmM4In0%3D; mbr_session=eyJpdiI6Ims1Tms0THNoRmJhdWVBMDJWMXV1UlE9PSIsInZhbHVlIjoiVkJCbGg3TEhCUUFtKzQ3Vzl0d2NuemxuK2VCR3Y4ZUlOVmVEcHJXeWVoTVNZY1pcL2pzXC9ZenpIQ3o2aDAwRWdFRVJneGU1V0c1alRKZnMxWGQ4VVB6Zz09IiwibWFjIjoiYjVjMWNjMWY0YzQ3M2JmODBhMGNjMzk3MWE5MDVhYzY4NWU1YjZkZWE1MjA0YzcxOTI5YmVjY2U3MzQ1ZTI1NCJ9
 Host:                      localhost:8000
 Upgrade-Insecure-Requests: 1
 User-Agent:                Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36
