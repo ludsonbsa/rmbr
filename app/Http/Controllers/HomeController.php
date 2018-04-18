@@ -20,13 +20,13 @@ class HomeController extends Controller
     public function infusion(Request $request)
     {
 
-        $param = $request->all();
+        $param = $request->input('inf_field_FirstName');
 
         $caminho = public_path().'/uploads/planilhas/teste.txt';
         $fp = fopen($caminho, "a");
 
         // Escreve "exemplo de escrita" no bloco1.txt
-        $escreve = fwrite($fp, $request);
+        $escreve = fwrite($fp, $param);
 
         // Fecha o arquivo
         fclose($fp);
