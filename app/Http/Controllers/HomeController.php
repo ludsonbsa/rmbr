@@ -13,4 +13,11 @@ class HomeController extends Controller
     {
         return response()->redirectToRoute('admin.leads');
     }
+
+    public function infusion(Request $request)
+    {
+        if($request->isMethod('post')){
+            var_dump($request);
+        }
+    }
 }

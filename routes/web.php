@@ -174,5 +174,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
     /****************************************SUPORTE********************************************/
 
+    /*******EXTERNO***********/
+    Route::get('infusion/', 'HomeController@buscar_brinde')->name('brindes.buscar-brinde');
+
 });
 
