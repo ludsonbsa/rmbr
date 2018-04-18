@@ -1,0 +1,22 @@
+GET /admin/infusion HTTP/1.1
+Accept:                    text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding:           gzip, deflate, br
+Accept-Language:           pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,it;q=0.6
+Connection:                keep-alive
+Cookie:                    PHPSESSID=pjfj9ll9giiim8vcg31uih8vnm; _ga=GA1.1.1102242985.1508499140; contactId=5415795; XSRF-TOKEN=eyJpdiI6IklDbTZFSGNmY3NYRkFCajlwZFhqVnc9PSIsInZhbHVlIjoiNW9aZTFpQVZTazdob0pwVGNoNHdBak9NbTBKNXBWWFVmM1YzaTBDQm5idkxGa2crY0FySW9wdkpnZzRNeGdaZVFDSFlWY2l3K1k1alZkTXpXXC9OWmJnPT0iLCJtYWMiOiIxMjhlMjUzYjhiM2Q2ZDI4ZTE3YjkzYjMxMTZlZjI0YzcyOTlhY2FjZmZjZjg0ZWUwMjQxY2NlY2Y1NDFkMTVhIn0%3D; mbr_session=eyJpdiI6InlYaWtXOTgwdkZuWHlBQTg5Y2p3cGc9PSIsInZhbHVlIjoiTWZjVTA1a3NPR1ljclB6b3VyaEZmVDRsbEdXeWN4TjhCQXRBNldIektDMFJKbThPVlV0OWFcL3p5Z3hKMmx6RkYzdUIwZXY5UUVENjVnQ0U4SzhZNnN3PT0iLCJtYWMiOiIwYTMwYTFjMDU0MjUzZDIyMTExYjc4ZGE2MzkyNmQwMjlhNDQ5ZmI0N2NhMTNlMGJjZmQ2ZTM4MzgzZGZhYzkzIn0%3D
+Host:                      localhost:8000
+Upgrade-Insecure-Requests: 1
+User-Agent:                Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36
+
+GET /admin/infusion HTTP/1.1
+Accept:                    text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding:           gzip, deflate
+Accept-Language:           pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,it;q=0.6
+Cache-Control:             max-age=0
+Connection:                keep-alive
+Cookie:                    contactId=5415795; XSRF-TOKEN=eyJpdiI6IkxacytJRk40eExlRlBOSjE5b1Q4Ync9PSIsInZhbHVlIjoiV0drZ0M5S1RZcWUwNUN6dWUxUFJucE9ZZ3Q4XC81ZDdWOXdxQ1huZEhHdFl5OHlST0pXOUdVcm1UeEtwK3ZwOEtTU3VCWUNwXC85N3h4WitpNnVcL09xNWc9PSIsIm1hYyI6ImYyNGQ2ZjIwOGQ0Yzc0ZTlmNjQ5NGE1YzZmYzgwY2Q2YzRiZGNlZDZmMjhmM2Y1OWY0ZDA4YjhhMDA4ZjYyOWUifQ%3D%3D; laravel_session=eyJpdiI6IjB2bXNHeEdTQjlYWFwvWFFcL0ZqWVNuZz09IiwidmFsdWUiOiIwZ09tcER1ZVwvMnE0OEpcL01XSTVBV1h0VnVZYTdoWkFCWUJ5QUgzZUNtcFV3dlFNWUl0cFhjcWdPcFhpd3BMeE1BMDJVRUFwTkVpdDNKTWFNRmZsbzZ3PT0iLCJtYWMiOiIzNDliNTY4OGM0NzY4YzQ4MjZmYTE4NWM0YzMwNzk5ZWQzODEyMmQxOThiNDU0MWE2ZWQyMTA1YTU5ZTUwNjQ5In0%3D
+Host:                      mbrdigital-com-br.umbler.net
+Upgrade-Insecure-Requests: 1
+User-Agent:                Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36
+Cookie: contactId=; XSRF-TOKEN=FKRGPY8KlZSj7G0gjtELHNWhGw2LhVmtBvmQKWfB; laravel_session=li64SupfT4GYThvZ8HkCrd9yAf2Y5v4sAqfj7Q7d
+

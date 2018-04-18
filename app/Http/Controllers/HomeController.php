@@ -21,7 +21,7 @@ class HomeController extends Controller
     {
 
         $param = $request->all();
-        
+
         $caminho = public_path().'/uploads/planilhas/teste.txt';
         $fp = fopen($caminho, "a");
 
