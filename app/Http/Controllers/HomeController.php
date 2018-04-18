@@ -18,7 +18,7 @@ class HomeController extends Controller
     {
 
         if($request['inf_field_FirstName']){
-            $caminho = public_path().'/uploads/planilhas';
+            $caminho = public_path().'/uploads/planilhas/teste.txt';
             $fp = fopen($caminho, "a");
 
             // Escreve "exemplo de escrita" no bloco1.txt
