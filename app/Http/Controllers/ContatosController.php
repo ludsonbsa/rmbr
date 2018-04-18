@@ -28,7 +28,7 @@ class ContatosController extends Controller
             ->where('t1.status','!=', 'Expirado')
             ->groupBy('t1.email')
             ->orderBy('t1.id','DESC')
-            ->paginate(50);
+            ->paginate(100);
 
         return view('contatos.leads.leads', ['contatos' => $lead]);
     }

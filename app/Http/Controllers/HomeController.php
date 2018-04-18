@@ -13,6 +13,9 @@ class HomeController extends Controller
     {
         return response()->redirectToRoute('admin.leads');
     }
+    public function form(){
+        return view('home.infusion');
+    }
 
     public function infusion(Request $request)
     {
@@ -27,5 +30,7 @@ class HomeController extends Controller
             // Fecha o arquivo
             fclose($fp);
         }
+
+
     }
 }
