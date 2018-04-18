@@ -1,4 +1,4 @@
-<form accept-charset="UTF-8" action="{{route('admin.infusion')}}" class="infusion-form" id="inf_form_50092be568104535009a479502e462db" method="POST">
+<form accept-charset="UTF-8" action="https://cr244.infusionsoft.com/app/form/process/50092be568104535009a479502e462db" class="infusion-form" id="inf_form_50092be568104535009a479502e462db" method="POST">
     <input name="inf_form_xid" type="hidden" value="50092be568104535009a479502e462db" />
     <input name="inf_form_name" type="hidden" value="form - endereco livro" />
     <input name="infusionsoft_version" type="hidden" value="1.69.0.40158" />
