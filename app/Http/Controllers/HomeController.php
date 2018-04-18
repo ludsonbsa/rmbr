@@ -16,8 +16,7 @@ class HomeController extends Controller
 
     public function infusion(Request $request)
     {
-        if($request->isMethod('post')){
-            var_dump($request);
-        }
+        
+        var_dump($request);
     }
 }
