@@ -13,10 +13,12 @@ class ComissoesController extends Controller
     {
         //listagem das comissões a serem conferidas
         $query = DB::table('tb_contatos as t1')
-            ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t1.ddd, t2.user_nome")
-            ->join('users as t2','t1.id_responsavel','=','t2.id')
-            ->whereRaw("(t1.pos_atendimento ='Boleto Gerado' OR t1.pos_atendimento = 
-'Vendido') AND (t1.insercao_hotmart != 'Pagina Externa') AND t1.conferencia = 0")
+            ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t1.ddd, t2.at_nome_atendente")
+            ->join('tb_atendimento as t2','t1.id_responsavel','=','t2.at_id_responsavel')
+            ->where('t1.pos_atendimento', '=', 'Boleto Gerado')
+            ->orWhere('t1.pos_atendimento','=', 'Vendido')
+            ->where('t1.insercao_hotmart','!=','Pagina Externa')
+            ->where('t1.conferencia','=', 0)
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')->paginate(25);
 
