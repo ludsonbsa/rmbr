@@ -175,7 +175,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     /****************************************SUPORTE********************************************/
 
     /*******EXTERNO***********/
-    Route::get('infusion/', 'HomeController@infusion')->name('infusion');
+    Route::put('infusion/', 'HomeController@infusion')->name('infusion');
 
     Route::get('form/', 'HomeController@form')->name('infusion.form');
 
