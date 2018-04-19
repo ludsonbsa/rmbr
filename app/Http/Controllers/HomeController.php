@@ -55,7 +55,7 @@ class HomeController extends Controller
         $all['data_de_venda'] = date('d/m/Y H:i:s');
         $all['em_atendimento'] = NULL;
         $all['pais'] = 'Brasil';
-        $all['id_responsavel'] = 'Sistema';
+        $all['id_responsavel'] = 10; //Sistema
         $all['pos_atendimento'] = 'Vendido';
         $all['insercao_hotmart'] = 'Página Externa';
         $all['prioridade']= 'Duvidas profundas sobre o curso';
