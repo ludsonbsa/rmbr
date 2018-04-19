@@ -27,7 +27,7 @@ class HomeController extends Controller
         $ddd = substr($all['telefone'], 0, 2);
         $all['telefone'] = substr($all['telefone'], 2);
 
-        $param =
+        /*$param =
                 $request->input('inf_field_FirstName')."\n"
               . $request->input('inf_field_Email')."\n"
               . $request->input('inf_custom_CPF')."\n"
@@ -39,11 +39,7 @@ class HomeController extends Controller
               . $request->input('inf_field_City2')."\n"
               . $request->input('inf_field_PostalCode2')."\n"
               . $request->input('inf_custom_Numero')."\n"
-              . $request->input('inf_custom_Complemento');
-
-
-
-
+              . $request->input('inf_custom_Complemento');*/
 
         $all['nome'] = $request->input('inf_field_FirstName');
         $all['email'] = $request->input('inf_field_Email');
@@ -59,27 +55,20 @@ class HomeController extends Controller
         $all['data_de_venda'] = date('d/m/Y H:i:s');
         $all['em_atendimento'] = NULL;
         $all['pais'] = 'Brasil';
-        $all['id_responsavel'] = Auth::id();
+        $all['id_responsavel'] = 'Sistema';
         $all['pos_atendimento'] = 'Vendido';
         $all['enviar_kit'] = 1;
 
-
-        $caminho = public_path().'/uploads/planilhas/teste.txt';
+       /* $caminho = public_path().'/uploads/planilhas/teste.txt';
         $fp = fopen($caminho, "a");
 
         // Escreve "exemplo de escrita" no bloco1.txt
         $escreve = fwrite($fp, $param);
 
         // Fecha o arquivo
-        fclose($fp);
+        fclose($fp);*/
+        Brindes::create($all);
 
-        /*
-        if(Brindes::create($all)){
-            $msg = '<div class="alert alert-success"><strong>Brinde</strong> cadastrado com sucesso</div>';
-        }else{
-            $msg = '<div class="alert alert-danger"><strong>Brinde</strong> não cadastrado</div>';
-        }
-       */
 
     }
 }
