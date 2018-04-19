@@ -12,7 +12,7 @@
     </div>
     <div class="infusion-field">
         <label for="inf_field_SSN">CPF utilizado na compra: *</label>
-        <input class="infusion-field-input" id="inf_field_SSN" name="inf_field_SSN" placeholder="CPF utilizado na compra: *" type="text" />
+        <input class="infusion-field-input" id="inf_custom_CPF" name="inf_custom_CPF" placeholder="CPF utilizado na compra: *" type="text" />
     </div>
     <div class="infusion-field">
         <label for="inf_custom_DDDTelefone">DDD+Telefone *</label>
@@ -54,6 +54,4 @@
     </div>
 </form>
 <script type="text/javascript" src="https://cr244.infusionsoft.com/app/webTracking/getTrackingCode"></script>
-<script type="text/javascript" src="https://cr244.infusionsoft.com/resources/external/recaptcha/production/recaptcha.js?b=1.69.0.40158-hf-201804171813"></script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadInfusionRecaptchaCallback&render=explicit" async="async" defer="defer"></script>
 <script type="text/javascript" src="https://cr244.infusionsoft.com/app/timezone/timezoneInputJs?xid=50092be568104535009a479502e462db"></script>
