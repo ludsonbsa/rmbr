@@ -31,7 +31,7 @@ class HomeController extends Controller
               . $request->input('inf_field_Address2Street2')."\n"
               . $request->input('inf_field_City2')."\n"
               . $request->input('inf_field_PostalCode2')."\n"
-              . $request->input('inf_custom_Número')."\n"
+              . $request->input('inf_custom_Numero')."\n"
               . $request->input('inf_custom_Complemento');
 
 
