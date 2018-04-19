@@ -31,7 +31,7 @@ class HomeController extends Controller
                 $request->input('inf_field_FirstName')."\n"
               . $request->input('inf_field_Email')."\n"
               . $request->input('inf_custom_CPF')."\n"
-              . "DDD: ".$all['telefone']."\n"
+              . "DDD: ".$ddd."\n"
               . "Telefone: ".$all['telefone']."\n"
               . $request->input('inf_custom_EstadoSigla')."\n"
               . $request->input('inf_field_Address2Street1')."\n"
