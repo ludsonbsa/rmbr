@@ -57,18 +57,16 @@ class HomeController extends Controller
         $all['pais'] = 'Brasil';
         $all['id_responsavel'] = 'Sistema';
         $all['pos_atendimento'] = 'Vendido';
+        $all['insercao_hotmart'] = 'Página Externa';
+        $all['prioridade']= 'Duvidas profundas sobre o curso';
         $all['enviar_kit'] = 1;
-
        /* $caminho = public_path().'/uploads/planilhas/teste.txt';
-        $fp = fopen($caminho, "a");
-
-        // Escreve "exemplo de escrita" no bloco1.txt
+        $fp= fopen($caminho, "a");
+        //Escreve "exemplo de escrita" no bloco1.txt
         $escreve = fwrite($fp, $param);
-
         // Fecha o arquivo
         fclose($fp);*/
         Brindes::create($all);
-
 
     }
 }
