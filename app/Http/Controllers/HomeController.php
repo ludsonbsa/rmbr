@@ -25,12 +25,14 @@ class HomeController extends Controller
         $all['telefone'] = str_replace(")", "", $all['telefone']);
 
         $ddd = substr($all['telefone'], 0, 2);
+        $all['telefone'] = substr($all['telefone'], 2);
 
         $param =
                 $request->input('inf_field_FirstName')."\n"
               . $request->input('inf_field_Email')."\n"
               . $request->input('inf_custom_CPF')."\n"
-              . $ddd."\n"
+              . "DDD: ".$all['telefone']."\n"
+              . "Telefone: ".$all['telefone']."\n"
               . $request->input('inf_custom_EstadoSigla')."\n"
               . $request->input('inf_field_Address2Street1')."\n"
               . $request->input('inf_field_Address2Street2')."\n"
