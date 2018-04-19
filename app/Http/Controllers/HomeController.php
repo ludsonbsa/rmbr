@@ -20,12 +20,17 @@ class HomeController extends Controller
 
     public function infusion(Request $request)
     {
+        $all['telefone'] = str_replace(" ", "", $request->input('inf_custom_DDDTelefone'));
+        $all['telefone'] = str_replace("(", "", $all['telefone']);
+        $all['telefone'] = str_replace(")", "", $all['telefone']);
+
+        $ddd = substr($all['telefone'], 0, 2);
 
         $param =
                 $request->input('inf_field_FirstName')."\n"
               . $request->input('inf_field_Email')."\n"
               . $request->input('inf_custom_CPF')."\n"
-              . $request->input('inf_custom_DDDTelefone')."\n"
+              . $ddd."\n"
               . $request->input('inf_custom_EstadoSigla')."\n"
               . $request->input('inf_field_Address2Street1')."\n"
               . $request->input('inf_field_Address2Street2')."\n"
@@ -36,11 +41,7 @@ class HomeController extends Controller
 
 
 
-        $all['telefone'] = str_replace(" ", "", $request->input('inf_custom_DDDTelefone'));
-        $all['telefone'] = str_replace("(", "", $all['telefone']);
-        $all['telefone'] = str_replace(")", "", $all['telefone']);
 
-        $ddd = substr($all['telefone'], 0, 2);
 
         $all['nome'] = $request->input('inf_field_FirstName');
         $all['email'] = $request->input('inf_field_Email');
