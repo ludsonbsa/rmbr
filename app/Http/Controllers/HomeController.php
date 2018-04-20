@@ -63,7 +63,7 @@ class HomeController extends Controller
         $all['conferencia'] = 2;
 
         Brindes::create($all);
-        
+
 
     }
 }

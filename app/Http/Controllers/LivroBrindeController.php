@@ -323,9 +323,8 @@ t1.estado, t1.nome_do_produto, t1
             $email = $resultado->email;
             $telefone = $resultado->telefone;
 
-            $endereco = $resultado->endereco;
+
             $functions = new \App\Helpers\Functions();
-            $endereco = $functions->sanitizeString($endereco);
             $nome = $functions->sanitizeString($resultado->nome);
 
             #Verifico resultados começando por CPF
