@@ -3,7 +3,7 @@
 @section('content')
     <section class="content" style="background:url('/images/bglead.jpg') repeat-x #f0f0f0;">
 
-        <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Buscar Brinde</h1>
+        <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Buscar Livro</h1>
 
         <section class="widget" style=" height:160px;">
 
@@ -11,7 +11,7 @@
 
             <br>
 
-            <form action="{{route('admin.brindes.buscar-brinde')}}" name="encontrarBrinde" id="brindeFind" method="post">
+            <form action="{{route('admin.livro.buscar-livro')}}" name="encontrarBrinde" id="brindeFind" method="post">
                 {!! csrf_field() !!}
                 <div class="field-wrap t96">
                     <label>Digite o E-mail:</label>
@@ -58,7 +58,7 @@
                 @if($brinde->etiqueta_gerada == 0)
                     <p id="etiqueta_gerada" style="font-weight: bold; line-height: 30px; text-align: center; font-size:26px; color:#878787;">A etiqueta ainda não foi gerada</p>
 
-                    <a href="{{route('admin.brindes.editar', $brinde->id)}}" class="enviar"><button class="enviar t96">Você pode editar este endereço</button></a>
+                    <a href="{{route('admin.livro.editar', $brinde->id)}}" class="enviar"><button class="enviar t96">Você pode editar este endereço</button></a>
                 @else
                     <p id="etiqueta_gerada" style="font-weight: bold; line-height: 30px; text-align: center; font-size:26px; color:#878787;">A etiqueta já foi gerada, não é possível editar este endereço.</p>
                 @endif

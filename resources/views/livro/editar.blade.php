@@ -12,7 +12,7 @@
             <br>
             @foreach($brindes as $brinde)
 
-            <form name="formulario" action="{{route('admin.brindes.editar-update', $brinde->id)}}" method="post" enctype="multipart/form-data">
+            <form name="formulario" action="{{route('admin.livro.editar-update', $brinde->id)}}" method="post" enctype="multipart/form-data">
 
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
 

@@ -57,7 +57,7 @@ class HomeController extends Controller
         $all['pais'] = 'Brasil';
         $all['id_responsavel'] = 10; //Sistema
         $all['pos_atendimento'] = 'Vendido';
-        $all['insercao_hotmart'] = 'Página Externa';
+        $all['insercao_hotmart'] = 'Página Externa LMBR';
         $all['prioridade']= 'Duvidas profundas sobre o curso';
         $all['enviar_kit'] = 1;
        /* $caminho = public_path().'/uploads/planilhas/teste.txt';
@@ -67,6 +67,9 @@ class HomeController extends Controller
         // Fecha o arquivo
         fclose($fp);*/
         Brindes::create($all);
+
+        #Inserir na tabela de atendimentos, teste
+
 
     }
 }

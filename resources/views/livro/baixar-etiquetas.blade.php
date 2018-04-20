@@ -33,8 +33,8 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><a href="{{route('admin.brindes.baixar_etiqueta',$contato)}}"><img src="/images/baixaretiqueta.svg" width="150" title="Baixar Etiqueta" alt="[Baixar]" class="icone" /></a></td>
-                    <td><a href="{{route('admin.brindes.deletar_etiqueta',$contato)}}"><img src="/images/excluir.svg" title="Excluir" alt="[Excluir]" class="icone" width="30" /></a></td>
+                    <td><a href="{{route('admin.livro.baixar_etiqueta',$contato)}}"><img src="/images/baixaretiqueta.svg" width="150" title="Baixar Etiqueta" alt="[Baixar]" class="icone" /></a></td>
+                    <td><a href="{{route('admin.livro.deletar_etiqueta',$contato)}}"><img src="/images/excluir.svg" title="Excluir" alt="[Excluir]" class="icone" width="30" /></a></td>
 
                 </tr>
                 </td>

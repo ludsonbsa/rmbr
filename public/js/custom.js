@@ -92,6 +92,22 @@ $(function() {
             var tab1 = '/admin/brindes/baixar-etiquetas';
         }
 
+        //Verificação de Brinde Menu
+        if(the_tab == '.livro-tab1'){
+            location.href='/admin/livro/listar';
+        }else if(the_tab == '.livro-tab2'){
+            var tab1 = '/admin/livro/resultado-conferencia';
+        }
+        else if(the_tab == '.livro-tab3'){
+            var tab1 = '/admin/livro/aprovar-manualmente';
+        }
+        else if(the_tab == '.livro-tab4'){
+            var tab1 = '/admin/livro/gerar-etiquetas';
+        }
+        else if(the_tab == '.livro-tab5'){
+            var tab1 = '/admin/livro/baixar-etiquetas';
+        }
+
 
         $(".widget").html("<div id='loader'></div>").load(tab1,function(responseTxt, statusTxt, xhr){
             if(statusTxt == "success")

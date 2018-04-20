@@ -30,7 +30,7 @@
     "autoload": {
         "files":[
             "app/Helpers.php",
-            "app/Helpers/functions.php",
+            "app/Helpers/Functions.php",
             "app/Helpers/PlanilhaImport.php",
             "app/Helpers/CSV.php",
             "app/Helpers/CSVLine.php",

@@ -165,7 +165,47 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
         Route::get('brindes/reprovar/{id}', 'BrindesController@reprovar')->name('brindes.reprovar');
 
-        Route::post('brindes/buscar-brinde/', 'BrindesController@buscar_brinde')->name('brindes.buscar-brinde');
+
+
+        /*************************** LIVRO BRINDE ***************************************************/
+
+        Route::get('livro/listar', 'LivroBrindeController@index')->name('listar.livro');
+        Route::post('livro/conferir-brinde', 'BrindesController@conferir_brinde')->name('listar.conferir-livro');
+
+        Route::get('livro/resultado-conferencia', 'LivroBrindeController@resultado_conferencia')->name('livro.resultado-conferencia');
+
+        Route::get('livro/baixar-etiquetas', 'LivroBrindeController@baixar_etiquetas')->name('livro.baixar_etiqueta');
+
+        Route::get('livro/aprovar-manualmente', 'LivroBrindeController@aprovar_manualmente')->name('livro.aprovar-manualmente');
+
+        Route::get('livro/gerar-etiquetas', 'LivroBrindeController@gerar_etiquetas')->name('livro.gerar_etiquetas');
+
+        Route::get('livro/etiquetas/deletar/{etiqueta}', 'LivroBrindeController@deletar_etiqueta')->name('livro.deletar_etiqueta');
+
+        Route::get('livro/etiquetas/baixar/{etiqueta}', 'LivroBrindeController@baixar')->name('livro.baixar_etiqueta');
+
+        Route::get('livro/add', 'LivroBrindeController@add')->name('livro.add');
+        Route::put('livro/cadastrar', 'LivroBrindeController@cadastrar')->name('livro.cadastrar');
+        Route::get('livro/editar/{id}', 'LivroBrindeController@editar')->name('livro.editar');
+        Route::post('livro/editar-update/{id}', 'LivroBrindeController@editar_update')->name('livro.editar-update');
+
+        Route::get('livro/buscar', 'LivroBrindeController@buscar')->name('livro.buscar');
+
+        Route::post('livro/buscar-brinde','LivroBrindeController@buscar_brinde')->name('livro.buscar-brinde');
+
+        Route::get('livro/conferir', 'LivroBrindeController@conferirBrindes')->name('livro.conferir');
+
+        Route::get('livro/criar-etiquetas', 'LivroBrindeController@criar_etiquetas')->name('livro.criar-etiquetas');
+
+        Route::get('livro/gerarpdf-pendente', 'LivroBrindeController@gerarpdf_pendentes')->name('livro.gerarpdf-pendentes');
+
+        Route::get('livro/gerarpdf-aprovarmanual', 'LivroBrindeController@aprovar_manualmente_pdf')->name('livro.gerarpdf-aprovarmanual');
+
+        Route::get('livro/aprovar/{id}', 'LivroBrindeController@aprovar')->name('livro.aprovar');
+
+        Route::get('livro/reprovar/{id}', 'LivroBrindeController@reprovar')->name('livro.reprovar');
+
+        Route::post('livro/buscar-brinde/', 'LivroBrindeController@buscar_livro')->name('livro.buscar-livro');
 
     /*********CONFIG********/
     Route::get('config', 'ConfigController@index')->name('config');

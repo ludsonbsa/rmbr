@@ -34,7 +34,7 @@
 
 @if($contagem != 0)
     <div class="field-wrap" style="float: right;">
-        <a href="{{route('admin.brindes.gerarpdf-aprovarmanual')}}" class="enviar"><button class="enviar">Gerar PDF</button></a>
+        <a href="{{route('admin.livro.gerarpdf-aprovarmanual')}}" class="enviar"><button class="enviar">Gerar PDF</button></a>
     </div>
 @endif
 
@@ -44,7 +44,7 @@
         $('.reprovar').click(function(){
 
             var id = $(this).attr('data-id');
-            var url = '/admin/brindes/reprovar/'+id;
+            var url = '/admin/livro/reprovar/'+id;
             var vai = $('.'+id);
 
             $.ajax({
@@ -64,7 +64,7 @@
         $('.aprovar').click(function(){
 
             var id = $(this).attr('data-id');
-            var url = '/admin/brindes/aprovar/'+id;
+            var url = '/admin/livro/aprovar/'+id;
             var vai = $('.'+id);
 
             $.ajax({
