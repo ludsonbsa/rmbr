@@ -260,7 +260,7 @@ class ContatosController extends Controller
         #Update na tabela contatos com as informações
         $param = $request->all();
 
-        $email = $param['email'];
+
         $envkit = $param['enviar_kit'];
         $dia = $param['ligarDepois'];
         $horas = $param['ligarDepois-hora'];
@@ -270,9 +270,8 @@ class ContatosController extends Controller
 
         $param = $request->except(['ligarDepois','ligarDepois-hora','_token','at_inicio_atendimento', 'sendForm']);
 
-
         #Qual email é pra buscar no sistema pra fazer o update
-
+        $email = $param['email'];
         #E-mail nunca jamais poderá estar vazio
         if(empty($email))
         {
@@ -288,7 +287,6 @@ class ContatosController extends Controller
         $up = $contatos->update($dados);
 
         $contatos->update($param);
-
         $idContato = $id;
 
         $dado = ['em_atendimento' => 0, 'em_atendendo' => NULL];
@@ -304,7 +302,7 @@ class ContatosController extends Controller
 
         $msg = "Lead atualizado com sucesso";
 
-        return response()->redirectToRoute('admin.leads')->with('message',$msg);
+        return response()->redirectToRoute('admin.leads')->with('msg',$msg);
     }
 
     public function editar_update(Request $request, $id)
