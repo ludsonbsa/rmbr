@@ -9,14 +9,13 @@
             <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Atendimento de Contato</h1>
 
             <section class="widget" style="height:350px; background:#f7f7f7;">
-                {!! Session::get('msg')  !!}
                 @if(session()->has('msg'))
                     <div class='alert alert-success'>
-                        {{ session('msg') }}
-                    </div>
-                @elseif(session()->has('msg-error'))
-                    <div class='alert alert-danger'>
-                        {{ session('msg-error') }}
+                        {!! session('msg') !!}
+                   </div>
+               @elseif(session()->has('msg-error'))
+                   <div class='alert alert-danger'>
+                       {!! session('msg-error') !!}
                     </div>
                 @endif
 

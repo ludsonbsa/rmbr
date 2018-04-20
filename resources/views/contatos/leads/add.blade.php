@@ -8,7 +8,15 @@
     <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Adicionar Contato</h1>
 
     <section class="widget" style="min-height:560px;">
-
+        @if(session()->has('msg'))
+            <div class='alert alert-success'>
+                {!! session('msg') !!}
+            </div>
+        @elseif(session()->has('msg-error'))
+            <div class='alert alert-danger'>
+                {!! session('msg-error') !!}
+            </div>
+        @endif
         <div class="faixa"></div>
         <br>
         <div class="content">
@@ -38,7 +46,7 @@
 
                 <div class="field-wrap t60">
                     <label>E-mail:</label>
-                    <input type="email" name="email" value="" class="t100" placeholder="">
+                    <input type="email" name="email" required value="" class="t100" placeholder="">
                 </div>
 
 

@@ -92,6 +92,13 @@ t1.estado, t1.nome_do_produto, t1
         $all = $request->all();
         $telefone = $all['telefone'];
 
+        $email = $all['email'];
+        #E-mail nunca jamais poderá estar vazio
+        if(empty($email))
+        {
+            return response()->redirectToRoute('admin.livro.add')->with('msg-error', "Campo e-mail não pode estar vazio, adicione um e-mail válido.");
+        }
+
         $ddd = substr($telefone, 0, 2);
         $all['ddd'] = $ddd;
         $all['data_de_venda'] = date('d/m/Y H:i:s');
@@ -107,7 +114,7 @@ t1.estado, t1.nome_do_produto, t1
         }else{
             $msg = '<div class="alert alert-danger"><strong>Livro</strong> não cadastrado</div>';
         }
-        return response()->redirectToRoute('admin.livro.add')->with('message',$msg);
+        return response()->redirectToRoute('admin.livro.add')->with('msg',$msg);
     }
 
     public function resultado_conferencia(){

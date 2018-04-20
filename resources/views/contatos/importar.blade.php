@@ -8,11 +8,11 @@
 
             @if(session()->has('msg'))
                 <div class='alert alert-success'>
-                {{ session('msg') }}
+                    {!! session('msg') !!}
                 </div>
-                @elseif(session()->has('msg-error'))
+            @elseif(session()->has('msg-error'))
                 <div class='alert alert-danger'>
-                    {{ session('msg-error') }}
+                    {!! session('msg-error') !!}
                 </div>
             @endif
 
@@ -23,7 +23,6 @@
                         <li><a href="#2" data-tab="tab2-imp">Recuperação de Vendas</a></li>
                     </ul>
                 </div> <!-- tabs-menu -->
-
 
 
                 <div class="tab1 tabs first-tab">

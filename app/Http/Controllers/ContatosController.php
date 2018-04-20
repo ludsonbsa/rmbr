@@ -274,10 +274,10 @@ class ContatosController extends Controller
         #Qual email é pra buscar no sistema pra fazer o update
 
         #E-mail nunca jamais poderá estar vazio
-       /* if(empty($email))
+        if(empty($email))
         {
-            return response()->redirectToRoute('admin.atender', $id)->with('message', "Campo e-mail não pode estar vazio, procure o responsável pela inserção para adicionar um e-mail");
-        }*/
+            return response()->redirectToRoute('admin.atender', $id)->with('msg-error', "Campo e-mail não pode estar vazio, procure o responsável pela inserção para adicionar um e-mail");
+        }
 
         $contatos = Contatos::where('email', 'LIKE', $email);
 
@@ -302,7 +302,6 @@ class ContatosController extends Controller
                 ['at_status' => 1, 'at_id_responsavel' => Auth::id(), 'at_id_contato' => $idContato, 'at_final_atendimento' => date('Y-m-d H:i:s'), 'at_nome_atendente' => Auth::user()->user_nome, 'token' => $token,]
             );
 
-
         $msg = "Lead atualizado com sucesso";
 
         return response()->redirectToRoute('admin.leads')->with('message',$msg);
@@ -316,6 +315,10 @@ class ContatosController extends Controller
         $email = $param['email'];
 
         #E-mail nunca jamais poderá estar vazio
+        if(empty($email))
+        {
+            return response()->redirectToRoute('admin.leads.editar', $id)->with('msg-error', "Campo e-mail não pode estar vazio, procure o responsável pela inserção para adicionar um e-mail");
+        }
 
         $contatos = Contatos::where('id', '=', $id);
         $contatos->update($param);
@@ -365,13 +368,12 @@ class ContatosController extends Controller
 
         $param = $request->all();
         $email = $param['email'];
-        #E-mail nunca jamais poderá estar vazio
-        if(empty($email) || $email == '')
-        {
-            return response()->redirectToRoute('admin.lead.cadastrar')->with('message', "Campo e-mail não pode estar vazio, procure o responsável pela inserção para adicionar um e-mail");
-        }
 
-        $email = $param['email'];
+        #E-mail nunca jamais poderá estar vazio
+        if(empty($email))
+        {
+            return response()->redirectToRoute('admin.lead.add')->with('msg-error', "Campo e-mail não pode estar vazio, insira um endereço de e-mail válido.");
+        }
 
         #Fazer select de e-mail, se existir email notificar usuário de que não pode ter registro de email duplicado no sistema
 
