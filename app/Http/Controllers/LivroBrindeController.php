@@ -397,7 +397,6 @@ t1.estado, t1.nome_do_produto, t1
         $dados = [ 'aprovado' => 0 ];
         $query = DB::table('tb_contatos as t1')
             ->selectRaw('t1.email, t1.id')
-            ->where('t1.insercao_hotmart', '=', 'Página Externa LMBR')
             ->where('t1.id','=', $id)
             ->get();
 
