@@ -407,7 +407,6 @@ t1.estado, t1.nome_do_produto, t1
 
             #faço update em todos os e-mails deste registro.
             DB::table('tb_contatos')
-                ->where('t1.insercao_hotmart', '=', 'Página Externa LMBR')
                 ->where('email', 'LIKE', $email)
                 ->update($dados);
         }
