@@ -266,13 +266,19 @@ class ContatosController extends Controller
         $horas = $param['ligarDepois-hora'];
         $token = $param['_token'];
 
-
         $param['data_ligar_depois'] = date('Y-m-d H:i', strtotime($dia.' '.$horas));
 
         $param = $request->except(['ligarDepois','ligarDepois-hora','_token','at_inicio_atendimento', 'sendForm']);
 
 
         #Qual email é pra buscar no sistema pra fazer o update
+
+        #E-mail nunca jamais poderá estar vazio
+        if(empty($email) || $email == '')
+        {
+            return response()->redirectToRoute('admin.atender', $id)->with('message', "Campo e-mail não pode estar vazio, procure o responsável pela inserção para adicionar um e-mail");
+        }
+
         $contatos = Contatos::where('email', 'LIKE', $email);
 
         #Defino qual dado quero que atualize
@@ -307,6 +313,13 @@ class ContatosController extends Controller
         #Update na tabela contatos com as informações
         $param = $request->all();
         $param = $request->except(['ligarDepois','ligarDepois-hora','_token','at_inicio_atendimento', 'sendForm']);
+
+        #E-mail nunca jamais poderá estar vazio
+        if(empty($email) || $email == '')
+        {
+            return response()->redirectToRoute('admin.lead.editar', $id)->with('message', "Campo e-mail não pode estar vazio, procure o responsável pela inserção para adicionar um e-mail");
+        }
+
         $contatos = Contatos::where('id', '=', $id);
         $contatos->update($param);
 
@@ -352,7 +365,15 @@ class ContatosController extends Controller
     }
 
     public function cadastrar(Request $request){
+
         $param = $request->all();
+        $email = $param['email'];
+        #E-mail nunca jamais poderá estar vazio
+        if(empty($email) || $email == '')
+        {
+            return response()->redirectToRoute('admin.lead.cadastrar')->with('message', "Campo e-mail não pode estar vazio, procure o responsável pela inserção para adicionar um e-mail");
+        }
+
         $email = $param['email'];
 
         #Fazer select de e-mail, se existir email notificar usuário de que não pode ter registro de email duplicado no sistema
