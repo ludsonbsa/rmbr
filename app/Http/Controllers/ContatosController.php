@@ -21,6 +21,7 @@ class ContatosController extends Controller
             ->selectRaw("t1.id, t1.data_de_venda, t1.nome,t1.ddd, t1.telefone, t1.email, t1.obs_followup, t1.observacao, t1.status, t1.documento_usuario, t1.nome_do_produto, t1.em_atendimento, t1.em_atendendo, t1.insercao_hotmart, t1.prioridade, t1.id_responsavel, t2.user_nome, t2.avatar")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereNull('t1.aprovado')
+            ->whereNotNull('t1.email')
             ->whereNull('t1.pos_atendimento')
             ->whereNotNull('t1.telefone')
             ->where('t1.telefone', '!=','')
@@ -259,7 +260,6 @@ class ContatosController extends Controller
     {
         #Update na tabela contatos com as informações
         $param = $request->all();
-
 
         $envkit = $param['enviar_kit'];
         $dia = $param['ligarDepois'];

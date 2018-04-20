@@ -60,12 +60,7 @@ class HomeController extends Controller
         $all['insercao_hotmart'] = 'Página Externa LMBR';
         $all['prioridade']= 'Duvidas profundas sobre o curso';
         $all['enviar_kit'] = 1;
-       /* $caminho = public_path().'/uploads/planilhas/teste.txt';
-        $fp= fopen($caminho, "a");
-        //Escreve "exemplo de escrita" no bloco1.txt
-        $escreve = fwrite($fp, $param);
-        // Fecha o arquivo
-        fclose($fp);*/
+
         Brindes::create($all);
 
         #Inserir na tabela de atendimentos, teste

@@ -165,6 +165,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Wilgucki\Csv\CsvServiceProvider::class,
+        Spatie\Backup\BackupServiceProvider::class,
+
 
         /*
          * Package Service Providers...
