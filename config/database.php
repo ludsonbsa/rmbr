@@ -55,6 +55,12 @@ return [
             'options'   => array(
                  PDO::MYSQL_ATTR_LOCAL_INFILE => true,
             ),
+            'dump' => [
+                'dump_binary_path' => 'C:/xampp/mysql/bin', // only the path, so without `mysqldump` or `pg_dump`
+                'use_single_transaction',
+                'timeout' => 60 * 5, // 5 minute timeout
+                'add_extra_option' => '--optionname=optionvalue',
+            ]
 
         ],
 

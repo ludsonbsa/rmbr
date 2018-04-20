@@ -43,7 +43,7 @@ class HomeController extends Controller
 
         $all['nome'] = $request->input('inf_field_FirstName');
         $all['email'] = $request->input('inf_field_Email');
-        $all['documento_usuario'] = $request->input('inf_field_SSN');
+        $all['documento_usuario'] = $request->input('inf_custom_CPF');
         $all['estado'] = $request->input('inf_custom_EstadoSigla');
         $all['cidade'] = $request->input('inf_field_City2');
         $all['cep'] = $request->input('inf_field_PostalCode2');
@@ -60,11 +60,10 @@ class HomeController extends Controller
         $all['insercao_hotmart'] = 'Página Externa LMBR';
         $all['prioridade']= 'Duvidas profundas sobre o curso';
         $all['enviar_kit'] = 1;
+        $all['conferencia'] = 2;
 
         Brindes::create($all);
-
-        #Inserir na tabela de atendimentos, teste
-
+        
 
     }
 }
