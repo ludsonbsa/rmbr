@@ -274,7 +274,7 @@ class ContatosController extends Controller
         #Qual email é pra buscar no sistema pra fazer o update
 
         #E-mail nunca jamais poderá estar vazio
-        if(empty($email) || $email == '')
+        if(empty($email))
         {
             return response()->redirectToRoute('admin.atender', $id)->with('message', "Campo e-mail não pode estar vazio, procure o responsável pela inserção para adicionar um e-mail");
         }
