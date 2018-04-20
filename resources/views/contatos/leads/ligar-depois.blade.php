@@ -28,9 +28,9 @@
             @foreach($contatos as $contato)
 
                 <tr class="">
-                    <td>{{$contato->nome}}</td>
+                    <td class="nome">{!! $contato->nome !!}</td>
                     <td>{{$contato->email}}</td>
-                    <td class="meio">({{$contato->insercao_hotmart}})</td>
+                    <td class="meio"><span>{{$contato->insercao_hotmart}}</span></td>
                     <td class="meio"><span class="nao-vendido">{!! $contato->pos_atendimento !!}</span></td>
                     <td class="meio"><span>{!! date('d/m/Y H:i:s', strtotime($contato->data_ligar_depois))
                     !!}</span></td>
