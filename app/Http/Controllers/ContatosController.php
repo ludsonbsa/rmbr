@@ -22,6 +22,7 @@ class ContatosController extends Controller
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereNull('t1.aprovado')
             ->whereNotNull('t1.email')
+            ->where('t1.email','!=', '')
             ->whereNull('t1.pos_atendimento')
             ->whereNotNull('t1.telefone')
             ->where('t1.telefone', '!=','')
