@@ -274,10 +274,10 @@ class ContatosController extends Controller
         #Qual email é pra buscar no sistema pra fazer o update
 
         #E-mail nunca jamais poderá estar vazio
-        if(empty($email))
+       /* if(empty($email))
         {
             return response()->redirectToRoute('admin.atender', $id)->with('message', "Campo e-mail não pode estar vazio, procure o responsável pela inserção para adicionar um e-mail");
-        }
+        }*/
 
         $contatos = Contatos::where('email', 'LIKE', $email);
 
@@ -313,12 +313,9 @@ class ContatosController extends Controller
         #Update na tabela contatos com as informações
         $param = $request->all();
         $param = $request->except(['ligarDepois','ligarDepois-hora','_token','at_inicio_atendimento', 'sendForm']);
+        $email = $param['email'];
 
         #E-mail nunca jamais poderá estar vazio
-        if(empty($email) || $email == '')
-        {
-            return response()->redirectToRoute('admin.lead.editar', $id)->with('message', "Campo e-mail não pode estar vazio, procure o responsável pela inserção para adicionar um e-mail");
-        }
 
         $contatos = Contatos::where('id', '=', $id);
         $contatos->update($param);
