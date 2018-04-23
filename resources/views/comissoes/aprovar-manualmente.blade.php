@@ -5,7 +5,7 @@
         <th class="header">CPF</th>
         <th class="header">Telefone</th>
         <th class="header">E-mail</th>
-        <th class="header">Produto</th>
+        <th class="header">Meio</th>
         <th class="header">Responsável</th>
         <th class="header" colspan="2">Ações</th>
     </tr>
@@ -18,7 +18,7 @@
         <td>{!! $contato->documento_usuario !!}</td>
         <td>{!! $contato->telefone !!}</td>
         <td>{!! $contato->email !!}</td>
-        <td>{!! $contato->nome_do_produto !!}</td>
+        <td class="meio"><span>{!! $contato->insercao_hotmart !!}</span></td>
         <td>{!! $contato->user_nome !!}</td>
         <td>
             <a href="#" class="reprovar" data-id="{!! $contato->id !!}"><img src="/images/reprovar.svg" title="Reprovar" alt="[Reprovar]" class="icone" width="50" /></a>

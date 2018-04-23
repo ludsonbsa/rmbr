@@ -206,7 +206,7 @@ t1.estado, t1.nome_do_produto, t1
 
         endforeach;
 
-        $csv->save("uploads/etiquetas/etiqueta_" . date('d-m-Y H-i').".csv");
+        $csv->save("uploads/livros/etiqueta_" . date('d-m-Y H-i').".csv");
 
         return response()->redirectToRoute('admin.listar.livro');
 
@@ -445,7 +445,7 @@ t1.estado, t1.nome_do_produto, t1
 
     public function baixar_etiquetas()
     {
-        $dir = public_path().'/uploads/etiquetas/';
+        $dir = public_path().'/uploads/livros/';
         $scan = scandir($dir,1);
         $contatosEt = $scan;
 

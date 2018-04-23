@@ -42,7 +42,7 @@
 
                             <td class="nome">{!!$brinde->nome!!}</td>
                             <td>({{$brinde->ddd}}) {{$brinde->telefone}}</td>
-                            <td>{!!$brinde->insercao_hotmart!!}</td>
+                            <td class="meio"><span>{!! $brinde->insercao_hotmart!!}</span></td>
                             <td>{!!$brinde->email!!}</td>
                             <td>{!!$brinde->user_nome!!}</td>
 

@@ -16,6 +16,7 @@ class ComissoesController extends Controller
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t1.ddd, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereIn('t1.pos_atendimento', ['Vendido', 'Boleto Gerado'])
+            ->where('t2.id','!=', 10)
             ->where('t1.conferencia','=', 0)
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')
@@ -42,6 +43,7 @@ class ComissoesController extends Controller
         $queryAPROVADAS = DB::table('tb_contatos as t1')
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart,t1.ddd, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
+            ->where('t2.id','!=', 10) #Elimina usuário sistema
             ->whereRaw("(t1.conferencia = 1 AND t1.aprovado = 1) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND (t1.comissao_gerada IS NULL) AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12'")
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')->get();
@@ -50,6 +52,7 @@ class ComissoesController extends Controller
 
         $queryNAOAPROVADAS = DB::table('tb_contatos as t1')
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart,t1.ddd, t2.user_nome")
+            ->where('t2.id','!=', 10) #Elimina usuário sistema
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereRaw("(t1.conferencia = 1 AND t1.aprovado IS NULL) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND t2.id != 10 AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12'")
             ->groupBy('t1.email')
@@ -64,6 +67,7 @@ class ComissoesController extends Controller
         $query = DB::table('tb_contatos as t1')
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t1.ddd, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
+            ->where('t2.id','!=', 10) #Elimina usuário sistema
             ->whereRaw("(t1.pos_atendimento ='Boleto Gerado' OR t1.pos_atendimento = 
 'Vendido') AND (t1.insercao_hotmart != 'Pagina Externa') AND t1.conferencia = 0")
             ->groupBy('t1.email')
@@ -118,11 +122,6 @@ class ComissoesController extends Controller
 
             }
 
-            /*$queryString = DB::table('tb_contatos')
-                ->selectRaw("email, documento_usuario, telefone")
-                ->whereRaw("{$query} LIKE '%{$like}%' AND status = 'aprovado'")
-                ->get();*/
-
             #Fiz um select com a query do caso acima, apenas para ver em tela os dados
         }
         return response()->redirectToRoute('admin.comissoes.listar')->with('message',"Conferência realizada");
@@ -133,6 +132,7 @@ class ComissoesController extends Controller
         $query = DB::table('tb_contatos as t1')
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome_do_produto, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart,t1.ddd, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
+            ->where('t2.id','!=', 10) #Elimina usuário sistema
             ->whereRaw("(t1.conferencia = 1 AND t1.aprovado IS NULL) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL)")
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')
@@ -147,6 +147,7 @@ class ComissoesController extends Controller
         $query = DB::table('tb_contatos as t1')
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart,t1.ddd, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
+            ->where('t2.id','!=', 10) #Elimina usuário sistema
             ->whereRaw("(t1.conferencia = 1 AND t1.aprovado IS NULL) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL)")
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')
@@ -176,6 +177,7 @@ class ComissoesController extends Controller
         $dados = [ 'aprovado' => 1 ];
         $query = DB::table('tb_contatos as t1')
             ->selectRaw('t1.email, t1.id')
+            ->where('t1.insercao_hotmart', !'=', 'Página Externa LMBR')
             ->where('t1.id','=', $id)
             ->get();
 
@@ -186,6 +188,7 @@ class ComissoesController extends Controller
 
             #Faço update em todos os e-mails deste registro.
             DB::table('tb_contatos')
+                ->where('insercao_hotmart', '!=', 'Página Externa LMBR')
                 ->where('email', 'LIKE', $email)
                 ->update($dados);
         }
@@ -196,6 +199,7 @@ class ComissoesController extends Controller
         #Busco através do ID os e-mails(registros) existentes
         $query = DB::table('tb_contatos as t1')
             ->selectRaw('t1.email, t1.id')
+            ->where('t1.insercao_hotmart', '!=', 'Página Externa LMBR')
             ->where('t1.id','=', $id)
             ->get();
 
@@ -206,6 +210,7 @@ class ComissoesController extends Controller
 
             #Faço update em todos os e-mails deste registro.
             DB::table('tb_contatos')
+                ->where('insercao_hotmart', '!=', 'Página Externa LMBR')
                 ->where('email', 'LIKE', $email)
                 ->update($dados);
         }
@@ -218,6 +223,7 @@ class ComissoesController extends Controller
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereRaw("(t1.conferencia = 1 AND t1.aprovado = 1) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != 
             NULL) AND (t1.comissao_gerada IS NULL AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12')")
+            ->where('t1.insercao_hotmart', '!=', 'Página Externa LMBR')
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')
             ->get();
@@ -230,6 +236,7 @@ class ComissoesController extends Controller
         $query = DB::table('tb_contatos as t1')
             ->selectRaw("t1.id, t1.nome_do_produto, t1.data_de_venda, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t2.user_nome, t2.id")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
+            ->where('t1.insercao_hotmart', '!=', 'Página Externa LMBR')
             ->whereRaw("(t1.conferencia = 1 AND t1.aprovado = 1) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != 
             NULL) AND (t1.comissao_gerada IS NULL AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12')")
             ->groupBy('t1.email')
@@ -264,6 +271,7 @@ class ComissoesController extends Controller
         $query = DB::table('tb_contatos as t1')
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t2.user_nome, t2.id")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
+            ->where('t1.insercao_hotmart', '!=', 'Página Externa LMBR')
             ->whereRaw("(t1.conferencia = 1 AND t1.aprovado = 1) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND (t1.comissao_gerada IS NULL AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12')")
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')
@@ -430,6 +438,7 @@ class ComissoesController extends Controller
         $query = DB::table('tb_comissoes as t1')
             ->selectRaw("COUNT(t1.com_id_user) as count_id_user, SUM(t1.com_final) as soma_final, t1.com_id_user, t1.com_mes, t1.com_ano, t1.com_final, t1.com_pago, t1.com_produto, t2.user_nome, t2.avatar")
             ->join('users as t2','t1.com_id_user','=','t2.id')
+            ->where('t1.insercao_hotmart', '!=', 'Página Externa LMBR')
             ->where("t2.id",'!=', 10)
             ->groupBy('t1.com_id_user', 't1.com_mes', 't1.com_ano')
             ->orderBy('t1.com_id','DESC')

@@ -27,20 +27,6 @@ class HomeController extends Controller
         $ddd = substr($all['telefone'], 0, 2);
         $all['telefone'] = substr($all['telefone'], 2);
 
-        /*$param =
-                $request->input('inf_field_FirstName')."\n"
-              . $request->input('inf_field_Email')."\n"
-              . $request->input('inf_custom_CPF')."\n"
-              . "DDD: ".$ddd."\n"
-              . "Telefone: ".$all['telefone']."\n"
-              . $request->input('inf_custom_EstadoSigla')."\n"
-              . $request->input('inf_field_Address2Street1')."\n"
-              . $request->input('inf_field_Address2Street2')."\n"
-              . $request->input('inf_field_City2')."\n"
-              . $request->input('inf_field_PostalCode2')."\n"
-              . $request->input('inf_custom_Numero')."\n"
-              . $request->input('inf_custom_Complemento');*/
-
         $all['nome'] = $request->input('inf_field_FirstName');
         $all['email'] = $request->input('inf_field_Email');
         $all['documento_usuario'] = $request->input('inf_custom_CPF');

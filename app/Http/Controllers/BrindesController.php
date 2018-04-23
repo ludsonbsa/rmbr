@@ -250,7 +250,8 @@ t1.estado, t1.nome_do_produto, t1
     public function gerar_etiquetas()
     {
         $query = DB::table('tb_contatos as t1')
-            ->selectRaw("t1.id, t1.nome_do_produto, t1.data_de_venda, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t1.endereco, t2.user_nome")
+            ->selectRaw("t1.id, t1.nome_do_produto, t1.data_de_venda, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t1.endereco, t3.at_nome_atendente, t2.user_nome")
+            ->join('tb_atendimento as t3', 't3.at_id_contato', '=', 't1.id')
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereRaw("(t1.conferencia_brinde = 1 AND t1.aprovado = 1) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND (t1.etiqueta_gerada IS NULL)")
             ->where('t1.insercao_hotmart', '!=', 'Página Externa LMBR')
@@ -276,11 +277,14 @@ t1.estado, t1.nome_do_produto, t1
         $pdf = new \FPDF("P","pt","A4");
         $pdf->AddPage();
         $pdf->SetFont('arial','B',12);
-        $pdf->Cell(0,15,'etiquetas Pendentes',0,1,'L');
+        $pdf->Cell(0,15,'Etiquetas Pendentes',0,1,'L');
         $pdf->Ln();
 
         foreach ($query as $dados){
-            $endereco = $dados->endereco;
+            $functions = new \App\Helpers\Functions();
+            $endereco = $functions->sanitizeString($dados->endereco);
+            $dados->nome = $functions->sanitizeString($dados->nome);
+
             if(empty($endereco) || $endereco == ''){
                 $endereco = "Nao possui endereco";
             }
@@ -377,7 +381,7 @@ t1.estado, t1.nome_do_produto, t1
 
             #faço update em todos os e-mails deste registro.
             DB::table('tb_contatos')
-                ->where('t1.insercao_hotmart', '!=', 'Página Externa LMBR')
+                ->where('insercao_hotmart', '!=', 'Página Externa LMBR')
                 ->where('email', 'LIKE', $email)
                 ->update($dados);
         }
@@ -398,7 +402,7 @@ t1.estado, t1.nome_do_produto, t1
 
             #faço update em todos os e-mails deste registro.
             DB::table('tb_contatos')
-                ->where('t1.insercao_hotmart', '!=', 'Página Externa LMBR')
+                ->where('insercao_hotmart', '!=', 'Página Externa LMBR')
                 ->where('email', 'LIKE', $email)
                 ->update($dados);
         }
