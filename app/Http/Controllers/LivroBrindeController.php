@@ -226,7 +226,7 @@ t1.estado, t1.nome_do_produto, t1
         $pdf = new \FPDF("P","pt","A4");
         $pdf->AddPage();
         $pdf->SetFont('arial','B',12);
-        $pdf->Cell(0,15,'etiquetas Pendentes',0,1,'L');
+        $pdf->Cell(0,15,'Etiquetas Pendentes',0,1,'L');
         $pdf->Ln();
 
         foreach ($query as $dados){
