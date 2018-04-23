@@ -101,7 +101,7 @@ class HomeController extends Controller
             array_map('rtrim', $HotmartSale);
 
             //GET HOTMART TRANSACTION
-            $HotmartTransaction = (!empty($request->input('transaction_ext') ? $request->input('transaction_ext')) : $request->input('transaction');
+            $HotmartTransaction = (!empty($request->input('transaction_ext')) ? $request->input('transaction_ext') : $request->input('transaction'));
 
             //PRODUCT NEGATIVATE
             if (!empty('hotmartnegativeID')):
@@ -114,7 +114,7 @@ class HomeController extends Controller
                 endif;
             endif;
         endif;
-        
+
        /*$caminho = public_path().'/uploads/hotmart.txt';
         $fp = fopen($caminho, "a");
 
