@@ -50,6 +50,78 @@ class HomeController extends Controller
 
         Brindes::create($all);
 
+    }
 
+    public function hotmart(Request $request){
+
+        function getWcHotmartStatus($Status = null)
+        {
+            $HotmartStatus = [
+                'started' => 'Iniciado',
+                'billet_printed' => 'Boleto Impresso',
+                'pending_analysis' => 'Pendente',
+                'delayed' => 'Atrasado',
+                'canceled' => 'Cancelado',
+                'approved' => 'Aprovado',
+                'completed' => 'Concluído',
+                'chargeback' => 'Chargeback',
+                'blocked' => 'Bloqueado',
+                'refunded' => 'Devolvido',
+                'admin_free' => 'Cadastrado'
+            ];
+            if (!empty($Status)):
+                return $HotmartStatus[$Status];
+            else:
+                return $HotmartStatus;
+            endif;
+        }
+
+        header("access-control-allow-origin: https://app-vlc.hotmart.com");
+        header('Content-Type: text/html; charset=UTF-8');
+
+//GET HOTMART POST
+        $HotmartSale = $request->all();
+
+//LOG GENERATE
+        if (1 && !empty($HotmartSale)):
+            $HotmartLog = null;
+            foreach ($HotmartSale as $key => $value):
+                $HotmartLog .= "{$key}: {$value}\r\n";
+            endforeach;
+
+            $HotmartLogFile = fopen(public_path().'/uploads/hotmart.txt', 'a');
+            fwrite($HotmartLogFile, "\r\n########## " . date('d/m/Y H\hi') . " ##########\r\n\r\n" . $HotmartLog);
+            fclose($HotmartLogFile);
+        endif;
+
+        if ($HotmartSale && !empty($request->input('hottok')) && $request->input('hottok') == 'qv82T5NcQDBW4lR8Yi4vkD5eAmTuYY123249'):
+            //CLEAR DATA
+            array_map('strip_tags', $HotmartSale);
+            array_map('trim', $HotmartSale);
+            array_map('rtrim', $HotmartSale);
+
+            //GET HOTMART TRANSACTION
+            $HotmartTransaction = (!empty($request->input('transaction_ext') ? $request->input('transaction_ext')) : $request->input('transaction');
+
+            //PRODUCT NEGATIVATE
+            if (!empty('hotmartnegativeID')):
+                $NegativateProductsExmplode = explode(',', 'hotmartnegativeID');
+                $NegativateProductsTrim = array_map('trim', $NegativateProductsExmplode);
+                $NegativateProducts = array_map('rtrim', $NegativateProductsTrim);
+
+                if (in_array($request->input('prod'), $NegativateProducts)):
+                    exit;
+                endif;
+            endif;
+        endif;
+        
+       /*$caminho = public_path().'/uploads/hotmart.txt';
+        $fp = fopen($caminho, "a");
+
+        // Escreve "exemplo de escrita" no bloco1.txt
+        $escreve = fwrite($fp, $request);
+
+        // Fecha o arquivo
+        fclose($fp);*/
     }
 }
