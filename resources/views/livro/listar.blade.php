@@ -78,11 +78,12 @@
                 </table>
 
                 {!! $brindes->links() !!}
-
+                        @if(Auth::user()->role == 1 || Auth::user()->role == 4)
                 <div class="field-wrap" style="float:right; margin-top:0px; padding:17px; width:100%;">
                     <h3 style="font-size:18px; float:left; font-weight: 500; color:#636363; margin-top:8px;">Você precisa conferir {{$brindes->total()}}  brindes</h3>
                     <a href="{{route('admin.livro.conferir')}}"><button type="submit" name="enviaQueryBrinde" class="enviar">Conferir Brindes</button></a>
                 </div>
+                        @endif
                     </div>
                 </div>
 
