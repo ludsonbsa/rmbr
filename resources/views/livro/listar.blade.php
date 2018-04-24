@@ -51,7 +51,7 @@
 
                             @endif
 
-                            @if(Auth::user()->role == 1 || Auth::user()->role == 4 )
+                            @if(Auth::user()->role == 1 || Auth::user()->role == 4 || Auth::user()->role == 3)
                                 <td class="acao">
                                     <a href="{{route('admin.livro.editar', $brinde->id)}}" title="Editar Contato"><img src="/images/editar.svg" width="30" class="icone"></a>
                                 </td>
