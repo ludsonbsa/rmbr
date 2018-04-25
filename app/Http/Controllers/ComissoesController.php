@@ -438,7 +438,6 @@ class ComissoesController extends Controller
         $query = DB::table('tb_comissoes as t1')
             ->selectRaw("COUNT(t1.com_id_user) as count_id_user, SUM(t1.com_final) as soma_final, t1.com_id_user, t1.com_mes, t1.com_ano, t1.com_final, t1.com_pago, t1.com_produto, t2.user_nome, t2.avatar")
             ->join('users as t2','t1.com_id_user','=','t2.id')
-            ->where('t1.insercao_hotmart', '!=', 'Página Externa LMBR')
             ->where("t2.id",'!=', 10)
             ->groupBy('t1.com_id_user', 't1.com_mes', 't1.com_ano')
             ->orderBy('t1.com_id','DESC')
