@@ -44,7 +44,7 @@ class ComissoesController extends Controller
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart,t1.ddd, t2.user_nome")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->where('t2.id','!=', 10) #Elimina usuário sistema
-            ->whereRaw("(t1.conferencia = 1 OR t1.conferencia = 2) AND t1.aprovado = 1 AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND (t1.comissao_gerada IS NULL) AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12'")
+            ->whereRaw("(t1.conferencia = 1) AND t1.aprovado = 1 AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND (t1.comissao_gerada IS NULL) AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12'")
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')->get();
 
@@ -54,7 +54,7 @@ class ComissoesController extends Controller
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart,t1.ddd, t2.user_nome")
             ->where('t2.id','!=', 10) #Elimina usuário sistema
             ->join('users as t2','t1.id_responsavel','=','t2.id')
-            ->whereRaw("(t1.conferencia = 1 OR t1.conferencia = 2) AND t1.aprovado IS NULL AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND t2.id != 10 AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12'")
+            ->whereRaw("(t1.conferencia = 1) AND t1.aprovado IS NULL AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND t2.id != 10 AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12'")
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')->get();
 
@@ -221,7 +221,7 @@ class ComissoesController extends Controller
         $query = DB::table('tb_contatos as t1')
             ->selectRaw("t1.id, t1.nome_do_produto, t1.data_de_venda, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t2.user_nome, t2.id")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
-            ->whereRaw("(t1.conferencia = 1 OR t1.conferencia = 2) AND t1.aprovado = 1 AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != 
+            ->whereRaw("(t1.conferencia = 1) AND t1.aprovado = 1 AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != 
             NULL) AND (t1.comissao_gerada IS NULL AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12')")
             ->where('t1.insercao_hotmart', '!=', 'Página Externa LMBR')
             ->groupBy('t1.email')

@@ -112,9 +112,9 @@ t1.estado, t1.nome_do_produto, t1
         $all['conferencia'] = 2;
 
         if(Brindes::create($all)){
-            $msg = '<div class="alert alert-success"><strong>Brinde</strong> cadastrado com sucesso</div>';
+            $msg = 'Brinde cadastrado com sucesso';
         }else{
-            $msg = '<div class="alert alert-danger"><strong>Brinde</strong> não cadastrado</div>';
+            $msg = 'Brinde não cadastrado';
         }
         return response()->redirectToRoute('admin.brindes.add')->with('msg',$msg);
     }

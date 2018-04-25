@@ -31,20 +31,6 @@
             <a href="{{route('admin.brindes.buscar')}}" title="Buscar Brinde" alt="[Buscar Brinde]">Buscar Brinde</a>
         </li>
 
-        <li>
-            <a href="{{route('admin.listar.livro')}}" title="Livros" alt="[Livros]"><img src="/images/leads/brinde_menu.svg" width="30" title="" alt="">Brindes Livro</a>
-
-        </li>
-
-        <li class="sub">
-            <a href="{{route('admin.livro.add')}}" title="Add Livro" alt="[Add Livro]">Adicionar Livro</a>
-        </li>
-
-
-        <li class="sub">
-            <a href="{{route('admin.livro.buscar')}}" title="Buscar Livro" alt="[Buscar Livro]">Buscar Livro</a>
-        </li>
-
 
         <li>
             <a href="{{route('admin.importar')}}" title="Importações" alt="[Importações]"><img src="/images/leads/importar_menu.svg" width="30" title="" alt="">Importações</a>
@@ -101,21 +87,6 @@
         <li class="sub">
             <a href="{{route('admin.brindes.buscar')}}" title="Buscar Brinde" alt="[Buscar Brinde]">Buscar Brinde</a>
         </li>
-        <li>
-            <a href="{{route('admin.listar.livro')}}" title="Livros" alt="[Livros]"><img src="/images/leads/brinde_menu.svg" width="30" title="" alt="">Brindes Livro</a>
-
-        </li>
-
-        <li class="sub">
-            <a href="{{route('admin.livro.add')}}" title="Add Livro" alt="[Add Livro]">Adicionar Livro</a>
-        </li>
-
-
-        <li class="sub">
-            <a href="{{route('admin.livro.buscar')}}" title="Buscar Livro" alt="[Buscar Livro]">Buscar Livro</a>
-        </li>
-
-
 
     </ul>
 </nav>
@@ -146,16 +117,6 @@
     <li class="sub">
         <a href="{{route('admin.brindes.buscar')}}" title="Buscar Brinde" alt="[Buscar Brinde]">Buscar Brinde</a>
     </li>
-
-        <li>
-            <a href="{{route('admin.listar.livro')}}" title="Livros" alt="[Livros]"><img src="/images/leads/brinde_menu.svg" width="30" title="" alt="">Brindes Livro</a>
-
-        </li>
-
-        <li class="sub">
-            <a href="{{route('admin.livro.buscar')}}" title="Buscar Livro" alt="[Buscar Livro]">Buscar Livro</a>
-        </li>
-
 
 
     </ul>
