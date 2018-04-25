@@ -271,7 +271,7 @@ class ComissoesController extends Controller
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t2.user_nome, t2.id")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->where('t1.insercao_hotmart', '!=', 'Página Externa LMBR')
-            ->whereRaw("(t1.conferencia = 1 AND OR t1.conferencia = 2) AND t1.aprovado = 1 AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND (t1.comissao_gerada IS NULL AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12')")
+            ->whereRaw("(t1.conferencia = 1 OR t1.conferencia = 2) AND t1.aprovado = 1 AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND (t1.comissao_gerada IS NULL AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12')")
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')
             ->get();
