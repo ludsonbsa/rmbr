@@ -35,6 +35,8 @@
 
                                 <th class="header">Prioridade</th>
 
+                                <th class="header">Status</th>
+
                                 <th colspan="3"></th>
 
                             </tr>
@@ -50,6 +52,7 @@
                                     <td>{!! $contato->email!!}</td>
                                     <td class="meio"><span>{!! $contato->insercao_hotmart!!}</span></td>
                                     <td>{!!$contato->prioridade!!}</td>
+                                    <td>{!!$contato->status!!}</td>
 
                                     @if(Auth::user()->role == 1 AND Auth::user()->role != 2)
                                         <td class="acao"><a href="{{route('admin.lead.editar-ligar-depois', $contato->id)}}" class="atender">Editar</a></td>

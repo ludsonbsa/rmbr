@@ -312,8 +312,11 @@ t1.estado, t1.nome_do_produto, t1
         $brindes = DB::table('tb_contatos as t1')
             ->selectRaw('t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.ddd, t1.insercao_hotmart, t2.user_nome')
             ->join('users as t2', 't1.id_responsavel', '=','t2.id')
-            ->whereRaw("(t1.conferencia_brinde = 0 AND t1.enviar_kit = 1) AND (t1.pos_atendimento = 'Boleto Gerado' OR t1.pos_atendimento = 'Vendido')")
-            ->where('t1.insercao_hotmart', '=', 'Página Externa LMBR')
+            ->where('t1.conferencia_brinde','=',0)
+            ->where('t1.enviar_kit','=', 1)
+            ->whereIn('t1.pos_atendimento', ['Vendido', 'Boleto Gerado'])
+            /*->whereRaw("(t1.conferencia_brinde = 0 AND t1.enviar_kit = 1) AND (t1.pos_atendimento = 'Boleto Gerado' OR t1.pos_atendimento = 'Vendido')")*/
+            ->where('t1.insercao_hotmart', 'LIKE', 'Página Externa LMBR')
             ->groupBy('t1.email')
             ->orderBy('t1.id', 'ASC')
             ->get();
@@ -322,10 +325,6 @@ t1.estado, t1.nome_do_produto, t1
             $cpf = $resultado->documento_usuario;
             $email = $resultado->email;
             $telefone = $resultado->telefone;
-
-
-            $functions = new \App\Helpers\Functions();
-            $nome = $functions->sanitizeString($resultado->nome);
 
             #Verifico resultados começando por CPF
             if ($cpf) {
