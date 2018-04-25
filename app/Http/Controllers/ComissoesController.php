@@ -54,7 +54,7 @@ class ComissoesController extends Controller
             ->selectRaw("t1.id, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart,t1.ddd, t2.user_nome")
             ->where('t2.id','!=', 10) #Elimina usuário sistema
             ->join('users as t2','t1.id_responsavel','=','t2.id')
-            ->whereRaw("(t1.conferencia = 1 AND t1.aprovado IS NULL) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND t2.id != 10 AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12'")
+            ->whereRaw("(t1.conferencia = 1 OR t1.conferencia = 2) AND t1.aprovado IS NULL AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND t2.id != 10 AND insercao_hotmart != 'Pagina Externa' AND insercao_hotmart != 'Pagina Externa WB 15-12'")
             ->groupBy('t1.email')
             ->orderBy('t1.id','ASC')->get();
 
@@ -243,6 +243,8 @@ class ComissoesController extends Controller
             ->get();
         $count = $query->count();
 
+        $functions = new \App\Helpers\Functions();
+
         #Cria o PDF de quem precisa aprovar manualmente
         $pdf= new \FPDF("P","pt","A4");
         $pdf->AddPage();
@@ -251,6 +253,8 @@ class ComissoesController extends Controller
         $pdf->Ln();
 
         foreach ($query as $dados){
+            $dados->nome = $functions->sanitizeString($dados->nome);
+
             $pdf->Cell(0,15,date('d/m/Y H:i:s'),0,1,'L');
             $pdf->Ln();
             $pdf->Cell(0,15,$dados->nome,0,1,'L');
