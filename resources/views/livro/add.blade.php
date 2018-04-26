@@ -61,7 +61,7 @@
 
                     <input type="hidden" name="enviar_kit" value="1">
 
-                    <input type="hidden" name="insercao_hotmart" value="Add Brinde">
+                    <input type="hidden" name="insercao_hotmart" value="Add Brinde Webnário">
 
                     <input type="text" name="telefone" class="t100">
 

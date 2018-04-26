@@ -10,7 +10,6 @@
         <div class="tabs-menu">
                 <ul>
                     <li><a class="active-tab-menu" href="#1" data-tab="livro-tab1">Conferir Livros</a></li>
-                    <li><a href="#2" data-tab="livro-tab2">Resultado de Conferência</a></li>
                     <li><a href="#3" data-tab="livro-tab3">Aprovar Manualmente</a></li>
                     <li><a href="#4" data-tab="livro-tab4">Gerar Etiquetas Pendentes</a></li>
                     <li><a href="#5" data-tab="livro-tab5">Baixar Etiquetas</a></li>
