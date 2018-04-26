@@ -118,7 +118,7 @@
 
                             <option value="5">At. Temporário</option>
 
-                            <option value="At. Temporário">At. Temporário</option>
+                            <option value="6">At. Temporário</option>
 
                         </select>
 
