@@ -70,7 +70,7 @@ class ImportarPlanilha implements ShouldQueue
         #Adicionar linhas do banco de dados no arquivo CSV
         $executionStartTimeAP = microtime(true);
 
-        $aprovados = DB::select("SELECT nome_do_produto, nome, documento_usuario, status, email, transacao FROM tb_contatos WHERE (status = 'aprovado' OR status = 'completo')");
+        $aprovados = DB::select("SELECT nome_do_produto, nome, documento_usuario, status, email, transacao FROM tb_contatos WHERE (status = 'aprovado' OR status = 'completo') AND completo = 0");
         $executionStartTimeAPEND = microtime(true);
 
         $totalAP = $executionStartTimeAPEND - $executionStartTimeAP;
@@ -101,12 +101,12 @@ class ImportarPlanilha implements ShouldQueue
             $email = $data[4];
 
             $query = "SELECT id ,documento_usuario, email, status
-        FROM tb_contatos WHERE documento_usuario LIKE '%{$cpf}%' AND (status = 'Aprovado' OR status = 'completo')";
+        FROM tb_contatos WHERE documento_usuario LIKE '%{$cpf}%' AND (status = 'Aprovado' OR status = 'completo') AND completo = 0";
 
             #Se vazio CPF, então busca por e-mail
             if (empty($cpf)) {
                 $query = "SELECT id, documento_usuario, email, status
-        FROM tb_contatos WHERE email LIKE '%{$email}%' AND (status = 'aprovado' OR status = 'completo')";
+        FROM tb_contatos WHERE email LIKE '%{$email}%' AND (status = 'aprovado' OR status = 'completo') AND completo = 0";
             }
             #Faço uma query PDO para atualizar status aprovado a todos os registros que forem aprovados
             $bus = DB::select($query);
@@ -213,17 +213,17 @@ class ImportarPlanilha implements ShouldQueue
 
             $bus = "SELECT id, documento_usuario, email, telefone, nome
         FROM tb_contatos
-        WHERE documento_usuario LIKE '%{$cpf}%' AND pos_atendimento IS NULL";
+        WHERE documento_usuario LIKE '%{$cpf}%' AND pos_atendimento IS NULL AND completo = 0";
 
             if (empty($cpf)) {
                 $bus = "SELECT id, documento_usuario, email, telefone, nome
         FROM tb_contatos
-        WHERE email LIKE '%{$email}%' AND pos_atendimento IS NULL";
+        WHERE email LIKE '%{$email}%' AND pos_atendimento IS NULL AND completo = 0";
             }
             if (empty($email)) {
                 $bus = "SELECT id, documento_usuario, email, telefone, nome
         FROM tb_contatos
-        WHERE telefone = '{$telefone}' AND pos_atendimento IS NULL";
+        WHERE telefone = '{$telefone}' AND pos_atendimento IS NULL AND completo = 0";
             }
 
             $result = DB::select($bus);
