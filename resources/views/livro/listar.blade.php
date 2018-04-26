@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="content" style="background:url('/images/bglead.jpg') repeat-x #f0f0f0;">
-    <h1 style="font-size:25px; font-weight: bold; margin-bottom:20px;">Conferência de Livros<a href='#' id="refresher" title="Atualizar Dados"><img src="/images/refresh.svg" width="25" class="refresher" /></a></h1>
+    <h1 style="font-size:25px; font-weight: bold; margin-bottom:20px;">Conferência de KIT Webnário<a href='#' id="refresher" title="Atualizar Dados"><img src="/images/refresh.svg" width="25" class="refresher" /></a></h1>
 
 
     <div class="tabs-content">

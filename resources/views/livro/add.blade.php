@@ -11,7 +11,7 @@
             {!! session('msg-error') !!}
         </div>
     @endif
-    <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Adicionar Livro</h1>
+    <h1 style="font-size:25px; font-weight: bold; color:#636363; margin-bottom:20px;">Adicionar Kit Webnário</h1>
 
     <section class="widget" style="min-height:560px;">
 
