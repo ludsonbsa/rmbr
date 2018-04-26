@@ -230,10 +230,17 @@ t1.estado, t1.nome_do_produto, t1
         $pdf->Ln();
 
         foreach ($query as $dados){
-            $endereco = $dados->endereco;
+
+            $functions = new \App\Helpers\Functions();
+            $functions->sanitizeString($endereco = $dados->endereco);
+
+            $dados->nome = $functions->sanitizeString($dados->nome);
+
             if(empty($endereco) || $endereco == ''){
                 $endereco = "Não possui endereço";
             }
+
+
 
             $pdf->Ln();
             $pdf->Cell(0,15,date('d/m/Y H:i:s'),0,1,'L');
@@ -242,12 +249,12 @@ t1.estado, t1.nome_do_produto, t1
             $pdf->Cell(0,15,"Produto: ".$dados->nome_do_produto,0,1,'L');
             $pdf->Cell(0,15,"E-mail: ".$dados->email,0,1,'L');
             $pdf->Cell(0,15,"CPF: ".$dados->documento_usuario,0,1,'L');
-            $pdf->Cell(0,15,"Endereço: ".$endereco,0,1,'L');
+            $pdf->Cell(0,15,"Endereco: ".$endereco,0,1,'L');
             $pdf->Ln();
         }
 
         $pdf->Ln(8);
-        $pdf->Output("aprovar-livro-manual-".date('d-m-Y').".pdf","D");
+        $pdf->Output("aprovar-webnario-manual-".date('d-m-Y').".pdf","D");
     }
 
     public function gerar_etiquetas()
