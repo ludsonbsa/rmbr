@@ -77,7 +77,7 @@ class HomeController extends Controller
         $all['pais'] = 'Brasil';
         $all['id_responsavel'] = 10; //Sistema
         $all['pos_atendimento'] = 'Vendido';
-        $all['insercao_hotmart'] = 'Brinde Webnário PP';
+        $all['insercao_hotmart'] = 'Add Brinde Webnário';
         $all['prioridade']= 'Duvidas profundas sobre o curso';
         $all['enviar_kit'] = 1;
         $all['conferencia'] = 2;
