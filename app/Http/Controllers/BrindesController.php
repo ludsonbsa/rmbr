@@ -250,12 +250,11 @@ t1.estado, t1.nome_do_produto, t1
     public function gerar_etiquetas()
     {
         $query = DB::table('tb_contatos as t1')
-            ->selectRaw("t1.id, t1.nome_do_produto, t1.data_de_venda, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t1.endereco, t3.at_nome_atendente, t2.user_nome")
-            ->join('tb_atendimento as t3', 't3.at_id_contato', '=', 't1.id')
+            ->selectRaw("t1.id, t1.nome_do_produto, t1.data_de_venda, t1.documento_usuario, t1.nome, t1.email, t1.telefone, t1.insercao_hotmart, t1.endereco, t2.user_nome, t2.id")
             ->join('users as t2','t1.id_responsavel','=','t2.id')
             ->whereRaw("(t1.conferencia_brinde = 1 AND t1.aprovado = 1) AND (t1.pos_atendimento != 1 OR t1.pos_atendimento != NULL) AND (t1.etiqueta_gerada IS NULL)")
             ->where('t1.insercao_hotmart', '!=', 'Add Brinde Webnário')
-            ->groupBy('t1.documento_usuario')
+            ->groupBy('t1.email')
             ->orderBy('t1.data_de_venda','ASC')
             ->get();
         $count = $query->count();

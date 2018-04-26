@@ -216,7 +216,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
     /*******EXTERNO***********/
     Route::any('infusion/', 'HomeController@infusion')->name('infusion');
-    Route::any('wb-pp/', 'HomeController@wb_brinde')->name('webnario');
+    Route::any('brinde/wb-pp/', 'HomeController@wb_brinde')->name('webnario');
+    Route::any('brinde/pp/', 'HomeController@brinde_pp')->name('brinde-pp');
     Route::any('hotmart/', 'HomeController@hotmart')->name('hotmart');
 
     Route::get('form/', 'HomeController@form')->name('infusion.form');
