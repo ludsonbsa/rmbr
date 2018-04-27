@@ -28,6 +28,8 @@ class ContatosController extends Controller
             ->where('t1.telefone', '!=','')
             ->where('t1.status','!=', 'Boleto Impresso')
             ->where('t1.status','!=', 'Expirado')
+            ->where('t1.status','!=', 'Aprovado')
+            ->where('t1.status','!=', 'Completo')
             ->groupBy('t1.email')
             ->orderBy('t1.id','DESC')
             ->paginate(100);

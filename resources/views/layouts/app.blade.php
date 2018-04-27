@@ -15,7 +15,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <!-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> -->
-
+<?php
+    $checar = \Auth::check();
+    ?>
+    @if($checar == true):
     <script type="text/javascript">
         window._urq = window._urq || [];
         _urq.push(['initSite', 'aa7a8a6c-9e4c-413c-a370-fc805d6503cc']);
@@ -25,6 +28,7 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur, s);
         })();
     </script>
+    @endif
 </head>
 <body>
 <div id="app">
