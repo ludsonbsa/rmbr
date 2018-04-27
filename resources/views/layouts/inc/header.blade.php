@@ -30,9 +30,9 @@
 
 
 
-            <a href="http://mbrsuporte.helpsite.io/" class="html5lightbox" title="MBR Follow Up - Notificações" alt="[Notificações]">
+            <a href="#" onclick="_urq.push(['Feedback_Open'])">
 
-                <li><img src="/images/leads/ajuda.svg" width="20" class="icone" title="MBR Follow Up - Help" alt="[Help]">
+            <li><img src="/images/leads/ajuda.svg" width="20" class="icone" title="MBR Follow Up - Help" alt="[Help]">
                 </li>
             </a>
 

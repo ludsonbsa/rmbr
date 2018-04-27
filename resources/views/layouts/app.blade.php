@@ -15,6 +15,16 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <!-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> -->
+
+    <script type="text/javascript">
+        window._urq = window._urq || [];
+        _urq.push(['initSite', 'aa7a8a6c-9e4c-413c-a370-fc805d6503cc']);
+        (function() {
+            var ur = document.createElement('script'); ur.type = 'text/javascript'; ur.async = true;
+            ur.src = ('https:' == document.location.protocol ? 'https://cdn.userreport.com/userreport.js' : 'http://cdn.userreport.com/userreport.js');
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur, s);
+        })();
+    </script>
 </head>
 <body>
 <div id="app">
