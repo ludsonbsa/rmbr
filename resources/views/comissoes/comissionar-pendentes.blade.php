@@ -13,24 +13,7 @@
     </thead>
     <tbody>
 
-        @foreach($contatos as $contato)
-
-        <tr class="odd">
-
-            <td class="nome">{!! $contato->nome !!}</td>
-            <input type="hidden" name="nome" value="{!! $contato->nome !!}">
-            <td>{!! $contato->documento_usuario !!}</td>
-            <input type="hidden" name="documento_usuario" value="{!! $contato->documento_usuario !!}">
-            <td>{!! $contato->telefone !!}</td>
-            <input type="hidden" name="telefone" value="{!! $contato->telefone !!}">
-            <td>{!! $contato->data_de_venda !!}</td>
-            <td>{!! $contato->nome_do_produto !!}</td>
-            <td>{!! $contato->email !!}</td>
-            <input type="hidden" name="email" value="{!! $contato->email !!}">
-
-
-        </tr>
-        @endforeach
+       
 
     </tbody>
 
