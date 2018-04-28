@@ -1,5 +1,5 @@
 <form action="{{route('admin.comissoes.comissionar')}}" name="enviarQueries" method="post">
-    {!! csrf_field() !!}
+   
 <table id="myTable" border="0" width="100">
     <thead>
     <tr>
