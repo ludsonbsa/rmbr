@@ -293,18 +293,36 @@ class ComissoesController extends Controller
 
         #Criar Planilha de Comissão Geral
         $queryPlanilha = DB::table('tb_contatos as t1')
-            ->selectRaw("t1.id, t1.email, t1.aprovado, t1.nome_do_produto, t1.conferencia, t1.comissao_gerada, t2.at_id_contato, t2.at_id_responsavel, t2.at_nome_atendente, t2.at_final_atendimento")
+            ->selectRaw("t1.id, t1.email, t1.aprovado, t1.nome_do_produto, t1.id_responsavel, t1.conferencia, t1.comissao_gerada, t2.at_id_contato, t2.at_id_responsavel, t2.at_nome_atendente, t2.at_final_atendimento")
             ->join('tb_atendimento as t2','t1.id','=','t2.at_id_contato')
             ->whereRaw("(t1.aprovado = 1 AND t1.conferencia = 1) AND (t1.comissao_gerada = 1) AND completo = 1")
             ->get();
 
+        #Fazer Query também puxando dados do responsavel, pra adicionar junto no foreach de cada produto
         #Verificar se o mês das vendas equivalem ao mês atual?...
 
         $csv = new Helpers\CSV();
 
         foreach ($queryPlanilha as $comissoesMes):
-            $csv->addLine(new Helpers\CSVLine($comissoesMes->at_id_responsavel, $comissoesMes->at_id_contato, $comissoesMes->at_final_atendimento, $comissoesMes->nome_do_produto, $comissoesMes->at_nome_atendente));
+            $csv->addLine(new Helpers\CSVLine($comissoesMes->at_id_responsavel, $comissoesMes->at_id_contato, $comissoesMes->at_final_atendimento, $comissoesMes->nome_do_produto, $comissoesMes->at_nome_atendente,
+                $comissoesMes->id_responsavel));
+
+            #Faço a busca pra pegar somente do id requisitado
+            $queryResp = DB::table('tb_contatos as t1')
+                ->selectRaw("t1.id, t1.email, t1.aprovado, t1.nome_do_produto, t1.id_responsavel, t1.conferencia, t1.comissao_gerada, t1.updated_at, t2.user_nome, t2.id as userid")
+                ->join('users as t2','t1.id_responsavel','=','t2.id')
+                ->whereRaw("(t1.aprovado = 1 AND t1.conferencia = 1) AND (t1.comissao_gerada = 1) AND completo = 1 AND t1.id = {$comissoesMes->id}")
+                ->get();
+
+            foreach($queryResp as $comissaoResp):
+
+                #Adiciono numa nova linha esse achado
+                $csv->addLine(new Helpers\CSVLine($comissaoResp->id_responsavel, $comissaoResp->id, $comissaoResp->updated_at, $comissaoResp->nome_do_produto, $comissaoResp->user_nome,
+                    $comissaoResp->userid));
+            endforeach;
+
         endforeach;
+
         $csv->save("uploads/planilhas/comissoes-geradas-".date('d-m H').".csv");
 
         foreach ($queryPlanilha as $contato) {
@@ -321,7 +339,7 @@ class ComissoesController extends Controller
         $this->geraPlanilha();
 
         #Tem que deletar pra não duplicar comissões
-        $deletar = unlink('uploads/planilhas/comissoes-geradas-'.date('d-m H').'.csv');
+        //$deletar = unlink('uploads/planilhas/comissoes-geradas-'.date('d-m H').'.csv');
 
         return response()->redirectToRoute('admin.comissoes.listar');
 
@@ -347,11 +365,16 @@ class ComissoesController extends Controller
             $mes_e_ano = $data[2];
             $produto = $data[3];
             $atendenteNome = $data[4];
+            $responsavel = $data[5];
 
             #Aqui ele pega a data de final de atendimento e atribui ao mês para gerar comissão
             $mes = date('m', strtotime($data[2]));
             $ano = date('Y', strtotime($data[2]));
 
+            #Tem que fazer a verificação :
+            # Se existir mais de um mesmo contato na planilha, contar quantos tem, pegar
+            # o valor da comissão e dividir pela quantidade (Esperando definição do Ruy e Vitor)
+            # Ou pré definir por usuário o valor da comissão de cada produto?
 
             switch ($produto):
                 case 'Programa Mulheres Bem Resolvidas':
@@ -372,7 +395,8 @@ class ComissoesController extends Controller
                         'com_mes' => $mes,
                         'com_produto' => $produto,
                         'com_valor_produto' => $valor_produto,
-                        'com_final' => $comissao,
+                        #dividido por 2 devido ao split de comissões por serem 2 envolvidos
+                        'com_final' => $comissao/2,
                         'com_pago' => 0
                     ];
                     DB::table('tb_comissoes')->insert($dadosEntrada);
@@ -398,7 +422,7 @@ class ComissoesController extends Controller
                             'com_mes' => $mes,
                             'com_produto' => $produto,
                             'com_valor_produto' => $valor_produto,
-                            'com_final' => $comissao,
+                            'com_final' => $comissao/2,
                             'com_pago' => 0
                         ];
                         DB::table('tb_comissoes')->insert($dadosEntrada);
@@ -424,7 +448,7 @@ class ComissoesController extends Controller
                         'com_mes' => $mes,
                         'com_produto' => $produto,
                         'com_valor_produto' => $valor_produto,
-                        'com_final' => $comissao,
+                        'com_final' => $comissao/2,
                         'com_pago' => 0
                     ];
                     DB::table('tb_comissoes')->insert($dadosEntrada);
