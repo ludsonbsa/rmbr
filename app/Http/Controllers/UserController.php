@@ -115,7 +115,6 @@ class UserController extends Controller
 
         }
 
-
         $validator = Validator::make($request->all(), [
             'file' => 'max:500000',
         ]);
@@ -167,5 +166,30 @@ class UserController extends Controller
         User::destroy($id);
 
         return response()->redirectToRoute('admin.listar.usuarios');
+    }
+
+    public function cadastrar_senha(Request $request, $id){
+        $senha = $request->input('password');
+        $confirm_senha = $request->input('confirm_password');
+
+
+        if($confirm_senha == $senha && !empty($senha)){
+
+            #Encripto a senha
+            $password = bcrypt($senha);
+
+            #Seleciono o usuário
+            $user = User::where('id', '=', $id);
+            $param = [
+                'password' => $password
+            ];
+            $user->update($param);
+
+            return redirect()->route('admin.editar.usuario',$id)->with('msg',"Senha cadastrada com sucesso.");
+
+        }else{
+            return redirect()->route('admin.editar.usuario',$id)->with('msg-error',"Senha não cadastrada, campo senha não pode estar vazio ou senhas não batem.");
+        }
+
     }
 }

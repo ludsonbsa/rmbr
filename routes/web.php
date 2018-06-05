@@ -122,6 +122,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
         Route::post('usuarios/editar-update/{id}', 'UserController@editar_update')->name('editar-update.usuario');
 
+        Route::post('usuarios/cadastrar_senha/{id}', 'UserController@cadastrar_senha')->name('cadastrar_senha.usuario');
+
         Route::get('usuarios/status/{status}/{id}', [
             'uses' => 'UserController@status',
         ])->name('status');
