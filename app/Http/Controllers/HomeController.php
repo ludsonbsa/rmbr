@@ -154,6 +154,10 @@ class HomeController extends Controller
         if (1 && !empty($HotmartSale)):
             $HotmartLog = null;
             foreach ($HotmartSale as $key => $value):
+                switch ($key){
+                    case 'status':
+                        $this->getWcHotmartStatus($key);
+                }
                 $HotmartLog .= "{$key}: {$value}\r\n";
             endforeach;
 
@@ -183,5 +187,9 @@ class HomeController extends Controller
             endif;
         endif;
 
+    }
+
+    public function form_hotmart(){
+        return view('formpost');
     }
 }
