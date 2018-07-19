@@ -12,8 +12,8 @@ $(function() {
 
     $("#loader").fadeOut();
 
-    $('.tabs-menu ul li a').click(function(){
-
+    $('.tabs-menu ul li a').click(function(e){
+        e.preventDefault();
         var a = $(this);
         var active_tab_class = 'active-tab-menu';
         var the_tab = '.' + a.attr('data-tab');
@@ -130,8 +130,8 @@ $(function() {
         var email = $(this).attr('data-email');
         var nome = $(this).attr('data-nome');
         //Abro a modal
-        $('.modal').fadeIn('500');
-        $('.modal .idlead').text(nome+' <'+email+'> ?');
+        $('.modalDel').fadeIn('500');
+        $('.modalDel .idlead').text(nome+' <'+email+'> ?');
 
         var trocar ='/admin/leads/deletar/'+dados;
         //Atribuo o URL de delete com o id chamado
@@ -148,6 +148,13 @@ $(function() {
         var trocar ='/admin/leads/deletar/'+dados;
         //Atribuo o URL de delete com o id chamado
         $('.dataRoute').attr('href', trocar);
+        //Jogar as informações do lead pra dentro dos atributos e jogar no alert
+    });
+
+    $('.addmodal').click(function(){
+        //Abro a modal
+        $('.modaladd').fadeIn('500');
+
         //Jogar as informações do lead pra dentro dos atributos e jogar no alert
     });
 
@@ -347,7 +354,7 @@ $(document).ready(function() {
                  }
 
                  if(data.aprovado == 1){
-                     $('#comprou').html("<p style='text-align: left;'>É aluna ou já comprou</p>");
+               
                      $('#dataVenda').html("<p style='text-align: left;'>Data de transação: "+data.data_de_venda+"</p>");
                  }else{
                      $('#comprou').html("<p style='text-align: left;'>Não é aluna ou não comprou</p>");

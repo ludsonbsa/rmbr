@@ -16,7 +16,7 @@
                 <div class="field-wrap t96">
                     <label>Digite o E-mail:</label>
                     <br>
-                    <input type="search" required id="buscaBr" class="t96" style="padding:12px;" name="buscarBrinde" placeholder="Digite o e-mail ou cep do contato...">
+                    <input type="search" required id="buscaBr" class="t96" style="padding:12px; width:104% !important;" name="buscarBrinde" placeholder="Digite o e-mail ou cep do contato...">
                 </div>
             </form>
 
@@ -43,12 +43,6 @@
                     <p><small id="bairro"><b>Bairro: </b>{!! $brinde->bairro !!}</small></p>
                     <p><small id="numero"><b>Número: </b>{!! $brinde->numero !!}</small></p>
                     <p><small id="complemento"><b>Complemento: </b>{!! $brinde->complemento !!}</small></p>
-
-                    @if($brinde->aprovado == 1)
-                        <p id="comprou">É aluna ou já comprou</p>
-                    @else
-                        <p id="comprou">Não é aluna ou não comprou</p>
-                    @endif
 
                     <p id="dataVenda"><b>Data de Transação: </b>{!! $brinde->data_de_venda !!}</p>
                 </div>

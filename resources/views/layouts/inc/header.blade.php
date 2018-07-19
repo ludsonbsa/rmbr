@@ -1,4 +1,16 @@
 
+<script type="text/javascript">
+    window._urq = window._urq || [];
+    _urq.push(['initSite', 'aa7a8a6c-9e4c-413c-a370-fc805d6503cc']);
+    (function() {
+        var ur = document.createElement('script'); ur.type = 'text/javascript'; 
+        ur.async = true;
+        ur.src = ('https:' == document.location.protocol ? 'https://cdn.userreport.com/userreport.js' : 'http://cdn.userreport.com/userreport.js');
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur, s);
+    })();
+</script>
+
+
 <section class="user">
     <a href="{{route('admin.dashboard')}}"><img src="/images/logo_mbr_digital.svg" width="200" style="position:absolute;"></a>
     <!--<div class="profile-img">
@@ -17,9 +29,12 @@
 
         <div class="buttons">
             <ul><!-- Atendente -->
-                <a href="{{route('admin.lead.add')}}" title="MBR Follow Up - Adicionar Lead" alt="[Adicionar Lead]">
+
+                <a href="#" class="addmodal">
                     <li><img src="/images/leads/new_lead.svg" width="20" class="icone" title="MBR Follow Up - Adicionar Lead" alt="[Adicionar Lead]"></li>
                 </a>
+                @include('modalAdd')
+
                 @if(\Auth::user()->role == 3 OR \Auth::user()->role == 2)
 
                 @else

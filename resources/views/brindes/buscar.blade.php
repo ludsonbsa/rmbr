@@ -16,7 +16,7 @@
             <div class="field-wrap t96">
                 <label>Digite o E-mail:</label>
                 <br>
-                <input type="search" required id="buscaBr" class="t96" style="padding:12px;" name="buscarBrinde" placeholder="Digite o e-mail ou cep do contato...">
+                <input type="search" required id="buscaBr" class="t96" style="padding:12px; width:104% !important;" name="buscarBrinde" placeholder="Digite o e-mail ou cep do contato...">
             </div>
         </form>
 

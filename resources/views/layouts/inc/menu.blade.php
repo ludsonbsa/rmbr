@@ -7,8 +7,8 @@
 
         </li>
 
-        <li class="sub">
-            <a href="{{route('admin.lead.add')}}" title="Add Lead" alt="[Add Lead]">Adicionar Lead</a>
+         <li class="sub">
+            <a href="#" class="addmodal" title="Add Lead" alt="[Add Lead]">Adicionar Lead</a>
         </li>
 
         <li>
@@ -32,7 +32,7 @@
         </li>
 
 
-        <li>
+        <!--<li>
             <a href="{{route('admin.listar.livro')}}" title="Brindes Webnário" alt="[Brindes]"><img src="/images/leads/brinde_menu.svg" width="30" title="" alt="">Brindes WB</a>
 
         </li>
@@ -45,7 +45,7 @@
 
         <li class="sub">
             <a href="{{route('admin.livro.buscar')}}" title="Buscar Brinde" alt="[Buscar Brinde]">Buscar Brinde</a>
-        </li>
+        </li>-->
 
 
 

@@ -49,7 +49,7 @@
 
 
 
-                    <div class="field-wrap t100">
+                    <div class="field-wrap t100" style="width:108% !important;">
 
                         <p>Nome Completo:</p>
 
@@ -58,11 +58,11 @@
 
 
 
-                    <div class="field-wrap t100">
+                    <div class="field-wrap t100" style="width:108% !important;">
 
                         <p>E-mail:</p>
 
-                        <input type="email"  class="t100" required style="color:#e1e1e1;" name="email" value="{{$user->email}}" @if(\Auth::user()->role != 1) readonly @endif placeholder="">
+                        <input type="email"  class="t100" required style="color:#e1e1e1;" name="email" value="{{$user->email}}" @if(\Auth::user()->role != 1) readonly @endif placeholder="" style="width:108% !important;">
 
                     </div>
 
@@ -71,13 +71,13 @@
 
                     @if(\Auth::user()->role == 1)
 
-                    <div class="field-wrap t100">
+                    <div class="field-wrap t100" style="width:108% !important;">
 
                         <p>Nível</p>
 
                         <br>
 
-                        <select name="role" class="t100">
+                        <select name="role" class="t100" >
 
                             @switch($user->role)
                                 @case(1)
@@ -133,7 +133,7 @@
 
                     </div>
 
-                    <div class="field-wrap t100">
+                    <div class="field-wrap t100" style="width:108% !important;">
 
                         <p>Status</p>
 
@@ -161,20 +161,17 @@
                     @endif
                     <br>
 
-                    <div class="field-wrap t100">
-                        <button type="submit" name="sendForm" class="enviar">Editar Usuário</button>
-                    </div>
 
+                    <div class="field-wrap t50" style="width:50% !important; float:right; margin-right:-48px">
+                        <button type="submit" name="sendForm" class="enviar" >Atualizar Usuário</button>
+                    </div>
                 </div><!-- final da sessao field wrap -->
 
             </form>
-
-
-            <div class="field-wrap t100" style="margin-left:-110px;">
-                <a href="#" class="senhas"><button class="enviar">Cadastrar Nova Senha</button></a>
-            </div>
-            @include('modalSenha')
-
+                <div class="field-wrap t50 botton" style="float:right; margin-right:0px !important; width:53% !important;">
+                    <a href="#" class="senhas"><button class="enviar" style="margin-left:0px;">Cadastrar Nova Senha</button></a>
+                </div>
+                @include('modalSenha')
         </div>
 
     </section>

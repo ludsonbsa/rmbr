@@ -3,10 +3,10 @@
 
 
 @section('content')
-<div class="container">
+<div class="container-fluid total">
     <div class="row">
         <div class="logo col-md-6 col-md-offset-2">
-            <img src="<?= env('APP_URL').'/images/logo_mbr_digital.svg'?>" width="300" class="col-md-offset-5 logocenter" />
+            <img src="<?= env('APP_URL').'/images/logo-branca.svg'?>" width="300" class="col-md-offset-5 logocenter" />
 
         </div>
         <div class="col-md-6 col-md-offset-3">
@@ -53,7 +53,7 @@
                         <div class="form-group">
                             <div class="col-md-12">
                                 <button type="submit" class="btn loginbutton col-md-12">
-                                    Login
+                                    Entrar no sistema
                                 </button>
                             </div>
                                <!-- <a class="btn btn-link col-md-6 col-md-offset-3" href="{{ route('password.request')

@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Brindes;
+use App\Contatos;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
+    private $status;
 
     public function index()
     {
@@ -16,6 +19,40 @@ class HomeController extends Controller
     }
     public function form(){
         return view('home.infusion');
+    }
+
+    public function call(Request $request){
+
+
+        if($request->input('ligar')){
+            $contatos = new Contatos;
+            $contatos->data_de_venda = date('d/m/Y H:i:s');
+            $contatos->nome_do_produto = 'Pompoarismo Cátia Damasceno';
+            $contatos->email = $request->input('email');
+            $contatos->nome = $request->input('nome');
+            $contatos->ddd = $request->input('ddd');
+            $contatos->telefone = $request->input('telefone');
+            $contatos->insercao_hotmart = 'Call';
+            $contatos->prioridade = 'Solicitou Ligação Agendada';
+            $contatos->id_responsavel = 0;
+
+
+            $data = $request->input('data');
+            $hora = $request->input('ligarDepois-hora');
+
+            $date = new \DateTime($data);
+            $time = new \DateTime($hora);
+            $merge = new \DateTime($date->format('Y-m-d') . ' ' . $time->format('H:i:s'));
+            $dataFinal = $merge->format('d/m/Y H:i:s');
+
+            $contatos->observacao = $request->input('solicitar'). "Solicitou ligação para dia e hora: ".$dataFinal;
+
+            $contatos->data_ligar_depois = $dataFinal;
+            $contatos->save();
+
+            return redirect('http://lp.toquefeminino.com.br/call-pp-obrigado/');
+        }
+
     }
 
     public function infusion(Request $request)
@@ -122,6 +159,8 @@ class HomeController extends Controller
 
     public function hotmart(Request $request){
 
+
+
         function getWcHotmartStatus($Status = null)
         {
             $HotmartStatus = [
@@ -147,24 +186,142 @@ class HomeController extends Controller
         header("access-control-allow-origin: https://app-vlc.hotmart.com");
         header('Content-Type: text/html; charset=UTF-8');
 
-//GET HOTMART POST
+        //GET HOTMART POST
         $HotmartSale = $request->all();
 
-//LOG GENERATE
+        //LOG GENERATE
         if (1 && !empty($HotmartSale)):
             $HotmartLog = null;
-            foreach ($HotmartSale as $key => $value):
-                switch ($key){
-                    case 'status':
-                        $this->getWcHotmartStatus($key);
+            #Criando arquivo pra fazer as paradas, PAREI AQUI DA ULTIMA
+            $HotmartAtt = fopen(public_path().'/uploads/hotmart-att.txt', 'a');
+
+            #Regra do banco
+            $email = $request->input('email');
+            $produto = $request->input('prod_name');
+            $pegaEmail = DB::table('tb_contatos')
+                ->selectRaw("id, email")
+                ->where('email','=', $email)
+                ->get();
+
+            $retorno = $pegaEmail->count();
+
+
+            #Atualizar recebendo o status do HOTMART
+            $status = $request->input('status');
+
+            switch($status){
+                case 'approved':
+                    $status = 'Aprovado';
+                    $aprovado = 1;
+                    break;
+
+                case 'billet_printed':
+                    $status = 'Boleto Impresso';
+                    break;
+
+                case 'pending_analysis':
+                    $status = 'Pendente';
+                    break;
+
+                case 'delayed':
+                    $status = 'Atrasado';
+                    break;
+
+                case 'canceled':
+                    $status = 'Cancelado';
+                    break;
+
+                case 'completed':
+                    $status = 'Concluído';
+                    break;
+
+                case 'chargeback':
+                    $status = 'Chargeback';
+                    break;
+
+                case 'blocked':
+                    $status = 'Bloqueado';
+                    break;
+
+                case 'refunded':
+                    $status = 'Devolvido';
+                    break;
+
+                case 'admin_free':
+                    $status = 'Cadastrado';
+                    break;
+            }
+
+            if($retorno == 1){
+
+                #Se status for aprovado e o produto ser o produto que chegou no post
+                if($aprovado == 1){
+
+                    #Aqui na hora atualizar botar conferencia = 1
+                    #QUANDO FOR ATUALIZAR< VER SE ENVIAR-KIT = 1
+                    $dado = ['status' => $status, 'aprovado' => 1, 'conferencia' => 1, 'conferencia_brinde' => 1];
+
+                }else{
+                    $dado = ['status' => $status];
                 }
-                $HotmartLog .= "{$key}: {$value}\r\n";
+
+                #Se já existir um aprovado, não substituir o status para outro em hipotese nenhuma
+
+                $upd = DB::table('tb_contatos')
+                    ->whereRaw("email = '{$email}'")
+                    ->update($dado);
+            }else{
+                #Tentativa de criar novo contato
+                $contatos = new Contatos;
+                $contatos->nome_do_produto = $request->input('prod_name');
+                $contatos->nome_do_produtor = $request->input('producer_name');
+                $contatos->documento_produtor = $request->input('producer_document');
+                $contatos->nome = $request->input('name');
+                $contatos->ddd = $request->input('phone_local_code');
+                $contatos->telefone = $request->input('phone_number');
+                $contatos->documento_usuario = $request->input('doc');
+                $contatos->transacao = $request->input('transaction');
+                $contatos->email = $request->input('email');
+                $contatos->status = $status;
+                $contatos->insercao_hotmart = 'Hotmart';
+                $contatos->prioridade = 'Oportunidade Hotmart';
+                $contatos->data_de_venda = $request->input('purchase_date');
+                $contatos->id_responsavel = 0;
+
+                $contatos->save();
+
+                #$dados =  $request->all();
+                #Se retornar zero precisa criar um novo registro.
+                $HotmartLogFile = fopen(public_path().'/uploads/n-existe.txt', 'a');
+
+
+            }
+
+            foreach ($HotmartSale as $key => $value):
+
+                if($key == 'status' || $key == 'email' || $key == 'doc' || $key == 'name'){
+                    $HotmartLog .= "{$key}: {$value}\r\n";
+                }
+
             endforeach;
+
+
+            fwrite($HotmartAtt, $HotmartLog);
+            fclose($HotmartAtt);
 
             $HotmartLogFile = fopen(public_path().'/uploads/hotmart.txt', 'a');
             fwrite($HotmartLogFile, "\r\n########## " . date('d/m/Y H\hi') . " ##########\r\n\r\n" . $HotmartLog);
             fclose($HotmartLogFile);
         endif;
+
+        $queryProd = DB::table('tb_produtos')
+            ->select('*')
+            ->where('prod_id', '=', 3)
+            ->get();
+
+        foreach($queryProd as $p):
+            $apiChave = $p->api_chave;
+        endforeach;
 
         if ($HotmartSale && !empty($request->input('hottok')) && $request->input('hottok') == 'qv82T5NcQDBW4lR8Yi4vkD5eAmTuYY123249'):
             //CLEAR DATA

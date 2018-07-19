@@ -21,15 +21,28 @@
         <br>
         <div class="content">
 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script>
+                $(function(){
+                    $('#nome').on('input', function() {
+                        if (/[0-9]/g.test(this.value)) {
+                            alert("Atenção <?php echo Auth::user()->user_nome;?>, o campo NOME não pode conter números.");
+                            $(this).val('');
+                        }
+                    });
+                });
+            </script>
+
             <form name="formulario" action="{{route('admin.lead.cadastrar')}}" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="_method" value="PUT">
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <input type="hidden" name="data_de_venda" value="{{date('d/m/Y H:i:s')}}" />
                 <input type="hidden" name="id_responsavel" value="{{Auth::id()}}">
 
+
                 <div class="field-wrap t60">
                     <label>Nome:</label>
-                    <input type="text" name="nome" value="" class="t100" placeholder="" required="required">
+                    <input type="text" name="nome" value="" id="nome" class="t100" placeholder="" required="required">
                 </div>
 
                 <div class="field-wrap t10">
@@ -58,6 +71,7 @@
                         <option value="Whatsapp">Whatsapp</option>
                         <option value="E-mail">E-mail</option>
                         <option value="Facebook">Facebook</option>
+                        <option value="Instagram">Instagram</option>
                     </select>
                 </div>
 

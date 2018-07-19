@@ -1,15 +1,15 @@
 @extends(layout())
 
 @section('content')
-
+    {!! Session::get('message')  !!}
     <section class="content" style="background:url('/images/bglead.jpg') repeat-x #f0f0f0;">
         @if(session()->has('msg'))
             <div class='alert alert-success'>
-                {{ session('msg') }}
+                {!! session('msg') !!}
             </div>
         @elseif(session()->has('msg-error'))
             <div class='alert alert-danger'>
-                {{ session('msg-error') }}
+                {!! session('msg-error') !!}
             </div>
         @endif
 
@@ -67,9 +67,9 @@
 
                                 <tr class="" @if($contato->em_atendimento != 0 || $contato->em_atendimento != NULL) style="background:#e4e4e4; color:#ccc" disabled="" @endif>
                                 <td class="nome">{!! $contato->nome !!}</td>
-                                <!--<td>({{$contato->ddd}}) {{$contato->telefone}}</td>-->
+                                    <!--<td>({{$contato->ddd}}) {{$contato->telefone}}</td>-->
                                     <td>{{$contato->email}}</td>
-                                    <td class="meio"><span>{{$contato->insercao_hotmart}}</span></td>
+                                    <td class="meio"><span @if($contato->insercao_hotmart == 'Call') style="background:#68162c; color:#fff76b; font-weight: bolder;" @endif>{{$contato->insercao_hotmart}}</span></td>
                                     <td>{!!$contato->prioridade!!}</td>
 
                                     <!--<td @if($contato->nome_do_produto == "Programa Mulheres Bem Resolvidas") style="" @endif>{!!$contato->nome_do_produto !!}</td>-->
@@ -89,7 +89,7 @@
                                         </td>
 
                                         @if($contato->em_atendendo != NULL || $contato->em_atendendo != '')
-                                            <td><img src="{{$contato->em_atendendo}}" alt="" width="30" class="atendente perfilEdit"></td>
+                                            <td><img src="{{$contato->em_atendendo}}" alt="" width="30" height="30" title="Em atendimento" class="atendente perfilEdit"></td>
                                             @else
                                             <td></td>
                                         @endif
@@ -103,7 +103,7 @@
                                             <td class="acao">
                                             </td>
                                             @else
-                                            <td><img src="{{$contato->em_atendendo}}" alt="" width="30" class="atendente perfilEdit" style="margin-left:20px;"></td>
+                                            <td><img src="{{$contato->em_atendendo}}" alt="" width="30" height="30" class="atendente perfilEdit" style="margin-left:20px;"></td>
                                         @endif
 
                                         @if($contato->id_responsavel == \Auth::user()->id)
@@ -128,7 +128,7 @@
                                             <td class="acao"><a href="{{route('admin.atender', $contato->id)}}" class="atender">Atender</a></td>
 
                                             @else
-                                            <td ><img src="{{$contato->em_atendendo}}" alt="" width="30" class="atendente perfilEdit" style="margin-left:20px;"></td>
+                                            <td ><img src="{{$contato->em_atendendo}}" alt="" width="30" height="30" class="atendente perfilEdit" style="margin-left:20px;"></td>
                                         @endif
                                         @if($contato->id_responsavel == \Auth::user()->id)
                                                 <td class="acao">
@@ -151,7 +151,7 @@
                                             <td class="acao">
                                             </td>
                                         @else
-                                            <td><img src="{{$contato->em_atendendo}}" alt="" width="30" class="atendente perfilEdit" style="margin-left:20px;"></td>
+                                            <td><img src="{{$contato->em_atendendo}}" alt="" width="30" height="30" class="atendente perfilEdit" style="margin-left:20px;"></td>
                                         @endif
 
                                         @if($contato->id_responsavel == \Auth::user()->id)
